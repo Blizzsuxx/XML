@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<potvrdaOVakcinaciji xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/C:/Users/Uros/Desktop/potvrdaOVakcinaciji.xsd">
+    <Pacijent>
+        <ime>Eozbarurp</ime>
+        <prezime>Ulkrosncjstrp</prezime>
+        <datum>2023-06-27Z</datum>
+        <pol>
+            <Musko>Musko</Musko>
+        </pol>
+        <jmbg>7019496909562</jmbg>
+    </Pacijent>
+    <datumPrva>2021-12-25Z</datumPrva>
+    <serija>55593906</serija>
+    <datumDruga>2023-03-24Z</datumDruga>
+    <ustanova>
+        <naziv>Fzgzaqojqtdtfch</naziv>
+        <ulica>Xyvysgncpebwszyeeaephghqsq</ulica>
+        <broj>9</broj>
+        <grad>Huhlypuxwppwlidhxe</grad>
+    </ustanova>
+    <vakcina>
+        <Pfizer>Pfizer</Pfizer>
+    </vakcina>
+    <datumPotvrde>2022-08-16</datumPotvrde>
+    <QRCode>Zmi-yz6CDTRop:IfQ7LvopO7gq4y7:Khb:5Qk4cS_vLVj0w25bi-d2UAuXdRmBR:m:awaL5AkYLTxvMiAuqCFg_5AxpNpgtMmdUY-u7so.40mblRoReALOrT6f4yG9uhd7rOmZ6EqUf-OGhcPShGIlZAyIw7jKOmG_aD7SLWTVf1MgktHEu3OThorLZsLcQ0e.fyM5Um_UktI0UwfiMieWsEConeB8WLiwulO:R7OG.4ovFc1-EW1c9n-Rgr:nP3Y_qUX5R0bBK21RDFjVaR7FC73hPQQ1fWi3n7xeQ_JONS8Qs4BRonDDAki-cBW-X7iRXBJMwQ0:KT3uKzSnFAs-ejdkZ6mzs7a4qbHLh22GN2QEKpjo6Dgi.GNHgCrTkf5f1lUjDWQz0xarn56EDuDjD_-0YwZ4hMvZnpgp:WnsbCt02EArzxQnRus96lmm1X5ftnu2mVQ.toz32o6DADbCkS3N29Ca8P1S-lmBzl3IeZegyAB9GVuAK-QzHobCO0iR-smVwl:.XKDyIKdnq:wx0JXTRbvO9A0lYTORJ3aI5ia:0.yzQ6xk19jKe4viiQNgNZrmx5xBwenxgccC.sSkuXoaac1VQPx2PA1ZygZkRHWTxpYmUFUOXEDn2wf:ZcyuZ5llvryq01uJTPtSs0VINB3XCO_q7bttv_sdl1AB2G2Cqj.xoZVnwxlIVyd8szHsgxLPZg-29flgsfgMM_aCSNtsHpoHdvNfEXrOG9T9h8j4Ns-bT8:JF8T.EZD.Z3tp20lPLZ3wyePaNIJLJa_P6hIaQxqD1CYMJydjc7p2-YUvYmfmxbAzpEkMa:mWRsi_IZIZWFL8r1ZhMkZmBLSazw0LA8DM37RuzXoYw.8r9aNyqTw_GxluSjUtRi5_Tp-TknOdvhMvpBn_RgfaTcf7UIlLcUadTNskug2Xg8QKXDzhXVOkIOw0g7.cl70Zjf:wiWFq4STTva-gbgbLe4-PDOAh:PosfZbXC2eywfw3RLQGyHQVh-YqCMC38MkCIcchSwBsft_D:xgjCn8EVkyMTF2Qsz9CY5pFprdlmNmj1FZSkcwlOGDsOHaIY0CrP2DSj4:YrW1weoAWhCwip7DqZEO8XWNvtbVw:-RkDdfm.n-kF:5h-ToqSd5bKkIwYqkqRAhd:_RD0e5-jXyQwWyTc5KqigN9dInOoA2P5DPq</QRCode>
+</potvrdaOVakcinaciji>

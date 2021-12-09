@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zahtevZaSertifikat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/C:/Users/Uros/Desktop/zahtevZaSertifikat.xsd">
+    <Pacijent>
+        <ime>Vbhyrpdjmnctddux</ime>
+        <prezime>Kgbdkv</prezime>
+        <datum>2023-04-03</datum>
+        <pol>
+            <Zensko>Zensko</Zensko>
+        </pol>
+        <jmbg>2901324244624</jmbg>
+        <pasos>6981439060</pasos>
+    </Pacijent>
+    <razlog>Qiqpqcdsomcinzyjdcshnahghweeuowjgykqgbgeemzzxheqjxticqavyoohfiomwsnsbrrqeerqczyiwdzxlewtplflwphpyqb</razlog>
+    <mesto>Eoigbsnwvc</mesto>
+    <dan>---18</dan>
+    <mesec>--06</mesec>
+    <godina>7</godina>
+    <potpis>dpfpqtxkdmvpxhk</potpis>
+</zahtevZaSertifikat>
