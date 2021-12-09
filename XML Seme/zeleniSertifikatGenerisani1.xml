@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<digitalniSertifikat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/C:/Users/Uros/Desktop/zeleniSertifikat.xsd" ID="731">
+    <QRCode>2A.aLcucpEPP0546Hj-50eKXL-1tm6X2aWmCUAc9U6Frr5We-Tt0FZJQic4kvFL4EjL.SFVE_iWrmrJEZ2uQPsZpTuDjuJ6cZB_txI.C0Ffu38SP0u-reOoxAEUgy0u.KMlny0:CAho5zei7aPZYBnrMRWkeRLjDCuPCJ18hzW3tKOPNyWyohp0cae3zKP3_0WK5sQnGZya3PmH0cZ.Tea5ovniUbaX80Iw94biagbWbgdm_y6T9z_7_RzthzdIbtly6Xv-82ga_S5kG3Afir5:VRj6kmdFheS_GPwKKaCaQkOmYzoc5vJ7hSj1tLXIlzoFipEyqdJzk6S862G.3WANrgwRqQGtm0DHG4B:DsDTKamWFsyc6aBEuBA0b6KG_4B-AbUFmKAkDHiDeE9NBwkHioHvZamPddlsw90dtWDppsAa2EPKQpBSWLyC1sy5OhieUqZ8nnP58XZwxK:fkFK2MFbdcp8BA-hCg5O4Szbovh25DwA6.B1d95RpZITRcgb0MpR5WhxyF0Z611YG_N8Kxc59dn2AT4yYo-IBMrG:7rdl:cbPnoTk65dvO5WvTSp8gEXdrbzHYRVHYGTzKnRgc12l8o7mukVAdXW5fpSSi3m.UDL:M70bXZnKFkRWDhA4D6VVZ9Z9roB-2cL0gsTM-HFyNYhqGa_qOf89lwRzc4JYt.0b:k9WW8Dwcog7rE4XeHTEySY1M6yX310jsvgShsjhGISJV:XuMshViSL5w5RCR-Zbso1yHoZrFUXp7Lw.e7ctVkxW6uwm2BEVq:RfPiOoYxawvDI7dKA6U4_vDhvir:D6_4xso6NrNRcG5uK6z.m56PJKphOR-:TI75Qej4yH8KysZyNrI-jij_uhHfWaYFh26vG_jeG:dty:KxzS_RC2D5EU-GaR7nIoqbUpD:t6075cfIqsU0bBm4tauZgRO-Ijg66oEecJvbd:NeZ8Z9ao-lKTKHlDgYPmx4NcadFOyfjasYvoFrC7zzPlF8KrzriU5dXmf8UHWSVVAdE.1p2fNqSkTh-7J32tVm.NpVI5ALA97FmwDnD2Jz1bDtue7oSFu_:9rgDEg2UY.k2dWt4mkVaCO4NBlwdwA6EE6hawytYK-TTJYTq3xEUtO:sh7KPKCP7fIJ-fgt-83LTKyuc7gw96bMLEu.BKQnq5c3cXuyZUSM:J0gTefjreD-op65U.mA2OMy.FdBY9sCeo6l8HhnuhWZ5CUmba8NAI2IIMlYzX1I8S.E.TI0UCxrS2weKqn.nN.nnK5KgPrKeuVHTEvoSWY9-.cPzXxgx8W:1lQim6Crypj8qVrvtD:tbhGnY1Gm25tSQKTm.49RSLA36evVMsNUoEJW9XB7uaXV.AJSiiqdxq4gn_-oYU30YX6xZLBhwcFc2_1sRTAOKCvcggY33Q6S45MbJz5ZEk.foD2kk:bP-IVwhG5l:BgPn2JUPQACfmY7Ogf9QUQgityCKjmgt-FIw1lWUDXX7jACwzdzJ8aEll6FaYXMA7TYbbfZWiTt9P5G_nSSeLDDC43MjFUrE-yzzhWKCvEK.jVGNrt8Rd-vyZBEj5yMGMBKU7VN6oGEH8g5K_0q0EoGLevlK3oNi7PV2tH27CS4ILGVurFaGOg-_55BDpq4AkgX16pSRjD0mVyO:TbY_aymVx5YBNbtoLFH9V6Cfz5ZRHI_dNwu-8mBQumzpzgVOSkB1ME_qXAKG.xqnThJcazpdLbwHYqe1lwNf9B_88-JjawNxgPe3Kn3dLR_bEH5QHOcfwlMPl7Qe5jGLmX.rmahw</QRCode>
+    <Pacijent>
+        <ime>Cybde</ime>
+        <prezime>Hayyoznjjdle</prezime>
+        <datum>2022-02-07Z</datum>
+        <pol>
+            <Zensko>Zensko</Zensko>
+        </pol>
+        <jmbg>3579137805937</jmbg>
+    </Pacijent>
+    <datumIzdavanja>2023-08-30</datumIzdavanja>
+    <prvaDoza>
+        <serija>43452561</serija>
+        <datumPrve>2022-04-19</datumPrve>
+        <zdravstvenaUstanova>
+            <naziv>Zfxdfmcpjobzdpbo</naziv>
+            <ulica>Hwvjzuxmcrshee</ulica>
+            <broj>5</broj>
+            <grad>Yvnzz</grad>
+        </zdravstvenaUstanova>
+    </prvaDoza>
+    <drugaDoza>
+        <serijaDruga>22742441</serijaDruga>
+        <datumDruge>2022-10-23</datumDruge>
+        <zdravstvenaUstanova>
+            <naziv>Mvbesbazotuvmjsskrawthszazlpvb</naziv>
+            <ulica>Hbpbkuqerlxbqwfxjalm</ulica>
+            <broj>791</broj>
+            <grad>Mkrdzhiktvbcgkfwv</grad>
+        </zdravstvenaUstanova>
+    </drugaDoza>
+    <vreme>07:42:09.418</vreme>
+</digitalniSertifikat>
