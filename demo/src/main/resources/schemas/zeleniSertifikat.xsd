@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="digitalniSertifikat">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="QRCode">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="4296"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="Pacijent" type="TOsoba"/>
+                <xs:element name="datumIzdavanja" type="xs:date"/>
+                <xs:element name="prvaDoza" type="TPrvaDoza"/>
+                <xs:element name="drugaDoza" type="TDrugaDoza"/>
+                <xs:element name="vreme" type="xs:time"/>
+            </xs:sequence>
+            <xs:attribute name="ID">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minExclusive value="0"/>
+                        <xs:pattern value="[0-9]+"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TOsoba">
+        <xs:sequence>
+            <xs:element name="ime">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z][a-z]{2,15}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="prezime">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z][a-z]{2,20}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="datum" type="xs:date"/>
+            <xs:element name="pol" type="TPol"> </xs:element>
+            <xs:element name="jmbg">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{13,13}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TPol">
+        <xs:choice>
+            <xs:element fixed="Musko" name="Musko" type="xs:string"/>
+            <xs:element fixed="Zensko" name="Zensko" type="xs:string"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:complexType name="TZdravstvenaUstanova">
+        <xs:sequence>
+            <xs:element name="naziv">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z][a-z]{5,30}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ulica">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z][a-z]{2,30}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="broj">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{1,3}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="grad">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z][a-z]{2,20}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TPrvaDoza">
+        <xs:sequence>
+            <xs:element name="serija">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{8,8}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="datumPrve" type="xs:date"/>
+            <xs:element name="zdravstvenaUstanova" type="TZdravstvenaUstanova"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TDrugaDoza">
+        <xs:sequence>
+            <xs:element name="serijaDruga">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{8,8}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="datumDruge" type="xs:date"/>
+            <xs:element name="zdravstvenaUstanova" type="TZdravstvenaUstanova"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://ftn.uns.ac.rs/interesovanje" xmlns="http://ftn.uns.ac.rs/interesovanje"
+    xmlns:ns1="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji">
+    <xs:import namespace="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+        schemaLocation="potvrdaOVakcinaciji.xsd"/>
+    <xs:element name="interesovanje_za_vakcinisanje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="drzavljanstvo">
+                    <xs:complexType>
+                        <xs:choice>
+                            <xs:element name="drzavljanstvo_republike_srbije" type="xs:string"/>
+                            <xs:element name="strani_sa_broravkom" type="xs:string"/>
+                            <xs:element name="strani_bez_boravka" type="xs:string"/>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="osoba" type="TOsoba"/>
+                <xs:element name="lokacija" type="xs:string"/>
+                <xs:element name="vakcine">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="izabrane_vakcine">
+                                <xs:complexType>
+                                    <xs:complexContent>
+                                        <xs:extension base="TIzbor">
+                                            <xs:sequence>
+                                                <xs:element name="vakcina" type="TVakcina"/>
+                                            </xs:sequence>
+                                        </xs:extension>
+                                    </xs:complexContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="bilo_sta" type="TIzbor"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="davalac_krvi" type="TIzbor"/>
+                <xs:element name="dan" type="xs:gMonthDay"/>
+                <xs:element name="potpis" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TVakcina">
+        <xs:choice>
+            <xs:element name="Pfizer" fixed="Pfizer" type="xs:string"/>
+            <xs:element name="Sinopharm" fixed="Sinopharm" type="xs:string"/>
+            <xs:element name="Moderna" fixed="Moderna" type="xs:string"/>
+            <xs:element name="Sputnik" fixed="Sputnik" type="xs:string"/>
+            <xs:element fixed="AstraZeneca" name="AstraZeneca" type="xs:string"/>
+        </xs:choice>
+    </xs:complexType>
+    <xs:complexType name="TOsoba">
+        <xs:sequence>
+            <xs:element name="jmbg">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{13,13}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ime" type="xs:string"/>
+            <xs:element name="prezime" type="xs:string"/>
+            <xs:element name="e-adresa">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="/^[^\s@]+@[^\s@]+\.[^\s@]+$/"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="mobilni">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="06[0-9]{8,8}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="fiksni">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="01[0-9]{7,7}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TIzbor">
+        <xs:attribute name="izabran" type="xs:boolean" use="required"/>
+    </xs:complexType>
+</xs:schema>

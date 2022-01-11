@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http:/www.ftn.uns.ac.rs/izvestaj_o_imunizaciji"
+    xmlns:imunizacija="http:/www.ftn.uns.ac.rs/izvestaj_o_imunizaciji">
+
+
+    <xs:import namespace="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+        schemaLocation="potvrdaOVakcinaciji.xsd"/>
+    <xs:element name="izvestaj_o_imunizaciji">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="izvestaj_se_odnosi_na">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="datum_od" type="xs:date"/>
+                            <xs:element name="datum_do" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="podaci">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="imunizacija">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="podneto" type="xs:long"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="zeleni_sertifikat">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="podneto" type="xs:long"/>
+                                        <xs:element name="primljeno" type="xs:long"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="dato_je_vakcina" type="xs:long"/>
+                <xs:element name="primljene_doze">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="doza" type="imunizacija:TDoza"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="proizvodjaci">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="proizvodjac"
+                                type="imunizacija:TProizvodjac"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="datum_izdavanja" type="xs:date"/>
+                <xs:element name="potpis" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="TProizvodjac">
+        <xs:sequence>
+            <xs:element name="Ime" type="TVakcina"/>
+            <xs:element name="broj_doza" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TDoza">
+        <xs:sequence>
+            <xs:element name="redni_broj_doze" type="xs:long"/>
+            <xs:element name="primljena_kolicina" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TVakcina">
+        <xs:choice>
+            <xs:element name="Pfizer" fixed="Pfizer" type="xs:string"/>
+            <xs:element name="Sinopharm" fixed="Sinopharm" type="xs:string"/>
+            <xs:element name="Moderna" fixed="Moderna" type="xs:string"/>
+            <xs:element name="Sputnik" fixed="Sputnik" type="xs:string"/>
+            <xs:element fixed="AstraZeneca" name="AstraZeneca" type="xs:string"/>
+        </xs:choice>
+    </xs:complexType>
+</xs:schema>
