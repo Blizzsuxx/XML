@@ -23,9 +23,40 @@ public class XMLController {
         this.xmlService = service;
     }
 
-    @PostMapping("/jaxB")
-    public ResponseEntity<XMLDto> getChangedXMLJaxB(@RequestBody XMLDto dto) throws Exception{
-        String response = xmlService.jaxBTestInteresovanje(dto);
+//    @PostMapping("/jaxBSaglasnost")
+//    public ResponseEntity<XMLDto> getChangedXMLJaxBSaglasnost(@RequestBody XMLDto dto) throws Exception{
+//        String response = xmlService.jaxBTestSaglasnost(dto);
+//        return new ResponseEntity<XMLDto>(new XMLDto(response), HttpStatus.OK);
+//    }
+//
+//    @PostMapping("/jaxBInteresovanje")
+//    public ResponseEntity<XMLDto> getChangedXMLJaxBInteresovanje(@RequestBody XMLDto dto) throws Exception{
+//        String response = xmlService.jaxBInteresovanje(dto);
+//        return new ResponseEntity<XMLDto>(new XMLDto(response), HttpStatus.OK);
+//    }
+//
+//    @PostMapping("/jaxBPotrvrda")
+//    public ResponseEntity<XMLDto> getChangedXMLJaxBPotvrda(@RequestBody XMLDto dto) throws Exception{
+//        String response = xmlService.jaxBTestPotvrda(dto);
+//        return new ResponseEntity<XMLDto>(new XMLDto(response), HttpStatus.OK);
+//    }
+//
+//    @PostMapping("/jaxBIzvestaj")
+//    public ResponseEntity<XMLDto> getChangedXMLJaxBIzvestaj(@RequestBody XMLDto dto) throws Exception{
+//        String response = xmlService.jaxBTestIzvestaj(dto);
+//        return new ResponseEntity<XMLDto>(new XMLDto(response), HttpStatus.OK);
+//    }
+//
+//
+//    @PostMapping("/jaxBZahtevZaSertifikat")
+//    public ResponseEntity<XMLDto> getChangedXMLJaxBZahtev(@RequestBody XMLDto dto) throws Exception{
+//        String response = xmlService.jaxBTestZahtevSertifikat(dto);
+//        return new ResponseEntity<XMLDto>(new XMLDto(response), HttpStatus.OK);
+//    }
+
+    @PostMapping("/jaxBDigitalni")
+    public ResponseEntity<XMLDto> getChangedXMLJaxBDigitalni(@RequestBody XMLDto dto) throws Exception{
+        String response = xmlService.jaxBTestZeleni(dto);
         return new ResponseEntity<XMLDto>(new XMLDto(response), HttpStatus.OK);
     }
 }
