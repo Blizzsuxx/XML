@@ -2,8 +2,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
     targetNamespace="http://ftn.uns.ac.rs/interesovanje" xmlns="http://ftn.uns.ac.rs/interesovanje"
     xmlns:ns1="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji">
-    <xs:import namespace="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji" 
-        schemaLocation="potvrdaOVakcinaciji.xsd"/>
     <xs:element name="interesovanje_za_vakcinisanje">
         <xs:complexType>
             <xs:sequence>
@@ -87,5 +85,43 @@
     </xs:complexType>
     <xs:complexType name="TIzbor">
         <xs:attribute name="izabran" type="xs:boolean" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="TZdravstvenaUstanova">
+        <xs:sequence>
+            <xs:element name="naziv">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z][a-z]{5,30}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ulica">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z][a-z]{2,30}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="broj">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{1,3}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="grad">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z][a-z]{2,20}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TPol">
+        <xs:choice>
+            <xs:element fixed="Musko" name="Musko" type="xs:string"/>
+            <xs:element fixed="Zensko" name="Zensko" type="xs:string"/>
+        </xs:choice>
     </xs:complexType>
 </xs:schema>
