@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<digitalniSertifikat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/media/user/games/Projects/XML/demo/src/main/resources/schemas/zeleniSertifikat.xsd">
+    <QRCode>QRCode0</QRCode>
+    <Pacijent>
+        <ime>Aaa</ime>
+        <prezime>Aaa</prezime>
+        <datum>2006-05-04</datum>
+        <pol>
+            <Musko>Musko</Musko>
+        </pol>
+        <jmbg>0000000000000</jmbg>
+    </Pacijent>
+    <datumIzdavanja>2006-05-04</datumIzdavanja>
+    <prvaDoza>
+        <serija>00000000</serija>
+        <datumPrve>2006-05-04</datumPrve>
+        <zdravstvenaUstanova>
+            <naziv>Aaaaaa</naziv>
+            <ulica>Aaa</ulica>
+            <broj>0</broj>
+            <grad>Aaa</grad>
+        </zdravstvenaUstanova>
+    </prvaDoza>
+    <drugaDoza>
+        <serijaDruga>00000000</serijaDruga>
+        <datumDruge>2006-05-04</datumDruge>
+        <zdravstvenaUstanova>
+            <naziv>Aaaaaa</naziv>
+            <ulica>Aaa</ulica>
+            <broj>0</broj>
+            <grad>Aaa</grad>
+        </zdravstvenaUstanova>
+    </drugaDoza>
+    <vreme>01:01:01.001</vreme>
+</digitalniSertifikat>

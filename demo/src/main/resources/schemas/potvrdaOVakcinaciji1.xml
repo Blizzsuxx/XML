@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<potvrdaOVakcinaciji xmlns="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji file:/media/user/games/Projects/XML/demo/src/main/resources/schemas/potvrdaOVakcinaciji.xsd">
+    <Pacijent>
+        <ime>Aaa</ime>
+        <prezime>Aaa</prezime>
+        <datum>2006-05-04</datum>
+        <pol>
+            <Zensko>Zensko</Zensko>
+        </pol>
+        <jmbg>0000000000000</jmbg>
+    </Pacijent>
+    <datumPrva>2006-05-04</datumPrva>
+    <serija>00000000</serija>
+    <datumDruga>2006-05-04</datumDruga>
+    <ustanova>
+        <naziv>Aaaaaa</naziv>
+        <ulica>Aaa</ulica>
+        <broj>0</broj>
+        <grad>Aaa</grad>
+    </ustanova>
+    <vakcina>
+        <Sinopharm>Sinopharm</Sinopharm>
+    </vakcina>
+    <datumPotvrde>2006-05-04</datumPotvrde>
+    <QRCode>QRCode0</QRCode>
+</potvrdaOVakcinaciji>

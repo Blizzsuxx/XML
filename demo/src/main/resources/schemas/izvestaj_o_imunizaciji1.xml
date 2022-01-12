@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imunizacija:izvestaj_o_imunizaciji xmlns:imunizacija="http:/www.ftn.uns.ac.rs/izvestaj_o_imunizaciji"
+ xmlns:ns1="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http:/www.ftn.uns.ac.rs/izvestaj_o_imunizaciji file:/media/user/games/Projects/XML/demo/src/main/resources/schemas/izvestaj_o_imunizaciji.xsd">
+    <imunizacija:izvestaj_se_odnosi_na>
+        <imunizacija:datum_od>2006-05-04</imunizacija:datum_od>
+        <imunizacija:datum_do>2006-05-04</imunizacija:datum_do>
+    </imunizacija:izvestaj_se_odnosi_na>
+    <imunizacija:podaci>
+        <imunizacija:imunizacija>
+            <imunizacija:podneto>-1073741773</imunizacija:podneto>
+        </imunizacija:imunizacija>
+        <imunizacija:zeleni_sertifikat>
+            <imunizacija:podneto>-1073741773</imunizacija:podneto>
+            <imunizacija:primljeno>-1073741773</imunizacija:primljeno>
+        </imunizacija:zeleni_sertifikat>
+    </imunizacija:podaci>
+    <imunizacija:dato_je_vakcina>-1073741773</imunizacija:dato_je_vakcina>
+    <imunizacija:primljene_doze>
+        <imunizacija:doza>
+            <imunizacija:redni_broj_doze>-1073741773</imunizacija:redni_broj_doze>
+            <imunizacija:primljena_kolicina>-1073741773</imunizacija:primljena_kolicina>
+        </imunizacija:doza>
+        <imunizacija:doza>
+            <imunizacija:redni_broj_doze>-1073741773</imunizacija:redni_broj_doze>
+            <imunizacija:primljena_kolicina>-1073741773</imunizacija:primljena_kolicina>
+        </imunizacija:doza>
+    </imunizacija:primljene_doze>
+    <imunizacija:proizvodjaci>
+        <imunizacija:proizvodjac>
+            <imunizacija:Ime>
+                <imunizacija:Pfizer>Pfizer</imunizacija:Pfizer>
+            </imunizacija:Ime>
+            <imunizacija:broj_doza>-1073741773</imunizacija:broj_doza>
+        </imunizacija:proizvodjac>
+        <imunizacija:proizvodjac>
+            <imunizacija:Ime>
+                <imunizacija:Pfizer>Pfizer</imunizacija:Pfizer>
+            </imunizacija:Ime>
+            <imunizacija:broj_doza>-1073741773</imunizacija:broj_doza>
+        </imunizacija:proizvodjac>
+    </imunizacija:proizvodjaci>
+    <imunizacija:datum_izdavanja>2006-05-04</imunizacija:datum_izdavanja>
+    <imunizacija:potpis>potpis0</imunizacija:potpis>
+</imunizacija:izvestaj_o_imunizaciji>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<in:interesovanje_za_vakcinisanje xmlns:ns1="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+ xmlns:in="http://ftn.uns.ac.rs/interesovanje"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://ftn.uns.ac.rs/interesovanje file:/media/user/games/Projects/XML/demo/src/main/resources/schemas/interesovanje.xsd">
+    <in:drzavljanstvo>
+        <in:strani_bez_boravka>strani_bez_boravka0</in:strani_bez_boravka>
+    </in:drzavljanstvo>
+    <in:osoba>
+        <in:jmbg>0000000000000</in:jmbg>
+        <in:ime>ime0</in:ime>
+        <in:prezime>prezime0</in:prezime>
+        <in:e-adresa>/^!@!.!$/</in:e-adresa>
+        <in:mobilni>0600000000</in:mobilni>
+        <in:fiksni>010000000</in:fiksni>
+    </in:osoba>
+    <in:lokacija>lokacija0</in:lokacija>
+    <in:vakcine>
+        <in:izabrane_vakcine izabran="false">
+            <in:vakcina>
+                <in:Sputnik>Sputnik</in:Sputnik>
+            </in:vakcina>
+        </in:izabrane_vakcine>
+        <in:bilo_sta izabran="false"/>
+    </in:vakcine>
+    <in:davalac_krvi izabran="false"/>
+    <in:dan>--12-30</in:dan>
+    <in:potpis>potpis0</in:potpis>
+</in:interesovanje_za_vakcinisanje>
