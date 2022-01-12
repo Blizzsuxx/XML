@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
     targetNamespace="http://ftn.uns.ac.rs/interesovanje" xmlns="http://ftn.uns.ac.rs/interesovanje"
     xmlns:ns1="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji">
-    <xs:import namespace="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+    <xs:import namespace="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji" 
         schemaLocation="potvrdaOVakcinaciji.xsd"/>
     <xs:element name="interesovanje_za_vakcinisanje">
         <xs:complexType>

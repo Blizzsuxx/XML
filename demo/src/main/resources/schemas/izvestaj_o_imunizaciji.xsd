@@ -61,7 +61,7 @@
     </xs:element>
     <xs:complexType name="TProizvodjac">
         <xs:sequence>
-            <xs:element name="Ime" type="TVakcina"/>
+            <xs:element name="Ime" type="imunizacija:TVakcina"/>
             <xs:element name="broj_doza" type="xs:long"/>
         </xs:sequence>
     </xs:complexType>
