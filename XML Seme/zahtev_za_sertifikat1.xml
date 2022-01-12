@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zahtevZaSertifikat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/media/user/games/Projects/XML/XML%20Seme/zahtevZaSertifikat.xsd">
+    <Pacijent>
+        <ime>Aaa</ime>
+        <prezime>Aaa</prezime>
+        <datum>2006-05-04</datum>
+        <pol>
+            <Musko>Musko</Musko>
+        </pol>
+        <jmbg>0000000000000</jmbg>
+        <pasos>0000000000</pasos>
+    </Pacijent>
+    <razlog>Aaaaa</razlog>
+    <mesto>Aaa</mesto>
+    <dan>---01</dan>
+    <mesec>--01</mesec>
+    <godina>0</godina>
+    <potpis>aa</potpis>
+</zahtevZaSertifikat>

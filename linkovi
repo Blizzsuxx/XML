@@ -1,0 +1,12 @@
+http:/ftn.uns.ac.rs/interesovanje/{id}
+
+http:/ftn.uns.ac.rs/izvestaj_o_imunizaciji/{id}
+
+http:/ftn.uns.ac.rs/potvrda_o_vakcinaciji/{id}
+
+http:/ftn.uns.ac.rs/saglasnost/{id}
+
+http:/ftn.uns.ac.rs/zahtev_za_sertifikat/{id}
+
+http:/ftn.uns.ac.rs/zeleni_sertifikat/{id}
+
