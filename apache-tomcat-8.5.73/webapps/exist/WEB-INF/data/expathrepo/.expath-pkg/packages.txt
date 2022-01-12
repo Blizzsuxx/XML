@@ -1,0 +1,6 @@
+shared-0.9.1 http://exist-db.org/apps/shared 0.9.1
+functx-1.0.1 http://www.functx.com 1.0.1
+usermanager-0.16.5 http://exist-db.org/apps/usermanager 0.16.5
+dashboard-1.1.1 http://exist-db.org/apps/dashboard 1.1.1
+eXide-2.4.13 http://exist-db.org/apps/eXide 2.4.13
+monex-1.0.1 http://exist-db.org/apps/monex 1.0.1

@@ -1,0 +1,1 @@
+2022-01-12 16:28:35,555 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/log4j.xml 
