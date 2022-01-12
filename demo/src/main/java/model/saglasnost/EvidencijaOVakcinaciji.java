@@ -1,5 +1,5 @@
 
-package saglasnost;
+package model.saglasnost;
 
 import java.util.ArrayList;
 import java.util.List;
