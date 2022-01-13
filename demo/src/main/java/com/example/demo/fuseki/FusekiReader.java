@@ -23,7 +23,7 @@ public class FusekiReader {
     private FusekiReader(){}
 
     public static ArrayList<String> executeQuery(Map<String,String> params) throws IOException {
-        FusekiAuthenticationUtilities.ConnectionProperties conn = FusekiAuthenticationUtilities.loadProperties();
+        FusekiAuthenticationUtilities conn = new FusekiAuthenticationUtilities();
         String sparqlQueryTemplate = readFile(QUERY_FILEPATH, StandardCharsets.UTF_8);
         System.out.println("Query: " + sparqlQueryTemplate);
         String sparqlQuery = StringSubstitutor.replace(sparqlQueryTemplate,params,"{{","}}");

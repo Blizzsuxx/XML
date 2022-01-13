@@ -281,3 +281,158 @@ OK!
 2022-01-13 06:26:47,073 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 100% 
 2022-01-13 06:26:47,074 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : N/A 
 2022-01-13 06:26:47,075 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 06:36:59,567 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 270,336K total; 4,071,424K max; 97,303K free 
+2022-01-13 06:36:59,568 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 45% (29 out of 64) Cache efficiency : 79% 
+2022-01-13 06:36:59,568 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 100% (255 out of 256) Cache efficiency : 99% 
+2022-01-13 06:36:59,569 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 06:36:59,569 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 100% 
+2022-01-13 06:36:59,570 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : N/A 
+2022-01-13 06:36:59,570 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 06:43:49,710 [global.BrokerPools.ShutdownHook] INFO  (BrokerPools.java [lambda$static$0]:67) - Executing shutdown thread 
+2022-01-13 06:43:49,711 [global.BrokerPools.ShutdownHook] INFO  (BrokerPool.java [shutdown]:1577) - Database is shutting down ... 
+2022-01-13 06:43:50,463 [global.BrokerPools.ShutdownHook] WARN  (DOMFile.java [close]:310) - The file doesn't own a write lock 
+2022-01-13 06:43:50,465 [global.BrokerPools.ShutdownHook] INFO  (Journal.java [shutdown]:660) - Shutting down Journal with checkpoint... 
+2022-01-13 06:43:50,465 [global.BrokerPools.ShutdownHook] INFO  (FileLock.java [release]:188) - Deleting lock file: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/journal.lck 
+2022-01-13 06:43:50,466 [global.BrokerPools.ShutdownHook] INFO  (FileLock.java [release]:188) - Deleting lock file: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/dbx_dir.lck 
+2022-01-13 06:43:50,468 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-exec-6 
+2022-01-13 06:43:50,469 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-exec-5 
+2022-01-13 06:43:50,469 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-AsyncTimeout 
+2022-01-13 06:43:50,469 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-exec-8 
+2022-01-13 06:43:50,469 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-exec-10 
+2022-01-13 06:43:50,470 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: main 
+2022-01-13 06:43:50,470 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Signal Dispatcher 
+2022-01-13 06:43:50,470 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: NioBlockingSelector.BlockPoller-0 
+2022-01-13 06:43:50,470 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: SIGHUP handler 
+2022-01-13 06:43:50,470 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: global.BrokerPools.ShutdownHook 
+2022-01-13 06:43:50,471 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: AsyncFileHandlerWriter-1747585824 
+2022-01-13 06:43:50,471 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-exec-7 
+2022-01-13 06:43:50,471 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Catalina-startStop-2 
+2022-01-13 06:43:50,471 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Finalizer 
+2022-01-13 06:43:50,471 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-exec-9 
+2022-01-13 06:43:50,472 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-Acceptor-0 
+2022-01-13 06:43:50,472 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-exec-4 
+2022-01-13 06:43:50,472 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-exec-3 
+2022-01-13 06:43:50,472 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Reference Handler 
+2022-01-13 06:43:50,473 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-exec-1 
+2022-01-13 06:43:50,473 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: db.exist.shutdown-status-reporter 
+2022-01-13 06:43:50,473 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-exec-2 
+2022-01-13 06:43:50,473 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: SIGTERM handler 
+2022-01-13 06:43:50,473 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-ClientPoller-1 
+2022-01-13 06:43:50,474 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: http-nio-8081-ClientPoller-0 
+2022-01-13 06:43:50,474 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: ForkJoinPool.commonPool-worker-9 
+2022-01-13 06:43:50,474 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Notification Thread 
+2022-01-13 06:43:50,474 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Thread-3 
+2022-01-13 06:43:50,475 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Common-Cleaner 
+2022-01-13 06:43:50,475 [global.BrokerPools.ShutdownHook] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: localhost-startStop-2 
+2022-01-13 06:43:50,475 [global.BrokerPools.ShutdownHook] INFO  (BrokerPool.java [shutdown]:1693) - shutdown complete ! 
+2022-01-13 10:22:05,632 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:115) - EXistServlet: exist.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF 
+2022-01-13 10:22:05,667 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:118) - Reading configuration from /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/conf.xml 
+2022-01-13 10:22:05,673 [localhost-startStop-1] INFO  (Configuration.java [<init>]:177) - Reading configuration from file /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/conf.xml 
+2022-01-13 10:22:05,720 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.security.BouncyCastleJceProviderStartupTrigger 
+2022-01-13 10:22:05,721 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.protocolhandler.URLStreamHandlerStartupTrigger 
+2022-01-13 10:22:05,721 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.extensions.exquery.restxq.impl.RestXqStartupTrigger 
+2022-01-13 10:22:05,724 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.repo.AutoDeploymentTrigger 
+2022-01-13 10:22:06,086 [localhost-startStop-1] INFO  (Configuration.java [configureValidation]:1518) - Add catalog uri file:///media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist//WEB-INF/catalog.xml 
+2022-01-13 10:22:06,087 [localhost-startStop-1] INFO  (GrammarPool.java [<init>]:54) - Initializing GrammarPool. 
+2022-01-13 10:22:06,088 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:138) - Configuring eXist instance 
+2022-01-13 10:22:06,098 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:400) - database instance 'exist' will wait  120,000 ms during shutdown 
+2022-01-13 10:22:06,099 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:403) - database instance 'exist' is enabled for recovery : true 
+2022-01-13 10:22:06,099 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:408) - database instance 'exist' will have between 1 and 20 brokers 
+2022-01-13 10:22:06,099 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:412) - database instance 'exist' will be synchronized every 120,000 ms 
+2022-01-13 10:22:06,134 [localhost-startStop-1] INFO  (DefaultCacheManager.java [<init>]:155) - Cache settings: 262,144k; totalPages: 65,536; maxCacheSize: 58,982; cacheShrinkThreshold: 10,000 
+2022-01-13 10:22:06,209 [localhost-startStop-1] INFO  (XQueryPool.java [configure]:110) - QueryPool: size = 128; maxQueryStackSize = 64; timeout = 120,000;  
+2022-01-13 10:22:06,215 [db.exist.prepare-quartz-scheduler] INFO  (QuartzSchedulerImpl.java [getQuartzProperties]:134) - Successfully loaded quartz.properties 
+2022-01-13 10:22:06,684 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.ngram.NGramIndex as ngram-index 
+2022-01-13 10:22:06,848 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.lucene.LuceneIndex as lucene-index 
+2022-01-13 10:22:06,850 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.sort.SortIndex as sort-index 
+2022-01-13 10:22:06,961 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.range.RangeIndex as range-index 
+2022-01-13 10:22:06,976 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.storage.structural.NativeStructuralIndex as structural-index 
+2022-01-13 10:22:06,979 [localhost-startStop-1] ERROR (PluginsManagerImpl.java [addPlugin]:239) - java.lang.ClassNotFoundException: org.exist.storage.md.MDStorageManager 
+2022-01-13 10:22:06,980 [localhost-startStop-1] INFO  (SyncTask.java [configure]:73) - Using DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data. Minimal disk space required for database to continue operations: 128mb 
+2022-01-13 10:22:06,986 [localhost-startStop-1] INFO  (SyncTask.java [configure]:76) - Usable space on partition containing DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data: 191973mb 
+2022-01-13 10:22:07,347 [localhost-startStop-1] INFO  (BlobStoreImplService.java [startSystem]:71) - Opened de-duplicating Blob Store v1. metadata=blob.dbx, store=blob/ 
+2022-01-13 10:22:07,455 [localhost-startStop-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 135,958K free 
+2022-01-13 10:22:07,475 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 10:22:07,476 [localhost-startStop-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 5% (13 out of 256) Cache efficiency : 99% 
+2022-01-13 10:22:07,476 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 8% (5 out of 64) Cache efficiency : 99% 
+2022-01-13 10:22:07,477 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 6% (4 out of 64) Cache efficiency : 96% 
+2022-01-13 10:22:07,478 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:22:07,479 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:22:07,648 [localhost-startStop-1] INFO  (BouncyCastleJceProviderStartupTrigger.java [execute]:47) - Registered JCE Security Provider: org.bouncycastle.jce.provider.BouncyCastleProvider 
+2022-01-13 10:22:07,651 [localhost-startStop-1] WARN  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:71) - The JVM already has a URLStreamHandlerFactory registered, skipping... 
+2022-01-13 10:22:07,651 [localhost-startStop-1] INFO  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:85) - Setting java.protocol.handler.pkgs to org.apache.catalina.webresources|org.exist.protocolhandler.protocols 
+2022-01-13 10:22:07,852 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:151) - Registering XMLDB driver 
+2022-01-13 10:22:07,858 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doGeneralExistServletConfig]:196) - Using default user guest for all unauthorized requests. 
+2022-01-13 10:22:07,870 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:149) - Looking for a valid Parser...
+Checking for Xerces, found version Xerces-J 2.11.0
+OK!
+ 
+2022-01-13 10:22:07,887 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:171) - Looking for a valid Transformer...
+Checking for Saxon, found version 9.6.0.7
+OK!
+ 
+2022-01-13 10:22:07,887 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:183) - Looking for a valid Resolver...
+Checking for Resolver, found version XmlResolver 1.2
+OK!
+ 
+2022-01-13 10:22:07,888 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:189) - Using parser org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser 
+2022-01-13 10:22:07,903 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:190) - Using transformer org.apache.xalan.transformer.TransformerIdentityImpl 
+2022-01-13 10:22:18,594 [http-nio-8081-exec-9] INFO  (Descriptor.java [<init>]:103) - Reading Descriptor from file /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/descriptor.xml 
+2022-01-13 10:22:19,917 [http-nio-8081-exec-2] INFO  (MimeTable.java [load]:246) - Loading mime table from file /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/mime-types.xml 
+2022-01-13 10:22:19,958 [http-nio-8081-exec-2] INFO  (TemporaryFileManager.java [<init>]:109) - Temporary folder is: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp/exist-db-temp-file-manager-11108287421932894365 
+2022-01-13 10:24:09,489 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 116,768K free 
+2022-01-13 10:24:09,490 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 10:24:09,491 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 10:24:09,492 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 10:24:09,493 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 10:24:09,494 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:24:09,495 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:34:21,988 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 125,848K free 
+2022-01-13 10:34:21,989 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 10:34:21,989 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 10:34:21,989 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 10:34:21,990 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 10:34:21,990 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:34:21,990 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:44:34,490 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 111,931K free 
+2022-01-13 10:44:34,491 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 10:44:34,493 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 10:44:34,494 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 10:44:34,494 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 10:44:34,495 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:44:34,496 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:54:46,987 [db.exist.scheduler.quartz-worker-3] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 99,190K free 
+2022-01-13 10:54:46,988 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 10:54:46,988 [db.exist.scheduler.quartz-worker-3] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 10:54:46,988 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 10:54:46,989 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 10:54:46,989 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:54:46,989 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:04:59,489 [db.exist.scheduler.quartz-worker-3] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 87,467K free 
+2022-01-13 11:04:59,491 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 11:04:59,492 [db.exist.scheduler.quartz-worker-3] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 11:04:59,492 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 11:04:59,493 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 11:04:59,494 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:04:59,494 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:15:11,989 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 75,060K free 
+2022-01-13 11:15:11,990 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 11:15:11,991 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 11:15:11,992 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 11:15:11,993 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 11:15:11,994 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:15:11,994 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:25:24,490 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 62,096K free 
+2022-01-13 11:25:24,491 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 11:25:24,492 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 11:25:24,493 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 11:25:24,493 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 11:25:24,493 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:25:24,494 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:35:36,989 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 50,067K free 
+2022-01-13 11:35:36,990 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 11:35:36,991 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 11:35:36,992 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 11:35:36,993 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 11:35:36,993 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:35:36,993 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 

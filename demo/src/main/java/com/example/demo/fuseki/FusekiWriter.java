@@ -17,7 +17,7 @@ public class FusekiWriter {
 
     public static void saveRDF() throws IOException {
         System.out.println("[INFO] Loading triples from an RDF/XML to a model...");
-        FusekiAuthenticationUtilities.ConnectionProperties conn = FusekiAuthenticationUtilities.loadProperties();
+        FusekiAuthenticationUtilities conn = new FusekiAuthenticationUtilities();
 
         Model model = ModelFactory.createDefaultModel();
         model.read(RDF_FILEPATH);

@@ -61,3 +61,73 @@
 2022-01-13 06:26:47,073 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 100% 
 2022-01-13 06:26:47,074 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : N/A 
 2022-01-13 06:26:47,075 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 06:36:59,567 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 270,336K total; 4,071,424K max; 97,303K free 
+2022-01-13 06:36:59,568 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 45% (29 out of 64) Cache efficiency : 79% 
+2022-01-13 06:36:59,568 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 100% (255 out of 256) Cache efficiency : 99% 
+2022-01-13 06:36:59,569 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 06:36:59,569 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 100% 
+2022-01-13 06:36:59,570 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : N/A 
+2022-01-13 06:36:59,570 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:22:07,455 [localhost-startStop-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 135,958K free 
+2022-01-13 10:22:07,475 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 10:22:07,476 [localhost-startStop-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 5% (13 out of 256) Cache efficiency : 99% 
+2022-01-13 10:22:07,476 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 8% (5 out of 64) Cache efficiency : 99% 
+2022-01-13 10:22:07,477 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 6% (4 out of 64) Cache efficiency : 96% 
+2022-01-13 10:22:07,478 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:22:07,479 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:24:09,489 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 116,768K free 
+2022-01-13 10:24:09,490 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 10:24:09,491 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 10:24:09,492 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 10:24:09,493 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 10:24:09,494 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:24:09,495 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:34:21,988 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 125,848K free 
+2022-01-13 10:34:21,989 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 10:34:21,989 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 10:34:21,989 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 10:34:21,990 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 10:34:21,990 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:34:21,990 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:44:34,490 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 111,931K free 
+2022-01-13 10:44:34,491 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 10:44:34,493 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 10:44:34,494 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 10:44:34,494 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 10:44:34,495 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:44:34,496 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:54:46,987 [db.exist.scheduler.quartz-worker-3] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 99,190K free 
+2022-01-13 10:54:46,988 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 10:54:46,988 [db.exist.scheduler.quartz-worker-3] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 10:54:46,988 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 10:54:46,989 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 10:54:46,989 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 10:54:46,989 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:04:59,489 [db.exist.scheduler.quartz-worker-3] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 87,467K free 
+2022-01-13 11:04:59,491 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 11:04:59,492 [db.exist.scheduler.quartz-worker-3] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 11:04:59,492 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 11:04:59,493 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 11:04:59,494 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:04:59,494 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:15:11,989 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 75,060K free 
+2022-01-13 11:15:11,990 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 11:15:11,991 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 11:15:11,992 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 11:15:11,993 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 11:15:11,994 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:15:11,994 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:25:24,490 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 62,096K free 
+2022-01-13 11:25:24,491 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 11:25:24,492 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 11:25:24,493 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 11:25:24,493 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 11:25:24,493 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:25:24,494 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:35:36,989 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 50,067K free 
+2022-01-13 11:35:36,990 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 11:35:36,991 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 11:35:36,992 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 11:35:36,993 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 11:35:36,993 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 11:35:36,993 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 

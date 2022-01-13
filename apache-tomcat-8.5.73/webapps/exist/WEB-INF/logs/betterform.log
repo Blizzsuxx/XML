@@ -1,3 +1,4 @@
 2022-01-13 05:22:54,677 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/log4j.xml 
 2022-01-13 05:24:22,143 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/log4j.xml 
 2022-01-13 05:56:07,942 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/log4j.xml 
+2022-01-13 10:22:05,032 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/log4j.xml 
