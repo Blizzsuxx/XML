@@ -4,13 +4,8 @@ import javax.xml.bind.JAXBContext;
 
 import com.example.demo.dto.XMLDto;
 import com.example.demo.jaxb.JaxB;
-import com.example.demo.model.interesovanje.InteresovanjeZaVakcinisanje;
-
-import com.example.demo.model.izvestajOImunizaciji.IzvestajOImunizaciji;
-import com.example.demo.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
-import com.example.demo.model.saglasnost.SaglasnostZaSprovodjenjeImunizacije;
-import com.example.demo.model.zahtevZaSertifikat.ZahtevZaSertifikat;
 import com.example.demo.model.zeleniSertifikat.DigitalniSertifikat;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -81,4 +76,13 @@ public class XMLService {
 
     return jaxB.marshall(DigitalniSertifikat.class, sertifikat);
     }
+
+    // public ArrayList<String> searchByMetadata(String naziv, String godina) throws IOException {
+    //     Map<String, String> params = new HashMap<>();
+    //     params.put("naziv", naziv);
+    //     params.put("godina", godina);
+
+    //     ArrayList<String> result = FusekiReader.executeQuery(params);
+    //     return result;
+    // }
 }

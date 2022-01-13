@@ -59,4 +59,15 @@ public class XMLController {
         String response = xmlService.jaxBTestZeleni(dto);
         return new ResponseEntity<XMLDto>(new XMLDto(response), HttpStatus.OK);
     }
+
+    // @GetMapping("fusekiSearch/{naziv}/{godina}")
+    // public ResponseEntity<String> searchFromRDF(@PathVariable("naziv") String naziv, @PathVariable("godina") String godina) throws IOException {
+    //     ArrayList<String> result = service.searchByMetadata(naziv, godina);
+    //     String output = "";
+    //     for (String r : result) {
+    //         output += "\n" + r;
+    //     }
+    //     System.out.println("OUTPUT: " + output);
+    //     return new ResponseEntity<>(output, HttpStatus.OK);
+    // }
 }

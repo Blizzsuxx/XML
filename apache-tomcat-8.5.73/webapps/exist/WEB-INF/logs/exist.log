@@ -1,85 +1,283 @@
-2022-01-12 23:52:33,875 [localhost-startStop-2] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:115) - EXistServlet: exist.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF 
-2022-01-12 23:52:33,875 [localhost-startStop-2] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:118) - Reading configuration from /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/conf.xml 
-2022-01-12 23:52:33,879 [localhost-startStop-2] INFO  (Configuration.java [<init>]:177) - Reading configuration from file /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/conf.xml 
-2022-01-12 23:52:33,912 [localhost-startStop-2] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.security.BouncyCastleJceProviderStartupTrigger 
-2022-01-12 23:52:33,912 [localhost-startStop-2] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.protocolhandler.URLStreamHandlerStartupTrigger 
-2022-01-12 23:52:33,913 [localhost-startStop-2] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.extensions.exquery.restxq.impl.RestXqStartupTrigger 
-2022-01-12 23:52:33,914 [localhost-startStop-2] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.repo.AutoDeploymentTrigger 
-2022-01-12 23:52:34,206 [localhost-startStop-2] INFO  (Configuration.java [configureValidation]:1518) - Add catalog uri file:///media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist//WEB-INF/catalog.xml 
-2022-01-12 23:52:34,207 [localhost-startStop-2] INFO  (GrammarPool.java [<init>]:54) - Initializing GrammarPool. 
-2022-01-12 23:52:34,208 [localhost-startStop-2] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:138) - Configuring eXist instance 
-2022-01-12 23:52:34,217 [localhost-startStop-2] INFO  (BrokerPool.java [<init>]:400) - database instance 'exist' will wait  120,000 ms during shutdown 
-2022-01-12 23:52:34,217 [localhost-startStop-2] INFO  (BrokerPool.java [<init>]:403) - database instance 'exist' is enabled for recovery : true 
-2022-01-12 23:52:34,217 [localhost-startStop-2] INFO  (BrokerPool.java [<init>]:408) - database instance 'exist' will have between 1 and 20 brokers 
-2022-01-12 23:52:34,217 [localhost-startStop-2] INFO  (BrokerPool.java [<init>]:412) - database instance 'exist' will be synchronized every 120,000 ms 
-2022-01-12 23:52:34,244 [localhost-startStop-2] INFO  (DefaultCacheManager.java [<init>]:155) - Cache settings: 262,144k; totalPages: 65,536; maxCacheSize: 58,982; cacheShrinkThreshold: 10,000 
-2022-01-12 23:52:34,303 [localhost-startStop-2] INFO  (XQueryPool.java [configure]:110) - QueryPool: size = 128; maxQueryStackSize = 64; timeout = 120,000;  
-2022-01-12 23:52:34,310 [db.exist.prepare-quartz-scheduler] INFO  (QuartzSchedulerImpl.java [getQuartzProperties]:134) - Successfully loaded quartz.properties 
-2022-01-12 23:52:34,566 [localhost-startStop-2] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.ngram.NGramIndex as ngram-index 
-2022-01-12 23:52:34,697 [localhost-startStop-2] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.lucene.LuceneIndex as lucene-index 
-2022-01-12 23:52:34,698 [localhost-startStop-2] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.sort.SortIndex as sort-index 
-2022-01-12 23:52:34,700 [localhost-startStop-2] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.range.RangeIndex as range-index 
-2022-01-12 23:52:34,700 [localhost-startStop-2] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.storage.structural.NativeStructuralIndex as structural-index 
-2022-01-12 23:52:34,703 [localhost-startStop-2] ERROR (PluginsManagerImpl.java [addPlugin]:239) - java.lang.ClassNotFoundException: org.exist.storage.md.MDStorageManager 
-2022-01-12 23:52:34,703 [localhost-startStop-2] INFO  (SyncTask.java [configure]:73) - Using DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data. Minimal disk space required for database to continue operations: 128mb 
-2022-01-12 23:52:34,705 [localhost-startStop-2] INFO  (SyncTask.java [configure]:76) - Usable space on partition containing DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data: 192297mb 
-2022-01-12 23:52:34,836 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
-2022-01-12 23:52:34,870 [localhost-startStop-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 286,720K total; 4,071,424K max; 203,700K free 
-2022-01-12 23:52:34,871 [localhost-startStop-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : 100% 
-2022-01-12 23:52:34,871 [localhost-startStop-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 0% (1 out of 256) Cache efficiency : 100% 
-2022-01-12 23:52:34,871 [localhost-startStop-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : 100% 
-2022-01-12 23:52:34,871 [localhost-startStop-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 2% (1 out of 64) Cache efficiency : 100% 
-2022-01-12 23:52:34,871 [localhost-startStop-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : N/A 
-2022-01-12 23:52:34,872 [localhost-startStop-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
-2022-01-12 23:52:34,898 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/admin.xml 
-2022-01-12 23:52:34,908 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
-2022-01-12 23:52:34,910 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
-2022-01-12 23:52:35,166 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/admin.xml 
-2022-01-12 23:52:35,167 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document admin.xml (2) ... 
-2022-01-12 23:52:35,172 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/guest.xml 
-2022-01-12 23:52:35,181 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
-2022-01-12 23:52:35,182 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
-2022-01-12 23:52:35,188 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/guest.xml 
-2022-01-12 23:52:35,190 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document guest.xml (3) ... 
-2022-01-12 23:52:35,198 [localhost-startStop-2] INFO  (BlobStoreImplService.java [startSystem]:71) - Opened de-duplicating Blob Store v1. metadata=blob.dbx, store=blob/ 
-2022-01-12 23:52:35,200 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/plugins/config.xml 
-2022-01-12 23:52:35,210 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/scheduler/scheduler.xml 
-2022-01-12 23:52:35,409 [localhost-startStop-2] INFO  (BouncyCastleJceProviderStartupTrigger.java [execute]:47) - Registered JCE Security Provider: org.bouncycastle.jce.provider.BouncyCastleProvider 
-2022-01-12 23:52:35,411 [localhost-startStop-2] WARN  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:71) - The JVM already has a URLStreamHandlerFactory registered, skipping... 
-2022-01-12 23:52:35,412 [localhost-startStop-2] INFO  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:88) - System property java.protocol.handler.pkgs has not been updated. 
-2022-01-12 23:53:11,886 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/groups/eXide.xml 
-2022-01-12 23:53:11,898 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
-2022-01-12 23:53:11,899 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
-2022-01-12 23:53:11,902 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/groups/eXide.xml 
-2022-01-12 23:53:11,904 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document eXide.xml (568) ... 
-2022-01-12 23:53:11,907 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/eXide.xml 
-2022-01-12 23:53:11,913 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
-2022-01-12 23:53:11,915 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
-2022-01-12 23:53:11,918 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/eXide.xml 
-2022-01-12 23:53:11,920 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document eXide.xml (569) ... 
-2022-01-12 23:53:20,204 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/groups/monex.xml 
-2022-01-12 23:53:20,207 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
-2022-01-12 23:53:20,208 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
-2022-01-12 23:53:20,211 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/groups/monex.xml 
-2022-01-12 23:53:20,212 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document monex.xml (772) ... 
-2022-01-12 23:53:20,215 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/monex.xml 
-2022-01-12 23:53:20,218 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
-2022-01-12 23:53:20,219 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
-2022-01-12 23:53:20,221 [localhost-startStop-2] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/monex.xml 
-2022-01-12 23:53:20,223 [localhost-startStop-2] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document monex.xml (773) ... 
-2022-01-12 23:53:24,055 [localhost-startStop-2] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:151) - Registering XMLDB driver 
-2022-01-12 23:53:24,058 [localhost-startStop-2] INFO  (AbstractExistHttpServlet.java [doGeneralExistServletConfig]:196) - Using default user guest for all unauthorized requests. 
-2022-01-12 23:53:24,064 [localhost-startStop-2] INFO  (XmlLibraryChecker.java [check]:149) - Looking for a valid Parser...
+2022-01-13 05:22:55,192 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:115) - EXistServlet: exist.home=/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF 
+2022-01-13 05:22:55,194 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:118) - Reading configuration from /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/conf.xml 
+2022-01-13 05:22:55,198 [localhost-startStop-1] INFO  (Configuration.java [<init>]:177) - Reading configuration from file /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/conf.xml 
+2022-01-13 05:22:55,238 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.security.BouncyCastleJceProviderStartupTrigger 
+2022-01-13 05:22:55,240 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.protocolhandler.URLStreamHandlerStartupTrigger 
+2022-01-13 05:22:55,240 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.extensions.exquery.restxq.impl.RestXqStartupTrigger 
+2022-01-13 05:22:55,243 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.repo.AutoDeploymentTrigger 
+2022-01-13 05:22:55,583 [localhost-startStop-1] INFO  (Configuration.java [configureValidation]:1518) - Add catalog uri file:///media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist//WEB-INF/catalog.xml 
+2022-01-13 05:22:55,584 [localhost-startStop-1] INFO  (GrammarPool.java [<init>]:54) - Initializing GrammarPool. 
+2022-01-13 05:22:55,585 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:138) - Configuring eXist instance 
+2022-01-13 05:22:55,595 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:400) - database instance 'exist' will wait  120,000 ms during shutdown 
+2022-01-13 05:22:55,595 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:403) - database instance 'exist' is enabled for recovery : true 
+2022-01-13 05:22:55,595 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:408) - database instance 'exist' will have between 1 and 20 brokers 
+2022-01-13 05:22:55,596 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:412) - database instance 'exist' will be synchronized every 120,000 ms 
+2022-01-13 05:22:55,622 [localhost-startStop-1] INFO  (DefaultCacheManager.java [<init>]:155) - Cache settings: 262,144k; totalPages: 65,536; maxCacheSize: 58,982; cacheShrinkThreshold: 10,000 
+2022-01-13 05:22:55,699 [localhost-startStop-1] INFO  (XQueryPool.java [configure]:110) - QueryPool: size = 128; maxQueryStackSize = 64; timeout = 120,000;  
+2022-01-13 05:22:55,705 [db.exist.prepare-quartz-scheduler] INFO  (QuartzSchedulerImpl.java [getQuartzProperties]:134) - Successfully loaded quartz.properties 
+2022-01-13 05:22:55,982 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.ngram.NGramIndex as ngram-index 
+2022-01-13 05:22:56,117 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.lucene.LuceneIndex as lucene-index 
+2022-01-13 05:22:56,119 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.sort.SortIndex as sort-index 
+2022-01-13 05:22:56,121 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.range.RangeIndex as range-index 
+2022-01-13 05:22:56,122 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.storage.structural.NativeStructuralIndex as structural-index 
+2022-01-13 05:22:56,125 [localhost-startStop-1] ERROR (PluginsManagerImpl.java [addPlugin]:239) - java.lang.ClassNotFoundException: org.exist.storage.md.MDStorageManager 
+2022-01-13 05:22:56,126 [localhost-startStop-1] INFO  (SyncTask.java [configure]:73) - Using DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data. Minimal disk space required for database to continue operations: 128mb 
+2022-01-13 05:22:56,128 [localhost-startStop-1] INFO  (SyncTask.java [configure]:76) - Usable space on partition containing DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data: 192440mb 
+2022-01-13 05:22:56,255 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
+2022-01-13 05:22:56,291 [localhost-startStop-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 237,568K total; 4,071,424K max; 67,210K free 
+2022-01-13 05:22:56,292 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : 100% 
+2022-01-13 05:22:56,292 [localhost-startStop-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 0% (1 out of 256) Cache efficiency : 100% 
+2022-01-13 05:22:56,292 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : 100% 
+2022-01-13 05:22:56,293 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 2% (1 out of 64) Cache efficiency : 100% 
+2022-01-13 05:22:56,293 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : N/A 
+2022-01-13 05:22:56,293 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:22:56,318 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/admin.xml 
+2022-01-13 05:22:56,328 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
+2022-01-13 05:22:56,329 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
+2022-01-13 05:22:56,553 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/admin.xml 
+2022-01-13 05:22:56,557 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document admin.xml (2) ... 
+2022-01-13 05:22:56,568 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/guest.xml 
+2022-01-13 05:22:56,575 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
+2022-01-13 05:22:56,576 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
+2022-01-13 05:22:56,580 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/guest.xml 
+2022-01-13 05:22:56,582 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document guest.xml (3) ... 
+2022-01-13 05:22:56,589 [localhost-startStop-1] INFO  (BlobStoreImplService.java [startSystem]:71) - Opened de-duplicating Blob Store v1. metadata=blob.dbx, store=blob/ 
+2022-01-13 05:22:56,591 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/plugins/config.xml 
+2022-01-13 05:22:56,600 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/scheduler/scheduler.xml 
+2022-01-13 05:22:56,833 [localhost-startStop-1] INFO  (BouncyCastleJceProviderStartupTrigger.java [execute]:47) - Registered JCE Security Provider: org.bouncycastle.jce.provider.BouncyCastleProvider 
+2022-01-13 05:22:56,835 [localhost-startStop-1] WARN  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:71) - The JVM already has a URLStreamHandlerFactory registered, skipping... 
+2022-01-13 05:22:56,835 [localhost-startStop-1] INFO  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:85) - Setting java.protocol.handler.pkgs to org.apache.catalina.webresources|org.exist.protocolhandler.protocols 
+2022-01-13 05:23:26,767 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/groups/eXide.xml 
+2022-01-13 05:23:26,778 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
+2022-01-13 05:23:26,779 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
+2022-01-13 05:23:26,782 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/groups/eXide.xml 
+2022-01-13 05:23:26,784 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document eXide.xml (568) ... 
+2022-01-13 05:23:26,787 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/eXide.xml 
+2022-01-13 05:23:26,792 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
+2022-01-13 05:23:26,793 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
+2022-01-13 05:23:26,796 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/eXide.xml 
+2022-01-13 05:23:26,798 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document eXide.xml (569) ... 
+2022-01-13 05:23:35,335 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/groups/monex.xml 
+2022-01-13 05:23:35,339 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
+2022-01-13 05:23:35,340 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
+2022-01-13 05:23:35,343 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/groups/monex.xml 
+2022-01-13 05:23:35,345 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document monex.xml (772) ... 
+2022-01-13 05:23:35,348 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/monex.xml 
+2022-01-13 05:23:35,352 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/config.xml 
+2022-01-13 05:23:35,353 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document config.xml (1) ... 
+2022-01-13 05:23:35,356 [localhost-startStop-1] INFO  (Configurator.java [save]:1298) - Storing configuration /db/system/security/exist/accounts/monex.xml 
+2022-01-13 05:23:35,358 [localhost-startStop-1] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document monex.xml (773) ... 
+2022-01-13 05:23:41,241 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:151) - Registering XMLDB driver 
+2022-01-13 05:23:41,246 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doGeneralExistServletConfig]:196) - Using default user guest for all unauthorized requests. 
+2022-01-13 05:23:41,255 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:149) - Looking for a valid Parser...
 Checking for Xerces, found version Xerces-J 2.11.0
 OK!
  
-2022-01-12 23:53:24,073 [localhost-startStop-2] INFO  (XmlLibraryChecker.java [check]:171) - Looking for a valid Transformer...
+2022-01-13 05:23:41,269 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:171) - Looking for a valid Transformer...
 Checking for Saxon, found version 9.6.0.7
 OK!
  
-2022-01-12 23:53:24,074 [localhost-startStop-2] INFO  (XmlLibraryChecker.java [check]:183) - Looking for a valid Resolver...
+2022-01-13 05:23:41,270 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:183) - Looking for a valid Resolver...
 Checking for Resolver, found version XmlResolver 1.2
 OK!
  
-2022-01-12 23:53:24,074 [localhost-startStop-2] INFO  (XmlLibraryChecker.java [check]:189) - Using parser org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser 
-2022-01-12 23:53:24,076 [localhost-startStop-2] INFO  (XmlLibraryChecker.java [check]:190) - Using transformer org.apache.xalan.transformer.TransformerIdentityImpl 
+2022-01-13 05:23:41,271 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:189) - Using parser org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser 
+2022-01-13 05:23:41,273 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:190) - Using transformer org.apache.xalan.transformer.TransformerIdentityImpl 
+2022-01-13 05:23:43,537 [localhost-startStop-1] INFO  (BrokerPool.java [shutdown]:1577) - Database is shutting down ... 
+2022-01-13 05:23:43,922 [localhost-startStop-1] WARN  (DOMFile.java [close]:310) - The file doesn't own a write lock 
+2022-01-13 05:23:43,923 [localhost-startStop-1] INFO  (Journal.java [shutdown]:660) - Shutting down Journal with checkpoint... 
+2022-01-13 05:23:43,924 [localhost-startStop-1] INFO  (FileLock.java [release]:188) - Deleting lock file: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/journal.lck 
+2022-01-13 05:23:43,924 [localhost-startStop-1] INFO  (FileLock.java [release]:188) - Deleting lock file: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/dbx_dir.lck 
+2022-01-13 05:23:43,925 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: ForkJoinPool.commonPool-worker-3 
+2022-01-13 05:23:43,925 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Signal Dispatcher 
+2022-01-13 05:23:43,926 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Notification Thread 
+2022-01-13 05:23:43,926 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: db.exist.shutdown-status-reporter 
+2022-01-13 05:23:43,926 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Catalina-startStop-1 
+2022-01-13 05:23:43,926 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: AsyncFileHandlerWriter-1747585824 
+2022-01-13 05:23:43,926 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Finalizer 
+2022-01-13 05:23:43,926 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Common-Cleaner 
+2022-01-13 05:23:43,926 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: main 
+2022-01-13 05:23:43,927 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: Reference Handler 
+2022-01-13 05:23:43,927 [localhost-startStop-1] WARN  (BrokerPool.java [clearThreadLocals]:1740) - Could not clear ThreadLocals for thread: localhost-startStop-1 
+2022-01-13 05:23:43,927 [localhost-startStop-1] INFO  (BrokerPool.java [shutdown]:1693) - shutdown complete ! 
+2022-01-13 05:24:22,707 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:115) - EXistServlet: exist.home=/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF 
+2022-01-13 05:24:22,709 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:118) - Reading configuration from /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/conf.xml 
+2022-01-13 05:24:22,715 [localhost-startStop-1] INFO  (Configuration.java [<init>]:177) - Reading configuration from file /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/conf.xml 
+2022-01-13 05:24:22,757 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.security.BouncyCastleJceProviderStartupTrigger 
+2022-01-13 05:24:22,758 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.protocolhandler.URLStreamHandlerStartupTrigger 
+2022-01-13 05:24:22,759 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.extensions.exquery.restxq.impl.RestXqStartupTrigger 
+2022-01-13 05:24:22,761 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.repo.AutoDeploymentTrigger 
+2022-01-13 05:24:23,089 [localhost-startStop-1] INFO  (Configuration.java [configureValidation]:1518) - Add catalog uri file:///media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist//WEB-INF/catalog.xml 
+2022-01-13 05:24:23,090 [localhost-startStop-1] INFO  (GrammarPool.java [<init>]:54) - Initializing GrammarPool. 
+2022-01-13 05:24:23,091 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:138) - Configuring eXist instance 
+2022-01-13 05:24:23,101 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:400) - database instance 'exist' will wait  120,000 ms during shutdown 
+2022-01-13 05:24:23,102 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:403) - database instance 'exist' is enabled for recovery : true 
+2022-01-13 05:24:23,102 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:408) - database instance 'exist' will have between 1 and 20 brokers 
+2022-01-13 05:24:23,102 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:412) - database instance 'exist' will be synchronized every 120,000 ms 
+2022-01-13 05:24:23,133 [localhost-startStop-1] INFO  (DefaultCacheManager.java [<init>]:155) - Cache settings: 262,144k; totalPages: 65,536; maxCacheSize: 58,982; cacheShrinkThreshold: 10,000 
+2022-01-13 05:24:23,209 [localhost-startStop-1] INFO  (XQueryPool.java [configure]:110) - QueryPool: size = 128; maxQueryStackSize = 64; timeout = 120,000;  
+2022-01-13 05:24:23,215 [db.exist.prepare-quartz-scheduler] INFO  (QuartzSchedulerImpl.java [getQuartzProperties]:134) - Successfully loaded quartz.properties 
+2022-01-13 05:24:23,501 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.ngram.NGramIndex as ngram-index 
+2022-01-13 05:24:23,641 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.lucene.LuceneIndex as lucene-index 
+2022-01-13 05:24:23,643 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.sort.SortIndex as sort-index 
+2022-01-13 05:24:23,707 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.range.RangeIndex as range-index 
+2022-01-13 05:24:23,708 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.storage.structural.NativeStructuralIndex as structural-index 
+2022-01-13 05:24:23,710 [localhost-startStop-1] ERROR (PluginsManagerImpl.java [addPlugin]:239) - java.lang.ClassNotFoundException: org.exist.storage.md.MDStorageManager 
+2022-01-13 05:24:23,711 [localhost-startStop-1] INFO  (SyncTask.java [configure]:73) - Using DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data. Minimal disk space required for database to continue operations: 128mb 
+2022-01-13 05:24:23,713 [localhost-startStop-1] INFO  (SyncTask.java [configure]:76) - Usable space on partition containing DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data: 192350mb 
+2022-01-13 05:24:23,945 [localhost-startStop-1] INFO  (BlobStoreImplService.java [startSystem]:71) - Opened de-duplicating Blob Store v1. metadata=blob.dbx, store=blob/ 
+2022-01-13 05:24:24,085 [localhost-startStop-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 223,232K total; 4,071,424K max; 139,148K free 
+2022-01-13 05:24:24,085 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 05:24:24,086 [localhost-startStop-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 5% (13 out of 256) Cache efficiency : 99% 
+2022-01-13 05:24:24,086 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 8% (5 out of 64) Cache efficiency : 99% 
+2022-01-13 05:24:24,086 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 6% (4 out of 64) Cache efficiency : 96% 
+2022-01-13 05:24:24,086 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:24:24,087 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:24:24,250 [localhost-startStop-1] INFO  (BouncyCastleJceProviderStartupTrigger.java [execute]:47) - Registered JCE Security Provider: org.bouncycastle.jce.provider.BouncyCastleProvider 
+2022-01-13 05:24:24,253 [localhost-startStop-1] WARN  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:71) - The JVM already has a URLStreamHandlerFactory registered, skipping... 
+2022-01-13 05:24:24,253 [localhost-startStop-1] INFO  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:85) - Setting java.protocol.handler.pkgs to org.apache.catalina.webresources|org.exist.protocolhandler.protocols 
+2022-01-13 05:24:24,314 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:151) - Registering XMLDB driver 
+2022-01-13 05:24:24,318 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doGeneralExistServletConfig]:196) - Using default user guest for all unauthorized requests. 
+2022-01-13 05:24:24,329 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:149) - Looking for a valid Parser...
+Checking for Xerces, found version Xerces-J 2.11.0
+OK!
+ 
+2022-01-13 05:24:24,346 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:171) - Looking for a valid Transformer...
+Checking for Saxon, found version 9.6.0.7
+OK!
+ 
+2022-01-13 05:24:24,346 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:183) - Looking for a valid Resolver...
+Checking for Resolver, found version XmlResolver 1.2
+OK!
+ 
+2022-01-13 05:24:24,347 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:189) - Using parser org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser 
+2022-01-13 05:24:24,359 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:190) - Using transformer org.apache.xalan.transformer.TransformerIdentityImpl 
+2022-01-13 05:24:26,780 [http-nio-8081-exec-1] INFO  (Descriptor.java [<init>]:103) - Reading Descriptor from file /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/descriptor.xml 
+2022-01-13 05:24:27,883 [http-nio-8081-exec-4] INFO  (MimeTable.java [load]:246) - Loading mime table from file /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/mime-types.xml 
+2022-01-13 05:24:27,892 [http-nio-8081-exec-4] INFO  (TemporaryFileManager.java [<init>]:109) - Temporary folder is: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/temp/exist-db-temp-file-manager-14462374586631511605 
+2022-01-13 05:26:26,217 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 268,288K total; 4,071,424K max; 154,029K free 
+2022-01-13 05:26:26,218 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 05:26:26,218 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 05:26:26,219 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 05:26:26,219 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 05:26:26,219 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:26:26,220 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:36:38,716 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 268,288K total; 4,071,424K max; 141,103K free 
+2022-01-13 05:36:38,717 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 05:36:38,717 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 05:36:38,717 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 05:36:38,717 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 05:36:38,717 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:36:38,718 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:46:51,216 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 268,288K total; 4,071,424K max; 128,500K free 
+2022-01-13 05:46:51,217 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-01-13 05:46:51,218 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 9% (24 out of 256) Cache efficiency : 99% 
+2022-01-13 05:46:51,218 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 05:46:51,219 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-01-13 05:46:51,219 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:46:51,220 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:48:31,214 [db.exist.scheduler.quartz-worker-3] ERROR (FileUtils.java [measureFileStore]:265) - java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data 
+2022-01-13 05:48:31,215 [db.exist.scheduler.quartz-worker-3] ERROR (FileUtils.java [measureFileStore]:265) - java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/dbx_dir.lck 
+2022-01-13 05:48:33,715 [db.exist.scheduler.quartz-worker-1] ERROR (FileUtils.java [measureFileStore]:265) - java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data 
+2022-01-13 05:48:33,716 [db.exist.scheduler.quartz-worker-1] ERROR (FileUtils.java [measureFileStore]:265) - java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/dbx_dir.lck 
+2022-01-13 05:48:36,214 [db.exist.scheduler.quartz-worker-2] ERROR (FileUtils.java [measureFileStore]:265) - java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data 
+2022-01-13 05:48:36,214 [db.exist.scheduler.quartz-worker-2] ERROR (FileUtils.java [measureFileStore]:265) - java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/dbx_dir.lck 
+2022-01-13 05:48:37,948 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] INFO  (BrokerPool.java [shutdown]:1577) - Database is shutting down ... 
+2022-01-13 05:56:08,528 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:115) - EXistServlet: exist.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF 
+2022-01-13 05:56:08,529 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:118) - Reading configuration from /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/conf.xml 
+2022-01-13 05:56:08,534 [localhost-startStop-1] INFO  (Configuration.java [<init>]:177) - Reading configuration from file /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/conf.xml 
+2022-01-13 05:56:08,571 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.security.BouncyCastleJceProviderStartupTrigger 
+2022-01-13 05:56:08,572 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.protocolhandler.URLStreamHandlerStartupTrigger 
+2022-01-13 05:56:08,573 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.extensions.exquery.restxq.impl.RestXqStartupTrigger 
+2022-01-13 05:56:08,575 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.repo.AutoDeploymentTrigger 
+2022-01-13 05:56:08,906 [localhost-startStop-1] INFO  (Configuration.java [configureValidation]:1518) - Add catalog uri file:///media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist//WEB-INF/catalog.xml 
+2022-01-13 05:56:08,906 [localhost-startStop-1] INFO  (GrammarPool.java [<init>]:54) - Initializing GrammarPool. 
+2022-01-13 05:56:08,907 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:138) - Configuring eXist instance 
+2022-01-13 05:56:08,917 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:400) - database instance 'exist' will wait  120,000 ms during shutdown 
+2022-01-13 05:56:08,918 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:403) - database instance 'exist' is enabled for recovery : true 
+2022-01-13 05:56:08,918 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:408) - database instance 'exist' will have between 1 and 20 brokers 
+2022-01-13 05:56:08,918 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:412) - database instance 'exist' will be synchronized every 120,000 ms 
+2022-01-13 05:56:08,945 [localhost-startStop-1] INFO  (DefaultCacheManager.java [<init>]:155) - Cache settings: 262,144k; totalPages: 65,536; maxCacheSize: 58,982; cacheShrinkThreshold: 10,000 
+2022-01-13 05:56:09,020 [localhost-startStop-1] INFO  (XQueryPool.java [configure]:110) - QueryPool: size = 128; maxQueryStackSize = 64; timeout = 120,000;  
+2022-01-13 05:56:09,026 [db.exist.prepare-quartz-scheduler] INFO  (QuartzSchedulerImpl.java [getQuartzProperties]:134) - Successfully loaded quartz.properties 
+2022-01-13 05:56:09,085 [localhost-startStop-1] INFO  (FileLock.java [message]:292) - File lock last access timestamp: Jan 13, 2022 /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/dbx_dir.lck 
+2022-01-13 05:56:09,085 [localhost-startStop-1] INFO  (FileLock.java [message]:292) - Found a stale lockfile. Trying to remove it:  /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/dbx_dir.lck 
+2022-01-13 05:56:09,085 [localhost-startStop-1] INFO  (FileLock.java [release]:188) - Deleting lock file: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/dbx_dir.lck 
+2022-01-13 05:56:09,187 [localhost-startStop-1] INFO  (FileLock.java [message]:292) - File lock last access timestamp: Jan 13, 2022 /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/journal.lck 
+2022-01-13 05:56:09,187 [localhost-startStop-1] INFO  (FileLock.java [message]:292) - Found a stale lockfile. Trying to remove it:  /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/journal.lck 
+2022-01-13 05:56:09,187 [localhost-startStop-1] INFO  (FileLock.java [release]:188) - Deleting lock file: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/journal.lck 
+2022-01-13 05:56:09,339 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.ngram.NGramIndex as ngram-index 
+2022-01-13 05:56:09,489 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.lucene.LuceneIndex as lucene-index 
+2022-01-13 05:56:09,491 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.sort.SortIndex as sort-index 
+2022-01-13 05:56:09,558 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.range.RangeIndex as range-index 
+2022-01-13 05:56:09,559 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.storage.structural.NativeStructuralIndex as structural-index 
+2022-01-13 05:56:09,562 [localhost-startStop-1] ERROR (PluginsManagerImpl.java [addPlugin]:239) - java.lang.ClassNotFoundException: org.exist.storage.md.MDStorageManager 
+2022-01-13 05:56:09,562 [localhost-startStop-1] INFO  (SyncTask.java [configure]:73) - Using DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data. Minimal disk space required for database to continue operations: 128mb 
+2022-01-13 05:56:09,565 [localhost-startStop-1] INFO  (SyncTask.java [configure]:76) - Usable space on partition containing DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data: 192366mb 
+2022-01-13 05:56:09,661 [localhost-startStop-1] INFO  (RecoveryManager.java [recover]:117) - Unclean shutdown detected. Scanning journal... 
+2022-01-13 05:56:09,670 [localhost-startStop-1] INFO  (RecoveryManager.java [recover]:152) - Dirty transactions: 19 
+2022-01-13 05:56:09,671 [localhost-startStop-1] INFO  (RecoveryManager.java [recover]:162) - Running recovery... 
+2022-01-13 05:56:09,671 [localhost-startStop-1] INFO  (RecoveryManager.java [doRecovery]:248) - Running recovery ... 
+2022-01-13 05:56:09,671 [localhost-startStop-1] INFO  (RecoveryManager.java [doRecovery]:258) - First pass: redoing 19 transactions... 
+2022-01-13 05:56:09,673 [localhost-startStop-1] INFO  (RecoveryManager.java [doRecovery]:291) - Redo processed 19 out of 19 transactions. 
+2022-01-13 05:56:09,673 [localhost-startStop-1] INFO  (RecoveryManager.java [doRecovery]:296) - Second pass: undoing dirty transactions. Uncommitted transactions: 0 
+2022-01-13 05:56:09,675 [localhost-startStop-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 225,280K total; 4,071,424K max; 152,373K free 
+2022-01-13 05:56:09,675 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:56:09,676 [localhost-startStop-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 0% (0 out of 256) Cache efficiency : N/A 
+2022-01-13 05:56:09,676 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:56:09,676 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:56:09,677 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:56:09,677 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 05:56:09,678 [localhost-startStop-1] INFO  (NativeBroker.java [rebuildIndex]:3501) - Rebuilding index dom.dbx 
+2022-01-13 05:56:09,688 [localhost-startStop-1] INFO  (NativeBroker.java [rebuildIndex]:3503) - Index dom.dbx was rebuilt. 
+2022-01-13 05:56:09,689 [localhost-startStop-1] INFO  (NativeBroker.java [rebuildIndex]:3501) - Rebuilding index collections.dbx 
+2022-01-13 05:56:09,690 [localhost-startStop-1] INFO  (NativeBroker.java [rebuildIndex]:3503) - Index collections.dbx was rebuilt. 
+2022-01-13 05:56:09,812 [localhost-startStop-1] INFO  (BlobStoreImplService.java [startSystem]:71) - Opened de-duplicating Blob Store v1. metadata=blob.dbx, store=blob/ 
+2022-01-13 05:56:09,845 [localhost-startStop-1] INFO  (NativeBroker.java [repair]:3462) - Removing index files ... 
+2022-01-13 05:56:09,850 [localhost-startStop-1] INFO  (NativeBroker.java [repair]:3470) - Recreating index files ... 
+2022-01-13 05:56:09,852 [localhost-startStop-1] INFO  (NativeBroker.java [repair]:3484) - Reindexing database files ... 
+2022-01-13 05:56:10,197 [localhost-startStop-1] INFO  (ConsistencyCheckTask.java [execute]:150) - Starting consistency check... 
+2022-01-13 05:56:10,227 [localhost-startStop-1] INFO  (ConsistencyCheckTask.java [execute]:173) - Finished consistency check 
+2022-01-13 05:56:10,727 [localhost-startStop-1] INFO  (BouncyCastleJceProviderStartupTrigger.java [execute]:47) - Registered JCE Security Provider: org.bouncycastle.jce.provider.BouncyCastleProvider 
+2022-01-13 05:56:10,729 [localhost-startStop-1] WARN  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:71) - The JVM already has a URLStreamHandlerFactory registered, skipping... 
+2022-01-13 05:56:10,729 [localhost-startStop-1] INFO  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:85) - Setting java.protocol.handler.pkgs to org.apache.catalina.webresources|org.exist.protocolhandler.protocols 
+2022-01-13 05:56:10,787 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:151) - Registering XMLDB driver 
+2022-01-13 05:56:10,792 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doGeneralExistServletConfig]:196) - Using default user guest for all unauthorized requests. 
+2022-01-13 05:56:10,805 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:149) - Looking for a valid Parser...
+Checking for Xerces, found version Xerces-J 2.11.0
+OK!
+ 
+2022-01-13 05:56:10,823 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:171) - Looking for a valid Transformer...
+Checking for Saxon, found version 9.6.0.7
+OK!
+ 
+2022-01-13 05:56:10,824 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:183) - Looking for a valid Resolver...
+Checking for Resolver, found version XmlResolver 1.2
+OK!
+ 
+2022-01-13 05:56:10,824 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:189) - Using parser org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser 
+2022-01-13 05:56:10,838 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:190) - Using transformer org.apache.xalan.transformer.TransformerIdentityImpl 
+2022-01-13 05:56:13,131 [http-nio-8081-exec-1] INFO  (Descriptor.java [<init>]:103) - Reading Descriptor from file /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/descriptor.xml 
+2022-01-13 05:56:14,252 [http-nio-8081-exec-4] INFO  (MimeTable.java [load]:246) - Loading mime table from file /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/mime-types.xml 
+2022-01-13 05:56:14,261 [http-nio-8081-exec-4] INFO  (TemporaryFileManager.java [<init>]:109) - Temporary folder is: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp/exist-db-temp-file-manager-16570290025027803970 
+2022-01-13 06:06:22,067 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 270,336K total; 4,071,424K max; 135,208K free 
+2022-01-13 06:06:22,068 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 45% (29 out of 64) Cache efficiency : 79% 
+2022-01-13 06:06:22,068 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 100% (255 out of 256) Cache efficiency : 99% 
+2022-01-13 06:06:22,069 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 06:06:22,069 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 100% 
+2022-01-13 06:06:22,069 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : N/A 
+2022-01-13 06:06:22,070 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 06:16:34,570 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 270,336K total; 4,071,424K max; 121,934K free 
+2022-01-13 06:16:34,571 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 45% (29 out of 64) Cache efficiency : 79% 
+2022-01-13 06:16:34,573 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 100% (255 out of 256) Cache efficiency : 99% 
+2022-01-13 06:16:34,573 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 06:16:34,574 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 100% 
+2022-01-13 06:16:34,575 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : N/A 
+2022-01-13 06:16:34,575 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-01-13 06:26:47,069 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 270,336K total; 4,071,424K max; 109,921K free 
+2022-01-13 06:26:47,070 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 45% (29 out of 64) Cache efficiency : 79% 
+2022-01-13 06:26:47,072 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 100% (255 out of 256) Cache efficiency : 99% 
+2022-01-13 06:26:47,073 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 99% 
+2022-01-13 06:26:47,073 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 100% 
+2022-01-13 06:26:47,074 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 2% (1 out of 64) Cache efficiency : N/A 
+2022-01-13 06:26:47,075 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 

@@ -50,3 +50,1293 @@ NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED -
 12-Jan-2022 16:29:21.284 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [15] ms
 12-Jan-2022 16:29:21.288 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
 12-Jan-2022 16:29:21.310 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 55150 ms
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 04:27:08.838 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+13-Jan-2022 04:27:08.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+13-Jan-2022 04:27:08.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+13-Jan-2022 04:27:08.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Jan-2022 04:27:08.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-94-generic
+13-Jan-2022 04:27:08.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Jan-2022 04:27:08.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-16-openjdk-amd64
+13-Jan-2022 04:27:08.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           16.0.1+9-Ubuntu-120.04
+13-Jan-2022 04:27:08.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+13-Jan-2022 04:27:08.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:27:08.843 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:27:08.844 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Jan-2022 04:27:08.844 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Jan-2022 04:27:08.845 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Jan-2022 04:27:08.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Jan-2022 04:27:08.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 04:27:08.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/logging.properties
+13-Jan-2022 04:27:08.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Jan-2022 04:27:08.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Jan-2022 04:27:08.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Jan-2022 04:27:08.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+13-Jan-2022 04:27:08.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Jan-2022 04:27:08.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:27:08.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:27:08.847 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp
+13-Jan-2022 04:27:08.847 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+13-Jan-2022 04:27:08.884 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 04:27:08.905 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Jan-2022 04:27:08.918 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 622 ms
+13-Jan-2022 04:27:08.968 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Jan-2022 04:27:08.968 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+13-Jan-2022 04:27:09.036 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war]
+13-Jan-2022 04:27:23.866 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Jan-2022 04:27:26.606 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Create a new repository with storage: File system storage in /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo
+13-Jan-2022 04:27:26.649 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/dashboard'
+13-Jan-2022 04:27:26.665 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/usermanager'
+13-Jan-2022 04:27:26.671 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Warning: package uses old-style content dir: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/functx-1.0.1/functx'
+13-Jan-2022 04:27:26.721 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/eXide'
+13-Jan-2022 04:27:28.203 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war] has finished in [19,166] ms
+13-Jan-2022 04:27:28.233 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war]
+13-Jan-2022 04:27:30.338 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-01-13 04:27:31] Config     INFO  FUSEKI_HOME=unset
+[2022-01-13 04:27:31] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-01-13 04:27:31] Server     ERROR Exception in server initialization
+org.apache.jena.fuseki.FusekiConfigException: Failed to create directory: /etc/fuseki
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.ensureDir(FusekiWebapp.java:386) ~[jena-fuseki-webapp-4.3.2.jar:4.3.2]
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.formatBaseArea(FusekiWebapp.java:147) [jena-fuseki-webapp-4.3.2.jar:4.3.2]
+	at org.apache.jena.fuseki.webapp.ShiroEnvironmentLoader.contextInitialized(ShiroEnvironmentLoader.java:48) [jena-fuseki-webapp-4.3.2.jar:4.3.2]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4763) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5232) [catalina.jar:8.5.73]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1016) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903) [catalina.jar:8.5.73]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:831) [?:?]
+[2022-01-13 04:27:31] Config     INFO  Context path = /fuseki
+[2022-01-13 04:27:31] Server     ERROR Failed to initialize : Server not running
+13-Jan-2022 04:27:31.243 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Jan-2022 04:27:31.244 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/fuseki] startup failed due to previous errors
+13-Jan-2022 04:27:31.283 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war] has finished in [3,049] ms
+13-Jan-2022 04:27:31.284 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager]
+13-Jan-2022 04:27:31.371 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager] has finished in [88] ms
+13-Jan-2022 04:27:31.372 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs]
+13-Jan-2022 04:27:31.401 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs] has finished in [28] ms
+13-Jan-2022 04:27:31.401 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples]
+13-Jan-2022 04:27:31.751 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples] has finished in [350] ms
+13-Jan-2022 04:27:31.752 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager]
+13-Jan-2022 04:27:31.780 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager] has finished in [29] ms
+13-Jan-2022 04:27:31.780 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT]
+13-Jan-2022 04:27:31.804 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [24] ms
+13-Jan-2022 04:27:31.806 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 04:27:31.812 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 22893 ms
+13-Jan-2022 04:27:33.623 INFO [Notification Thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load [javax.management.openmbean.CompositeData]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [javax.management.openmbean.CompositeData]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1435)
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1423)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1262)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1223)
+		at io.micrometer.core.instrument.binder.jvm.JvmGcMetrics.lambda$bindTo$4(JvmGcMetrics.java:133)
+		at java.management/sun.management.NotificationEmitterSupport.sendNotification(NotificationEmitterSupport.java:155)
+		at jdk.management/com.sun.management.internal.GarbageCollectorExtImpl.createGCNotification(GarbageCollectorExtImpl.java:115)
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 04:30:21.116 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+13-Jan-2022 04:30:21.118 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+13-Jan-2022 04:30:21.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+13-Jan-2022 04:30:21.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Jan-2022 04:30:21.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-94-generic
+13-Jan-2022 04:30:21.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Jan-2022 04:30:21.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-16-openjdk-amd64
+13-Jan-2022 04:30:21.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           16.0.1+9-Ubuntu-120.04
+13-Jan-2022 04:30:21.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+13-Jan-2022 04:30:21.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:30:21.119 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:30:21.120 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Jan-2022 04:30:21.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Jan-2022 04:30:21.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Jan-2022 04:30:21.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Jan-2022 04:30:21.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 04:30:21.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/logging.properties
+13-Jan-2022 04:30:21.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Jan-2022 04:30:21.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Jan-2022 04:30:21.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Jan-2022 04:30:21.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+13-Jan-2022 04:30:21.121 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Jan-2022 04:30:21.122 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:30:21.122 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:30:21.122 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp
+13-Jan-2022 04:30:21.122 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+13-Jan-2022 04:30:21.158 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 04:30:21.171 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Jan-2022 04:30:21.182 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 431 ms
+13-Jan-2022 04:30:21.215 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Jan-2022 04:30:21.216 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+13-Jan-2022 04:30:21.230 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war]
+13-Jan-2022 04:30:27.045 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Jan-2022 04:30:29.471 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Create a new repository with storage: File system storage in /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo
+13-Jan-2022 04:30:29.481 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/dashboard'
+13-Jan-2022 04:30:29.487 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/usermanager'
+13-Jan-2022 04:30:29.487 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Warning: package uses old-style content dir: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/functx-1.0.1/functx'
+13-Jan-2022 04:30:29.489 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/eXide'
+13-Jan-2022 04:30:30.328 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war] has finished in [9,098] ms
+13-Jan-2022 04:30:30.329 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war]
+13-Jan-2022 04:30:31.639 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-01-13 04:30:32] Config     INFO  FUSEKI_HOME=unset
+[2022-01-13 04:30:32] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-01-13 04:30:32] Server     ERROR Exception in server initialization
+org.apache.jena.fuseki.FusekiConfigException: Failed to create directory: /etc/fuseki
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.ensureDir(FusekiWebapp.java:386) ~[jena-fuseki-webapp-4.3.2.jar:4.3.2]
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.formatBaseArea(FusekiWebapp.java:147) [jena-fuseki-webapp-4.3.2.jar:4.3.2]
+	at org.apache.jena.fuseki.webapp.ShiroEnvironmentLoader.contextInitialized(ShiroEnvironmentLoader.java:48) [jena-fuseki-webapp-4.3.2.jar:4.3.2]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4763) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5232) [catalina.jar:8.5.73]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1016) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903) [catalina.jar:8.5.73]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:831) [?:?]
+[2022-01-13 04:30:32] Config     INFO  Context path = /fuseki
+[2022-01-13 04:30:32] Server     ERROR Failed to initialize : Server not running
+13-Jan-2022 04:30:32.431 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Jan-2022 04:30:32.431 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/fuseki] startup failed due to previous errors
+13-Jan-2022 04:30:32.460 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war] has finished in [2,131] ms
+13-Jan-2022 04:30:32.461 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager]
+13-Jan-2022 04:30:32.487 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager] has finished in [25] ms
+13-Jan-2022 04:30:32.487 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs]
+13-Jan-2022 04:30:32.499 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs] has finished in [12] ms
+13-Jan-2022 04:30:32.499 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples]
+13-Jan-2022 04:30:32.616 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples] has finished in [117] ms
+13-Jan-2022 04:30:32.616 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager]
+13-Jan-2022 04:30:32.629 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager] has finished in [13] ms
+13-Jan-2022 04:30:32.630 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT]
+13-Jan-2022 04:30:32.639 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [9] ms
+13-Jan-2022 04:30:32.642 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 04:30:32.647 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 11465 ms
+13-Jan-2022 04:30:46.251 INFO [Notification Thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load [javax.management.openmbean.CompositeData]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [javax.management.openmbean.CompositeData]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1435)
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1423)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1262)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1223)
+		at io.micrometer.core.instrument.binder.jvm.JvmGcMetrics.lambda$bindTo$4(JvmGcMetrics.java:133)
+		at java.management/sun.management.NotificationEmitterSupport.sendNotification(NotificationEmitterSupport.java:155)
+		at jdk.management/com.sun.management.internal.GarbageCollectorExtImpl.createGCNotification(GarbageCollectorExtImpl.java:115)
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 04:40:54.478 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+13-Jan-2022 04:40:54.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+13-Jan-2022 04:40:54.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+13-Jan-2022 04:40:54.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Jan-2022 04:40:54.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-94-generic
+13-Jan-2022 04:40:54.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Jan-2022 04:40:54.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-16-openjdk-amd64
+13-Jan-2022 04:40:54.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           16.0.1+9-Ubuntu-120.04
+13-Jan-2022 04:40:54.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+13-Jan-2022 04:40:54.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:40:54.482 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:40:54.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Jan-2022 04:40:54.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Jan-2022 04:40:54.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Jan-2022 04:40:54.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Jan-2022 04:40:54.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 04:40:54.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/logging.properties
+13-Jan-2022 04:40:54.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Jan-2022 04:40:54.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Jan-2022 04:40:54.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Jan-2022 04:40:54.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+13-Jan-2022 04:40:54.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Jan-2022 04:40:54.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:40:54.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:40:54.484 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp
+13-Jan-2022 04:40:54.485 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+13-Jan-2022 04:40:54.518 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 04:40:54.535 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[HTTP/1.1-8081]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1076)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:843)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:639)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:552)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:336)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:88)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:221)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1161)
+		at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1074)
+		... 13 more
+13-Jan-2022 04:40:54.536 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 411 ms
+13-Jan-2022 04:40:54.577 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Jan-2022 04:40:54.578 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+13-Jan-2022 04:40:54.592 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war]
+13-Jan-2022 04:41:00.599 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Jan-2022 04:41:23.109 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war] has finished in [28,517] ms
+13-Jan-2022 04:41:23.111 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war]
+13-Jan-2022 04:41:24.447 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-01-13 04:41:25] Config     INFO  FUSEKI_HOME=unset
+[2022-01-13 04:41:25] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-01-13 04:41:25] Server     ERROR Exception in server initialization
+org.apache.jena.fuseki.FusekiConfigException: Failed to create directory: /etc/fuseki
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.ensureDir(FusekiWebapp.java:386) ~[jena-fuseki-webapp-4.3.2.jar:4.3.2]
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.formatBaseArea(FusekiWebapp.java:147) [jena-fuseki-webapp-4.3.2.jar:4.3.2]
+	at org.apache.jena.fuseki.webapp.ShiroEnvironmentLoader.contextInitialized(ShiroEnvironmentLoader.java:48) [jena-fuseki-webapp-4.3.2.jar:4.3.2]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4763) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5232) [catalina.jar:8.5.73]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1016) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903) [catalina.jar:8.5.73]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:831) [?:?]
+[2022-01-13 04:41:25] Config     INFO  Context path = /fuseki
+[2022-01-13 04:41:25] Server     ERROR Failed to initialize : Server not running
+13-Jan-2022 04:41:25.285 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Jan-2022 04:41:25.286 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/fuseki] startup failed due to previous errors
+13-Jan-2022 04:41:25.343 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war] has finished in [2,232] ms
+13-Jan-2022 04:41:25.344 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager]
+13-Jan-2022 04:41:25.381 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager] has finished in [36] ms
+13-Jan-2022 04:41:25.381 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs]
+13-Jan-2022 04:41:25.405 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs] has finished in [24] ms
+13-Jan-2022 04:41:25.405 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples]
+13-Jan-2022 04:41:25.409 INFO [Notification Thread] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load [javax.management.openmbean.CompositeData]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [javax.management.openmbean.CompositeData]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1435)
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1423)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1262)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1223)
+		at io.micrometer.core.instrument.binder.jvm.JvmGcMetrics.lambda$bindTo$4(JvmGcMetrics.java:133)
+		at java.management/sun.management.NotificationEmitterSupport.sendNotification(NotificationEmitterSupport.java:155)
+		at jdk.management/com.sun.management.internal.GarbageCollectorExtImpl.createGCNotification(GarbageCollectorExtImpl.java:115)
+13-Jan-2022 04:41:25.583 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples] has finished in [177] ms
+13-Jan-2022 04:41:25.583 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager]
+13-Jan-2022 04:41:25.604 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager] has finished in [20] ms
+13-Jan-2022 04:41:25.604 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT]
+13-Jan-2022 04:41:25.615 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [11] ms
+13-Jan-2022 04:41:25.617 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 31080 ms
+13-Jan-2022 04:41:25.619 SEVERE [main] org.apache.catalina.core.StandardServer.await StandardServer.await: create[localhost:8005]: 
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:552)
+		at java.base/sun.nio.ch.Net.bind(Net.java:541)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:643)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:281)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:414)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:776)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:722)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+13-Jan-2022 04:41:25.620 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 04:41:25.620 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+13-Jan-2022 04:41:25.651 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [exist] appears to have started a thread named [db.exist.scheduler.quartz-worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@16.0.1/java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+13-Jan-2022 04:41:25.652 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [exist] appears to have started a thread named [db.exist.scheduler.quartz-worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@16.0.1/java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+13-Jan-2022 04:41:25.652 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [exist] appears to have started a thread named [db.exist.scheduler.quartz-worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@16.0.1/java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+13-Jan-2022 04:41:25.652 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [exist] appears to have started a thread named [db.exist.scheduler.quartz-worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@16.0.1/java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+13-Jan-2022 04:41:25.653 WARNING [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [exist] appears to have started a thread named [db.exist.scheduler.quartz-scheduler_QuartzSchedulerThread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@16.0.1/java.lang.Object.wait(Native Method)
+ org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:254)
+13-Jan-2022 04:41:25.655 SEVERE [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [exist] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@5a1e25b8]) and a value of type [net.sf.saxon.expr.sort.LRUCache] (value [net.sf.saxon.expr.sort.LRUCache@4bea7f4e]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+13-Jan-2022 04:41:25.672 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 04:41:25.673 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 04:45:00.922 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+13-Jan-2022 04:45:00.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+13-Jan-2022 04:45:00.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+13-Jan-2022 04:45:00.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Jan-2022 04:45:00.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-94-generic
+13-Jan-2022 04:45:00.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Jan-2022 04:45:00.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-16-openjdk-amd64
+13-Jan-2022 04:45:00.925 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           16.0.1+9-Ubuntu-120.04
+13-Jan-2022 04:45:00.926 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+13-Jan-2022 04:45:00.926 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:45:00.926 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:45:00.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Jan-2022 04:45:00.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Jan-2022 04:45:00.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Jan-2022 04:45:00.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Jan-2022 04:45:00.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 04:45:00.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/logging.properties
+13-Jan-2022 04:45:00.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Jan-2022 04:45:00.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Jan-2022 04:45:00.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Jan-2022 04:45:00.927 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+13-Jan-2022 04:45:00.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Jan-2022 04:45:00.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:45:00.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 04:45:00.928 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp
+13-Jan-2022 04:45:00.928 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+13-Jan-2022 04:45:00.966 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 04:45:00.987 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Jan-2022 04:45:01.005 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 441 ms
+13-Jan-2022 04:45:01.054 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Jan-2022 04:45:01.054 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+13-Jan-2022 04:45:01.068 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war]
+13-Jan-2022 04:45:07.321 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Jan-2022 04:45:09.749 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Create a new repository with storage: File system storage in /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo
+13-Jan-2022 04:45:09.764 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/dashboard'
+13-Jan-2022 04:45:09.773 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/usermanager'
+13-Jan-2022 04:45:09.774 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Warning: package uses old-style content dir: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/functx-1.0.1/functx'
+13-Jan-2022 04:45:09.777 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/eXide'
+Scanning journal  [=                                                 ] (2 %)Scanning journal  [==                                                ] (4 %)Scanning journal  [===                                               ] (6 %)Scanning journal  [====                                              ] (8 %)Scanning journal  [=====                                             ] (10 %)Scanning journal  [======                                            ] (12 %)Scanning journal  [=======                                           ] (14 %)Scanning journal  [========                                          ] (16 %)Scanning journal  [=========                                         ] (18 %)Scanning journal  [==========                                        ] (20 %)Scanning journal  [===========                                       ] (22 %)Scanning journal  [============                                      ] (24 %)Scanning journal  [=============                                     ] (26 %)Scanning journal  [==============                                    ] (28 %)Scanning journal  [===============                                   ] (30 %)Scanning journal  [================                                  ] (32 %)Scanning journal  [=================                                 ] (34 %)Scanning journal  [==================                                ] (36 %)Scanning journal  [===================                               ] (38 %)Scanning journal  [====================                              ] (40 %)Scanning journal  [=====================                             ] (42 %)Scanning journal  [======================                            ] (44 %)Scanning journal  [=======================                           ] (46 %)Scanning journal  [========================                          ] (48 %)Scanning journal  [=========================                         ] (50 %)Scanning journal  [==========================                        ] (52 %)Scanning journal  [===========================                       ] (54 %)Scanning journal  [============================                      ] (56 %)Scanning journal  [==============================                    ] (60 %)Scanning journal  [===============================                   ] (62 %)Scanning journal  [=================================                 ] (66 %)Scanning journal  [==================================                ] (68 %)Scanning journal  [===================================               ] (70 %)Scanning journal  [====================================              ] (72 %)Scanning journal  [=====================================             ] (74 %)Scanning journal  [======================================            ] (76 %)Scanning journal  [=======================================           ] (78 %)Scanning journal  [========================================          ] (80 %)Scanning journal  [=========================================         ] (82 %)Scanning journal  [==========================================        ] (84 %)Scanning journal  [===========================================       ] (86 %)Scanning journal  [============================================      ] (88 %)Scanning journal  [=============================================     ] (90 %)Scanning journal  [==============================================    ] (92 %)Scanning journal  [================================================  ] (96 %)Scanning journal  [================================================= ] (98 %)Redo  [================================================  ] (96 %)Redo  [================================================= ] (98 %)13-Jan-2022 04:45:11.458 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war] has finished in [10,389] ms
+13-Jan-2022 04:45:11.458 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war]
+13-Jan-2022 04:45:11.460 INFO [localhost-startStop-1] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki] was found with a last modified time that did not match the associated WAR. It will be deleted.
+13-Jan-2022 04:45:12.785 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-01-13 04:45:13] Config     INFO  FUSEKI_HOME=unset
+[2022-01-13 04:45:13] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-01-13 04:45:13] Server     ERROR Exception in server initialization
+org.apache.jena.fuseki.FusekiConfigException: Failed to create directory: /etc/fuseki
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.ensureDir(FusekiWebapp.java:372) ~[jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.formatBaseArea(FusekiWebapp.java:145) [jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.jena.fuseki.webapp.ShiroEnvironmentLoader.contextInitialized(ShiroEnvironmentLoader.java:50) [jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4763) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5232) [catalina.jar:8.5.73]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1016) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903) [catalina.jar:8.5.73]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:831) [?:?]
+[2022-01-13 04:45:13] Config     INFO  Context path = /fuseki
+[2022-01-13 04:45:13] Server     ERROR Failed to initialize : Server not running
+13-Jan-2022 04:45:13.523 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Jan-2022 04:45:13.524 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/fuseki] startup failed due to previous errors
+13-Jan-2022 04:45:13.555 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war] has finished in [2,097] ms
+13-Jan-2022 04:45:13.556 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager]
+13-Jan-2022 04:45:13.578 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager] has finished in [21] ms
+13-Jan-2022 04:45:13.578 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs]
+13-Jan-2022 04:45:13.588 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs] has finished in [10] ms
+13-Jan-2022 04:45:13.588 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples]
+13-Jan-2022 04:45:13.703 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples] has finished in [115] ms
+13-Jan-2022 04:45:13.703 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager]
+13-Jan-2022 04:45:13.717 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager] has finished in [14] ms
+13-Jan-2022 04:45:13.718 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT]
+13-Jan-2022 04:45:13.727 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [8] ms
+13-Jan-2022 04:45:13.729 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 04:45:13.735 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 12729 ms
+13-Jan-2022 04:47:23.765 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.users.MemoryUserDatabase.backgroundProcess Reloading memory user database [UserDatabase] from updated source [file:/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/tomcat-users.xml]
+13-Jan-2022 04:47:23.766 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.users.MemoryUserDatabase.open The specified user database [conf/tomcat-users.xml] could not be found
+13-Jan-2022 04:47:23.767 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.users.MemoryUserDatabase.open Failed to close [conf/tomcat-users.xml]
+	java.io.FileNotFoundException: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/tomcat-users.xml (No such file or directory)
+		at java.base/java.io.FileInputStream.open0(Native Method)
+		at java.base/java.io.FileInputStream.open(FileInputStream.java:211)
+		at java.base/java.io.FileInputStream.<init>(FileInputStream.java:153)
+		at java.base/java.io.FileInputStream.<init>(FileInputStream.java:108)
+		at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+		at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)
+		at org.apache.catalina.users.MemoryUserDatabase.open(MemoryUserDatabase.java:466)
+		at org.apache.catalina.users.MemoryUserDatabase.backgroundProcess(MemoryUserDatabase.java:689)
+		at org.apache.catalina.realm.UserDatabaseRealm.backgroundProcess(UserDatabaseRealm.java:138)
+		at org.apache.catalina.realm.CombinedRealm.backgroundProcess(CombinedRealm.java:308)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1156)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 04:47:24.268 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+13-Jan-2022 04:47:24.271 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [ROOT]
+	java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1729)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 04:47:24.775 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/exist]
+2022-01-13 04:47:25,189 ContainerBackgroundProcessor[StandardEngine[Catalina]] ERROR An exception occurred processing Appender exist.core java.lang.IllegalStateException: java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:100)
+	at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:257)
+	at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:280)
+	at org.apache.catalina.webresources.Cache.getResource(Cache.java:62)
+	at org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:215)
+	at org.apache.catalina.webresources.StandardRoot.getClassLoaderResource(StandardRoot.java:224)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:876)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1379)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1223)
+	at org.apache.logging.log4j.core.impl.Log4jLogEvent.getThrownProxy(Log4jLogEvent.java:629)
+	at org.apache.logging.log4j.core.pattern.ExtendedThrowablePatternConverter.format(ExtendedThrowablePatternConverter.java:63)
+	at org.apache.logging.log4j.core.pattern.PatternFormatter.format(PatternFormatter.java:44)
+	at org.apache.logging.log4j.core.layout.PatternLayout$PatternFormatterPatternSerializer.toSerializable(PatternLayout.java:385)
+	at org.apache.logging.log4j.core.layout.PatternLayout.toText(PatternLayout.java:241)
+	at org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:226)
+	at org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:60)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.directEncodeEvent(AbstractOutputStreamAppender.java:197)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.appender.RollingRandomAccessFileAppender.append(RollingRandomAccessFileAppender.java:243)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:417)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2017)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1983)
+	at org.apache.logging.log4j.spi.AbstractLogger.error(AbstractLogger.java:750)
+	at org.exist.storage.BrokerPool.shutdown(BrokerPool.java:1657)
+	at org.exist.storage.BrokerPools.stopAll(BrokerPools.java:315)
+	at org.exist.http.servlets.AbstractExistHttpServlet.destroy(AbstractExistHttpServlet.java:91)
+	at org.apache.catalina.core.StandardWrapper.unload(StandardWrapper.java:1334)
+	at org.apache.catalina.core.StandardWrapper.stopInternal(StandardWrapper.java:1663)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5455)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+	at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: java.io.IOException: java.lang.reflect.InvocationTargetException
+	at org.apache.tomcat.util.compat.Jre9Compat.jarFileNewInstance(Jre9Compat.java:209)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:187)
+	at org.apache.catalina.webresources.AbstractArchiveResourceSet.openJarFile(AbstractArchiveResourceSet.java:308)
+	at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:96)
+	... 55 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.GeneratedConstructorAccessor7.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.apache.tomcat.util.compat.Jre9Compat.jarFileNewInstance(Jre9Compat.java:206)
+	... 58 more
+Caused by: java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/lib/exist-file-4.8.0.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1212)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:706)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:240)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:171)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+	... 63 more
+
+13-Jan-2022 04:47:25.202 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.session.StandardManager.stopInternal Exception unloading sessions to persistent storage
+	java.io.FileNotFoundException: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/work/Catalina/localhost/exist/SESSIONS.ser (No such file or directory)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:303)
+		at org.apache.catalina.session.StandardManager.unload(StandardManager.java:268)
+		at org.apache.catalina.session.StandardManager.stopInternal(StandardManager.java:384)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5463)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 04:47:25.207 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [exist]
+	java.lang.IllegalStateException: java.io.IOException: java.lang.reflect.InvocationTargetException
+		at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:100)
+		at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:257)
+		at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:280)
+		at org.apache.catalina.webresources.Cache.getResource(Cache.java:62)
+		at org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:215)
+		at org.apache.catalina.webresources.StandardRoot.getClassLoaderResource(StandardRoot.java:224)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResourceAsStream(WebappClassLoaderBase.java:1168)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1727)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+	Caused by: java.io.IOException: java.lang.reflect.InvocationTargetException
+		at org.apache.tomcat.util.compat.Jre9Compat.jarFileNewInstance(Jre9Compat.java:209)
+		at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:187)
+		at org.apache.catalina.webresources.AbstractArchiveResourceSet.openJarFile(AbstractArchiveResourceSet.java:308)
+		at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:96)
+		... 24 more
+	Caused by: java.lang.reflect.InvocationTargetException
+		at java.base/jdk.internal.reflect.GeneratedConstructorAccessor7.newInstance(Unknown Source)
+		at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+		at org.apache.tomcat.util.compat.Jre9Compat.jarFileNewInstance(Jre9Compat.java:206)
+		... 27 more
+	Caused by: java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/lib/exist-file-4.8.0.jar
+		at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+		at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+		at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+		at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+		at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+		at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+		at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+		at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1212)
+		at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:706)
+		at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:240)
+		at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:171)
+		at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+		... 32 more
+13-Jan-2022 04:47:25.208 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [exist] created a ThreadLocal with key of type [org.exist.util.pool.NodePool.PoolThreadLocal] (value [org.exist.util.pool.NodePool$PoolThreadLocal@32bdb404]) and a value of type [org.exist.util.pool.NodePool] (value [org.exist.util.pool.NodePool@540204aa]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+13-Jan-2022 04:47:25.209 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [exist] created a ThreadLocal with key of type [org.exist.util.pool.NodePool.PoolThreadLocal] (value [org.exist.util.pool.NodePool$PoolThreadLocal@32bdb404]) and a value of type [org.exist.util.pool.NodePool] (value [org.exist.util.pool.NodePool@590cb8ac]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+13-Jan-2022 04:47:25.715 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/examples]
+13-Jan-2022 04:47:25.718 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [examples]
+	java.lang.IllegalStateException: java.io.IOException: java.lang.reflect.InvocationTargetException
+		at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:100)
+		at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:257)
+		at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:280)
+		at org.apache.catalina.webresources.Cache.getResource(Cache.java:62)
+		at org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:215)
+		at org.apache.catalina.webresources.StandardRoot.getClassLoaderResource(StandardRoot.java:224)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResourceAsStream(WebappClassLoaderBase.java:1168)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1727)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+	Caused by: java.io.IOException: java.lang.reflect.InvocationTargetException
+		at org.apache.tomcat.util.compat.Jre9Compat.jarFileNewInstance(Jre9Compat.java:209)
+		at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:187)
+		at org.apache.catalina.webresources.AbstractArchiveResourceSet.openJarFile(AbstractArchiveResourceSet.java:308)
+		at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:96)
+		... 24 more
+	Caused by: java.lang.reflect.InvocationTargetException
+		at java.base/jdk.internal.reflect.GeneratedConstructorAccessor7.newInstance(Unknown Source)
+		at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+		at org.apache.tomcat.util.compat.Jre9Compat.jarFileNewInstance(Jre9Compat.java:206)
+		... 27 more
+	Caused by: java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar
+		at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+		at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+		at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+		at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+		at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+		at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+		at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+		at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1212)
+		at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:706)
+		at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:240)
+		at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:171)
+		at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+		... 32 more
+13-Jan-2022 04:47:26.220 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/fuseki]
+13-Jan-2022 04:47:26.721 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/host-manager]
+13-Jan-2022 04:47:26.722 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [host-manager]
+	java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1729)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 04:47:27.224 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/manager]
+13-Jan-2022 04:47:27.226 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [manager]
+	java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1729)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 04:47:27.728 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/docs]
+13-Jan-2022 04:47:27.730 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [docs]
+	java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1729)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 05:22:46.950 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+13-Jan-2022 05:22:46.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+13-Jan-2022 05:22:46.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+13-Jan-2022 05:22:46.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Jan-2022 05:22:46.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-94-generic
+13-Jan-2022 05:22:46.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Jan-2022 05:22:46.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-16-openjdk-amd64
+13-Jan-2022 05:22:46.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           16.0.1+9-Ubuntu-120.04
+13-Jan-2022 05:22:46.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+13-Jan-2022 05:22:46.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73
+13-Jan-2022 05:22:46.954 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73
+13-Jan-2022 05:22:46.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Jan-2022 05:22:46.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Jan-2022 05:22:46.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Jan-2022 05:22:46.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Jan-2022 05:22:46.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 05:22:46.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/conf/logging.properties
+13-Jan-2022 05:22:46.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Jan-2022 05:22:46.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Jan-2022 05:22:46.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Jan-2022 05:22:46.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+13-Jan-2022 05:22:46.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Jan-2022 05:22:46.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73
+13-Jan-2022 05:22:46.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73
+13-Jan-2022 05:22:46.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/temp
+13-Jan-2022 05:22:46.956 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+13-Jan-2022 05:22:46.994 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 05:22:47.005 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[HTTP/1.1-8081]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1076)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:843)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:639)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:662)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:305)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:552)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:336)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:88)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:221)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1161)
+		at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1074)
+		... 13 more
+13-Jan-2022 05:22:47.006 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 408 ms
+13-Jan-2022 05:22:47.039 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Jan-2022 05:22:47.039 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+13-Jan-2022 05:22:47.052 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist.war]
+13-Jan-2022 05:22:53.640 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Jan-2022 05:22:55.950 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Create a new repository with storage: File system storage in /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo
+13-Jan-2022 05:23:15.675 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Warning: package uses old-style content dir: '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/functx-1.0.1/functx'
+13-Jan-2022 05:23:15.855 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/usermanager'
+13-Jan-2022 05:23:18.734 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/dashboard'
+13-Jan-2022 05:23:26.739 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/eXide'
+13-Jan-2022 05:23:41.281 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist.war] has finished in [54,229] ms
+13-Jan-2022 05:23:41.282 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/fuseki.war]
+13-Jan-2022 05:23:42.613 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-01-13 05:23:43] Config     INFO  FUSEKI_HOME=unset
+[2022-01-13 05:23:43] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-01-13 05:23:43] Server     ERROR Exception in server initialization
+org.apache.jena.fuseki.FusekiConfigException: Failed to create directory: /etc/fuseki
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.ensureDir(FusekiWebapp.java:372) ~[jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.formatBaseArea(FusekiWebapp.java:145) [jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.jena.fuseki.webapp.ShiroEnvironmentLoader.contextInitialized(ShiroEnvironmentLoader.java:50) [jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4763) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5232) [catalina.jar:8.5.73]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1016) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903) [catalina.jar:8.5.73]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:831) [?:?]
+[2022-01-13 05:23:43] Config     INFO  Context path = /fuseki
+[2022-01-13 05:23:43] Server     ERROR Failed to initialize : Server not running
+13-Jan-2022 05:23:43.331 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Jan-2022 05:23:43.332 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/fuseki] startup failed due to previous errors
+13-Jan-2022 05:23:43.361 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/fuseki.war] has finished in [2,078] ms
+13-Jan-2022 05:23:43.361 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/manager]
+13-Jan-2022 05:23:43.383 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/manager] has finished in [22] ms
+13-Jan-2022 05:23:43.383 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/docs]
+13-Jan-2022 05:23:43.393 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/docs] has finished in [10] ms
+13-Jan-2022 05:23:43.393 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/examples]
+13-Jan-2022 05:23:43.504 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/examples] has finished in [111] ms
+13-Jan-2022 05:23:43.504 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/host-manager]
+13-Jan-2022 05:23:43.517 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/host-manager] has finished in [12] ms
+13-Jan-2022 05:23:43.517 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/ROOT]
+13-Jan-2022 05:23:43.527 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/ROOT] has finished in [10] ms
+13-Jan-2022 05:23:43.529 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 56523 ms
+13-Jan-2022 05:23:43.531 SEVERE [main] org.apache.catalina.core.StandardServer.await StandardServer.await: create[localhost:8005]: 
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:552)
+		at java.base/sun.nio.ch.Net.bind(Net.java:541)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:643)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:395)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:281)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:414)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:776)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:722)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+13-Jan-2022 05:23:43.532 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 05:23:43.532 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+13-Jan-2022 05:23:43.935 SEVERE [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [exist] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@4efe05f5]) and a value of type [org.apache.xerces.parsers.SAXParser] (value [org.apache.xerces.parsers.SAXParser@2a09d7e0]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+13-Jan-2022 05:23:43.935 SEVERE [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [exist] created a ThreadLocal with key of type [org.exist.util.pool.NodePool.PoolThreadLocal] (value [org.exist.util.pool.NodePool$PoolThreadLocal@6e4a8381]) and a value of type [org.exist.util.pool.NodePool] (value [org.exist.util.pool.NodePool@19abf44]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+13-Jan-2022 05:23:43.936 SEVERE [localhost-startStop-1] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [exist] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@7ff69c1d]) and a value of type [net.sf.saxon.expr.sort.LRUCache] (value [net.sf.saxon.expr.sort.LRUCache@2b427c38]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+13-Jan-2022 05:23:43.952 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 05:23:43.953 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 05:24:14.757 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+13-Jan-2022 05:24:14.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+13-Jan-2022 05:24:14.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+13-Jan-2022 05:24:14.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Jan-2022 05:24:14.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-94-generic
+13-Jan-2022 05:24:14.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Jan-2022 05:24:14.760 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-16-openjdk-amd64
+13-Jan-2022 05:24:14.761 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           16.0.1+9-Ubuntu-120.04
+13-Jan-2022 05:24:14.761 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+13-Jan-2022 05:24:14.761 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73
+13-Jan-2022 05:24:14.761 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73
+13-Jan-2022 05:24:14.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Jan-2022 05:24:14.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Jan-2022 05:24:14.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Jan-2022 05:24:14.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Jan-2022 05:24:14.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 05:24:14.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/conf/logging.properties
+13-Jan-2022 05:24:14.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Jan-2022 05:24:14.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Jan-2022 05:24:14.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Jan-2022 05:24:14.762 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+13-Jan-2022 05:24:14.763 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Jan-2022 05:24:14.763 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73
+13-Jan-2022 05:24:14.763 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73
+13-Jan-2022 05:24:14.763 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/temp
+13-Jan-2022 05:24:14.763 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+13-Jan-2022 05:24:14.794 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 05:24:14.806 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Jan-2022 05:24:14.817 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 403 ms
+13-Jan-2022 05:24:14.850 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Jan-2022 05:24:14.851 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+13-Jan-2022 05:24:14.866 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist.war]
+13-Jan-2022 05:24:21.145 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Jan-2022 05:24:23.454 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Create a new repository with storage: File system storage in /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo
+13-Jan-2022 05:24:23.463 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/dashboard'
+13-Jan-2022 05:24:23.469 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/usermanager'
+13-Jan-2022 05:24:23.470 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Warning: package uses old-style content dir: '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/functx-1.0.1/functx'
+13-Jan-2022 05:24:23.472 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/eXide'
+13-Jan-2022 05:24:24.369 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist.war] has finished in [9,503] ms
+13-Jan-2022 05:24:24.370 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/fuseki.war]
+13-Jan-2022 05:24:25.501 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-01-13 05:24:26] Config     INFO  FUSEKI_HOME=unset
+[2022-01-13 05:24:26] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-01-13 05:24:26] Server     ERROR Exception in server initialization
+org.apache.jena.fuseki.FusekiConfigException: Failed to create directory: /etc/fuseki
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.ensureDir(FusekiWebapp.java:372) ~[jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.formatBaseArea(FusekiWebapp.java:145) [jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.jena.fuseki.webapp.ShiroEnvironmentLoader.contextInitialized(ShiroEnvironmentLoader.java:50) [jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4763) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5232) [catalina.jar:8.5.73]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1016) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903) [catalina.jar:8.5.73]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:831) [?:?]
+[2022-01-13 05:24:26] Config     INFO  Context path = /fuseki
+[2022-01-13 05:24:26] Server     ERROR Failed to initialize : Server not running
+13-Jan-2022 05:24:26.380 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Jan-2022 05:24:26.381 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/fuseki] startup failed due to previous errors
+13-Jan-2022 05:24:26.414 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/fuseki.war] has finished in [2,044] ms
+13-Jan-2022 05:24:26.414 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/manager]
+13-Jan-2022 05:24:26.438 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/manager] has finished in [24] ms
+13-Jan-2022 05:24:26.438 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/docs]
+13-Jan-2022 05:24:26.449 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/docs] has finished in [11] ms
+13-Jan-2022 05:24:26.449 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/examples]
+13-Jan-2022 05:24:26.613 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/examples] has finished in [164] ms
+13-Jan-2022 05:24:26.613 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/host-manager]
+13-Jan-2022 05:24:26.632 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/host-manager] has finished in [19] ms
+13-Jan-2022 05:24:26.632 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/ROOT]
+13-Jan-2022 05:24:26.647 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/ROOT] has finished in [14] ms
+13-Jan-2022 05:24:26.649 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 05:24:26.654 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 11836 ms
+13-Jan-2022 05:48:36.937 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.users.MemoryUserDatabase.backgroundProcess Reloading memory user database [UserDatabase] from updated source [file:/media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/conf/tomcat-users.xml]
+13-Jan-2022 05:48:36.937 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.users.MemoryUserDatabase.open The specified user database [conf/tomcat-users.xml] could not be found
+13-Jan-2022 05:48:36.937 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.users.MemoryUserDatabase.open Failed to close [conf/tomcat-users.xml]
+	java.io.FileNotFoundException: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/conf/tomcat-users.xml (No such file or directory)
+		at java.base/java.io.FileInputStream.open0(Native Method)
+		at java.base/java.io.FileInputStream.open(FileInputStream.java:211)
+		at java.base/java.io.FileInputStream.<init>(FileInputStream.java:153)
+		at java.base/java.io.FileInputStream.<init>(FileInputStream.java:108)
+		at java.base/sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86)
+		at java.base/sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:189)
+		at org.apache.catalina.users.MemoryUserDatabase.open(MemoryUserDatabase.java:466)
+		at org.apache.catalina.users.MemoryUserDatabase.backgroundProcess(MemoryUserDatabase.java:689)
+		at org.apache.catalina.realm.UserDatabaseRealm.backgroundProcess(UserDatabaseRealm.java:138)
+		at org.apache.catalina.realm.CombinedRealm.backgroundProcess(CombinedRealm.java:308)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1156)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 05:48:37.438 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+13-Jan-2022 05:48:37.442 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [ROOT]
+	java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1729)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 05:48:37.947 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/exist]
+13-Jan-2022 05:48:38.367 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardWrapper.unload InstanceManager.destroy() for servlet [EXistServlet] threw exception
+	java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "instance" is null
+		at org.apache.catalina.core.DefaultInstanceManager.destroyInstance(DefaultInstanceManager.java:196)
+		at org.apache.catalina.core.StandardWrapper.unload(StandardWrapper.java:1352)
+		at org.apache.catalina.core.StandardWrapper.stopInternal(StandardWrapper.java:1663)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 05:48:38.368 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.session.StandardManager.stopInternal Exception unloading sessions to persistent storage
+	java.io.FileNotFoundException: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/work/Catalina/localhost/exist/SESSIONS.ser (No such file or directory)
+		at java.base/java.io.FileOutputStream.open0(Native Method)
+		at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+		at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+		at org.apache.catalina.session.StandardManager.doUnload(StandardManager.java:303)
+		at org.apache.catalina.session.StandardManager.unload(StandardManager.java:268)
+		at org.apache.catalina.session.StandardManager.stopInternal(StandardManager.java:384)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5463)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 05:48:38.376 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [exist]
+	java.lang.IllegalStateException: java.io.IOException: java.lang.reflect.InvocationTargetException
+		at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:100)
+		at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:257)
+		at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:280)
+		at org.apache.catalina.webresources.Cache.getResource(Cache.java:62)
+		at org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:215)
+		at org.apache.catalina.webresources.StandardRoot.getClassLoaderResource(StandardRoot.java:224)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResourceAsStream(WebappClassLoaderBase.java:1168)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1727)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+	Caused by: java.io.IOException: java.lang.reflect.InvocationTargetException
+		at org.apache.tomcat.util.compat.Jre9Compat.jarFileNewInstance(Jre9Compat.java:209)
+		at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:187)
+		at org.apache.catalina.webresources.AbstractArchiveResourceSet.openJarFile(AbstractArchiveResourceSet.java:308)
+		at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:96)
+		... 24 more
+	Caused by: java.lang.reflect.InvocationTargetException
+		at java.base/jdk.internal.reflect.GeneratedConstructorAccessor7.newInstance(Unknown Source)
+		at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+		at org.apache.tomcat.util.compat.Jre9Compat.jarFileNewInstance(Jre9Compat.java:206)
+		... 27 more
+	Caused by: java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/lib/exist-file-4.8.0.jar
+		at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+		at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+		at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+		at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+		at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+		at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+		at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+		at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1212)
+		at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:706)
+		at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:240)
+		at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:171)
+		at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+		... 32 more
+13-Jan-2022 05:48:38.377 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [exist] appears to have started a thread named [db.exist.blob-store.persistent-writer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@16.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@16.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+ java.base@16.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:505)
+ java.base@16.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3137)
+ java.base@16.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1614)
+ java.base@16.0.1/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+ org.exist.storage.blob.BlobStoreImpl$PersistentWriter.run(BlobStoreImpl.java:1562)
+ java.base@16.0.1/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 05:48:38.378 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [exist] appears to have started a thread named [db.exist.blob-store.vacuum] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@16.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@16.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+ java.base@16.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:505)
+ java.base@16.0.1/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3137)
+ java.base@16.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1614)
+ java.base@16.0.1/java.util.concurrent.PriorityBlockingQueue.take(PriorityBlockingQueue.java:533)
+ org.exist.storage.blob.BlobStoreImpl$BlobVacuum.run(BlobStoreImpl.java:1631)
+ java.base@16.0.1/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 05:48:38.378 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [exist] created a ThreadLocal with key of type [org.exist.util.pool.NodePool.PoolThreadLocal] (value [org.exist.util.pool.NodePool$PoolThreadLocal@13958d3e]) and a value of type [org.exist.util.pool.NodePool] (value [org.exist.util.pool.NodePool@7e142333]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+13-Jan-2022 05:48:38.378 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [exist] created a ThreadLocal with key of type [org.exist.util.pool.NodePool.PoolThreadLocal] (value [org.exist.util.pool.NodePool$PoolThreadLocal@13958d3e]) and a value of type [org.exist.util.pool.NodePool] (value [org.exist.util.pool.NodePool@2c1f7034]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+13-Jan-2022 05:48:38.379 SEVERE [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [exist] created a ThreadLocal with key of type [org.exist.util.pool.NodePool.PoolThreadLocal] (value [org.exist.util.pool.NodePool$PoolThreadLocal@13958d3e]) and a value of type [org.exist.util.pool.NodePool] (value [org.exist.util.pool.NodePool@13dce4f4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+13-Jan-2022 05:48:38.881 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/examples]
+13-Jan-2022 05:48:38.886 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [examples]
+	java.lang.IllegalStateException: java.io.IOException: java.lang.reflect.InvocationTargetException
+		at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:100)
+		at org.apache.catalina.webresources.AbstractArchiveResourceSet.getResource(AbstractArchiveResourceSet.java:257)
+		at org.apache.catalina.webresources.StandardRoot.getResourceInternal(StandardRoot.java:280)
+		at org.apache.catalina.webresources.Cache.getResource(Cache.java:62)
+		at org.apache.catalina.webresources.StandardRoot.getResource(StandardRoot.java:215)
+		at org.apache.catalina.webresources.StandardRoot.getClassLoaderResource(StandardRoot.java:224)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResourceAsStream(WebappClassLoaderBase.java:1168)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1727)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+	Caused by: java.io.IOException: java.lang.reflect.InvocationTargetException
+		at org.apache.tomcat.util.compat.Jre9Compat.jarFileNewInstance(Jre9Compat.java:209)
+		at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:187)
+		at org.apache.catalina.webresources.AbstractArchiveResourceSet.openJarFile(AbstractArchiveResourceSet.java:308)
+		at org.apache.catalina.webresources.AbstractSingleArchiveResourceSet.getArchiveEntry(AbstractSingleArchiveResourceSet.java:96)
+		... 24 more
+	Caused by: java.lang.reflect.InvocationTargetException
+		at java.base/jdk.internal.reflect.GeneratedConstructorAccessor7.newInstance(Unknown Source)
+		at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+		at org.apache.tomcat.util.compat.Jre9Compat.jarFileNewInstance(Jre9Compat.java:206)
+		... 27 more
+	Caused by: java.nio.file.NoSuchFileException: /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar
+		at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+		at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+		at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+		at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+		at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+		at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+		at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+		at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1212)
+		at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:706)
+		at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:240)
+		at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:171)
+		at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+		... 32 more
+13-Jan-2022 05:48:39.390 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/fuseki]
+13-Jan-2022 05:48:39.892 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/host-manager]
+13-Jan-2022 05:48:39.895 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [host-manager]
+	java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1729)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 05:48:40.399 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/manager]
+13-Jan-2022 05:48:40.402 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [manager]
+	java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1729)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+13-Jan-2022 05:48:40.906 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/docs]
+13-Jan-2022 05:48:40.907 WARNING [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc JDBC driver de-registration failed for web application [docs]
+	java.lang.NullPointerException: Cannot invoke "java.io.InputStream.read(byte[], int, int)" because "is" is null
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:1729)
+		at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:1668)
+		at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:1605)
+		at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:455)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5505)
+		at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+		at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:844)
+		at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1458)
+		at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1383)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1646)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:314)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1170)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1396)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1400)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1368)
+		at java.base/java.lang.Thread.run(Thread.java:831)
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 05:56:00.509 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+13-Jan-2022 05:56:00.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+13-Jan-2022 05:56:00.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+13-Jan-2022 05:56:00.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Jan-2022 05:56:00.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-94-generic
+13-Jan-2022 05:56:00.512 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Jan-2022 05:56:00.513 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-16-openjdk-amd64
+13-Jan-2022 05:56:00.513 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           16.0.1+9-Ubuntu-120.04
+13-Jan-2022 05:56:00.513 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+13-Jan-2022 05:56:00.513 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 05:56:00.513 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 05:56:00.514 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Jan-2022 05:56:00.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Jan-2022 05:56:00.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Jan-2022 05:56:00.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Jan-2022 05:56:00.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Jan-2022 05:56:00.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/logging.properties
+13-Jan-2022 05:56:00.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Jan-2022 05:56:00.515 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Jan-2022 05:56:00.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Jan-2022 05:56:00.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+13-Jan-2022 05:56:00.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Jan-2022 05:56:00.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 05:56:00.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+13-Jan-2022 05:56:00.516 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp
+13-Jan-2022 05:56:00.516 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+13-Jan-2022 05:56:00.548 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 05:56:00.565 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Jan-2022 05:56:00.575 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 436 ms
+13-Jan-2022 05:56:00.607 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Jan-2022 05:56:00.608 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+13-Jan-2022 05:56:00.624 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war]
+13-Jan-2022 05:56:06.895 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Jan-2022 05:56:09.280 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Create a new repository with storage: File system storage in /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo
+13-Jan-2022 05:56:09.290 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/dashboard'
+13-Jan-2022 05:56:09.297 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/usermanager'
+13-Jan-2022 05:56:09.298 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Warning: package uses old-style content dir: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/functx-1.0.1/functx'
+13-Jan-2022 05:56:09.301 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/eXide'
+Scanning journal  [=                                                 ] (2 %)Scanning journal  [==                                                ] (4 %)Scanning journal  [===                                               ] (6 %)Scanning journal  [====                                              ] (8 %)Scanning journal  [=====                                             ] (10 %)Scanning journal  [======                                            ] (12 %)Scanning journal  [=======                                           ] (14 %)Scanning journal  [========                                          ] (16 %)Scanning journal  [=========                                         ] (18 %)Scanning journal  [==========                                        ] (20 %)Scanning journal  [===========                                       ] (22 %)Scanning journal  [============                                      ] (24 %)Scanning journal  [=============                                     ] (26 %)Scanning journal  [==============                                    ] (28 %)Scanning journal  [===============                                   ] (30 %)Scanning journal  [================                                  ] (32 %)Scanning journal  [=================                                 ] (34 %)Scanning journal  [==================                                ] (36 %)Scanning journal  [===================                               ] (38 %)Scanning journal  [====================                              ] (40 %)Scanning journal  [=====================                             ] (42 %)Scanning journal  [======================                            ] (44 %)Scanning journal  [=======================                           ] (46 %)Scanning journal  [========================                          ] (48 %)Scanning journal  [=========================                         ] (50 %)Scanning journal  [==========================                        ] (52 %)Scanning journal  [===========================                       ] (54 %)Scanning journal  [============================                      ] (56 %)Scanning journal  [=============================                     ] (58 %)Scanning journal  [==============================                    ] (60 %)Scanning journal  [===============================                   ] (62 %)Scanning journal  [================================                  ] (64 %)Scanning journal  [=================================                 ] (66 %)Scanning journal  [==================================                ] (68 %)Scanning journal  [===================================               ] (70 %)Scanning journal  [====================================              ] (72 %)Scanning journal  [=====================================             ] (74 %)Scanning journal  [======================================            ] (76 %)Scanning journal  [=======================================           ] (78 %)Scanning journal  [========================================          ] (80 %)Scanning journal  [=========================================         ] (82 %)Scanning journal  [==========================================        ] (84 %)Scanning journal  [===========================================       ] (86 %)Scanning journal  [============================================      ] (88 %)Scanning journal  [=============================================     ] (90 %)Scanning journal  [==============================================    ] (92 %)Scanning journal  [===============================================   ] (94 %)Scanning journal  [================================================  ] (96 %)Scanning journal  [================================================= ] (98 %)Redo  [======================================            ] (76 %)Redo  [=======================================           ] (78 %)Redo  [========================================          ] (80 %)Redo  [=========================================         ] (82 %)Redo  [==========================================        ] (84 %)Redo  [===========================================       ] (86 %)Redo  [============================================      ] (88 %)Redo  [=============================================     ] (90 %)Redo  [==============================================    ] (92 %)Redo  [===============================================   ] (94 %)Redo  [================================================  ] (96 %)Redo  [================================================= ] (98 %)13-Jan-2022 05:56:10.848 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war] has finished in [10,224] ms
+13-Jan-2022 05:56:10.849 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war]
+13-Jan-2022 05:56:11.996 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-01-13 05:56:12] Config     INFO  FUSEKI_HOME=unset
+[2022-01-13 05:56:12] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-01-13 05:56:12] Server     ERROR Exception in server initialization
+org.apache.jena.fuseki.FusekiConfigException: Failed to create directory: /etc/fuseki
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.ensureDir(FusekiWebapp.java:372) ~[jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.jena.fuseki.webapp.FusekiWebapp.formatBaseArea(FusekiWebapp.java:145) [jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.jena.fuseki.webapp.ShiroEnvironmentLoader.contextInitialized(ShiroEnvironmentLoader.java:50) [jena-fuseki-webapp-3.17.0.jar:3.17.0]
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4763) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5232) [catalina.jar:8.5.73]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727) [catalina.jar:8.5.73]
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1016) [catalina.jar:8.5.73]
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1903) [catalina.jar:8.5.73]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
+	at java.lang.Thread.run(Thread.java:831) [?:?]
+[2022-01-13 05:56:12] Config     INFO  Context path = /fuseki
+[2022-01-13 05:56:12] Server     ERROR Failed to initialize : Server not running
+13-Jan-2022 05:56:12.780 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+13-Jan-2022 05:56:12.781 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/fuseki] startup failed due to previous errors
+13-Jan-2022 05:56:12.816 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war] has finished in [1,967] ms
+13-Jan-2022 05:56:12.817 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager]
+13-Jan-2022 05:56:12.842 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager] has finished in [25] ms
+13-Jan-2022 05:56:12.842 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs]
+13-Jan-2022 05:56:12.855 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs] has finished in [12] ms
+13-Jan-2022 05:56:12.855 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples]
+13-Jan-2022 05:56:12.997 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples] has finished in [142] ms
+13-Jan-2022 05:56:12.998 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager]
+13-Jan-2022 05:56:13.013 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager] has finished in [15] ms
+13-Jan-2022 05:56:13.014 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT]
+13-Jan-2022 05:56:13.028 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [14] ms
+13-Jan-2022 05:56:13.030 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+13-Jan-2022 05:56:13.040 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 12464 ms
