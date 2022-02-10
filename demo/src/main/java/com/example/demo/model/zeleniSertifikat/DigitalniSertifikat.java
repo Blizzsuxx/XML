@@ -1,6 +1,8 @@
 
 package com.example.demo.model.zeleniSertifikat;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -59,7 +61,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "vreme"
 })
 @XmlRootElement(name = "digitalniSertifikat")
-public class DigitalniSertifikat {
+public class DigitalniSertifikat implements Serializable{
 
     @XmlElement(name = "QRCode", required = true)
     protected String qrCode;

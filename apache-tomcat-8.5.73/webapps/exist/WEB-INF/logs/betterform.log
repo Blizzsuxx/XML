@@ -2,3 +2,10 @@
 2022-01-13 05:24:22,143 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-exist-8.5.73/webapps/exist/WEB-INF/log4j.xml 
 2022-01-13 05:56:07,942 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/log4j.xml 
 2022-01-13 10:22:05,032 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/log4j.xml 
+2022-01-13 11:53:07,755 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/log4j.xml 
+2022-02-10 06:37:46,714 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/log4j.xml 
+2022-02-10 06:48:37,135 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/log4j.xml 
+2022-02-10 07:13:54,649 [http-nio-8081-exec-5] ERROR (ResourceServlet.java [doGet]:183) - Error in streaming resource /META-INF/resources/scripts/dijit/themes/nihilo/nihilo.css. Exception is java.io.IOException: Broken pipe 
+2022-02-10 07:13:54,653 [http-nio-8081-exec-3] ERROR (ResourceServlet.java [doGet]:183) - Error in streaming resource /META-INF/resources/scripts/dojo/dojo.js. Exception is java.io.IOException: Broken pipe 
+2022-02-10 07:19:11,267 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/log4j.xml 
+2022-02-10 07:24:42,680 [localhost-startStop-1] WARN  (WebFactory.java [initLogging]:244) - Could not find /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/log4j.xml 

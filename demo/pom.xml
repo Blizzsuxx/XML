@@ -32,34 +32,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.sf.xmldb-org</groupId>
-			<artifactId>xmldb-api</artifactId>
-			<version>1.7.0</version>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.exist-db/exist-core -->
-		<dependency>
-			<groupId>org.exist-db</groupId>
-			<artifactId>exist-core</artifactId>
-			<version>5.3.1</version>
-		</dependency>
-
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-
-
-
-
-
-		<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-arq</artifactId>
-			<version>4.3.1</version>
+			<version>3.13.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.jena</groupId>
@@ -72,7 +47,28 @@
 			<version>2.4</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>Saxon-HE</artifactId>
+			<version>9.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.exist-db</groupId>
+			<artifactId>exist-core</artifactId>
+			<version>5.1.0</version>
+		</dependency>
 
 
 	</dependencies>

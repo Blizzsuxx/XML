@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.xml.bind.JAXBContext;
 
+import com.example.demo.db.ExistManager;
 import com.example.demo.dto.XMLDto;
 import com.example.demo.fuseki.FusekiReader;
 import com.example.demo.jaxb.JaxB;
@@ -23,9 +24,11 @@ import org.springframework.stereotype.Service;
 public class XMLService {
 
     private final JaxB jaxB;
+    private ExistManager existManager;
 
-    public XMLService(JaxB jaxB) {
+    public XMLService(JaxB jaxB, ExistManager existManager) {
         this.jaxB = jaxB;
+        this.existManager = existManager;
     }
 
    public String jaxBTestZahtevSertifikat(XMLDto dto) throws Exception {
@@ -79,11 +82,12 @@ public class XMLService {
    }
 
     public String jaxBTestZeleni(XMLDto dto) throws Exception {
-    JAXBContext context = JAXBContext.newInstance(DigitalniSertifikat.class);
 
         DigitalniSertifikat sertifikat = (DigitalniSertifikat) jaxB.unmarshall(DigitalniSertifikat.class, dto.getText());
         sertifikat.setQRCode("dakndkansfnajojfnaddfnas");
         System.out.println(sertifikat);
+
+
 
     return jaxB.marshall(DigitalniSertifikat.class, sertifikat);
     }
