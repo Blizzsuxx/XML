@@ -157,3 +157,51 @@
 2022-02-10 07:24:43,920 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1362) - Quartz scheduler 'db.exist.scheduler.quartz-scheduler' initialized from an externally provided properties instance. 
 2022-02-10 07:24:43,920 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1366) - Quartz scheduler version: 2.3.0 
 2022-02-10 07:24:45,094 [localhost-startStop-1] INFO  (QuartzScheduler.java [start]:547) - Scheduler db.exist.scheduler.quartz-scheduler_$_NON_CLUSTERED started. 
+2022-02-12 10:42:58,965 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1208) - Using default implementation for ThreadExecutor 
+2022-02-12 10:42:58,996 [db.exist.prepare-quartz-scheduler] INFO  (SimpleThreadPool.java [initialize]:268) - Job execution threads will use class loader of thread: db.exist.prepare-quartz-scheduler 
+2022-02-12 10:42:59,008 [db.exist.prepare-quartz-scheduler] INFO  (SchedulerSignalerImpl.java [<init>]:61) - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl 
+2022-02-12 10:42:59,009 [db.exist.prepare-quartz-scheduler] INFO  (QuartzScheduler.java [<init>]:229) - Quartz Scheduler v.2.3.0 created. 
+2022-02-12 10:42:59,009 [db.exist.prepare-quartz-scheduler] INFO  (RAMJobStore.java [initialize]:155) - RAMJobStore initialized. 
+2022-02-12 10:42:59,010 [db.exist.prepare-quartz-scheduler] INFO  (QuartzScheduler.java [initialize]:294) - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'db.exist.scheduler.quartz-scheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ 
+2022-02-12 10:42:59,010 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1362) - Quartz scheduler 'db.exist.scheduler.quartz-scheduler' initialized from an externally provided properties instance. 
+2022-02-12 10:42:59,010 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1366) - Quartz scheduler version: 2.3.0 
+2022-02-12 10:43:00,793 [localhost-startStop-1] INFO  (QuartzScheduler.java [start]:547) - Scheduler db.exist.scheduler.quartz-scheduler_$_NON_CLUSTERED started. 
+2022-02-14 03:30:56,660 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1208) - Using default implementation for ThreadExecutor 
+2022-02-14 03:30:56,682 [db.exist.prepare-quartz-scheduler] INFO  (SimpleThreadPool.java [initialize]:268) - Job execution threads will use class loader of thread: db.exist.prepare-quartz-scheduler 
+2022-02-14 03:30:56,694 [db.exist.prepare-quartz-scheduler] INFO  (SchedulerSignalerImpl.java [<init>]:61) - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl 
+2022-02-14 03:30:56,694 [db.exist.prepare-quartz-scheduler] INFO  (QuartzScheduler.java [<init>]:229) - Quartz Scheduler v.2.3.0 created. 
+2022-02-14 03:30:56,695 [db.exist.prepare-quartz-scheduler] INFO  (RAMJobStore.java [initialize]:155) - RAMJobStore initialized. 
+2022-02-14 03:30:56,695 [db.exist.prepare-quartz-scheduler] INFO  (QuartzScheduler.java [initialize]:294) - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'db.exist.scheduler.quartz-scheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ 
+2022-02-14 03:30:56,696 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1362) - Quartz scheduler 'db.exist.scheduler.quartz-scheduler' initialized from an externally provided properties instance. 
+2022-02-14 03:30:56,696 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1366) - Quartz scheduler version: 2.3.0 
+2022-02-14 03:30:58,289 [localhost-startStop-1] INFO  (QuartzScheduler.java [start]:547) - Scheduler db.exist.scheduler.quartz-scheduler_$_NON_CLUSTERED started. 
+2022-02-15 04:31:31,061 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1208) - Using default implementation for ThreadExecutor 
+2022-02-15 04:31:31,087 [db.exist.prepare-quartz-scheduler] INFO  (SimpleThreadPool.java [initialize]:268) - Job execution threads will use class loader of thread: db.exist.prepare-quartz-scheduler 
+2022-02-15 04:31:31,102 [db.exist.prepare-quartz-scheduler] INFO  (SchedulerSignalerImpl.java [<init>]:61) - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl 
+2022-02-15 04:31:31,103 [db.exist.prepare-quartz-scheduler] INFO  (QuartzScheduler.java [<init>]:229) - Quartz Scheduler v.2.3.0 created. 
+2022-02-15 04:31:31,103 [db.exist.prepare-quartz-scheduler] INFO  (RAMJobStore.java [initialize]:155) - RAMJobStore initialized. 
+2022-02-15 04:31:31,104 [db.exist.prepare-quartz-scheduler] INFO  (QuartzScheduler.java [initialize]:294) - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'db.exist.scheduler.quartz-scheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+ 
+2022-02-15 04:31:31,104 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1362) - Quartz scheduler 'db.exist.scheduler.quartz-scheduler' initialized from an externally provided properties instance. 
+2022-02-15 04:31:31,104 [db.exist.prepare-quartz-scheduler] INFO  (StdSchedulerFactory.java [instantiate]:1366) - Quartz scheduler version: 2.3.0 
+2022-02-15 04:31:32,768 [localhost-startStop-1] INFO  (QuartzScheduler.java [start]:547) - Scheduler db.exist.scheduler.quartz-scheduler_$_NON_CLUSTERED started. 

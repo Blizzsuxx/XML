@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.example.demo.dto.XMLDto;
+import com.example.demo.model.interesovanje.InteresovanjeZaVakcinisanje;
 import com.example.demo.service.XMLService;
 
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "api/xml", produces = MediaType.APPLICATION_JSON_VALUE, consumes =  MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "api/xml", produces = MediaType.APPLICATION_XML_VALUE, consumes =  MediaType.APPLICATION_XML_VALUE)
 @CrossOrigin
 public class XMLController {
 
@@ -29,6 +30,13 @@ public class XMLController {
         super();
         this.xmlService = service;
     }
+
+    @PostMapping("/podnesiZahtevZaSaglasnost")
+   public ResponseEntity<Boolean> podnesiZahtevZaSaglasnost(@RequestBody InteresovanjeZaVakcinisanje dto) throws Exception{
+    System.out.println("AAAAAAAAAA");
+    
+    return new ResponseEntity<Boolean>(this.xmlService.podnesiZahtevZaSaglasnost(dto), HttpStatus.OK);
+   }
 
    @PostMapping("/jaxBSaglasnost")
    public ResponseEntity<XMLDto> getChangedXMLJaxBSaglasnost(@RequestBody XMLDto dto) throws Exception{

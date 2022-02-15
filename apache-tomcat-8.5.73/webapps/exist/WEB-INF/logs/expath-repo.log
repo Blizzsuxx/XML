@@ -89,3 +89,27 @@
 2022-02-10 07:24:45,072 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/monex already installed. Skipping. 
 2022-02-10 07:24:45,074 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/shared already installed. Skipping. 
 2022-02-10 07:24:45,076 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/usermanager already installed. Skipping. 
+2022-02-12 10:42:59,289 [localhost-startStop-1] INFO  (ExistRepository.java [prepare]:86) - Using directory /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo for expath package repository 
+2022-02-12 10:43:00,596 [localhost-startStop-1] INFO  (AutoDeploymentTrigger.java [execute]:67) - Scanning autodeploy directory. Found 6 app packages. 
+2022-02-12 10:43:00,689 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/dashboard already installed. Skipping. 
+2022-02-12 10:43:00,702 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/eXide already installed. Skipping. 
+2022-02-12 10:43:00,718 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://www.functx.com already installed. Skipping. 
+2022-02-12 10:43:00,733 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/monex already installed. Skipping. 
+2022-02-12 10:43:00,746 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/shared already installed. Skipping. 
+2022-02-12 10:43:00,760 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/usermanager already installed. Skipping. 
+2022-02-14 03:30:56,929 [localhost-startStop-1] INFO  (ExistRepository.java [prepare]:86) - Using directory /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo for expath package repository 
+2022-02-14 03:30:58,143 [localhost-startStop-1] INFO  (AutoDeploymentTrigger.java [execute]:67) - Scanning autodeploy directory. Found 6 app packages. 
+2022-02-14 03:30:58,165 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/dashboard already installed. Skipping. 
+2022-02-14 03:30:58,184 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/eXide already installed. Skipping. 
+2022-02-14 03:30:58,201 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://www.functx.com already installed. Skipping. 
+2022-02-14 03:30:58,217 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/monex already installed. Skipping. 
+2022-02-14 03:30:58,228 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/shared already installed. Skipping. 
+2022-02-14 03:30:58,251 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/usermanager already installed. Skipping. 
+2022-02-15 04:31:31,332 [localhost-startStop-1] INFO  (ExistRepository.java [prepare]:86) - Using directory /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo for expath package repository 
+2022-02-15 04:31:32,571 [localhost-startStop-1] INFO  (AutoDeploymentTrigger.java [execute]:67) - Scanning autodeploy directory. Found 6 app packages. 
+2022-02-15 04:31:32,663 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/dashboard already installed. Skipping. 
+2022-02-15 04:31:32,676 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/eXide already installed. Skipping. 
+2022-02-15 04:31:32,693 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://www.functx.com already installed. Skipping. 
+2022-02-15 04:31:32,707 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/monex already installed. Skipping. 
+2022-02-15 04:31:32,719 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/shared already installed. Skipping. 
+2022-02-15 04:31:32,733 [localhost-startStop-1] INFO  (Deployment.java [installAndDeploy]:192) - Application package http://exist-db.org/apps/usermanager already installed. Skipping. 
