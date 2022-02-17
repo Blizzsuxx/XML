@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 
 import com.example.demo.db.ExistManager;
 import com.example.demo.dto.XMLDto;
@@ -31,65 +32,84 @@ public class XMLService {
         this.existManager = existManager;
     }
 
-   public String jaxBTestZahtevSertifikat(XMLDto dto) throws Exception {
-       JAXBContext context = JAXBContext.newInstance(ZahtevZaSertifikat.class);
+    public boolean podnesiZahtevZaSaglasnost(InteresovanjeZaVakcinisanje dto){
+        String interesovanjeZaVakcinisanje = null;
+        try {
+            interesovanjeZaVakcinisanje = this.jaxB.marshall(InteresovanjeZaVakcinisanje.class, dto);
+        } catch (JAXBException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        try {
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", "1.xml", interesovanjeZaVakcinisanje);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return true;
+    }
 
-       ZahtevZaSertifikat zahtev = (ZahtevZaSertifikat) jaxB.unmarshall(ZahtevZaSertifikat.class, dto.getText());
-       zahtev.setMesto("Novi Sad");
-       System.out.println(zahtev);
+    public String jaxBTestZahtevSertifikat(XMLDto dto) throws Exception {
+        JAXBContext context = JAXBContext.newInstance(ZahtevZaSertifikat.class);
 
-       return jaxB.marshall(ZahtevZaSertifikat.class, zahtev);
-   }
+        ZahtevZaSertifikat zahtev = (ZahtevZaSertifikat) jaxB.unmarshall(ZahtevZaSertifikat.class, dto.getText());
+        zahtev.setMesto("Novi Sad");
+        System.out.println(zahtev);
 
-   public String jaxBInteresovanje(XMLDto dto) throws Exception {
-       JAXBContext context = JAXBContext.newInstance(InteresovanjeZaVakcinisanje.class);
+        return jaxB.marshall(ZahtevZaSertifikat.class, zahtev);
+    }
 
-       InteresovanjeZaVakcinisanje interesovanje = (InteresovanjeZaVakcinisanje) jaxB.unmarshall(InteresovanjeZaVakcinisanje.class, dto.getText());
-       interesovanje.setLokacija("Novi Sad");
-       System.out.println(interesovanje);
+    public String jaxBInteresovanje(XMLDto dto) throws Exception {
+        JAXBContext context = JAXBContext.newInstance(InteresovanjeZaVakcinisanje.class);
 
-       return jaxB.marshall(InteresovanjeZaVakcinisanje.class, interesovanje);
-   }
+        InteresovanjeZaVakcinisanje interesovanje = (InteresovanjeZaVakcinisanje) jaxB
+                .unmarshall(InteresovanjeZaVakcinisanje.class, dto.getText());
+        interesovanje.setLokacija("Novi Sad");
+        System.out.println(interesovanje);
 
-   public String jaxBTestIzvestaj(XMLDto dto) throws Exception {
-       JAXBContext context = JAXBContext.newInstance(IzvestajOImunizaciji.class);
+        return jaxB.marshall(InteresovanjeZaVakcinisanje.class, interesovanje);
+    }
 
-       IzvestajOImunizaciji izvestaj = (IzvestajOImunizaciji) jaxB.unmarshall(IzvestajOImunizaciji.class, dto.getText());
-       izvestaj.setDatoJeVakcina(2l);
-       System.out.println(izvestaj);
+    public String jaxBTestIzvestaj(XMLDto dto) throws Exception {
+        JAXBContext context = JAXBContext.newInstance(IzvestajOImunizaciji.class);
 
-       return jaxB.marshall(IzvestajOImunizaciji.class, izvestaj);
-   }
+        IzvestajOImunizaciji izvestaj = (IzvestajOImunizaciji) jaxB.unmarshall(IzvestajOImunizaciji.class,
+                dto.getText());
+        izvestaj.setDatoJeVakcina(2l);
+        System.out.println(izvestaj);
 
-   public String jaxBTestPotvrda(XMLDto dto) throws Exception {
-       JAXBContext context = JAXBContext.newInstance(PotvrdaOVakcinaciji.class);
+        return jaxB.marshall(IzvestajOImunizaciji.class, izvestaj);
+    }
 
-       PotvrdaOVakcinaciji potvrda = (PotvrdaOVakcinaciji) jaxB.unmarshall(PotvrdaOVakcinaciji.class, dto.getText());
-       potvrda.setQRCode("dakndkansfnajojfnaddfnas");
-       System.out.println(potvrda);
+    public String jaxBTestPotvrda(XMLDto dto) throws Exception {
+        JAXBContext context = JAXBContext.newInstance(PotvrdaOVakcinaciji.class);
 
-       return jaxB.marshall(PotvrdaOVakcinaciji.class, potvrda);
-   }
+        PotvrdaOVakcinaciji potvrda = (PotvrdaOVakcinaciji) jaxB.unmarshall(PotvrdaOVakcinaciji.class, dto.getText());
+        potvrda.setQRCode("dakndkansfnajojfnaddfnas");
+        System.out.println(potvrda);
 
-   public String jaxBTestSaglasnost(XMLDto dto) throws Exception {
-       JAXBContext context = JAXBContext.newInstance(SaglasnostZaSprovodjenjeImunizacije.class);
+        return jaxB.marshall(PotvrdaOVakcinaciji.class, potvrda);
+    }
 
-       SaglasnostZaSprovodjenjeImunizacije saglasnost = (SaglasnostZaSprovodjenjeImunizacije) jaxB.unmarshall(SaglasnostZaSprovodjenjeImunizacije.class, dto.getText());
-       saglasnost.setPotpis("gandas");
-       System.out.println(saglasnost);
+    public String jaxBTestSaglasnost(XMLDto dto) throws Exception {
+        JAXBContext context = JAXBContext.newInstance(SaglasnostZaSprovodjenjeImunizacije.class);
 
-       return jaxB.marshall(DigitalniSertifikat.class, saglasnost);
-   }
+        SaglasnostZaSprovodjenjeImunizacije saglasnost = (SaglasnostZaSprovodjenjeImunizacije) jaxB
+                .unmarshall(SaglasnostZaSprovodjenjeImunizacije.class, dto.getText());
+        saglasnost.setPotpis("gandas");
+        System.out.println(saglasnost);
+
+        return jaxB.marshall(DigitalniSertifikat.class, saglasnost);
+    }
 
     public String jaxBTestZeleni(XMLDto dto) throws Exception {
 
-        DigitalniSertifikat sertifikat = (DigitalniSertifikat) jaxB.unmarshall(DigitalniSertifikat.class, dto.getText());
+        DigitalniSertifikat sertifikat = (DigitalniSertifikat) jaxB.unmarshall(DigitalniSertifikat.class,
+                dto.getText());
         sertifikat.setQRCode("dakndkansfnajojfnaddfnas");
         System.out.println(sertifikat);
 
-
-
-    return jaxB.marshall(DigitalniSertifikat.class, sertifikat);
+        return jaxB.marshall(DigitalniSertifikat.class, sertifikat);
     }
 
     public ArrayList<String> searchByMetadata(String naziv, String godina) throws IOException {

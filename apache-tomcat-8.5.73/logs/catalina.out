@@ -132,3 +132,541 @@ org.apache.jena.fuseki.FusekiConfigException: Failed to create directory: /etc/f
 10-Feb-2022 07:24:48.127 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
 10-Feb-2022 07:24:48.133 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 13272 ms
 [2022-02-10 09:46:30] Admin      INFO  [4] Create database : name = /Fakultet
+12-Feb-2022 10:42:41.898 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+12-Feb-2022 10:42:41.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+12-Feb-2022 10:42:41.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+12-Feb-2022 10:42:41.919 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-99-generic
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_312-8u312-b07-0ubuntu1~20.04-b07
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/logging.properties
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+12-Feb-2022 10:42:41.920 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+12-Feb-2022 10:42:41.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+12-Feb-2022 10:42:41.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+12-Feb-2022 10:42:41.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+12-Feb-2022 10:42:41.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+12-Feb-2022 10:42:41.921 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp
+12-Feb-2022 10:42:41.921 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+12-Feb-2022 10:42:42.017 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+12-Feb-2022 10:42:42.060 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+12-Feb-2022 10:42:42.078 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 693 ms
+12-Feb-2022 10:42:42.110 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+12-Feb-2022 10:42:42.110 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+12-Feb-2022 10:42:42.129 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war]
+12-Feb-2022 10:42:56.206 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+12-Feb-2022 10:42:59.314 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Create a new repository with storage: File system storage in /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo
+12-Feb-2022 10:42:59.353 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/dashboard'
+12-Feb-2022 10:42:59.378 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/usermanager'
+12-Feb-2022 10:42:59.388 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Warning: package uses old-style content dir: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/functx-1.0.1/functx'
+12-Feb-2022 10:42:59.463 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/eXide'
+12-Feb-2022 10:43:00.886 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war] has finished in [18,757] ms
+12-Feb-2022 10:43:00.887 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war]
+12-Feb-2022 10:43:03.405 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-02-12 10:43:04] Config     INFO  FUSEKI_HOME=unset
+[2022-02-12 10:43:04] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-02-12 10:43:04] Config     INFO  Shiro file: file:///etc/fuseki/shiro.ini
+[2022-02-12 10:43:04] Config     INFO  Context path = /fuseki
+[2022-02-12 10:43:04] Config     INFO  Configuration file: /etc/fuseki/config.ttl
+[2022-02-12 10:43:04] Config     INFO  Load configuration: file:///etc/fuseki/configuration/Fakultet.ttl
+[2022-02-12 10:43:05] Server     INFO  Configuration file: /etc/fuseki/config.ttl
+[2022-02-12 10:43:05] Server     INFO  Path = /Fakultet
+[2022-02-12 10:43:05] Server     INFO  System
+[2022-02-12 10:43:05] Server     INFO    Memory: 3.5 GiB
+[2022-02-12 10:43:05] Server     INFO    Java:   1.8.0_312
+[2022-02-12 10:43:05] Server     INFO    OS:     Linux 5.4.0-99-generic amd64
+[2022-02-12 10:43:05] Server     INFO    PID:    100305
+12-Feb-2022 10:43:05.305 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war] has finished in [4,417] ms
+12-Feb-2022 10:43:05.305 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager]
+12-Feb-2022 10:43:05.381 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager] has finished in [76] ms
+12-Feb-2022 10:43:05.382 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs]
+12-Feb-2022 10:43:05.409 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs] has finished in [28] ms
+12-Feb-2022 10:43:05.409 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples]
+12-Feb-2022 10:43:05.691 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples] has finished in [282] ms
+12-Feb-2022 10:43:05.691 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager]
+12-Feb-2022 10:43:05.711 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager] has finished in [20] ms
+12-Feb-2022 10:43:05.712 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT]
+12-Feb-2022 10:43:05.738 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [26] ms
+12-Feb-2022 10:43:05.742 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+12-Feb-2022 10:43:05.754 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 23675 ms
+14-Feb-2022 03:30:42.198 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+14-Feb-2022 03:30:42.222 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+14-Feb-2022 03:30:42.222 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+14-Feb-2022 03:30:42.222 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+14-Feb-2022 03:30:42.223 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-99-generic
+14-Feb-2022 03:30:42.223 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+14-Feb-2022 03:30:42.223 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+14-Feb-2022 03:30:42.223 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_312-8u312-b07-0ubuntu1~20.04-b07
+14-Feb-2022 03:30:42.223 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+14-Feb-2022 03:30:42.223 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+14-Feb-2022 03:30:42.223 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+14-Feb-2022 03:30:42.223 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/logging.properties
+14-Feb-2022 03:30:42.223 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+14-Feb-2022 03:30:42.224 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+14-Feb-2022 03:30:42.224 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+14-Feb-2022 03:30:42.224 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+14-Feb-2022 03:30:42.224 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+14-Feb-2022 03:30:42.224 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+14-Feb-2022 03:30:42.224 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+14-Feb-2022 03:30:42.224 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp
+14-Feb-2022 03:30:42.224 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+14-Feb-2022 03:30:42.308 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+14-Feb-2022 03:30:42.323 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+14-Feb-2022 03:30:42.338 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 751 ms
+14-Feb-2022 03:30:42.388 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+14-Feb-2022 03:30:42.388 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+14-Feb-2022 03:30:42.449 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war]
+14-Feb-2022 03:30:53.972 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+14-Feb-2022 03:30:56.951 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Create a new repository with storage: File system storage in /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo
+14-Feb-2022 03:30:56.990 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/dashboard'
+14-Feb-2022 03:30:57.021 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/usermanager'
+14-Feb-2022 03:30:57.037 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Warning: package uses old-style content dir: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/functx-1.0.1/functx'
+14-Feb-2022 03:30:57.084 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/eXide'
+14-Feb-2022 03:30:58.383 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war] has finished in [15,933] ms
+14-Feb-2022 03:30:58.405 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war]
+14-Feb-2022 03:30:59.849 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-02-14 03:31:00] Config     INFO  FUSEKI_HOME=unset
+[2022-02-14 03:31:00] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-02-14 03:31:00] Config     INFO  Shiro file: file:///etc/fuseki/shiro.ini
+[2022-02-14 03:31:01] Config     INFO  Context path = /fuseki
+[2022-02-14 03:31:01] Config     INFO  Configuration file: /etc/fuseki/config.ttl
+[2022-02-14 03:31:01] Config     INFO  Load configuration: file:///etc/fuseki/configuration/Fakultet.ttl
+[2022-02-14 03:31:01] Server     INFO  Configuration file: /etc/fuseki/config.ttl
+[2022-02-14 03:31:01] Server     INFO  Path = /Fakultet
+[2022-02-14 03:31:01] Server     INFO  System
+[2022-02-14 03:31:01] Server     INFO    Memory: 3.5 GiB
+[2022-02-14 03:31:01] Server     INFO    Java:   1.8.0_312
+[2022-02-14 03:31:01] Server     INFO    OS:     Linux 5.4.0-99-generic amd64
+[2022-02-14 03:31:01] Server     INFO    PID:    197570
+14-Feb-2022 03:31:01.695 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war] has finished in [3,289] ms
+14-Feb-2022 03:31:01.695 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager]
+14-Feb-2022 03:31:01.786 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager] has finished in [91] ms
+14-Feb-2022 03:31:01.786 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs]
+14-Feb-2022 03:31:01.813 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs] has finished in [27] ms
+14-Feb-2022 03:31:01.813 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples]
+14-Feb-2022 03:31:02.090 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples] has finished in [277] ms
+14-Feb-2022 03:31:02.090 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager]
+14-Feb-2022 03:31:02.113 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager] has finished in [23] ms
+14-Feb-2022 03:31:02.113 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT]
+14-Feb-2022 03:31:02.131 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [18] ms
+14-Feb-2022 03:31:02.135 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+14-Feb-2022 03:31:02.156 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 19817 ms
+[2022-02-14 18:31:56] Admin      INFO  [6] Create database : name = /PersonDataset
+[2022-02-14 18:32:10] Fuseki     INFO  [8] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 18:32:10] Fuseki     INFO  [8] Update
+[2022-02-14 18:32:10] Fuseki     INFO  [8] 204 No Content (41 ms)
+[2022-02-14 18:32:10] Fuseki     INFO  [9] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 18:32:10] Fuseki     INFO  [9] Update
+[2022-02-14 18:32:10] Fuseki     INFO  [9] 204 No Content (10 ms)
+[2022-02-14 18:32:10] Fuseki     INFO  [10] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 18:32:10] Fuseki     INFO  [10] Update
+[2022-02-14 18:32:10] Fuseki     INFO  [10] 204 No Content (3 ms)
+[2022-02-14 18:32:10] Fuseki     INFO  [11] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 18:32:10] Fuseki     INFO  [11] Update
+[2022-02-14 18:32:10] Fuseki     INFO  [11] 204 No Content (4 ms)
+[2022-02-14 18:32:10] Fuseki     INFO  [12] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 18:32:10] Fuseki     INFO  [12] Update
+[2022-02-14 18:32:10] Fuseki     INFO  [12] 204 No Content (16 ms)
+[2022-02-14 18:32:47] Fuseki     INFO  [22] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 18:32:47] Fuseki     INFO  [22] Update
+[2022-02-14 18:32:47] Fuseki     INFO  [22] 204 No Content (4 ms)
+[2022-02-14 18:32:47] Fuseki     INFO  [23] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 18:32:47] Fuseki     INFO  [23] Update
+[2022-02-14 18:32:47] Fuseki     INFO  [23] 204 No Content (3 ms)
+[2022-02-14 18:32:47] Fuseki     INFO  [24] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 18:32:47] Fuseki     INFO  [24] Update
+[2022-02-14 18:32:47] Fuseki     INFO  [24] 204 No Content (3 ms)
+[2022-02-14 18:32:47] Fuseki     INFO  [25] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 18:32:47] Fuseki     INFO  [25] Update
+[2022-02-14 18:32:47] Fuseki     INFO  [25] 204 No Content (4 ms)
+[2022-02-14 18:32:47] Fuseki     INFO  [26] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 18:32:47] Fuseki     INFO  [26] Update
+[2022-02-14 18:32:47] Fuseki     INFO  [26] 204 No Content (3 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [34] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [34] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [42] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [41] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [41] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [42] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [43] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [43] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [44] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [44] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [45] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [45] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [47] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [47] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [46] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [46] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [48] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [48] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [42] 200 OK (48 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [44] 200 OK (44 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [41] 200 OK (48 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [48] 200 OK (27 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [47] 200 OK (31 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [46] 200 OK (29 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [43] 200 OK (48 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [45] 200 OK (33 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [49] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [50] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [49] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [51] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [50] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [52] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:32:57] Fuseki     INFO  [52] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [34] 200 OK (103 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [52] 200 OK (3 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [49] 200 OK (4 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [51] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:32:57] Fuseki     INFO  [50] 200 OK (6 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [51] 200 OK (7 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [67] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:57] Fuseki     INFO  [67] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:57] Fuseki     INFO  [67] 200 OK (21 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [81] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:57] Fuseki     INFO  [81] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:57] Fuseki     INFO  [81] 200 OK (3 ms)
+[2022-02-14 18:32:57] Fuseki     INFO  [88] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:57] Fuseki     INFO  [88] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:57] Fuseki     INFO  [89] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:57] Fuseki     INFO  [89] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:58] Fuseki     INFO  [88] 200 OK (5 ms)
+[2022-02-14 18:32:58] Fuseki     INFO  [90] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:58] Fuseki     INFO  [90] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:58] Fuseki     INFO  [91] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:58] Fuseki     INFO  [92] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:58] Fuseki     INFO  [91] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:58] Fuseki     INFO  [92] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:58] Fuseki     INFO  [93] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:58] Fuseki     INFO  [93] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:58] Fuseki     INFO  [92] 200 OK (6 ms)
+[2022-02-14 18:32:58] Fuseki     INFO  [93] 200 OK (3 ms)
+[2022-02-14 18:32:58] Fuseki     INFO  [95] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:58] Fuseki     INFO  [95] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:58] Fuseki     INFO  [90] 200 OK (13 ms)
+[2022-02-14 18:32:58] Fuseki     INFO  [91] 200 OK (12 ms)
+[2022-02-14 18:32:58] Fuseki     INFO  [95] 200 OK (4 ms)
+[2022-02-14 18:32:58] Fuseki     INFO  [89] 200 OK (21 ms)
+[2022-02-14 18:32:58] Fuseki     INFO  [102] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:58] Fuseki     INFO  [102] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:58] Fuseki     INFO  [103] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:58] Fuseki     INFO  [103] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:58] Fuseki     INFO  [103] 200 OK (2 ms)
+[2022-02-14 18:32:58] Fuseki     INFO  [102] 200 OK (5 ms)
+[2022-02-14 18:32:58] Fuseki     INFO  [118] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:58] Fuseki     INFO  [118] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:58] Fuseki     INFO  [118] 200 OK (2 ms)
+[2022-02-14 18:32:58] Fuseki     INFO  [119] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:32:58] Fuseki     INFO  [119] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:32:58] Fuseki     INFO  [119] 200 OK (5 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [221] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [221] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [221] 200 OK (3 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [230] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [230] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [230] 200 OK (2 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [231] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [231] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [232] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [232] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [231] 200 OK (2 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [232] 200 OK (2 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [233] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [234] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [234] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [233] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [234] 200 OK (1 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [235] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [235] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [236] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [236] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [237] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [237] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [235] 200 OK (2 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [233] 200 OK (4 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [237] 200 OK (3 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [241] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [238] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [240] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [240] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [238] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [241] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [242] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [242] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [243] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [243] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [239] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:07] Fuseki     INFO  [239] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:07] Fuseki     INFO  [243] 200 OK (1 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [239] 200 OK (2 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [242] 200 OK (3 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [236] 200 OK (1 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [241] 200 OK (5 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [240] 200 OK (5 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [238] 200 OK (8 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [244] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [244] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [244] 200 OK (5 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [252] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [252] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [252] 200 OK (2 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [261] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [261] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [262] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [262] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [261] 200 OK (2 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [263] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [263] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [264] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [264] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [262] 200 OK (4 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [264] 200 OK (1 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [265] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [263] 200 OK (4 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [265] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [265] 200 OK (2 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [266] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [267] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [266] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [268] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [267] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [268] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [269] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [269] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [268] 200 OK (1 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [269] 200 OK (1 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [270] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [270] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [267] 200 OK (3 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [266] 200 OK (7 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [270] 200 OK (4 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [271] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [272] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [273] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:07] Fuseki     INFO  [272] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [273] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [272] 200 OK (1 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [273] 200 OK (1 ms)
+[2022-02-14 18:33:07] Fuseki     INFO  [271] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:07] Fuseki     INFO  [271] 200 OK (7 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [343] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [343] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [343] 200 OK (1 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [352] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [352] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [352] 200 OK (3 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [353] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [353] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [353] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [354] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [354] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [355] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [355] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [356] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [356] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [354] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [357] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [355] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [357] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [356] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [358] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [358] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [357] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [358] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [359] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [359] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [359] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [360] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [361] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [361] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [362] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [361] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [365] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [363] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [365] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [364] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [363] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [360] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [364] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [365] 200 OK (3 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [363] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [362] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [366] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [366] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [364] 200 OK (5 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [362] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [360] 200 OK (8 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [367] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+(count(*)+as+%3Fcount)+%7B%3Fs+%3Fp+%3Fo%7D
+[2022-02-14 18:33:10] Fuseki     INFO  [367] Query = select (count(*) as ?count) {?s ?p ?o}
+[2022-02-14 18:33:10] Fuseki     INFO  [366] 200 OK (8 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [367] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [368] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [368] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [368] 200 OK (4 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [378] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [378] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [378] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [387] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [387] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [387] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [388] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [388] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [389] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [389] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [390] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [390] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [389] 200 OK (3 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [388] 200 OK (3 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [390] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [392] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [391] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [392] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [391] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [393] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [393] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [391] 200 OK (3 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [393] 200 OK (3 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [392] 200 OK (5 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [394] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [394] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [395] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [395] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [394] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [395] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [396] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [397] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [396] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [398] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [398] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [398] 200 OK (1 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [397] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [399] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [399] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [397] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [399] 200 OK (2 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [400] GET http://localhost:8081/fuseki/PersonDataset/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [402] GET http://localhost:8081/fuseki/Fakultet/sparql?query=select+%3Fg+(count(*)+as+%3Fcount)+%7Bgraph+%3Fg+%7B%3Fs+%3Fp+%3Fo%7D%7D+group+by+%3Fg
+[2022-02-14 18:33:10] Fuseki     INFO  [400] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [402] Query = select ?g (count(*) as ?count) {graph ?g {?s ?p ?o}} group by ?g
+[2022-02-14 18:33:10] Fuseki     INFO  [402] 200 OK (1 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [396] 200 OK (8 ms)
+[2022-02-14 18:33:10] Fuseki     INFO  [400] 200 OK (5 ms)
+[2022-02-14 18:33:32] Fuseki     INFO  [465] GET http://localhost:8081/fuseki/Fakultet
+[2022-02-14 18:33:32] Fuseki     INFO  [465] 200 OK (5 ms)
+[2022-02-14 18:33:56] Fuseki     INFO  [470] GET http://localhost:8081/fuseki/PersonDataset
+[2022-02-14 18:33:57] Fuseki     INFO  [470] 200 OK (5 ms)
+[2022-02-14 18:34:01] Fuseki     INFO  [471] GET http://localhost:8081/fuseki/PersonDataset/upload
+[2022-02-14 18:34:01] Fuseki     INFO  [471] 405 Method Not Allowed (0 ms)
+[2022-02-14 18:34:07] Fuseki     INFO  [472] GET http://localhost:8081/fuseki/PersonDataset
+[2022-02-14 18:34:07] Fuseki     INFO  [472] 200 OK (3 ms)
+[2022-02-14 18:34:19] Fuseki     INFO  [473] GET http://localhost:8081/fuseki/PersonDataset/query?query=SELECT++*%0AFROM+%3Chttp%3A%2F%2Flocalhost%3A8081%2Ffuseki%2FPersonDataset%2Fdata%2Fexample%2Ftest%2Fmetadata%3E%0AWHERE%0A++%7B+%3Fs++%3Fp++%3Fo+%7D%0A
+[2022-02-14 18:34:19] Fuseki     INFO  [473] Query = SELECT  * FROM <http://localhost:8081/fuseki/PersonDataset/data/example/test/metadata> WHERE   { ?s  ?p  ?o } 
+[2022-02-14 18:34:19] Fuseki     INFO  [473] 200 OK (9 ms)
+[2022-02-14 18:34:19] Fuseki     INFO  [474] GET http://localhost:8081/fuseki/PersonDataset/query?query=SELECT++*%0AFROM+%3Chttp%3A%2F%2Flocalhost%3A8081%2Ffuseki%2FPersonDataset%2Fdata%2Fexample%2Fperson%2Fmetadata%3E%0AWHERE%0A++%7B+%3Fs++%3Fp++%3Fo+%7D%0A
+[2022-02-14 18:34:19] Fuseki     INFO  [474] Query = SELECT  * FROM <http://localhost:8081/fuseki/PersonDataset/data/example/person/metadata> WHERE   { ?s  ?p  ?o } 
+[2022-02-14 18:34:19] Fuseki     INFO  [474] 200 OK (2 ms)
+[2022-02-14 18:38:43] Fuseki     INFO  [475] GET http://localhost:8081/fuseki/PersonDataset
+[2022-02-14 18:38:43] Fuseki     INFO  [475] 200 OK (2 ms)
+[2022-02-14 20:55:05] Fuseki     INFO  [476] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 20:55:05] Fuseki     INFO  [476] Update
+[2022-02-14 20:55:05] Fuseki     INFO  [476] 204 No Content (2 ms)
+[2022-02-14 20:55:05] Fuseki     INFO  [477] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 20:55:05] Fuseki     INFO  [477] Update
+[2022-02-14 20:55:05] Fuseki     INFO  [477] 204 No Content (5 ms)
+[2022-02-14 20:55:05] Fuseki     INFO  [478] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 20:55:05] Fuseki     INFO  [478] Update
+[2022-02-14 20:55:05] Fuseki     INFO  [478] 204 No Content (2 ms)
+[2022-02-14 20:55:05] Fuseki     INFO  [479] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 20:55:05] Fuseki     INFO  [479] Update
+[2022-02-14 20:55:05] Fuseki     INFO  [479] 204 No Content (3 ms)
+[2022-02-14 20:55:05] Fuseki     INFO  [480] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 20:55:05] Fuseki     INFO  [480] Update
+[2022-02-14 20:55:05] Fuseki     INFO  [480] 204 No Content (3 ms)
+[2022-02-14 22:53:01] Fuseki     INFO  [481] GET http://localhost:8081/fuseki/PersonDataset/query?query=SELECT++*%0AFROM+%3Chttp%3A%2F%2Flocalhost%3A8081%2Ffuseki%2FPersonDataset%2Fdata%2Fexample%2Fsparql%2Fmetadata%3E%0AWHERE%0A++%7B+%3Fperson++%3Chttp%3A%2F%2Fwww.ftn.uns.ac.rs%2Frdf%2Fexamples%2Fpredicate%2Fhobby%3E++%3Fhobby+%3B%0A+++++++++++++%3Chttp%3A%2F%2Fwww.ftn.uns.ac.rs%2Frdf%2Fexamples%2Fpredicate%2Fprofession%3E++%3Fprofession+%3B%0A+++++++++++++%3Chttp%3A%2F%2Fwww.ftn.uns.ac.rs%2Frdf%2Fexamples%2Fpredicate%2FlivesIn%3E++%3Flocation%0A++%7D%0A
+[2022-02-14 22:53:01] Fuseki     INFO  [481] Query = SELECT  * FROM <http://localhost:8081/fuseki/PersonDataset/data/example/sparql/metadata> WHERE   { ?person  <http://www.ftn.uns.ac.rs/rdf/examples/predicate/hobby>  ?hobby ;              <http://www.ftn.uns.ac.rs/rdf/examples/predicate/profession>  ?profession ;              <http://www.ftn.uns.ac.rs/rdf/examples/predicate/livesIn>  ?location   } 
+[2022-02-14 22:53:01] Fuseki     INFO  [481] 200 OK (2 ms)
+[2022-02-14 22:53:01] Fuseki     INFO  [482] GET http://localhost:8081/fuseki/PersonDataset/query?query=SELECT++*%0AFROM+%3Chttp%3A%2F%2Flocalhost%3A8081%2Ffuseki%2FPersonDataset%2Fdata%2Fexample%2Fsparql%2Fmetadata%3E%0AWHERE%0A++%7B+%3Fperson++%3Chttp%3A%2F%2Fwww.ftn.uns.ac.rs%2Frdf%2Fexamples%2Fpredicate%2Fhobby%3E++%3Fhobby+%3B%0A+++++++++++++%3Chttp%3A%2F%2Fwww.ftn.uns.ac.rs%2Frdf%2Fexamples%2Fpredicate%2Fprofession%3E++%3Fprofession+%3B%0A+++++++++++++%3Chttp%3A%2F%2Fwww.ftn.uns.ac.rs%2Frdf%2Fexamples%2Fpredicate%2FlivesIn%3E++%3Flocation%0A++%7D%0A
+[2022-02-14 22:53:01] Fuseki     INFO  [482] Query = SELECT  * FROM <http://localhost:8081/fuseki/PersonDataset/data/example/sparql/metadata> WHERE   { ?person  <http://www.ftn.uns.ac.rs/rdf/examples/predicate/hobby>  ?hobby ;              <http://www.ftn.uns.ac.rs/rdf/examples/predicate/profession>  ?profession ;              <http://www.ftn.uns.ac.rs/rdf/examples/predicate/livesIn>  ?location   } 
+[2022-02-14 22:53:01] Fuseki     INFO  [482] 200 OK (2 ms)
+[2022-02-14 22:53:30] Fuseki     INFO  [483] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 22:53:30] Fuseki     INFO  [483] Update
+[2022-02-14 22:53:30] Fuseki     INFO  [483] 204 No Content (3 ms)
+[2022-02-14 22:53:30] Fuseki     INFO  [484] GET http://localhost:8081/fuseki/PersonDataset/query?query=SELECT++*%0AFROM+%3Chttp%3A%2F%2Flocalhost%3A8081%2Ffuseki%2FPersonDataset%2Fdata%2Fexample%2Fsparql%2Fmetadata%3E%0AWHERE%0A++%7B+%3Fs++%3Fp++%3Fo+%7D%0A
+[2022-02-14 22:53:30] Fuseki     INFO  [484] Query = SELECT  * FROM <http://localhost:8081/fuseki/PersonDataset/data/example/sparql/metadata> WHERE   { ?s  ?p  ?o } 
+[2022-02-14 22:53:30] Fuseki     INFO  [484] 200 OK (2 ms)
+[2022-02-14 22:54:35] Fuseki     INFO  [485] POST http://localhost:8081/fuseki/PersonDataset/update
+[2022-02-14 22:54:35] Fuseki     INFO  [485] Update
+[2022-02-14 22:54:35] Fuseki     INFO  [485] 204 No Content (3 ms)
+[2022-02-14 22:54:35] Fuseki     INFO  [486] GET http://localhost:8081/fuseki/PersonDataset/query?query=SELECT++*%0AFROM+%3Chttp%3A%2F%2Flocalhost%3A8081%2Ffuseki%2FPersonDataset%2Fdata%2Fexample%2Fsparql%2Fmetadata%3E%0AWHERE%0A++%7B+%3Fs++%3Fp++%3Fo+%7D%0A
+[2022-02-14 22:54:35] Fuseki     INFO  [486] Query = SELECT  * FROM <http://localhost:8081/fuseki/PersonDataset/data/example/sparql/metadata> WHERE   { ?s  ?p  ?o } 
+[2022-02-14 22:54:35] Fuseki     INFO  [486] 200 OK (2 ms)
+15-Feb-2022 04:31:14.361 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+15-Feb-2022 04:31:14.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+15-Feb-2022 04:31:14.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+15-Feb-2022 04:31:14.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+15-Feb-2022 04:31:14.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-99-generic
+15-Feb-2022 04:31:14.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+15-Feb-2022 04:31:14.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+15-Feb-2022 04:31:14.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_312-8u312-b07-0ubuntu1~20.04-b07
+15-Feb-2022 04:31:14.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+15-Feb-2022 04:31:14.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+15-Feb-2022 04:31:14.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+15-Feb-2022 04:31:14.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/logging.properties
+15-Feb-2022 04:31:14.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+15-Feb-2022 04:31:14.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+15-Feb-2022 04:31:14.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+15-Feb-2022 04:31:14.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+15-Feb-2022 04:31:14.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+15-Feb-2022 04:31:14.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+15-Feb-2022 04:31:14.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+15-Feb-2022 04:31:14.407 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp
+15-Feb-2022 04:31:14.407 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+15-Feb-2022 04:31:14.469 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+15-Feb-2022 04:31:14.512 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+15-Feb-2022 04:31:14.522 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 507 ms
+15-Feb-2022 04:31:14.547 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+15-Feb-2022 04:31:14.548 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+15-Feb-2022 04:31:14.625 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war]
+15-Feb-2022 04:31:28.104 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+15-Feb-2022 04:31:31.354 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Create a new repository with storage: File system storage in /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo
+15-Feb-2022 04:31:31.393 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/dashboard'
+15-Feb-2022 04:31:31.407 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/usermanager'
+15-Feb-2022 04:31:31.418 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Warning: package uses old-style content dir: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/functx-1.0.1/functx'
+15-Feb-2022 04:31:31.466 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/eXide'
+15-Feb-2022 04:31:32.860 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war] has finished in [18,235] ms
+15-Feb-2022 04:31:32.887 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war]
+15-Feb-2022 04:31:35.566 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-02-15 04:31:36] Config     INFO  FUSEKI_HOME=unset
+[2022-02-15 04:31:36] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-02-15 04:31:36] Config     INFO  Shiro file: file:///etc/fuseki/shiro.ini
+[2022-02-15 04:31:36] Config     INFO  Context path = /fuseki
+[2022-02-15 04:31:36] Config     INFO  Configuration file: /etc/fuseki/config.ttl
+[2022-02-15 04:31:37] Config     INFO  Load configuration: file:///etc/fuseki/configuration/PersonDataset.ttl
+[2022-02-15 04:31:37] Config     INFO  Load configuration: file:///etc/fuseki/configuration/Fakultet.ttl
+[2022-02-15 04:31:37] Server     INFO  Configuration file: /etc/fuseki/config.ttl
+[2022-02-15 04:31:37] Server     INFO  Path = /Fakultet
+[2022-02-15 04:31:37] Server     INFO  Path = /PersonDataset
+[2022-02-15 04:31:37] Server     INFO  System
+[2022-02-15 04:31:37] Server     INFO    Memory: 3.5 GiB
+[2022-02-15 04:31:37] Server     INFO    Java:   1.8.0_312
+[2022-02-15 04:31:37] Server     INFO    OS:     Linux 5.4.0-99-generic amd64
+[2022-02-15 04:31:37] Server     INFO    PID:    22626
+15-Feb-2022 04:31:37.468 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war] has finished in [4,581] ms
+15-Feb-2022 04:31:37.469 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager]
+15-Feb-2022 04:31:37.528 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager] has finished in [59] ms
+15-Feb-2022 04:31:37.528 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs]
+15-Feb-2022 04:31:37.548 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs] has finished in [20] ms
+15-Feb-2022 04:31:37.548 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples]
+15-Feb-2022 04:31:37.885 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples] has finished in [337] ms
+15-Feb-2022 04:31:37.886 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager]
+15-Feb-2022 04:31:37.923 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager] has finished in [37] ms
+15-Feb-2022 04:31:37.923 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT]
+15-Feb-2022 04:31:37.943 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [20] ms
+15-Feb-2022 04:31:37.947 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+15-Feb-2022 04:31:37.954 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 23431 ms

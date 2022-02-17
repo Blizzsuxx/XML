@@ -1,0 +1,52 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+            <!-- <a class="navbar-brand" (click) = "this.router.navigate(['']);">Restaurant Application</a>  -->            
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+
+          <li>
+            <a class="navbar-brand" (click) = "this.router.navigate(['Interesovanje'])">Interesovanje</a>
+          </li>
+
+          <li>
+            <a class="navbar-brand" (click) = "this.router.navigate(['saglasnost'])">Saglasnost</a>
+          </li>
+
+          <li>
+            <a class="navbar-brand" (click) = "this.router.navigate(['zeleni-sertifikat'])">Zeleni Sertifikat</a>
+          </li>
+
+          <li>
+            <a class="navbar-brand" (click) = "this.router.navigate(['pregled-dokumenata'])">Pregled Dokumenata</a>
+          </li>
+          
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a  *ngIf="checkIfLogged() === true" (click)="logout()">Logout</a></li>
+          <li><a  *ngIf="checkIfLogged() === false" (click) = "this.router.navigate(['login']);">Login</a></li>
+
+          <!-- <li><a  *ngIf="checkIfLogged() === true" (click) = "this.router.navigate(['']);">Login</a></li> -->
+          <li><a  *ngIf="checkIfLogged() === true" (click) = "this.router.navigate(['profile']);" >Profile</a></li>
+
+          <li> 
+            <button (click) = "this.router.navigate(['notifications']);" type="button" class="icon-button" >
+              <span class="material-icons">notifications</span>
+              <span *ngIf="numNotifications !== 0 " class="icon-button__badge"> {{numNotifications}} </span>
+            </button>
+        </li>
+
+        </ul>
+      </div>
+    </div>
+</nav>
+  
+  

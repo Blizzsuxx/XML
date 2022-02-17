@@ -1,0 +1,4 @@
+2022-02-15 04:32:47,219 [http-nio-8081-exec-9] INFO  (RpcConnection.java [createCollection]:184) - collection /db/sample has been created 
+2022-02-15 04:32:47,810 [http-nio-8081-exec-9] INFO  (RpcConnection.java [createCollection]:184) - collection /db/sample/library has been created 
+2022-02-15 18:16:52,197 [http-nio-8081-exec-2] INFO  (RpcConnection.java [createCollection]:184) - collection /db/dokumenti has been created 
+2022-02-15 18:16:52,298 [http-nio-8081-exec-2] INFO  (RpcConnection.java [createCollection]:184) - collection /db/dokumenti/zahtevZaSaglasnost has been created 
