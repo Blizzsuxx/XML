@@ -1,12 +1,20 @@
 package com.example.demo.service;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeConstants;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.example.demo.db.ExistManager;
 import com.example.demo.dto.XMLDto;
@@ -25,24 +33,51 @@ import org.springframework.stereotype.Service;
 public class XMLService {
 
     private final JaxB jaxB;
-    private ExistManager existManager;
+    private final ExistManager existManager;
+    private final MailSender mailSender;
+    private final PDFTransformer pdfTransformer;
 
-    public XMLService(JaxB jaxB, ExistManager existManager) {
+    public XMLService(JaxB jaxB, ExistManager existManager, MailSender mailSender, PDFTransformer pdfTransformer) {
         this.jaxB = jaxB;
         this.existManager = existManager;
+        this.mailSender = mailSender;
+        this.pdfTransformer = pdfTransformer;
     }
 
-    public boolean podnesiZahtevZaSaglasnost(InteresovanjeZaVakcinisanje dto){
+    public boolean podnesiZahtevZaSaglasnost(InteresovanjeZaVakcinisanje dto) {
         String interesovanjeZaVakcinisanje = null;
+        GregorianCalendar calendar = new GregorianCalendar();
+        Date trenutniDatum = new Date();
+        calendar.setTime(trenutniDatum);
+        dto.setGodina(calendar.get(Calendar.YEAR) % 10 + "");
+        XMLGregorianCalendar date = null;
+        try {
+            
+            date = DatatypeFactory.newInstance().newXMLGregorianCalendar(DatatypeConstants.FIELD_UNDEFINED, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), DatatypeConstants.FIELD_UNDEFINED, DatatypeConstants.FIELD_UNDEFINED, DatatypeConstants.FIELD_UNDEFINED, DatatypeConstants.FIELD_UNDEFINED, DatatypeConstants.FIELD_UNDEFINED);
+        } catch (DatatypeConfigurationException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+        dto.setDan(date);
         try {
             interesovanjeZaVakcinisanje = this.jaxB.marshall(InteresovanjeZaVakcinisanje.class, dto);
+            System.out.println(interesovanjeZaVakcinisanje);
         } catch (JAXBException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
         try {
-            this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", "1.xml", interesovanjeZaVakcinisanje);
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getJmbg() + ".xml",
+                    interesovanjeZaVakcinisanje);
         } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        this.mailSender.sendEmail(dto.getOsoba().getEAdresa(), interesovanjeZaVakcinisanje);
+        try {
+            this.pdfTransformer.generateHTML(interesovanjeZaVakcinisanje,
+                    "demo/src/main/resources/xsl/interesovanje.xsl");
+        } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

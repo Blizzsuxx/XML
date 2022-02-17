@@ -36,7 +36,7 @@
                     <div class="example-container">
                         <mat-form-field appearance="fill">
                             <mat-label>Unesite JMBG</mat-label>
-                            <input matInput type="number" placeholder="2902968000000" [formControl]="jmbg" required>
+                            <input matInput placeholder="2902968000000" [formControl]="jmbg" required>
                             <mat-error *ngIf="jmbg.invalid">Morate uneti JMBG</mat-error>
                         </mat-form-field>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="example-container">
                         <mat-form-field appearance="fill">
                             <mat-label>Unesite mobilni telefon</mat-label>
-                            <input matInput type="number" placeholder="061729411323" [formControl]="mobilni" required>
+                            <input matInput placeholder="061729411323" [formControl]="mobilni" required>
                             <mat-error *ngIf="mobilni.invalid">Morate uneti broj</mat-error>
                             <mat-icon matSuffix>phone</mat-icon>
                         </mat-form-field>
@@ -69,7 +69,7 @@
                     <div class="example-container">
                         <mat-form-field appearance="fill">
                             <mat-label>Unesite fiksni telefon</mat-label>
-                            <input matInput type="number" placeholder="021823849" [formControl]="fiksni">
+                            <input matInput placeholder="021823849" [formControl]="fiksni">
                             <mat-error *ngIf="fiksni.invalid">Morate uneti broj</mat-error>
                             <mat-icon matSuffix>phone</mat-icon>
                         </mat-form-field>
