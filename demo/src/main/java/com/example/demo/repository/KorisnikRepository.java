@@ -4,6 +4,7 @@ import com.example.demo.db.ExistManager;
 import com.example.demo.model.korisnik.Korisnik;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.xmldb.api.modules.XMLResource;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -39,6 +40,10 @@ public class KorisnikRepository {
         }
 
         return true;
+    }
+
+    public XMLResource getOne(String email) throws Exception {
+        return existManager.load(collectionId, email);
     }
 
 }

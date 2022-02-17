@@ -1,99 +1,72 @@
-// package com.example.demo.controller;
+ package com.example.demo.controller;
 
-// import java.util.HashMap;
-// import java.util.Map;
+ import com.example.demo.dto.UserTokenStateDTO;
+ import com.example.demo.model.korisnik.Korisnik;
+ import com.example.demo.security.TokenUtils;
+ import com.example.demo.service.KorisnikService;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.http.HttpStatus;
+ import org.springframework.http.MediaType;
+ import org.springframework.http.ResponseEntity;
+ import org.springframework.security.authentication.AuthenticationManager;
+ import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+ import org.springframework.security.core.Authentication;
+ import org.springframework.security.core.context.SecurityContextHolder;
+ import org.springframework.security.core.userdetails.User;
+ import org.springframework.web.bind.annotation.PostMapping;
+ import org.springframework.web.bind.annotation.RequestBody;
+ import org.springframework.web.bind.annotation.RequestMapping;
+ import org.springframework.web.bind.annotation.RestController;
 
-// import javax.servlet.http.HttpServletRequest;
-// import javax.servlet.http.HttpServletResponse;
 
-// import com.example.demo.security.TokenUtils;
+ //Kontroler zaduzen za autentifikaciju korisnika
+ @RestController
+ @RequestMapping(produces = MediaType.APPLICATION_XML_VALUE)
+ public class AuthenticationController {
 
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.http.HttpStatus;
-// import org.springframework.http.MediaType;
-// import org.springframework.http.ResponseEntity;
-// import org.springframework.security.access.prepost.PreAuthorize;
-// import org.springframework.security.authentication.AuthenticationManager;
-// import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-// import org.springframework.security.core.Authentication;
-// import org.springframework.security.core.context.SecurityContextHolder;
-// import org.springframework.web.bind.annotation.PostMapping;
-// import org.springframework.web.bind.annotation.RequestBody;
-// import org.springframework.web.bind.annotation.RequestMapping;
-// import org.springframework.web.bind.annotation.RequestMethod;
-// import org.springframework.web.bind.annotation.RestController;
+     @Autowired
+     private TokenUtils tokenUtils;
 
-// import kts.restaurant_application.DTO.UserDTO;
-// import kts.restaurant_application.DTO.UserLoginDTO;
-// import kts.restaurant_application.DTO.UserTokenStateDTO;
-// import kts.restaurant_application.helper.UserMapper;
-// import kts.restaurant_application.services.CustomUserDetailsService;
-// import kts.restaurant_application.services.UserService;
+     @Autowired
+     private AuthenticationManager authenticationManager;
 
-// //Kontroler zaduzen za autentifikaciju korisnika
-// @RestController
-// @RequestMapping(value = "/auth", produces = MediaType.APPLICATION_JSON_VALUE)
-// public class AuthenticationController {
+     @Autowired
+     private KorisnikService korisnikService;
 
-//     @Autowired
-//     private TokenUtils tokenUtils;
 
-//     @Autowired
-//     private CustomUserDetailsService userDetailsService;
+     // Prvi endpoint koji pogadja korisnik kada se loguje.
+     // Tada zna samo svoje korisnicko ime i lozinku i to prosledjuje na backend.
+     @PostMapping(value = "/log-in", consumes = MediaType.APPLICATION_XML_VALUE)
+     public ResponseEntity<?> createAuthenticationToken(@RequestBody Korisnik korisnik) {
+         System.out.println(korisnik.getEmail());
+         System.out.println(korisnik.getLozinka());
 
-//     @Autowired
-//     private AuthenticationManager authenticationManager;
+         Authentication authentication = authenticationManager
+                 .authenticate(new UsernamePasswordAuthenticationToken(korisnik.getEmail(),
+                         korisnik.getLozinka()));
 
-//     @Autowired
-//     private UserService userService;
+         // Ubaci korisnika u trenutni security kontekst
+         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-//     private UserMapper userMapper;
+         // Kreiraj token za tog korisnika
+         User user = (User) authentication.getPrincipal();
+         String jwt = tokenUtils.generateToken(user.getUsername()); // prijavljujemo se na sistem sa email adresom
+         int expiresIn = tokenUtils.getExpiredIn();
 
-//     // Prvi endpoint koji pogadja korisnik kada se loguje.
-//     // Tada zna samo svoje korisnicko ime i lozinku i to prosledjuje na backend.
-//     @PostMapping("/log-in")
-//     public ResponseEntity<?> createAuthenticationToken(@RequestBody UserLoginDTO authenticationRequest,
-//                                                                     HttpServletResponse response) {
-//         System.out.println(authenticationRequest.getUsername());
-//         System.out.println(authenticationRequest.getPassword());
+         UserTokenStateDTO token = new UserTokenStateDTO(jwt);
+         // Vrati token kao odgovor na uspesnu autentifikaciju
+         return new ResponseEntity<>(token, HttpStatus.OK);
+     }
 
-//         Authentication authentication = authenticationManager
-//                 .authenticate(new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(),
-//                         authenticationRequest.getPassword()));
+     // Endpoint za registraciju novog korisnika
+     @PostMapping("/sign-up")
+     public ResponseEntity<?> addUser(@RequestBody Korisnik korisnik) throws Exception {
+         if (korisnikService.create(korisnik)) {
+             return new ResponseEntity<>(HttpStatus.CREATED);
+         }
 
-//         // Ubaci korisnika u trenutni security kontekst
-//         SecurityContextHolder.getContext().setAuthentication(authentication);
-
-//         // Kreiraj token za tog korisnika
-//         User user = (User) authentication.getPrincipal();
-//         String jwt = tokenUtils.generateToken(user.getUsername()); // prijavljujemo se na sistem sa email adresom
-//         int expiresIn = tokenUtils.getExpiredIn();
-
-//         UserTokenStateDTO token = new UserTokenStateDTO(jwt, expiresIn, user.getId(), user.getAuthorities());
-//         // Vrati token kao odgovor na uspesnu autentifikaciju
-//         return ResponseEntity.ok(token);
-
-//         //UserTokenStateDTO(String accessToken, Long expiresIn, Long userId, String userRole)
-//     }
-
-//     // Endpoint za registraciju novog korisnika
-//     @PostMapping("/sign-up")
-//     public ResponseEntity<?> addUser(@RequestBody UserDTO userRequest) throws Exception {
-
-//         User existUser = this.userService.findByUsername(userRequest.getUsername());
-//         if (existUser != null) {
-//             throw new Exception("Username already exists");
-//         }
-
-//         try {
-//             User user = userMapper.toEntity(userRequest);
-//             user.setIsDeleted(false);
-//             existUser = userService.save(user);
-//         } catch (Exception e) {
-//             return new ResponseEntity<>(e, HttpStatus.BAD_REQUEST);
-//         }
-//         return new ResponseEntity<>(userMapper.toDto(existUser), HttpStatus.CREATED);
-//     }
+         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+     }
 
 //     // U slucaju isteka vazenja JWT tokena, endpoint koji se poziva da se token osvezi
 //     @PostMapping(value = "/refresh")
@@ -134,4 +107,4 @@
 //     public AuthenticationController() {
 //         userMapper = new UserMapper();
 //     }
-// }
+ }

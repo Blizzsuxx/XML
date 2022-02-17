@@ -8,6 +8,8 @@
 
 package com.example.demo.model.korisnik;
 
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -191,5 +193,4 @@ public class Korisnik {
     public void setUloga(String value) {
         this.uloga = value;
     }
-
 }
