@@ -76,6 +76,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "vakcine",
     "davalacKrvi",
     "dan",
+    "godina",
     "potpis"
 })
 @XmlRootElement(name = "interesovanje_za_vakcinisanje", namespace = "http://ftn.uns.ac.rs/interesovanje")
@@ -96,6 +97,25 @@ public class InteresovanjeZaVakcinisanje {
     protected XMLGregorianCalendar dan;
     @XmlElement(namespace = "http://ftn.uns.ac.rs/interesovanje", required = true)
     protected String potpis;
+    @XmlElement(namespace = "http://ftn.uns.ac.rs/interesovanje", required = true)
+    protected String godina;
+
+
+
+
+
+
+
+
+
+    
+    public String getGodina() {
+        return godina;
+    }
+
+    public void setGodina(String godina) {
+        this.godina = godina;
+    }
 
     /**
      * Gets the value of the drzavljanstvo property.

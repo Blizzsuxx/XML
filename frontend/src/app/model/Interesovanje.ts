@@ -6,12 +6,15 @@ export class Drzavljanstvo{
 }
 export class TIzbor{
     public izabran : boolean;
+    constructor(){
+        this.izabran = false;
+    }
 }
 export class TOsoba{
     public jmbg: string;
     public ime: string;
     public prezime: string;
-    public eAdresa: string;
+    public eadresa: string;
     public mobilni: string;
     public fiksni: string;
 }
@@ -19,6 +22,10 @@ export class TOsoba{
 export class Vakcine{
     public izabraneVakcine : IzabraneVakcine;
     public biloSta : TIzbor;
+    constructor(){
+        this.izabraneVakcine = new IzabraneVakcine();
+        this.biloSta = new TIzbor()
+    }
 }
 
 export class IzabraneVakcine extends TIzbor{
@@ -40,9 +47,10 @@ export class Interesovanje{
     public drzavljanstvo : Drzavljanstvo
     public osoba : TOsoba   
     public lokacija : string
-    public vakcine : TVakcina
+    public vakcine : Vakcine
     public davalacKrvi : TIzbor
     public dan : string
+    public godina : string
     public potpis : string
 
 }

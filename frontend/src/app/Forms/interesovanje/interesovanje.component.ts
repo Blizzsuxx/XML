@@ -1,5 +1,7 @@
+import { toBase64String } from '@angular/compiler/src/output/source_map';
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { TIzbor, TVakcina, Vakcine } from 'src/app/model/Interesovanje';
 import { DokumentiService } from 'src/app/services/dokumenti/dokumenti.service';
 
 
@@ -79,7 +81,33 @@ export class InteresovanjeComponent implements OnInit {
   }
 
   submit(){
-    this.dokumentiService.sacuvajInteresovanje2(this.drzavljanstvo.value, this.email.value, this.jmbg.value, this.ime.value, this.prezime.value, this.mobilni.value, this.fiksni.value, this.opstina.value, "biloKoju", this.ime.value + " " + this.prezime.value, this.davalac);
+    var vakcine = new Vakcine();
+    console.log(this.task);
+    if(this.allComplete){
+      vakcine.biloSta.izabran = true;
+    } else {
+      vakcine.izabraneVakcine.izabran = true;
+      vakcine.izabraneVakcine.vakcina = new TVakcina();
+
+      if(this.task.subtasks != null && this.task.subtasks[0].completed){
+        vakcine.izabraneVakcine.vakcina.pfizer = "Pfizer";
+      }
+      if(this.task.subtasks != null && this.task.subtasks[1].completed){
+        vakcine.izabraneVakcine.vakcina.sputnik = "Sputnik";
+      }
+      if(this.task.subtasks != null && this.task.subtasks[2].completed){
+        vakcine.izabraneVakcine.vakcina.sinopharm = "Sinopharm";
+      }
+      if(this.task.subtasks != null && this.task.subtasks[3].completed){
+        vakcine.izabraneVakcine.vakcina.astraZeneca = "AstraZeneca";
+      }
+      if(this.task.subtasks != null && this.task.subtasks[4].completed){
+        vakcine.izabraneVakcine.vakcina.moderna = "Moderna";
+      }
+    }
+    
+    console.log(this.drzavljanstvo.value)
+    this.dokumentiService.sacuvajInteresovanje2(this.drzavljanstvo.value, this.email.value, this.jmbg.value, this.ime.value, this.prezime.value, this.mobilni.value, this.fiksni.value, this.opstina.value, vakcine, this.ime.value + " " + this.prezime.value, this.davalac);
   }
 
 }
