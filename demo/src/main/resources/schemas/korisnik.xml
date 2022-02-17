@@ -1,0 +1,7 @@
+<kor:korisnik xmlns:kor="http://www.ftn.uns.ac.rs/korisnik">
+  <kor:ime>string</kor:ime>
+  <kor:prezime>string</kor:prezime>
+  <kor:email>string@example.com</kor:email>
+  <kor:lozinka>stringstring</kor:lozinka>
+  <kor:uloga>string</kor:uloga>
+</kor:korisnik>
