@@ -1,9 +1,12 @@
 package com.example.demo.service;
 
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
@@ -14,6 +17,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import javax.mail.util.ByteArrayDataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -28,7 +32,7 @@ public class MailSender {
 
     }
 
-    public Boolean sendEmail(String address, String text) {
+    public Boolean sendEmail(String address, ByteArrayOutputStream text) {
         try {
             sendmail(address, text);
         } catch (MessagingException e) {
@@ -58,7 +62,7 @@ public class MailSender {
         return mailSender;
     }
 
-    public static void sendmail(String sendT0, String text) throws AddressException, MessagingException, IOException {
+    public static void sendmail(String sendT0, ByteArrayOutputStream text) throws AddressException, MessagingException, IOException {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
@@ -79,20 +83,24 @@ public class MailSender {
         msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("mahajiraaji@gmail.com"));
 
         msg.setSubject("Sistem Za Vakcinaciju");
-        msg.setContent("Sistem Za Vakcinaciju", "application/xml");
         msg.setSentDate(new Date());
 
         MimeBodyPart messageBodyPart = new MimeBodyPart();
-        messageBodyPart.setContent(text, "application/xml");
+        messageBodyPart.setText("Uspesno ste se prijavili za vakcinaciju\nU prilogu se nalazi vasa prijava");
 
         Multipart multipart = new MimeMultipart();
         multipart.addBodyPart(messageBodyPart);
-        MimeBodyPart attachPart = new MimeBodyPart();
+        
+        DataSource dataSource = new ByteArrayDataSource(text.toByteArray(), "application/pdf");
+        MimeBodyPart pdfBodyPart = new MimeBodyPart();
+        pdfBodyPart.setDataHandler(new DataHandler(dataSource));
+        pdfBodyPart.setFileName("dokument.pdf");
 
-        multipart.addBodyPart(attachPart);
+        multipart.addBodyPart(pdfBodyPart);
         msg.setContent(multipart);
-        msg.setText(text);
+        
 
         Transport.send(msg);
+
     }
 }

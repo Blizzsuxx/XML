@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -52,8 +53,12 @@ public class XMLService {
         dto.setGodina(calendar.get(Calendar.YEAR) % 10 + "");
         XMLGregorianCalendar date = null;
         try {
-            
-            date = DatatypeFactory.newInstance().newXMLGregorianCalendar(DatatypeConstants.FIELD_UNDEFINED, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), DatatypeConstants.FIELD_UNDEFINED, DatatypeConstants.FIELD_UNDEFINED, DatatypeConstants.FIELD_UNDEFINED, DatatypeConstants.FIELD_UNDEFINED, DatatypeConstants.FIELD_UNDEFINED);
+
+            date = DatatypeFactory.newInstance().newXMLGregorianCalendar(DatatypeConstants.FIELD_UNDEFINED,
+                    calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH),
+                    DatatypeConstants.FIELD_UNDEFINED, DatatypeConstants.FIELD_UNDEFINED,
+                    DatatypeConstants.FIELD_UNDEFINED, DatatypeConstants.FIELD_UNDEFINED,
+                    DatatypeConstants.FIELD_UNDEFINED);
         } catch (DatatypeConfigurationException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
@@ -73,14 +78,22 @@ public class XMLService {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        this.mailSender.sendEmail(dto.getOsoba().getEAdresa(), interesovanjeZaVakcinisanje);
+        ByteArrayOutputStream pdf = null;
         try {
-            this.pdfTransformer.generateHTML(interesovanjeZaVakcinisanje,
+            String html = this.pdfTransformer.generateHTML(interesovanjeZaVakcinisanje,
                     "demo/src/main/resources/xsl/interesovanje.xsl");
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getJmbg() + ".html",
+            html);
+            pdf = this.pdfTransformer.generatePDF(html);
+            
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
+        this.mailSender.sendEmail(dto.getOsoba().getEAdresa(), pdf);
         return true;
     }
 

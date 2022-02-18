@@ -1,11 +1,11 @@
 package com.example.demo.service;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -20,10 +20,8 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import com.itextpdf.text.Document;
+import com.itextpdf.html2pdf.HtmlConverter;
 import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.pdf.PdfWriter;
-import com.itextpdf.tool.xml.XMLWorkerHelper;
 
 import org.springframework.stereotype.Service;
 import org.xml.sax.SAXException;
@@ -42,9 +40,6 @@ public class PDFTransformer {
 	
 	private static TransformerFactory transformerFactory;
 	
-	public static final String INPUT_FILE = "data/xslt/bookstore.xml";
-	
-	public static final String XSL_FILE = "demo/src/main/resources/xsl/interesovanje.xsl";
 	
 	public static final String HTML_FILE = "bookstore.html";
 	
@@ -69,22 +64,11 @@ public class PDFTransformer {
      * @throws IOException
      * @throws DocumentException
      */
-    public void generatePDF(String filePath) throws IOException, DocumentException {
-        
-    	// Step 1
-    	Document document = new Document();
-        
-    	// Step 2
-        PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(filePath));
-        
-        // Step 3
-        document.open();
-        
-        // Step 4
-        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream(HTML_FILE));
-        
-        // Step 5
-        document.close();
+    public ByteArrayOutputStream generatePDF(String html) throws IOException, DocumentException {
+		ByteArrayOutputStream bStream = new ByteArrayOutputStream();
+        HtmlConverter.convertToPdf(html, bStream);
+
+		return bStream;
         
     }
 
@@ -109,7 +93,7 @@ public class PDFTransformer {
 		return document;
 	}
     
-    public void generateHTML(String content, String xslPath) throws FileNotFoundException {
+    public String generateHTML(String content, String xslPath) throws FileNotFoundException {
     	
 		try {
 
@@ -131,8 +115,11 @@ public class PDFTransformer {
 				e.printStackTrace();
 			}
 			DOMSource source = new DOMSource(d);
-			StreamResult result = new StreamResult(new FileOutputStream(HTML_FILE));
+			ByteArrayOutputStream bStream = new ByteArrayOutputStream();
+
+			StreamResult result = new StreamResult(bStream);
 			transformer.transform(source, result);
+			return bStream.toString("UTF-8");
 			
 		} catch (TransformerConfigurationException e) {
 			e.printStackTrace();
@@ -140,8 +127,11 @@ public class PDFTransformer {
 			e.printStackTrace();
 		} catch (TransformerException e) {
 			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-    
+		return null;
     }
     
     // public static void main(String[] args) throws IOException, DocumentException {

@@ -7832,3 +7832,162 @@ Caused by: java.io.IOException: Broken pipe
 2022-02-17 22:01:10,046 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
 2022-02-17 22:01:10,046 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
 2022-02-17 22:01:10,047 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 22:11:22,544 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 1,094,989K free 
+2022-02-17 22:11:22,544 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 22:11:22,544 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 23% (59 out of 256) Cache efficiency : 100% 
+2022-02-17 22:11:22,544 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 22:11:22,544 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 98% 
+2022-02-17 22:11:22,545 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 22:11:22,545 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 22:13:50,389 [http-nio-8081-exec-15] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-17 22:21:35,045 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 1,078,996K free 
+2022-02-17 22:21:35,045 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 22:21:35,045 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 23% (59 out of 256) Cache efficiency : 100% 
+2022-02-17 22:21:35,045 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 22:21:35,045 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 22:21:35,045 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 22:21:35,046 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 22:21:56,162 [http-nio-8081-exec-8] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-17 22:31:47,546 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 1,061,815K free 
+2022-02-17 22:31:47,546 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 22:31:47,546 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 23% (59 out of 256) Cache efficiency : 100% 
+2022-02-17 22:31:47,546 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 22:31:47,547 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 22:31:47,547 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 22:31:47,547 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 22:32:44,077 [http-nio-8081-exec-15] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-17 22:39:02,043 [http-nio-8081-exec-8] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-17 22:39:04,625 [http-nio-8081-exec-5] WARN  (TransactionManager.java [close]:389) - Transaction was not committed or aborted, auto aborting! 
+2022-02-17 22:42:00,045 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 1,035,690K free 
+2022-02-17 22:42:00,045 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-17 22:42:00,045 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-17 22:42:00,045 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 22:42:00,046 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 22:42:00,046 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 22:42:00,046 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 22:52:12,545 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 1,021,354K free 
+2022-02-17 22:52:12,545 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-17 22:52:12,545 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-17 22:52:12,545 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 22:52:12,545 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 22:52:12,545 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 22:52:12,545 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:02:25,045 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 1,007,018K free 
+2022-02-17 23:02:25,045 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-17 23:02:25,045 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-17 23:02:25,046 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 23:02:25,046 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 23:02:25,046 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:02:25,046 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:12:37,546 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 992,675K free 
+2022-02-17 23:12:37,547 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-17 23:12:37,547 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-17 23:12:37,547 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 23:12:37,547 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 23:12:37,548 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:12:37,548 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:16:08,374 [http-nio-8081-exec-6] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-17 23:16:08,732 [http-nio-8081-exec-3] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-17 23:19:20,786 [http-nio-8081-exec-6] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-17 23:19:21,178 [http-nio-8081-exec-3] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-17 23:22:50,045 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 956,901K free 
+2022-02-17 23:22:50,045 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-17 23:22:50,045 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-17 23:22:50,045 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 23:22:50,045 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 23:22:50,045 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:22:50,045 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:33:02,546 [db.exist.scheduler.quartz-worker-3] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 929,142K free 
+2022-02-17 23:33:02,546 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-17 23:33:02,546 [db.exist.scheduler.quartz-worker-3] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-17 23:33:02,547 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 23:33:02,547 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 23:33:02,547 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:33:02,547 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:40:10,663 [http-nio-8081-exec-22] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-17 23:40:10,955 [http-nio-8081-exec-6] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-17 23:43:15,044 [db.exist.scheduler.quartz-worker-3] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 900,256K free 
+2022-02-17 23:43:15,044 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-17 23:43:15,044 [db.exist.scheduler.quartz-worker-3] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-17 23:43:15,044 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 23:43:15,044 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 23:43:15,044 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:43:15,044 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:53:27,545 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 885,912K free 
+2022-02-17 23:53:27,546 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-17 23:53:27,546 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-17 23:53:27,546 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 23:53:27,546 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 23:53:27,546 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:53:27,547 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:53:43,076 [http-nio-8081-exec-5] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-17 23:53:43,437 [http-nio-8081-exec-7] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-17 23:55:30,048 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 681,179K free 
+2022-02-17 23:55:30,049 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-17 23:55:30,049 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-17 23:55:30,049 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-17 23:55:30,049 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-17 23:55:30,049 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-17 23:55:30,050 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:05:42,545 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 666,843K free 
+2022-02-18 00:05:42,545 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-18 00:05:42,546 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-18 00:05:42,546 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-18 00:05:42,546 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-18 00:05:42,546 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:05:42,546 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:09:02,622 [http-nio-8081-exec-5] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-18 00:09:02,974 [http-nio-8081-exec-8] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-18 00:10:14,195 [http-nio-8081-exec-5] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-18 00:10:14,591 [http-nio-8081-exec-8] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-18 00:15:55,045 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 635,087K free 
+2022-02-18 00:15:55,046 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-18 00:15:55,046 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-18 00:15:55,046 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-18 00:15:55,046 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-18 00:15:55,046 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:15:55,047 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:22:52,393 [http-nio-8081-exec-21] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-18 00:22:52,707 [http-nio-8081-exec-18] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-18 00:23:28,859 [http-nio-8081-exec-3] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-18 00:23:29,226 [http-nio-8081-exec-6] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-18 00:24:53,578 [http-nio-8081-exec-22] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-18 00:24:53,954 [http-nio-8081-exec-7] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-18 00:26:07,547 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 614,118K free 
+2022-02-18 00:26:07,547 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-18 00:26:07,547 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-18 00:26:07,547 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-18 00:26:07,547 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-18 00:26:07,548 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:26:07,548 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:36:20,050 [db.exist.scheduler.quartz-worker-3] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 599,774K free 
+2022-02-18 00:36:20,051 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-18 00:36:20,051 [db.exist.scheduler.quartz-worker-3] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-18 00:36:20,051 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-18 00:36:20,052 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-18 00:36:20,052 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:36:20,052 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:46:32,546 [db.exist.scheduler.quartz-worker-4] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 589,097K free 
+2022-02-18 00:46:32,546 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-18 00:46:32,546 [db.exist.scheduler.quartz-worker-4] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-18 00:46:32,546 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-18 00:46:32,547 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-18 00:46:32,547 [db.exist.scheduler.quartz-worker-4] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:46:32,547 [db.exist.scheduler.quartz-worker-4] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:53:26,424 [http-nio-8081-exec-23] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-18 00:53:26,746 [http-nio-8081-exec-5] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-18 00:56:45,045 [db.exist.scheduler.quartz-worker-2] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,575,936K total; 3,619,328K max; 571,991K free 
+2022-02-18 00:56:45,045 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 12% (8 out of 64) Cache efficiency : 100% 
+2022-02-18 00:56:45,046 [db.exist.scheduler.quartz-worker-2] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 24% (62 out of 256) Cache efficiency : 100% 
+2022-02-18 00:56:45,046 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 11% (7 out of 64) Cache efficiency : 100% 
+2022-02-18 00:56:45,046 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 30% (19 out of 64) Cache efficiency : 99% 
+2022-02-18 00:56:45,046 [db.exist.scheduler.quartz-worker-2] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:56:45,046 [db.exist.scheduler.quartz-worker-2] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-02-18 00:58:22,429 [http-nio-8081-exec-15] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-18 00:58:22,476 [http-nio-8081-exec-21] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-18 00:59:17,999 [http-nio-8081-exec-8] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-18 00:59:18,038 [http-nio-8081-exec-3] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-18 01:00:04,281 [http-nio-8081-exec-18] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-18 01:00:04,322 [http-nio-8081-exec-22] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
+2022-02-18 01:00:28,061 [http-nio-8081-exec-6] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.xml (881) ... 
+2022-02-18 01:00:28,092 [http-nio-8081-exec-23] INFO  (NativeBroker.java [removeXMLResource]:2590) - Removing document 1234567890123.html (882) ... 
