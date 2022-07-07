@@ -20,7 +20,7 @@ import java.io.File;
 @Service
 public class ExistManager {
 
-    private final static String TARGET_NAMESPACE = "http://nekiSajt.com";
+    private final static String TARGET_NAMESPACE = "https://ftn.uns.ac.rs/";
 
     public static final String UPDATE = "<xu:modifications version=\"1.0\" xmlns:xu=\"" + XUpdateProcessor.XUPDATE_NS
             + "\" xmlns=\"" + TARGET_NAMESPACE + "\">" + "<xu:update select=\"%1$s\">%2$s</xu:update>"
@@ -141,10 +141,13 @@ public class ExistManager {
         try {
             col = DatabaseManager.getCollection(authManager.getUri() + collectionUri, authManager.getUser(),
                     authManager.getPassword());
+            System.out.println("Collection size: " + col.getResourceCount());
             XPathQueryService xpathService = (XPathQueryService) col.getService("XPathQueryService", "1.0");
             xpathService.setProperty("indent", "yes");
             xpathService.setNamespace("", TARGET_NAMESPACE);
             result = xpathService.query(xpathExp);
+
+            System.out.println("Found: " + result.getSize());
         } finally {
             if (col != null) {
                 col.close();

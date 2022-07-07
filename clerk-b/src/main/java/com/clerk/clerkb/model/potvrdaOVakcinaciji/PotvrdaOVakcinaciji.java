@@ -16,7 +16,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
         "datumPotvrde",
         "qrCode"
 })
-@XmlRootElement(name = "model")
+@XmlRootElement(name = "potvrdaOVakcinaciji")
 public class PotvrdaOVakcinaciji {
 
     @XmlElement(name = "Pacijent", required = true)
