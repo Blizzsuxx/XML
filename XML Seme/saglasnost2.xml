@@ -1,0 +1,51 @@
+<dokument xmlns="http://ftn.uns.ac.rs/interesovanje">
+	<saglasnost_za_sprovodjenje_imunizacije>
+		<drzavljanstvo>
+			<republika_srbija>
+				<jmbg>2509999880156</jmbg>
+			</republika_srbija>
+		</drzavljanstvo>
+		<osoba>
+			<ime>Aaa</ime>
+			<prezime>Aaa</prezime>
+			<datum>2006-05-04</datum>
+			<pol>
+				<Musko>Musko</Musko>
+			</pol>
+			<jmbg>0000000000000</jmbg>
+		</osoba>
+		<radni_status><zaposlen /></radniStatus>
+		<zanimanje><drugo /></zanimanje>
+		<korisnik_ustanove_soc_zastite><izabran>true</izabran></korisnik_ustanove_soc_zastite>
+		<izjava>
+			<saglasnost><izabran>true</izabran></saglasnost>
+			<vakcina><Moderna /></vakcina>
+		</izjava>
+		<potpis>ABVGDDJZ</potpis>
+		<datum>2006-05-04</datum>
+	</saglasnost_za_sprovodjenje_imunizacije>
+	<evidencija_o_vakcinaciji>
+		<zdravstvena_ustanova>DZ Novi Sad</zdravstvena_ustanova>
+		<vakcinacijski_punkt>E60</vakcinacijski_punkt>
+		<ime_prezime_faksimil_brtel>
+			<ime>Aaa</ime>
+			<prezime>Aaa</prezime>
+			<faksimil>Aaa</faksimil>
+			<brtel>0644444444</brtel>
+		</ime_prezime_faksimil_brtel>
+		<tabela>
+			<element>
+				<vakcina><Moderna /></vakcina>
+				<datum_davanja>2006-05-04</datum_davanja>
+				<nacin_davanja>IM</nacin_davanja>
+				<ekstremitet><dr>dr</dr></ekstremitet>
+				<serija>45</serija>
+				<proizvodjac><Moderna /></proizvodjac>
+				<nezeljena_reakcija>false</nezeljena_reakcija>
+				<potpis_lekara>osstj</potpis_lekara>
+			</element>
+			<privremene_kontradikcije></privremene_kontradikcije>
+			<trajne_kontradikcije><izabran>false</izabran></trajne_kontradikcije>
+		</tabela>
+	</evidencija_o_vakcinaciji>
+</dokument>

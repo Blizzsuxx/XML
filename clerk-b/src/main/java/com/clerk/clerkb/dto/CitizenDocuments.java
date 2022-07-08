@@ -1,6 +1,7 @@
 package com.clerk.clerkb.dto;
 
 import com.clerk.clerkb.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
+import com.clerk.clerkb.model.saglasnost.Dokument;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
 
 import javax.xml.bind.annotation.*;
@@ -10,7 +11,8 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
         "certificateRequest",
-        "potvrde"
+        "potvrde",
+        "saglasnost"
 })
 @XmlRootElement(name = "citizenDocuments")
 public class CitizenDocuments {
@@ -18,6 +20,8 @@ public class CitizenDocuments {
     private ZahtevZaSertifikat certificateRequest;
 
     private List<PotvrdaOVakcinaciji> potvrde;
+
+    private List<Dokument> saglasnost;
 
     public ZahtevZaSertifikat getCertificateRequest() {
         return certificateRequest;
@@ -33,5 +37,13 @@ public class CitizenDocuments {
 
     public void setPotvrde(List<PotvrdaOVakcinaciji> potvrde) {
         this.potvrde = potvrde;
+    }
+
+    public List<Dokument> getSaglasnost() {
+        return saglasnost;
+    }
+
+    public void setSaglasnost(List<Dokument> saglasnost) {
+        this.saglasnost = saglasnost;
     }
 }

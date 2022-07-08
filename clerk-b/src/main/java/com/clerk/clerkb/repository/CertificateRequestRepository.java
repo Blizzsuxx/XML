@@ -25,7 +25,7 @@ public class CertificateRequestRepository {
             }
             JAXBContext jaxbContext = JAXBContext.newInstance(ZahtevZaSertifikat.class);
             ZahtevZaSertifikat cr = (ZahtevZaSertifikat) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
-            System.out.println(res.getContent().toString());
+            //System.out.println(res.getContent().toString());
             return cr;
         } catch (Exception e) {
             e.printStackTrace();
