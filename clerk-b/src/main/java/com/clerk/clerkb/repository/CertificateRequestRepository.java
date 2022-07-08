@@ -32,4 +32,9 @@ public class CertificateRequestRepository {
         }
         return null;
     }
+
+    public void delete(String documentId) throws Exception {
+        System.out.println(documentId);
+        existManager.delete(collectionId, documentId);
+    }
 }

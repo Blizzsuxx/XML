@@ -156,6 +156,17 @@ public class ExistManager {
         return result;
     }
 
+    public int getCollectionCount(String collectionUri){
+        try {
+            createConnection();
+            Collection col = DatabaseManager.getCollection(authManager.getUri() + collectionUri, authManager.getUser(),
+                    authManager.getPassword());
+            return col.getResourceCount();
+        } catch (Exception e){
+            return 0;
+        }
+    }
+
     public void update(int template, String collectionUri, String document, String contextXPath, String patch)
             throws Exception  {
         createConnection();
@@ -183,6 +194,29 @@ public class ExistManager {
         } finally {
             if (col != null) {
                 col.close();
+            }
+        }
+    }
+
+    public void delete(String collectionUri, String documentId) throws Exception{
+        createConnection();
+        org.xmldb.api.base.Collection col = null;
+
+        try {
+            // get the collection
+            col = DatabaseManager.getCollection(authManager.getUri() + collectionUri, authManager.getUser(), authManager.getPassword());
+            col.setProperty("indent", "yes");
+            col.removeResource(col.getResource(documentId));
+            System.out.println("[INFO] Removed document from the collection");
+        } finally {
+
+            // don't forget to cleanup
+            if(col != null) {
+                try {
+                    col.close();
+                } catch (XMLDBException xe) {
+                    xe.printStackTrace();
+                }
             }
         }
     }

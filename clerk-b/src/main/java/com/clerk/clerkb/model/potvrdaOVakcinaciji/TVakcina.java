@@ -26,6 +26,19 @@ public class TVakcina {
     @XmlElement(name = "AstraZeneca")
     protected String astraZeneca;
 
+    @Override
+    public String toString() {
+        if(pfizer != null && !pfizer.equals(""))
+            return "Pfizer";
+        else if (sinopharm != null && !sinopharm.equals(""))
+            return "Sinopharm";
+        else if (moderna != null && !moderna.equals(""))
+            return "Moderna";
+        else if (sputnik != null && !sputnik.equals(""))
+            return "Sputnik";
+        return "AstraZeneca";
+    }
+
     /**
      * Gets the value of the pfizer property.
      *
