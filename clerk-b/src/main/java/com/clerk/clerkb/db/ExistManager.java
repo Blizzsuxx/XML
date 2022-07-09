@@ -188,6 +188,7 @@ public class ExistManager {
         try {
             col = DatabaseManager.getCollection(authManager.getUri() + collectionUri, authManager.getUser(),
                     authManager.getPassword());
+
             XUpdateQueryService service = (XUpdateQueryService) col.getService("XUpdateQueryService", "1.0");
             service.setProperty("indent", "yes");
             service.updateResource(document, String.format(chosenTemplate, contextXPath, patch));
