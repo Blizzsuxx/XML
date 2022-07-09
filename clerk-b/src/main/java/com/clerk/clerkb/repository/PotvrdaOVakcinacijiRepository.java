@@ -47,4 +47,28 @@ public class PotvrdaOVakcinacijiRepository {
         return retVal.stream().filter(p -> p.getPacijent().getJmbg().equals(jmbg)).collect(Collectors.toList());
     }
 
+    public List<PotvrdaOVakcinaciji> findAll(){
+        List<PotvrdaOVakcinaciji> retVal = new ArrayList<>();
+
+        try {
+            ResourceSet xmlPotvrde = existManager.retrieve(collectionId, "//potvrdaOVakcinaciji");
+            ResourceIterator i = xmlPotvrde.getIterator();
+            XMLResource res;
+            while(i.hasMoreResources()){
+                try {
+                    res = (XMLResource) i.nextResource();
+                    JAXBContext jaxbContext = JAXBContext.newInstance(PotvrdaOVakcinaciji.class);
+                    PotvrdaOVakcinaciji one = (PotvrdaOVakcinaciji) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
+                    retVal.add(one);
+                } catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return retVal;
+    }
+
 }

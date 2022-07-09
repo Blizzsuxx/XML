@@ -132,6 +132,22 @@ public class IzvestajOImunizaciji {
         @XmlElement(name = "zeleni_sertifikat", namespace = "http:/www.ftn.uns.ac.rs/izvestaj_o_imunizaciji", required = true)
         protected IzvestajOImunizaciji.Podaci.ZeleniSertifikat zeleniSertifikat;
 
+        public Imunizacija getImunizacija() {
+            return imunizacija;
+        }
+
+        public void setImunizacija(Imunizacija imunizacija) {
+            this.imunizacija = imunizacija;
+        }
+
+        public ZeleniSertifikat getZeleniSertifikat() {
+            return zeleniSertifikat;
+        }
+
+        public void setZeleniSertifikat(ZeleniSertifikat zeleniSertifikat) {
+            this.zeleniSertifikat = zeleniSertifikat;
+        }
+
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
                 "podneto"

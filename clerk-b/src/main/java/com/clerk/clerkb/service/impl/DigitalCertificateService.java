@@ -57,7 +57,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     public void declineCertificateRequest(String requestId, String reason) throws Exception {
         ZahtevZaSertifikat zs = certificateRequestRepository.findById(requestId);
         certificateRequestRepository.delete(requestId);
-        mailSender.sendDeclineRequestEmail(zs, reason);
+        //mailSender.sendDeclineRequestEmail(zs, reason);
     }
 
     @Override
@@ -96,7 +96,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 
         //generate certificate html and pdf
 
-        mailSender.sendAcceptRequestEmail("digitalniSertifikat"); // + id
+        //mailSender.sendAcceptRequestEmail("digitalniSertifikat"); // + id
         return digitalCert;
     }
 }
