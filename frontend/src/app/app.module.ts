@@ -32,6 +32,7 @@ import { InteresovanjeComponent } from './Forms/interesovanje/interesovanje.comp
 import {MatCheckboxModule} from '@angular/material/checkbox'; 
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import { MatSelectModule } from '@angular/material/select';
+import { SigninFormComponent } from './Forms/signin-form/signin-form.component';
 
 
 
@@ -43,6 +44,7 @@ import { MatSelectModule } from '@angular/material/select';
     ProfilePageComponent,
     ChangePasswordFormComponent,
     InteresovanjeComponent,
+    SigninFormComponent,
   ],
   imports: [
     BrowserModule,

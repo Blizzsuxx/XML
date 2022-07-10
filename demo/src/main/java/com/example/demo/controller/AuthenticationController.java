@@ -1,28 +1,31 @@
  package com.example.demo.controller;
 
- import com.example.demo.dto.UserTokenStateDTO;
- import com.example.demo.model.korisnik.Korisnik;
- import com.example.demo.security.TokenUtils;
- import com.example.demo.service.KorisnikService;
  import org.springframework.beans.factory.annotation.Autowired;
- import org.springframework.http.HttpStatus;
- import org.springframework.http.MediaType;
- import org.springframework.http.ResponseEntity;
- import org.springframework.security.authentication.AuthenticationManager;
- import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
- import org.springframework.security.core.Authentication;
- import org.springframework.security.core.context.SecurityContextHolder;
- import org.springframework.security.core.userdetails.User;
- import org.springframework.web.bind.annotation.PostMapping;
- import org.springframework.web.bind.annotation.RequestBody;
- import org.springframework.web.bind.annotation.RequestMapping;
- import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.dto.UserTokenStateDTO;
+import com.example.demo.model.korisnik.Korisnik;
+import com.example.demo.security.TokenUtils;
+import com.example.demo.service.KorisnikService;
 
 
  //Kontroler zaduzen za autentifikaciju korisnika
  @RestController
- @RequestMapping(produces = MediaType.APPLICATION_XML_VALUE)
- public class AuthenticationController {
+ @RequestMapping(produces = MediaType.APPLICATION_XML_VALUE, value = "auth")
+@CrossOrigin
+public class AuthenticationController {
 
      @Autowired
      private TokenUtils tokenUtils;
@@ -40,6 +43,7 @@
      public ResponseEntity<?> createAuthenticationToken(@RequestBody Korisnik korisnik) {
          System.out.println(korisnik.getEmail());
          System.out.println(korisnik.getLozinka());
+         System.out.println(korisnik);
 
          Authentication authentication = authenticationManager
                  .authenticate(new UsernamePasswordAuthenticationToken(korisnik.getEmail(),
@@ -61,10 +65,11 @@
      // Endpoint za registraciju novog korisnika
      @PostMapping("/sign-up")
      public ResponseEntity<?> addUser(@RequestBody Korisnik korisnik) throws Exception {
+        System.out.println(korisnik);
          if (korisnikService.create(korisnik)) {
              return new ResponseEntity<>(HttpStatus.CREATED);
          }
-
+         
          return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
      }
 

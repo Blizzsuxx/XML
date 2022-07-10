@@ -1,10 +1,10 @@
 export class UserLogin {
 
-    public username: string;
-    public password: string;
+    public email: string;
+    public lozinka: string;
 
-    constructor(username: string, password: string) {
-        this.username = username;
-        this.password = password;
+    constructor(email: string, lozinka: string) {
+        this.email = email;
+        this.lozinka = lozinka;
     }
 }

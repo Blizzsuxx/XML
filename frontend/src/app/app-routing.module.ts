@@ -8,6 +8,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ChangePasswordFormComponent } from './Forms/change-password-form/change-password-form.component';
 import { InteresovanjeComponent } from './Forms/interesovanje/interesovanje.component';
+import { SigninFormComponent } from './Forms/signin-form/signin-form.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginFormComponent,
+  },
+
+  {
+    path: 'signin',
+    component: SigninFormComponent
   },
 
   {

@@ -21,6 +21,7 @@
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
+                <xs:element name="rodjendan" type="xs:date"/>
                 <xs:element name="uloga" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>

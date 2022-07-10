@@ -4,4 +4,5 @@
   <kor:email>string@example.com</kor:email>
   <kor:lozinka>stringstring</kor:lozinka>
   <kor:uloga>string</kor:uloga>
+  <kor:rodjendan>string</kor:rodjendan>
 </kor:korisnik>

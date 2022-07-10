@@ -33,13 +33,13 @@ export class ProfilePageComponent implements OnInit {
 
     this.profileService.findOne(this.authService.getUserId()).subscribe( (data) => {
       if (data !== null) {
-        this.username = data.username;
-        this.password = data.password;
-        this.lastName = data.lastName;
-        this.firstName = data.firstName;
+        this.username = data.email;
+        this.password = data.lozinka;
+        this.lastName = data.prezime;
+        this.firstName = data.ime;
 
         const datePipe = new DatePipe('en-US');
-        this.dateOfBirth = datePipe.transform(data.dateOfBirth, 'dd/MM/yyyy') || "";
+        this.dateOfBirth = datePipe.transform(data.rodjendan, 'dd/MM/yyyy') || "";
 
       }
     });

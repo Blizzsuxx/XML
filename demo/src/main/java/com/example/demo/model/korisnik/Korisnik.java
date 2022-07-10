@@ -8,8 +8,6 @@
 
 package com.example.demo.model.korisnik;
 
-import org.springframework.security.core.userdetails.UserDetails;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,6 +56,7 @@ import javax.xml.bind.annotation.XmlType;
     "prezime",
     "email",
     "lozinka",
+    "rodjendan",
     "uloga"
 })
 @XmlRootElement(name = "korisnik")
@@ -71,6 +70,8 @@ public class Korisnik {
     protected String email;
     @XmlElement(required = true)
     protected String lozinka;
+    @XmlElement(required = true)
+    protected String rodjendan;
     @XmlElement(required = true)
     protected String uloga;
 
@@ -193,4 +194,22 @@ public class Korisnik {
     public void setUloga(String value) {
         this.uloga = value;
     }
+
+    public String getRodjendan() {
+        return rodjendan;
+    }
+
+    public void setRodjendan(String rodjendan) {
+        this.rodjendan = rodjendan;
+    }
+
+    @Override
+    public String toString() {
+        return "Korisnik [email=" + email + ", ime=" + ime + ", lozinka=" + lozinka + ", prezime=" + prezime
+                + ", rodjendan=" + rodjendan + ", uloga=" + uloga + "]";
+    }
+
+    
+
+    
 }

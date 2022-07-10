@@ -1,13 +1,14 @@
 package com.example.demo.service;
 
-import com.example.demo.model.korisnik.Korisnik;
-import com.example.demo.repository.KorisnikRepository;
+import javax.xml.bind.JAXBContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.xmldb.api.modules.XMLResource;
 
-import javax.xml.bind.JAXBContext;
+import com.example.demo.model.korisnik.Korisnik;
+import com.example.demo.repository.KorisnikRepository;
 
 @Service
 public class KorisnikService {
@@ -19,9 +20,17 @@ public class KorisnikService {
     private PasswordEncoder passwordEncoder;
 
     public boolean create(Korisnik korisnik) throws Exception {
-        if (getOne(korisnik.getEmail()) != null ) {
-            return false;
+        Korisnik korisnik2 = null;
+        try{
+
+            korisnik2 = getOne(korisnik.getEmail());
+            if(korisnik2 != null){
+                return false;
+            }                
+        } catch(Exception e){
+
         }
+        
 
         korisnik.setLozinka(passwordEncoder.encode(korisnik.getLozinka()));
 

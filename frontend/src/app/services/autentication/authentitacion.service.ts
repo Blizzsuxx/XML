@@ -3,12 +3,14 @@ import { Injectable } from '@angular/core';
 
 import { BehaviorSubject } from 'rxjs';
 import { UserWithToken } from 'src/app/model/user-with-token';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { UserLogin } from 'src/app/model/user-login';
 import { environment } from 'src/environments/environment';
 import { tap } from 'rxjs/operators';
 import { Authority } from 'src/app/model/autority';
+import { js2xml } from "node_modules/xml-js"
+import { User } from 'src/app/model/user';
 
 @Injectable({
   providedIn: 'root'
@@ -20,14 +22,42 @@ export class AuthentitacionService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
+
+  signup(data : User){
+
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    console.log(js2xml(data, {compact:true}))
+    console.log(data)
+
+    return this.http.post<UserWithToken>(`${environment.baseUrl}/${environment.auth}/sign-up`, "<Korisnik>" + js2xml(data, {compact:true}) + "</Korisnik>", {headers: headers})
+    .subscribe()
+
+  }
+
   login(data: UserLogin) {
-    return this.http.post<UserWithToken>(`${environment.baseUrl}/${environment.auth}/log-in`, data)
-      .pipe(
-        tap( resData => {
-          console.log(resData);
-          this.handleAuthentication(resData);
-        })
-      );
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    console.log(js2xml(data, {compact:true}))
+    console.log(data)
+
+    return this.http.post<UserWithToken>(`${environment.baseUrl}/${environment.auth}/log-in`, "<UserLogin>" + js2xml(data, {compact:true}) + "</UserLogin>", {headers: headers})
+    .pipe(
+      tap( resData => {
+        console.log(resData);
+        this.handleAuthentication(resData);
+      })
+    );
+    
+    // return this.http.post<UserWithToken>(`${environment.baseUrl}/${environment.auth}/log-in`, data)
+    //   .pipe(
+    //     tap( resData => {
+    //       console.log(resData);
+    //       this.handleAuthentication(resData);
+    //     })
+    //   );
   }
 
   private handleAuthentication(
