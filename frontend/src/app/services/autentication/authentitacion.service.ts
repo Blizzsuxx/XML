@@ -9,7 +9,7 @@ import { UserLogin } from 'src/app/model/user-login';
 import { environment } from 'src/environments/environment';
 import { tap } from 'rxjs/operators';
 import { Authority } from 'src/app/model/autority';
-import { js2xml } from "node_modules/xml-js"
+import { js2xml, xml2js } from "node_modules/xml-js"
 import { User } from 'src/app/model/user';
 
 @Injectable({
@@ -18,7 +18,7 @@ import { User } from 'src/app/model/user';
 export class AuthentitacionService {
 
   //string = localStorage.getItem('loggedUser');
-  loggedUser = new BehaviorSubject<UserWithToken>(JSON.parse(localStorage.getItem('loggedUser') || '{}'));
+  loggedUser = new BehaviorSubject<string>(JSON.parse(localStorage.getItem('loggedUser') || '{}'));
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -43,11 +43,13 @@ export class AuthentitacionService {
     console.log(js2xml(data, {compact:true}))
     console.log(data)
 
-    return this.http.post<UserWithToken>(`${environment.baseUrl}/${environment.auth}/log-in`, "<UserLogin>" + js2xml(data, {compact:true}) + "</UserLogin>", {headers: headers})
+    console.log("AAA")
+    return this.http.post(`${environment.baseUrl}/${environment.auth}/log-in`, "<Korisnik>" + js2xml(data, {compact:true}) + "</Korisnik>", {headers: headers, responseType: "text"})
     .pipe(
       tap( resData => {
         console.log(resData);
-        this.handleAuthentication(resData);
+        const jwt = xml2js(resData).elements[0].elements[0].elements[0].text;
+        this.handleAuthentication(jwt);
       })
     );
     
@@ -61,22 +63,18 @@ export class AuthentitacionService {
   }
 
   private handleAuthentication(
-    resData: UserWithToken
+    resData: string
   ) {
-    const user = new UserWithToken(
-      resData.accessToken, 
-      resData.expiresIn, 
-      resData.userId,
-      resData.authorities);
+    const user = resData
     
 
     this.loggedUser.next(user);
     localStorage.setItem('loggedUser', JSON.stringify(user));
-    localStorage.setItem('autorities', JSON.stringify(resData.authorities))
+    // localStorage.setItem('autorities', JSON.stringify(resData.authorities))
   }
 
   logout() {
-    this.loggedUser.next(new UserWithToken('',0,-100,new Array<Authority>()));
+    this.loggedUser.next("");
     this.router.navigate(['/login']);
     localStorage.removeItem('loggedUser');
     localStorage.removeItem('autorities')

@@ -66,6 +66,7 @@ public class AuthenticationController {
      @PostMapping("/sign-up")
      public ResponseEntity<?> addUser(@RequestBody Korisnik korisnik) throws Exception {
         System.out.println(korisnik);
+        korisnik.setUloga("Gradjanin");
          if (korisnikService.create(korisnik)) {
              return new ResponseEntity<>(HttpStatus.CREATED);
          }
