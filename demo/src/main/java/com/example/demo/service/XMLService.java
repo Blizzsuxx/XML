@@ -17,6 +17,8 @@ import javax.xml.datatype.DatatypeConstants;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import org.springframework.stereotype.Service;
+
 import com.example.demo.db.ExistManager;
 import com.example.demo.dto.XMLDto;
 import com.example.demo.fuseki.FusekiReader;
@@ -27,8 +29,6 @@ import com.example.demo.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
 import com.example.demo.model.saglasnost.SaglasnostZaSprovodjenjeImunizacije;
 import com.example.demo.model.zahtevZaSertifikat.ZahtevZaSertifikat;
 import com.example.demo.model.zeleniSertifikat.DigitalniSertifikat;
-
-import org.springframework.stereotype.Service;
 
 @Service
 public class XMLService {
@@ -72,7 +72,7 @@ public class XMLService {
             e.printStackTrace();
         }
         try {
-            this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getJmbg() + ".xml",
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getEAdresa() + ".xml",
                     interesovanjeZaVakcinisanje);
         } catch (Exception e) {
             // TODO Auto-generated catch block
@@ -82,7 +82,7 @@ public class XMLService {
         try {
             String html = this.pdfTransformer.generateHTML(interesovanjeZaVakcinisanje,
                     "demo/src/main/resources/xsl/interesovanje.xsl");
-            this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getJmbg() + ".html",
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getEAdresa() + ".html",
             html);
             pdf = this.pdfTransformer.generatePDF(html);
             
