@@ -11,6 +11,7 @@ import { tap } from 'rxjs/operators';
 import { Authority } from 'src/app/model/autority';
 import { js2xml, xml2js } from "node_modules/xml-js"
 import { User } from 'src/app/model/user';
+import { Token } from 'src/app/model/token';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ import { User } from 'src/app/model/user';
 export class AuthentitacionService {
 
   //string = localStorage.getItem('loggedUser');
-  loggedUser = new BehaviorSubject<string>(JSON.parse(localStorage.getItem('loggedUser') || '{}'));
+  loggedUser = new BehaviorSubject<Token>(JSON.parse(localStorage.getItem('loggedUser') || '{}'));
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -47,9 +48,19 @@ export class AuthentitacionService {
     return this.http.post(`${environment.baseUrl}/${environment.auth}/log-in`, "<Korisnik>" + js2xml(data, {compact:true}) + "</Korisnik>", {headers: headers, responseType: "text"})
     .pipe(
       tap( resData => {
-        console.log(resData);
+        console.log(xml2js(resData).elements[0].elements[1].elements[2].elements[0].text);
         const jwt = xml2js(resData).elements[0].elements[0].elements[0].text;
-        this.handleAuthentication(jwt);
+        const user = xml2js(resData).elements[0].elements[1];
+        const ime = user.elements[0].elements[0].text;
+        const prezime = user.elements[1].elements[0].text;
+        const username = user.elements[2].elements[0].text;
+        const uloga = user.elements[5].elements[0].text;
+        const rodjendan = user.elements[4].elements[0].text;
+
+        let token = new Token(jwt, new User(username, "", ime, prezime, rodjendan));
+        token.user.uloga = uloga;
+
+        this.handleAuthentication(token);
       })
     );
     
@@ -63,7 +74,7 @@ export class AuthentitacionService {
   }
 
   private handleAuthentication(
-    resData: string
+    resData: Token
   ) {
     const user = resData
     
@@ -74,27 +85,17 @@ export class AuthentitacionService {
   }
 
   logout() {
-    this.loggedUser.next("");
+    const token = new Token("", new User("", "", "", "", ""));
+    this.loggedUser.next(token);
     this.router.navigate(['/login']);
     localStorage.removeItem('loggedUser');
-    localStorage.removeItem('autorities')
+    // localStorage.removeItem('autorities')
   }
 
-  getUserId(){
-    return JSON.parse(localStorage.getItem('loggedUser') || '{}').userId;
-  }
-
-  getUserRole(){
-    length : Number;
-    
-    length = JSON.parse(localStorage.getItem('autorities') || '{}').length;
-    
-    return JSON.parse(localStorage.getItem('autorities') || '{}')[length-1].authority;
-  }
 
   getAuthorizationToken(){
     if(localStorage.getItem('loggedUser') || ""){
-      return JSON.parse(localStorage.getItem('loggedUser') || "").accessToken;
+      return JSON.parse(localStorage.getItem('loggedUser') || "");
     }
     else{
       return false;

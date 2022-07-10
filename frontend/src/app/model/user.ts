@@ -5,6 +5,7 @@ export class User {
     public ime: string;
     public prezime: string;
     public rodjendan: string;
+    public uloga: string;
 
 
     constructor(username: string, password: string, firstName: string, lastName: string, dateOfBirth: string) {
@@ -14,4 +15,5 @@ export class User {
         this.prezime = lastName;
         this.rodjendan = dateOfBirth;
     }
+
 }

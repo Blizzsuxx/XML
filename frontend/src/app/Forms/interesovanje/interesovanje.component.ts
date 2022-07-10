@@ -2,6 +2,7 @@ import { toBase64String } from '@angular/compiler/src/output/source_map';
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 import { TIzbor, TVakcina, Vakcine } from 'src/app/model/Interesovanje';
+import { AuthentitacionService } from 'src/app/services/autentication/authentitacion.service';
 import { DokumentiService } from 'src/app/services/dokumenti/dokumenti.service';
 
 
@@ -21,9 +22,13 @@ export interface Task {
 export class InteresovanjeComponent implements OnInit {
 
 
-  constructor(private dokumentiService : DokumentiService) { }
+  constructor(private dokumentiService : DokumentiService, private authService: AuthentitacionService,) { }
 
   ngOnInit(): void {
+    const token = this.authService.getAuthorizationToken();
+    this.email.setValue(token.user.email);
+    this.ime.setValue(token.user.ime);
+    this.prezime.setValue(token.user.prezime);
   }
 
   email = new FormControl('', [Validators.required, Validators.email]);

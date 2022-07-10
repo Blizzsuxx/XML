@@ -1,6 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '../model/user';
 import { AuthentitacionService } from '../services/autentication/authentitacion.service';
 import { ProfileService } from '../services/profile/profile.service';
 
@@ -18,7 +19,7 @@ export class ProfilePageComponent implements OnInit {
   dateOfBirth : string;
   salary : number;
 
-  user_role : string;
+  user : User;
 
 
   constructor(
@@ -29,20 +30,17 @@ export class ProfilePageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.user_role = this.authService.getUserRole();
+    this.user = this.authService.getAuthorizationToken().user;
 
-    this.profileService.findOne(this.authService.getUserId()).subscribe( (data) => {
-      if (data !== null) {
-        this.username = data.email;
-        this.password = data.lozinka;
-        this.lastName = data.prezime;
-        this.firstName = data.ime;
+      if (this.user !== null) {
+        this.username = this.user.email;
+        this.lastName = this.user.prezime;
+        this.firstName = this.user.ime;
 
         const datePipe = new DatePipe('en-US');
-        this.dateOfBirth = datePipe.transform(data.rodjendan, 'dd/MM/yyyy') || "";
+        this.dateOfBirth = datePipe.transform(this.user.rodjendan, 'dd/MM/yyyy') || "";
 
       }
-    });
   }
 
   alertuj(text : string){
