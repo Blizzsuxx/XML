@@ -4,6 +4,7 @@ import com.clerk.clerkb.db.ExistManager;
 import com.clerk.clerkb.dto.CitizenDocuments;
 import com.clerk.clerkb.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
+import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.TDoza;
 import com.clerk.clerkb.model.zeleniSertifikat.TVakcinacija;
@@ -99,4 +100,15 @@ public class DigitalCertificateService implements IDigitalCertificateService {
         //mailSender.sendAcceptRequestEmail("digitalniSertifikat"); // + id
         return digitalCert;
     }
+
+    @Override
+    public ZahteviZaSertifikat findAllRequests() {
+        ZahteviZaSertifikat zzs = new ZahteviZaSertifikat();
+        List<ZahtevZaSertifikat> zzsList = certificateRequestRepository.findAll();
+
+        zzs.setZahtev(zzsList);
+        return zzs;
+    }
+
+
 }

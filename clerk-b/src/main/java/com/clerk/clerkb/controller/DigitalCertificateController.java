@@ -1,8 +1,11 @@
 package com.clerk.clerkb.controller;
 
 import com.clerk.clerkb.dto.CitizenDocuments;
+import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
+import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import com.clerk.clerkb.service.IDigitalCertificateService;
+import org.apache.regexp.RE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -41,6 +44,15 @@ public class DigitalCertificateController {
         }
         catch(Exception e){
             e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping(value ="/requests")
+    public ResponseEntity<ZahteviZaSertifikat> getAllCertificateRequests(){
+        try{
+            return new ResponseEntity<>(service.findAllRequests(), HttpStatus.OK);
+        } catch (Exception e){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }

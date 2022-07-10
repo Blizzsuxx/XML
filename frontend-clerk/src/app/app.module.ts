@@ -7,6 +7,7 @@ import { RequestsPageComponent } from './requests-page/requests-page.component';
 import { ImmunizationReportComponent } from './immunization-report/immunization-report.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { VaccinesPageComponent } from './vaccines-page/vaccines-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { VaccinesPageComponent } from './vaccines-page/vaccines-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

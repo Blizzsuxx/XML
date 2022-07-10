@@ -2,6 +2,7 @@ package com.clerk.clerkb.repository;
 
 import com.clerk.clerkb.db.ExistManager;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
+import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -42,6 +43,30 @@ public class CertificateRequestRepository {
     public void delete(String documentId) throws Exception {
         System.out.println(documentId);
         existManager.delete(collectionId, documentId);
+    }
+
+    public List<ZahtevZaSertifikat> findAll(){
+        List<ZahtevZaSertifikat> retVal = new ArrayList<>();
+
+        try{
+            ResourceSet xmlRequests = existManager.retrieve(collectionId, "/*");
+            ResourceIterator i = xmlRequests.getIterator();
+            XMLResource res;
+            while(i.hasMoreResources()){
+                try{
+                    res = (XMLResource) i.nextResource();
+                    JAXBContext jaxbContext = JAXBContext.newInstance(ZahteviZaSertifikat.class);
+                    ZahtevZaSertifikat one = (ZahtevZaSertifikat) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
+                    retVal.add(one);
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return retVal;
     }
 
     public long countForDates(LocalDate date1, LocalDate date2){
