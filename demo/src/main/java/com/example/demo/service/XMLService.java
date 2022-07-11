@@ -23,6 +23,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.db.ExistManager;
 import com.example.demo.dto.SaglasnostDTO;
 import com.example.demo.dto.XMLDto;
+import com.example.demo.dto.ZahtevZaSertifikatDTO;
 import com.example.demo.fuseki.FusekiReader;
 import com.example.demo.jaxb.JaxB;
 import com.example.demo.model.interesovanje.InteresovanjeZaVakcinisanje;
@@ -270,6 +271,107 @@ public class XMLService {
         }
         try {
             this.existManager.storeFromText("/db/dokumenti/saglasnost", dto.eadresa + ".xml",
+            saglasnost);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        // ByteArrayOutputStream pdf = null;
+        // try {
+        //     String html = this.pdfTransformer.generateHTML(interesovanjeZaVakcinisanje,
+        //             "demo/src/main/resources/xsl/interesovanje.xsl");
+        //     this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getEAdresa() + ".html",
+        //     html);
+        //     pdf = this.pdfTransformer.generatePDF(html);
+            
+        // } catch (FileNotFoundException e) {
+        //     // TODO Auto-generated catch block
+        //     e.printStackTrace();
+        // } catch (Exception e) {
+        //     // TODO Auto-generated catch block
+        //     e.printStackTrace();
+        // }
+        // this.mailSender.sendEmail(dto.eadresa, pdf);
+        return true;
+    }
+
+    public Boolean podnesiZahtevZaZeleniSertifikat(ZahtevZaSertifikatDTO dto) {
+        ZahtevZaSertifikat zahtevZaSertifikat = new ZahtevZaSertifikat();
+        zahtevZaSertifikat.setRazlog(dto.razlog);
+        zahtevZaSertifikat.setPotpis(dto.ime + " " + dto.prezime);
+        zahtevZaSertifikat.setMesto(dto.mesto);
+        zahtevZaSertifikat.setPacijent(new com.example.demo.model.zahtevZaSertifikat.TOsoba());
+        zahtevZaSertifikat.getPacijent().setIme(dto.ime);
+        zahtevZaSertifikat.getPacijent().setPrezime(dto.prezime);
+        zahtevZaSertifikat.getPacijent().setPasos(dto.brojPasossa);
+        zahtevZaSertifikat.getPacijent().setJmbg(dto.jmbg);
+        zahtevZaSertifikat.getPacijent().setPol(new com.example.demo.model.zahtevZaSertifikat.TPol());
+        if(dto.pol.equals("Musko") || dto.pol.equals("Muski")){
+
+            zahtevZaSertifikat.getPacijent().getPol().setMusko("Musko");
+        } else {
+
+            zahtevZaSertifikat.getPacijent().getPol().setMusko("Zensko");
+        }
+        
+        
+        
+        GregorianCalendar calendar = new GregorianCalendar();
+        Date trenutniDatum = new Date();
+        calendar.setTime(trenutniDatum);
+        
+        XMLGregorianCalendar date = null;
+        try {
+
+            date = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+        } catch (DatatypeConfigurationException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+        XMLGregorianCalendar rodjendan = null;
+        try {
+            calendar.setTime((new SimpleDateFormat("yyyy-MM-dd")).parse(dto.datumRodjenja));
+        } catch (ParseException e2) {
+            // TODO Auto-generated catch block
+            e2.printStackTrace();
+        }
+        try {
+
+            rodjendan = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+        } catch (DatatypeConfigurationException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+
+        zahtevZaSertifikat.getPacijent().setDatum(rodjendan);
+        try {
+            zahtevZaSertifikat.setDan(DatatypeFactory.newInstance().newXMLGregorianCalendar());
+        } catch (DatatypeConfigurationException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+        zahtevZaSertifikat.getDan().setDay(date.getDay());
+
+        try {
+            zahtevZaSertifikat.setMesec(DatatypeFactory.newInstance().newXMLGregorianCalendar());
+        } catch (DatatypeConfigurationException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+        zahtevZaSertifikat.getMesec().setMonth(date.getMonth());
+
+        zahtevZaSertifikat.setGodina(date.getYear());
+        String saglasnost = null;
+
+        try {
+            saglasnost = this.jaxB.marshall(ZahtevZaSertifikat.class, zahtevZaSertifikat);
+            System.out.println(saglasnost);
+        } catch (JAXBException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        try {
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat", dto.jmbg + ".xml",
             saglasnost);
         } catch (Exception e) {
             // TODO Auto-generated catch block

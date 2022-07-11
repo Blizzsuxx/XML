@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Drzavljanstvo, Interesovanje, TIzbor, TOsoba, TVakcina, Vakcine } from 'src/app/model/Interesovanje';
 import { js2xml } from "node_modules/xml-js"
 import { Saglasnost } from 'src/app/model/saglasnost';
+import { ZahtevZaZeleniSertifikat } from 'src/app/model/zahtev-za-zeleni-sertifikat';
 
 
 export class TestXML{
@@ -30,6 +31,22 @@ export class DokumentiService {
     console.log(js2xml(saglasnost, {compact:true}))
     console.log(saglasnost)
     this.http.post("http://localhost:8080/api/xml/podnesiSaglasnost", "<saglasnost_za_sprovodjenje_imunizacije>" + js2xml(saglasnost, {compact:true}) + "</saglasnost_za_sprovodjenje_imunizacije>", {headers: headers, responseType: "text"}).subscribe();
+    
+
+
+  }
+
+
+  sacuvajZahtevZaZeleniSertifikat(zahtevZaZeleniSertifikat: ZahtevZaZeleniSertifikat){
+    
+
+
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    console.log(js2xml(zahtevZaZeleniSertifikat, {compact:true}))
+    console.log(zahtevZaZeleniSertifikat)
+    this.http.post("http://localhost:8080/api/xml/podnesiZahtevZaZeleniSertifikat", "<zahtevZaSertifikat>" + js2xml(zahtevZaZeleniSertifikat, {compact:true}) + "</zahtevZaSertifikat>", {headers: headers, responseType: "text"}).subscribe();
     
 
 

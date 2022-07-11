@@ -5,16 +5,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="Pacijent" type="TOsoba"/>
-                <xs:element name="razlog">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:minLength value="5"/>
-                            <xs:whiteSpace value="preserve"/>
-                            <xs:pattern value="[A-Z][a-z]{2,200}"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name="mesto">
+                <xs:element name="razlog" type="xs:string" />
+                <xs:element name="mesto" type="xs:string">
                     <xs:simpleType>
                         <xs:restriction base="xs:string">
                             <xs:pattern value="[A-Z][a-z]{2,15}"/>
@@ -34,31 +26,19 @@
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
-                <xs:element name="potpis">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:pattern value="[a-z]{2,15}"/>
-                        </xs:restriction>
-                    </xs:simpleType>
+                <xs:element name="potpis" type="xs:string">
+                    
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:complexType name="TOsoba">
         <xs:sequence>
-            <xs:element name="ime">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="[A-Z][a-z]{2,15}"/>
-                    </xs:restriction>
-                </xs:simpleType>
+            <xs:element name="ime" type="xs:string">
+                
             </xs:element>
-            <xs:element name="prezime">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="[A-Z][a-z]{2,20}"/>
-                    </xs:restriction>
-                </xs:simpleType>
+            <xs:element name="prezime" type="xs:string">
+                
             </xs:element>
             <xs:element name="datum" type="xs:date"/>
             <xs:element name="pol" type="TPol"> </xs:element>

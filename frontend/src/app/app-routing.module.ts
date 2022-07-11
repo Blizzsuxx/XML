@@ -10,6 +10,7 @@ import { ChangePasswordFormComponent } from './Forms/change-password-form/change
 import { InteresovanjeComponent } from './Forms/interesovanje/interesovanje.component';
 import { SigninFormComponent } from './Forms/signin-form/signin-form.component';
 import { SaglasnostComponent } from './Forms/saglasnost/saglasnost.component';
+import { ZeleniSertifikatComponent } from './Forms/zeleni-sertifikat/zeleni-sertifikat.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,11 @@ const routes: Routes = [
   {
     path: 'saglasnost',
     component: SaglasnostComponent
+  },
+
+  {
+    path: 'zeleni-sertifikat',
+    component: ZeleniSertifikatComponent
   },
 
   {

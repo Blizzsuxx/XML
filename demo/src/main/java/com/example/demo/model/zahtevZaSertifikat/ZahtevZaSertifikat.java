@@ -76,7 +76,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "godina",
     "potpis"
 })
-@XmlRootElement(name = "model/zahtevZaSertifikat")
+@XmlRootElement(name = "zahtevZaSertifikat")
 public class ZahtevZaSertifikat {
     @XmlElement(name = "Pacijent", required = true)
     protected TOsoba pacijent;

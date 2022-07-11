@@ -35,6 +35,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { SigninFormComponent } from './Forms/signin-form/signin-form.component';
 import { SaglasnostComponent } from './Forms/saglasnost/saglasnost.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { EditorModule } from '@tinymce/tinymce-angular';
+import { ZeleniSertifikatComponent } from './Forms/zeleni-sertifikat/zeleni-sertifikat.component';
 
 
 @NgModule({
@@ -47,6 +49,7 @@ import {MatRadioModule} from '@angular/material/radio';
     InteresovanjeComponent,
     SigninFormComponent,
     SaglasnostComponent,
+    ZeleniSertifikatComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatCheckboxModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    EditorModule
     
   ],
   providers: [

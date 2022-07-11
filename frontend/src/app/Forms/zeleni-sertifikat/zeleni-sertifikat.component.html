@@ -1,0 +1,67 @@
+<div id="container-div">
+    <div id="form-holder-div" >
+        <h1 class="h1 mb-3 font-weight-normal">Login</h1>
+            
+            <div class="example-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Unesite ime</mat-label>
+                    <input matInput placeholder="Pera" [formControl]="ime" required>
+                    <mat-error *ngIf="ime.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="example-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Unesite Prezime</mat-label>
+                    <input matInput placeholder="Peric" [formControl]="prezime" required>
+                    <mat-error *ngIf="prezime.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="example-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Unesite JMBG</mat-label>
+                    <input matInput placeholder="1234567890123" [formControl]="jmbg" required>
+                    <mat-error *ngIf="jmbg.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="example-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Unesite Broj Pasosa</mat-label>
+                    <input matInput placeholder="23456789" [formControl]="pasos" required>
+                    <mat-error *ngIf="pasos.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="example-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Unesite Mesto</mat-label>
+                    <input matInput placeholder="Novi Sad" [formControl]="mesto" required>
+                    <mat-error *ngIf="mesto.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field >
+                    <mat-label>Datum Rodjenja</mat-label>
+                    <input matInput [matDatepicker]="picker"
+                    [formControl]="rodjendan"
+                    class="form-control" id="rodjendan"
+                    >
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        <editor
+            [(ngModel)]="richText"
+            [init]="{ plugins: 'lists link image table code help wordcount' }"
+            ></editor>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="pol">
+            <mat-radio-button value="Muski">Muski</mat-radio-button>
+            <mat-radio-button value="Zenski">Zenski</mat-radio-button>
+        </mat-radio-group>
+        <div id="button-div">
+            <button style="margin:15px;" color="primary" type="submit" class="btn btn-lg btn-primary btn-block" (click)="signup()" id="signup-button">Sign-up</button>
+        </div>
+    </div>
+</div>
+

@@ -1,8 +1,6 @@
 .example-container .mat-form-field + .mat-form-field {
     margin-top: 50px;
     border: 1px solid #555;
-    height: 1000px;
-    width: 100%;
   }
 
   .example-section {

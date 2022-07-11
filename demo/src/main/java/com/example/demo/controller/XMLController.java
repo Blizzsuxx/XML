@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.SaglasnostDTO;
 import com.example.demo.dto.XMLDto;
+import com.example.demo.dto.ZahtevZaSertifikatDTO;
 import com.example.demo.model.interesovanje.InteresovanjeZaVakcinisanje;
-import com.example.demo.model.interesovanje.TVakcina;
 import com.example.demo.service.XMLService;
 
 @RestController
@@ -46,6 +46,13 @@ public class XMLController {
     System.out.println("AAAAAAAAAA");
     System.out.println(dto);
     return new ResponseEntity<Boolean>(this.xmlService.podnesiSaglasnost(dto), HttpStatus.OK);
+   }
+
+   @PostMapping("/podnesiZahtevZaZeleniSertifikat")
+   public ResponseEntity<Boolean> podnesiZahtevZaZeleniSertifikat(@RequestBody ZahtevZaSertifikatDTO dto) throws Exception{
+    System.out.println("AAAAAAAAAA");
+    System.out.println(dto);
+    return new ResponseEntity<Boolean>(this.xmlService.podnesiZahtevZaZeleniSertifikat(dto), HttpStatus.OK);
    }
 
    @PostMapping("/jaxBSaglasnost")
@@ -97,13 +104,7 @@ public class XMLController {
     }
 
 
-    public static void mapirajVakciju(TVakcina vakcina, String vakcinaString){
-
-
-        
-
-
-    }
+    
 
     
 }
