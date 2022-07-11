@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     RequestsPageComponent,
     ImmunizationReportComponent,
     SearchPageComponent,
-    VaccinesPageComponent
+    VaccinesPageComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
