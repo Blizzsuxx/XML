@@ -1,7 +1,7 @@
 <div class="immunization">
     <label for="start">Start date:</label>
-    <input type="text" [(ngModel)]="startDate" />
-    <label for="start">End date:</label>
-    <input type="text" [(ngModel)]="endDate" />
+    <input type="date" value="2022-07-01" [(ngModel)]="startDate" /> <br>
+    <label for="start" value="2022-08-01">End date:</label>
+    <input type="date" [(ngModel)]="endDate" /> <br>
     <button (click)="generateReport()">Generate report</button>
 </div>

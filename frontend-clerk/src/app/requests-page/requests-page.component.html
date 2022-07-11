@@ -1,12 +1,15 @@
-<div>
-    <table>
+<div class="page">
+    <table class="table">
+        <thead>
         <tr>
-            <th>JMBG</th>
-            <th>Reason</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th style="width: 20%">JMBG</th>
+            <th style="width: 50%">Reason</th>
+            <th style="width: 10%"></th>
+            <th style="width: 10%"></th>
+            <th style="width: 10%"></th>
         </tr>
+        </thead>
+        <tbody>
         <tr *ngFor="let req of requests">
             <td>{{req.Pacijent.jmbg}}</td>
             <td>{{req.razlog}}</td>
@@ -14,6 +17,7 @@
             <td><button (click)="acceptRequest(req.Pacijent.jmbg)">Accept</button></td>
             <td><button (click)="declineRequest(req.Pacijent.jmbg)">Decline</button></td>
         </tr>
+        </tbody>
     </table>
     <label for="declineReason">Decline reason:</label>
     <input [(ngModel)]="reason"/>
@@ -24,5 +28,4 @@
         <button (click)="showAccordance()">Show accordance</button>
         <button (click)="showVaccination()">Show vaccination document</button>
     </div>
-    <p>requests-page works!</p>
 </div>

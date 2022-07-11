@@ -1,12 +1,12 @@
-<div>
+<div class="page">
     <h1>Vaccines</h1>
     <div class="table">
         <table>
             <tr>
-                <th>Id</th>
-                <th>Manufacturer</th>
-                <th>Quantity</th>
-                <th></th>
+                <th style="width: 20%">Id</th>
+                <th style="width: 40%">Manufacturer</th>
+                <th style="width: 20%">Quantity</th>
+                <th style="width: 20%"></th>
             </tr>
             <tr *ngFor="let vac of vaccines">
                 <td>{{vac.id}}</td>
@@ -20,13 +20,12 @@
     <input type="number" [(ngModel)]="newQuantity"/>
     <h3>Add new vaccine</h3>
     <div class="form">
-        <label for="id">Id</label>
-        <input type="text" [(ngModel)]="id"/> 
-        <label for="manufacturer">Manufacturer</label>
-        <input type="text" [(ngModel)]="manufacturer"/>
-        <label for="text">Quantity</label>
-        <input type="text" [(ngModel)]="quantity"/>
+        <label for="id">Id</label><br>
+        <input type="text" [(ngModel)]="id"/> <br>
+        <label for="manufacturer">Manufacturer</label><br>
+        <input type="text" [(ngModel)]="manufacturer"/> <br>
+        <label for="text">Quantity</label><br>
+        <input type="text" [(ngModel)]="quantity"/> <br>
         <button (click)="saveVaccine()">Save</button>
     </div>
-    <p>vaccines-page works!</p>
 </div>
