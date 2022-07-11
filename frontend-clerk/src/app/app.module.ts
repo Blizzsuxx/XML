@@ -9,6 +9,8 @@ import { SearchPageComponent } from './search-page/search-page.component';
 import { VaccinesPageComponent } from './vaccines-page/vaccines-page.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

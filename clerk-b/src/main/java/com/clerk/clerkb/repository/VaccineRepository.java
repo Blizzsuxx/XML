@@ -3,14 +3,20 @@ package com.clerk.clerkb.repository;
 import com.clerk.clerkb.db.ExistManager;
 import com.clerk.clerkb.model.saglasnost.Dokument;
 import com.clerk.clerkb.model.vakcina.Vaccine;
+import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
+import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.xmldb.api.base.ResourceIterator;
+import org.xmldb.api.base.ResourceSet;
 import org.xmldb.api.modules.XMLResource;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 @Repository
 public class VaccineRepository {
@@ -70,6 +76,30 @@ public class VaccineRepository {
             e.printStackTrace();
         }
         return vaccine;
+    }
+
+    public List<Vaccine> findAll(){
+        List<Vaccine> retVal = new ArrayList<>();
+
+        try{
+            ResourceSet xmlRequests = existManager.retrieve(collectionId, "/*");
+            ResourceIterator i = xmlRequests.getIterator();
+            XMLResource res;
+            while(i.hasMoreResources()){
+                try{
+                    res = (XMLResource) i.nextResource();
+                    JAXBContext jaxbContext = JAXBContext.newInstance(Vaccine.class);
+                    Vaccine one = (Vaccine) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
+                    retVal.add(one);
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return retVal;
     }
 
 }

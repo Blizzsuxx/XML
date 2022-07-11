@@ -1,1 +1,32 @@
-<p>vaccines-page works!</p>
+<div>
+    <h1>Vaccines</h1>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Manufacturer</th>
+                <th>Quantity</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let vac of vaccines">
+                <td>{{vac.id}}</td>
+                <td>{{vac.manufacturer}}</td>
+                <td>{{vac.quantity}}</td>
+                <td><button (click)="updateQuantity(vac.id)">Update quantity</button></td>
+            </tr>
+        </table>
+    </div>
+    <label for="newQuantity">New quantity</label>
+    <input type="number" [(ngModel)]="newQuantity"/>
+    <h3>Add new vaccine</h3>
+    <div class="form">
+        <label for="id">Id</label>
+        <input type="text" [(ngModel)]="id"/> 
+        <label for="manufacturer">Manufacturer</label>
+        <input type="text" [(ngModel)]="manufacturer"/>
+        <label for="text">Quantity</label>
+        <input type="text" [(ngModel)]="quantity"/>
+        <button (click)="saveVaccine()">Save</button>
+    </div>
+    <p>vaccines-page works!</p>
+</div>

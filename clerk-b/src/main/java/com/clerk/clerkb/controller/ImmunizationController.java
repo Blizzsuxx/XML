@@ -2,6 +2,7 @@ package com.clerk.clerkb.controller;
 
 import com.clerk.clerkb.db.ExistManager;
 import com.clerk.clerkb.model.vakcina.Vaccine;
+import com.clerk.clerkb.model.vakcina.Vaccines;
 import com.clerk.clerkb.service.IImmunizationService;
 import com.clerk.clerkb.service.IVaccineService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +43,12 @@ public class ImmunizationController {
     public ResponseEntity<Vaccine> saveVaccine(@RequestBody Vaccine vaccine){
 
         return new ResponseEntity<>(vaccineService.save(vaccine), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/get-all-vaccines")
+    public ResponseEntity<Vaccines> findAll(){
+
+        return new ResponseEntity<>(vaccineService.findAll(), HttpStatus.OK);
     }
 
 }

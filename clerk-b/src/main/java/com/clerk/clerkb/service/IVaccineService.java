@@ -1,6 +1,7 @@
 package com.clerk.clerkb.service;
 
 import com.clerk.clerkb.model.vakcina.Vaccine;
+import com.clerk.clerkb.model.vakcina.Vaccines;
 
 public interface IVaccineService {
 
@@ -9,4 +10,6 @@ public interface IVaccineService {
     void updateQuantity(long vaccineId, int quantity);
 
     int getQuantity(long vaccineId);
+
+    Vaccines findAll();
 }
