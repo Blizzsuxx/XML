@@ -10,6 +10,7 @@ import com.clerk.clerkb.model.zeleniSertifikat.TDoza;
 import com.clerk.clerkb.model.zeleniSertifikat.TVakcinacija;
 import com.clerk.clerkb.repository.*;
 import com.clerk.clerkb.service.IDigitalCertificateService;
+import com.google.zxing.WriterException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.xmldb.api.modules.XMLResource;
@@ -17,6 +18,8 @@ import org.xmldb.api.modules.XMLResource;
 import javax.xml.bind.JAXBContext;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -44,6 +47,12 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     //delete
     @Autowired
     private InteresovanjeRepository interesovanjeRepository;
+    //
+
+    @Autowired
+    private DocumentTransformerService transformerService;
+
+    private static final String PATH_TO_XSL = "src/main/resources/xsl/";
 
     @Override
     public CitizenDocuments getDocumentsForCitizen(String citizenId) {
@@ -112,8 +121,18 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     }
 
     @Override
-    public String findRequestById(String id) { //redefine
-        return interesovanjeRepository.findXmlById(id);
+    public String findRequestById(String id) throws FileNotFoundException { //redefine
+        String content = interesovanjeRepository.findXmlById(id);
+        transformerService.generateHTML("interesovanje" + id, content, PATH_TO_XSL + "interesovanje.xsl");
+        return "interesovanje" + id;
+    }
+
+    @Override
+    public String generateCertificateView(String id) throws IOException, WriterException {
+        String content = digitalCertificateRepository.findXmlById(id);
+        QRService.makeNewQr("http://localhost:8081/sertifikat" + id, "data/gen/qr-code.jpg");
+//        transformerService.generateHTML("digitalcert" + id, content, PATH_TO_XSL + "digitalniSertifikat.xsl"); //CHANGE
+        return "digitalcert" + id;
     }
 
 

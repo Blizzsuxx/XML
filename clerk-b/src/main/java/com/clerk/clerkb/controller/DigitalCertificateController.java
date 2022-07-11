@@ -20,9 +20,6 @@ public class DigitalCertificateController {
     @Autowired
     private IDigitalCertificateService service;
 
-    @Autowired
-    private DocumentTransformerService transformerService;
-
     @GetMapping(value = "/all-citizen/{citizenId}", produces = "application/xml")
     public ResponseEntity<CitizenDocuments> getAllDocumentsForCitizen(@PathVariable String citizenId){
         CitizenDocuments cd = service.getDocumentsForCitizen(citizenId);
@@ -65,11 +62,21 @@ public class DigitalCertificateController {
     public ResponseEntity<String> transformInteresovanje(@PathVariable String id){
         System.out.println("OK");
         try{
-            String content = service.findRequestById(id);
-            String html = transformerService.generateHTML(id, content, "src/main/resources/xsl/interesovanje.xsl");
+            String html = service.findRequestById(id);
             return new ResponseEntity<>(html, HttpStatus.OK);
         } catch(Exception e){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-    } //transform others
+    }
+
+    @GetMapping(value="/transform-certificate/{id}")
+    public ResponseEntity<String> transformCertificate(@PathVariable String id){
+        System.out.println("OK");
+        try {
+            String content = service.generateCertificateView(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch(Exception e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
 }

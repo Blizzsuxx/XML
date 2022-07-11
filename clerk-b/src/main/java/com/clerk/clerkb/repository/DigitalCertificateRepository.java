@@ -75,4 +75,18 @@ public class DigitalCertificateRepository {
         System.out.println("Certificates between dates: " + size);
         return size;
     }
+
+    public String findXmlById(String id){
+        XMLResource res = null;
+        try {
+            res = existManager.load(collectionId, id + ".xml");
+            if(res == null){
+                return null;
+            }
+            return res.getContent().toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

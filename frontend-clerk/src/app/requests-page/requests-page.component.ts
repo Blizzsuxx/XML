@@ -77,6 +77,8 @@ export class RequestsPageComponent implements OnInit {
   showRequest(){
     console.log("DISPLAYING REQUEST");
     var response = this.requestService.showDocument(this.selectedJmbg).subscribe((data: any) => {
+      console.log(data);
+      
       window.open(`${environment.serverUrl}/${data}`);
     });
   }

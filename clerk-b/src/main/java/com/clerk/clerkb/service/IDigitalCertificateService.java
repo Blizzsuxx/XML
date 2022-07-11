@@ -3,6 +3,10 @@ package com.clerk.clerkb.service;
 import com.clerk.clerkb.dto.CitizenDocuments;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
+import com.google.zxing.WriterException;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public interface IDigitalCertificateService {
 
@@ -14,5 +18,7 @@ public interface IDigitalCertificateService {
 
     ZahteviZaSertifikat findAllRequests();
 
-    String findRequestById(String id);
+    String findRequestById(String id) throws FileNotFoundException;
+
+    String generateCertificateView(String id) throws IOException, WriterException;
 }
