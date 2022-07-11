@@ -1,1 +1,7 @@
-<p>immunization-report works!</p>
+<div class="immunization">
+    <label for="start">Start date:</label>
+    <input type="text" [(ngModel)]="startDate" />
+    <label for="start">End date:</label>
+    <input type="text" [(ngModel)]="endDate" />
+    <button (click)="generateReport()">Generate report</button>
+</div>

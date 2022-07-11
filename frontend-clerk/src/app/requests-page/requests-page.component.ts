@@ -11,8 +11,6 @@ import { environment } from 'src/environments/environment';
 })
 export class RequestsPageComponent implements OnInit {
 
-  @ViewChild('iframe') iframe: any;
-
   constructor(
     public router: Router,
     private requestService: ProfileServiceService,
@@ -25,8 +23,6 @@ export class RequestsPageComponent implements OnInit {
 
   selectedJmbg: string = "";
   documents: any;
-
-  iframeData: string = "";
 
   ngOnInit(): void {
     var response = this.requestService.findAllRequests().subscribe((data: any) => {
@@ -83,17 +79,8 @@ export class RequestsPageComponent implements OnInit {
     var response = this.requestService.showDocument(this.selectedJmbg).subscribe((data: any) => {
       window.open(`${environment.serverUrl}/${data}`);
     });
-    
   }
-
-  private setIframe(iframe: any){
-    const win: Window = iframe.nativeElement.contentWindow;
-    const doc: Document = win.document;
-    doc.open();
-    doc.write(iframe);
-    doc.close()
-  }
-
+  
   showAccordance(){
     console.log("DISPLAYING ACCORDANCE");
     

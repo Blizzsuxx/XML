@@ -1,6 +1,7 @@
 package com.clerk.clerkb.controller;
 
 import com.clerk.clerkb.db.ExistManager;
+import com.clerk.clerkb.model.izvestajOImunizaciji.IzvestajOImunizaciji;
 import com.clerk.clerkb.model.vakcina.Vaccine;
 import com.clerk.clerkb.model.vakcina.Vaccines;
 import com.clerk.clerkb.service.IImmunizationService;
@@ -22,9 +23,8 @@ public class ImmunizationController {
     private IVaccineService vaccineService;
 
     @GetMapping("/report/{from}/{until}")
-    public ResponseEntity<String> getImmunizationReport(@PathVariable String from, @PathVariable String until){
-        service.createImmunizationReport(from, until);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<IzvestajOImunizaciji> getImmunizationReport(@PathVariable String from, @PathVariable String until){
+        return new ResponseEntity<>(service.createImmunizationReport(from, until), HttpStatus.OK);
     }
 
     @GetMapping("/update-quantity/{vaccineId}/{newQuantity}")

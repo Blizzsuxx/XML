@@ -28,4 +28,8 @@ export class ProfileServiceService {
   public showDocument(documentId: string){
     return this.http.get(`${environment.apiUrl}/cert/transform-interesovanje/${documentId}`, {responseType: 'text'});
   }
+
+  public createReport(start:string, end:string){
+    return this.http.get(`${environment.apiUrl}/immunization/report/${start}/${end}`, {responseType: 'text'});
+  }
 }
