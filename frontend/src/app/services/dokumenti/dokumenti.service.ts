@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Drzavljanstvo, Interesovanje, TIzbor, TOsoba, TVakcina, Vakcine } from 'src/app/model/Interesovanje';
 import { js2xml } from "node_modules/xml-js"
+import { Saglasnost } from 'src/app/model/saglasnost';
 
 
 export class TestXML{
@@ -17,6 +18,22 @@ export class TestXML{
 export class DokumentiService {
 
   constructor(private http: HttpClient, private router: Router) {}
+
+
+  sacuvajSaglasnost(saglasnost: Saglasnost){
+    
+
+
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    console.log(js2xml(saglasnost, {compact:true}))
+    console.log(saglasnost)
+    this.http.post("http://localhost:8080/api/xml/podnesiSaglasnost", "<saglasnost_za_sprovodjenje_imunizacije>" + js2xml(saglasnost, {compact:true}) + "</saglasnost_za_sprovodjenje_imunizacije>", {headers: headers, responseType: "text"}).subscribe();
+    
+
+
+  }
 
   sacuvajInteresovanje(interesovanje : Interesovanje){
     const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });

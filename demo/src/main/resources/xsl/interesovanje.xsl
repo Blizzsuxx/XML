@@ -40,9 +40,9 @@
         <div style="position:absolute;left:87.60px;top:248.16px" class="cls_003"><span class="cls_003">Презиме: <b><xsl:value-of select="x:interesovanje_za_vakcinisanje/x:osoba/x:prezime"/></b></span></div>
         <div style="position:absolute;left:87.60px;top:288.36px" class="cls_003"><span class="cls_003">Адреса електронске поште: <b><xsl:value-of select="x:interesovanje_za_vakcinisanje/x:osoba/x:e-adresa"/></b></span></div>
         <div style="position:absolute;left:87.60px;top:328.68px" class="cls_003"><span class="cls_003">Број мобилног телефона (навести број у формату 06X</span></div>
-        <div style="position:absolute;left:373.69px;top:328.68px" class="cls_003"><span class="cls_003">без размака и цртица): <b><xsl:value-of select="x:interesovanje_za_vakcinisanje/x:osoba/x:mobilni"/></b></span></div>
+        <div style="position:absolute;left:413.69px;top:328.68px" class="cls_003"><span class="cls_003">без размака и цртица): <b><xsl:value-of select="x:interesovanje_za_vakcinisanje/x:osoba/x:mobilni"/></b></span></div>
         <div style="position:absolute;left:87.60px;top:369.00px" class="cls_003"><span class="cls_003">Број фиксног телефона (навести број у формату нпр. 011</span></div>
-        <div style="position:absolute;left:388.64px;top:369.00px" class="cls_003"><span class="cls_003">без размака и цртица): <b><xsl:value-of select="x:interesovanje_za_vakcinisanje/x:osoba/x:fiksni"/></b></span></div>
+        <div style="position:absolute;left:428.64px;top:369.00px" class="cls_003"><span class="cls_003">без размака и цртица): <b><xsl:value-of select="x:interesovanje_za_vakcinisanje/x:osoba/x:fiksni"/></b></span></div>
         <div style="position:absolute;left:87.60px;top:409.32px" class="cls_003"><span class="cls_003">Одаберите локацију где желите да примите вакцину (унесите општину): <b><xsl:value-of select="x:interesovanje_za_vakcinisanje/x:lokacija"/></b></span></div>
         <div style="position:absolute;left:87.60px;top:449.64px" class="cls_003"><span class="cls_003">Исказујем интересовање да примим искључиво вакцину следећих произвођача за</span></div>
         <div style="position:absolute;left:87.60px;top:463.08px" class="cls_003"><span class="cls_003">који Агенција за лекове и медицинска средства потврди безбедност, ефикасност и</span></div>

@@ -33,7 +33,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import { MatSelectModule } from '@angular/material/select';
 import { SigninFormComponent } from './Forms/signin-form/signin-form.component';
-
+import { SaglasnostComponent } from './Forms/saglasnost/saglasnost.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { SigninFormComponent } from './Forms/signin-form/signin-form.component';
     ChangePasswordFormComponent,
     InteresovanjeComponent,
     SigninFormComponent,
+    SaglasnostComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +71,7 @@ import { SigninFormComponent } from './Forms/signin-form/signin-form.component';
     MatCheckboxModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatRadioModule
     
   ],
   providers: [

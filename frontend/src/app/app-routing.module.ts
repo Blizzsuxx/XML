@@ -9,6 +9,7 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ChangePasswordFormComponent } from './Forms/change-password-form/change-password-form.component';
 import { InteresovanjeComponent } from './Forms/interesovanje/interesovanje.component';
 import { SigninFormComponent } from './Forms/signin-form/signin-form.component';
+import { SaglasnostComponent } from './Forms/saglasnost/saglasnost.component';
 
 
 const routes: Routes = [
@@ -33,7 +34,10 @@ const routes: Routes = [
     component: InteresovanjeComponent,
   },
 
-
+  {
+    path: 'saglasnost',
+    component: SaglasnostComponent
+  },
 
   {
     path: 'navbar',

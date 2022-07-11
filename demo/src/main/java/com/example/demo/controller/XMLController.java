@@ -4,10 +4,6 @@ package com.example.demo.controller;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.example.demo.dto.XMLDto;
-import com.example.demo.model.interesovanje.InteresovanjeZaVakcinisanje;
-import com.example.demo.service.XMLService;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +14,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.dto.SaglasnostDTO;
+import com.example.demo.dto.XMLDto;
+import com.example.demo.model.interesovanje.InteresovanjeZaVakcinisanje;
+import com.example.demo.model.interesovanje.TVakcina;
+import com.example.demo.service.XMLService;
 
 @RestController
 @RequestMapping(value = "api/xml", produces = MediaType.APPLICATION_XML_VALUE, consumes =  MediaType.APPLICATION_XML_VALUE)
@@ -36,6 +38,14 @@ public class XMLController {
     System.out.println("AAAAAAAAAA");
     
     return new ResponseEntity<Boolean>(this.xmlService.podnesiZahtevZaSaglasnost(dto), HttpStatus.OK);
+   }
+
+
+   @PostMapping("/podnesiSaglasnost")
+   public ResponseEntity<Boolean> podnesiSaglasnost(@RequestBody SaglasnostDTO dto) throws Exception{
+    System.out.println("AAAAAAAAAA");
+    System.out.println(dto);
+    return new ResponseEntity<Boolean>(this.xmlService.podnesiSaglasnost(dto), HttpStatus.OK);
    }
 
    @PostMapping("/jaxBSaglasnost")
@@ -84,6 +94,15 @@ public class XMLController {
         }
         System.out.println("OUTPUT: " + output);
         return new ResponseEntity<>(output, HttpStatus.OK);
+    }
+
+
+    public static void mapirajVakciju(TVakcina vakcina, String vakcinaString){
+
+
+        
+
+
     }
 
     

@@ -159,3 +159,4 @@ Caused by: org.xml.sax.SAXParseException: Content is not allowed in prolog.
 2022-07-10 11:54:34,375 [http-nio-8081-exec-5] INFO  (RpcConnection.java [createCollection]:184) - collection /db/gradjanin has been created 
 2022-07-10 11:54:34,425 [http-nio-8081-exec-5] INFO  (RpcConnection.java [createCollection]:184) - collection /db/gradjanin/xml has been created 
 2022-07-10 11:54:34,550 [http-nio-8081-exec-2] INFO  (RpcConnection.java [createCollection]:184) - collection /db/gradjanin/xml/korisnik has been created 
+2022-07-11 13:12:07,658 [http-nio-8081-exec-2] INFO  (RpcConnection.java [createCollection]:184) - collection /db/dokumenti/saglasnost has been created 

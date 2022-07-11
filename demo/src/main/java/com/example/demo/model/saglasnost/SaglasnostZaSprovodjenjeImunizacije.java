@@ -887,6 +887,26 @@ public class SaglasnostZaSprovodjenjeImunizacije {
             this.dete = value;
         }
 
+        public void setRadniStatus(String radniStatus) {
+            if(radniStatus.equals("Zaposlen")){
+                this.zaposlen = "zaposlen";
+            } else if(radniStatus.equals("Nezaposlen")){
+    
+                this.nezaposlen = "nezaposlen";
+            } else if(radniStatus.equals("Penzioner")){
+    
+                this.penzioner = "penzioner";
+            } else if(radniStatus.equals("Ucenik")){
+    
+                this.ucenik = "ucenik";
+            } else if(radniStatus.equals("Student")){
+    
+                this.student = "student";
+            } else {
+                this.dete = "dete";
+            }
+        }
+
     }
 
 
@@ -1080,6 +1100,28 @@ public class SaglasnostZaSprovodjenjeImunizacije {
          */
         public void setDrugo(String value) {
             this.drugo = value;
+        }
+
+        public void setZanimanje(String zanimanje) {
+            System.out.println(zanimanje);
+            if(zanimanje.equals("ZdravstvenaZastita")){
+                this.zdravstvenaZastita = "zdravstvena_zastita";
+            } else if(zanimanje.equals("SocijalnaZastita")){
+    
+                this.socijalnaZastita = "socijalna_zastita";
+            } else if(zanimanje.equals("Prosveta")){
+    
+                this.prosveta = "prosveta";
+            } else if(zanimanje.equals("MUP")){
+    
+                this.mup = "mup";
+            } else if(zanimanje.equals("Vojska")){
+    
+                this.vojska = "vojska";
+            } else {
+                this.drugo = "drugo";
+            }
+
         }
 
     }

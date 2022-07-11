@@ -171,4 +171,28 @@ public class TVakcina {
         this.astraZeneca = value;
     }
 
+
+    public void setVakcina(String vakcina){
+
+
+        if(vakcina.equals("Pfizer-BioNTech")){
+            this.pfizer = "Pfizer";
+        } else if(vakcina.equals("Sputnik V")){
+
+            this.sputnik = "Sputnik";
+        } else if(vakcina.equals("Sinopharm")){
+
+            this.sinopharm = "Sinopharm";
+        } else if(vakcina.equals("AstraZeneca")){
+
+            this.astraZeneca = "AstraZeneca";
+        } else if(vakcina.equals("Moderna")){
+
+            this.moderna = "Moderna";
+        } else {
+
+        }
+
+    }
+
 }

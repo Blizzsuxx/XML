@@ -164,13 +164,7 @@
             <xs:element name="pol" type="TPol"/>
             <xs:element name="datum_rodjenja" type="xs:date"/>
             <xs:element name="mesto_rodjenja" type="xs:string"/>
-            <xs:element name="adresa">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="^[a-zA-Z]+[a-zA-Z0-9]*$"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
+            <xs:element name="adresa" type="xs:string"/>
             <xs:element name="mesto" type="xs:string"/>
             <xs:element name="mobilni">
                 <xs:simpleType>
@@ -182,14 +176,14 @@
             <xs:element name="fiksni">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:pattern value="01[0-9]{7,7}"/>
+                        <xs:pattern value="[0-9]{9,9}"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
             <xs:element name="e-adresa">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:pattern value="/^[^\s@]+@[^\s@]+\.[^\s@]+$/"/>
+                        <xs:pattern value="([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>

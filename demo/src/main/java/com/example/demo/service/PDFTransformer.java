@@ -20,11 +20,11 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import com.itextpdf.html2pdf.HtmlConverter;
-import com.itextpdf.text.DocumentException;
-
 import org.springframework.stereotype.Service;
 import org.xml.sax.SAXException;
+
+import com.itextpdf.html2pdf.HtmlConverter;
+import com.itextpdf.text.DocumentException;
 
 
 /**
@@ -41,9 +41,6 @@ public class PDFTransformer {
 	private static TransformerFactory transformerFactory;
 	
 	
-	public static final String HTML_FILE = "bookstore.html";
-	
-	public static final String OUTPUT_FILE = "gen/itext/bookstore.pdf";
 
 	static {
 

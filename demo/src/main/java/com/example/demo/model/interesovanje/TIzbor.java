@@ -50,5 +50,11 @@ public class TIzbor {
     public void setIzabran(boolean value) {
         this.izabran = value;
     }
-
+    public void setIzabran(String value) {
+        if(value.equals("Da") || value.equals("da") || value.equals("true")){
+            this.izabran = true;
+        } else {
+            this.izabran = false;
+        }
+    }
 }

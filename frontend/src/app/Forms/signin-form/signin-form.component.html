@@ -19,16 +19,16 @@
                 <input matInput class="form-control" id="prezime" type="text" formControlName="prezime" style="border: solid;">
             </div>
             <div>
-            <mat-form-field >
-                <mat-label>Unesite Datum Rodjenja</mat-label>
-                <input matInput [matDatepicker]="picker"
-                formControlName="rodjendan"
-                class="form-control" id="rodjendan"
-                >
-                <mat-hint>MM/DD/YYYY</mat-hint>
-                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
-              </mat-form-field>
+                <mat-form-field >
+                    <mat-label>Unesite Datum Rodjenja</mat-label>
+                    <input matInput [matDatepicker]="picker"
+                    formControlName="rodjendan"
+                    class="form-control" id="rodjendan"
+                    >
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
             </div>
 
 
