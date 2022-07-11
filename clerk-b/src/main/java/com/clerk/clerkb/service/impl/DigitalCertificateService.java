@@ -8,10 +8,7 @@ import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.TDoza;
 import com.clerk.clerkb.model.zeleniSertifikat.TVakcinacija;
-import com.clerk.clerkb.repository.CertificateRequestRepository;
-import com.clerk.clerkb.repository.DigitalCertificateRepository;
-import com.clerk.clerkb.repository.PotvrdaOVakcinacijiRepository;
-import com.clerk.clerkb.repository.SaglasnostRepository;
+import com.clerk.clerkb.repository.*;
 import com.clerk.clerkb.service.IDigitalCertificateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,6 +40,10 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 
     @Autowired
     private MailSender mailSender;
+
+    //delete
+    @Autowired
+    private InteresovanjeRepository interesovanjeRepository;
 
     @Override
     public CitizenDocuments getDocumentsForCitizen(String citizenId) {
@@ -108,6 +109,11 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 
         zzs.setZahtev(zzsList);
         return zzs;
+    }
+
+    @Override
+    public String findRequestById(String id) { //redefine
+        return interesovanjeRepository.findXmlById(id);
     }
 
 

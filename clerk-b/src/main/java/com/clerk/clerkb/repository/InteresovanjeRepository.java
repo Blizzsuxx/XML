@@ -52,4 +52,18 @@ public class InteresovanjeRepository {
         System.out.println("Interesovanja between dates: " + size);
         return size;
     }
+
+    public String findXmlById(String citizenId){
+        XMLResource res = null;
+        try {
+            res = existManager.load(collectionId, citizenId);
+            if(res == null){
+                return null;
+            }
+            return res.getContent().toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

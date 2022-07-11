@@ -5,6 +5,7 @@ import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import com.clerk.clerkb.service.IDigitalCertificateService;
+import com.clerk.clerkb.service.impl.DocumentTransformerService;
 import org.apache.regexp.RE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,6 +19,9 @@ public class DigitalCertificateController {
 
     @Autowired
     private IDigitalCertificateService service;
+
+    @Autowired
+    private DocumentTransformerService transformerService;
 
     @GetMapping(value = "/all-citizen/{citizenId}", produces = "application/xml")
     public ResponseEntity<CitizenDocuments> getAllDocumentsForCitizen(@PathVariable String citizenId){
@@ -56,4 +60,16 @@ public class DigitalCertificateController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+
+    @GetMapping(value="/transform-interesovanje/{id}")
+    public ResponseEntity<String> transformInteresovanje(@PathVariable String id){
+        System.out.println("OK");
+        try{
+            String content = service.findRequestById(id);
+            String html = transformerService.generateHTML(id, content, "src/main/resources/xsl/interesovanje.xsl");
+            return new ResponseEntity<>(html, HttpStatus.OK);
+        } catch(Exception e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    } //transform others
 }

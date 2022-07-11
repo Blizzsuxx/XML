@@ -13,4 +13,6 @@ public interface IDigitalCertificateService {
     DigitalniSertifikat acceptCertificateRequest(String requestId) throws Exception;
 
     ZahteviZaSertifikat findAllRequests();
+
+    String findRequestById(String id);
 }

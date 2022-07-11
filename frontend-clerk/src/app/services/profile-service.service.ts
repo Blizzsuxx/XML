@@ -12,4 +12,20 @@ export class ProfileServiceService {
   public findAllRequests() {
     return this.http.get(`${environment.apiUrl}/cert/requests`, {responseType: 'text'});
   }
+
+  public findAllCitizenDocuments(citizenId: string){
+    return this.http.get(`${environment.apiUrl}/cert/all-citizen/${citizenId}`, {responseType: 'text'});
+  }
+
+  public acceptCertificateRequest(citizenId: string){
+    return this.http.post(`${environment.apiUrl}/cert/approve/${citizenId}`, {}, {responseType: 'text'});
+  }
+
+  public declineCertificateRequest(citizenId: string, reason: string){
+    return this.http.post(`${environment.apiUrl}/cert/decline/${citizenId}/${reason}`, {});
+  }
+
+  public showDocument(documentId: string){
+    return this.http.get(`${environment.apiUrl}/cert/transform-interesovanje/${documentId}`, {responseType: 'text'});
+  }
 }
