@@ -52,7 +52,7 @@ public class DocumentTransformerService {
 
             StreamResult result = new StreamResult(bStream);
             transformer.transform(source, result);
-            System.out.println(bStream.toString(StandardCharsets.UTF_8));
+//            System.out.println(bStream.toString(StandardCharsets.UTF_8));
 
             PrintWriter out = new PrintWriter("data/gen/" + id + ".html");
             out.println(bStream.toString(StandardCharsets.UTF_8));

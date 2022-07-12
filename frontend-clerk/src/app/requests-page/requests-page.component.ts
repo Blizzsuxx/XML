@@ -76,7 +76,7 @@ export class RequestsPageComponent implements OnInit {
 
   showRequest(){
     console.log("DISPLAYING REQUEST");
-    var response = this.requestService.showDocument(this.selectedJmbg).subscribe((data: any) => {
+    var response = this.requestService.showDocument("request", this.selectedJmbg).subscribe((data: any) => {
       console.log(data);
       
       window.open(`${environment.serverUrl}/${data}`);
@@ -85,7 +85,11 @@ export class RequestsPageComponent implements OnInit {
   
   showAccordance(){
     console.log("DISPLAYING ACCORDANCE");
-    
+    var response = this.requestService.showDocument("saglasnost", this.selectedJmbg).subscribe((data: any) => {
+      console.log(data);
+      
+      window.open(`${environment.serverUrl}/${data}`);
+    }); 
   }
 
   showVaccination(){

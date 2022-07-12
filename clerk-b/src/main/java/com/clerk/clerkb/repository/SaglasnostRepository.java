@@ -43,4 +43,18 @@ public class SaglasnostRepository {
         }
         return retVal;
     }
+
+    public String findXmlById(String id) {
+        XMLResource res = null;
+        try {
+            res = existManager.load(collectionId, id);
+            if(res == null){
+                return null;
+            }
+            return res.getContent().toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

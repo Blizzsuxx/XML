@@ -20,5 +20,9 @@ public interface IDigitalCertificateService {
 
     String findRequestById(String id) throws FileNotFoundException;
 
+    String findSaglasnostById(String id) throws FileNotFoundException;
+
     String generateCertificateView(String id) throws IOException, WriterException;
+
+    String findInteresovanje(String id) throws FileNotFoundException;
 }

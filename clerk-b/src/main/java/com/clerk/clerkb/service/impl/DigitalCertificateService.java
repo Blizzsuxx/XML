@@ -121,18 +121,36 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     }
 
     @Override
-    public String findRequestById(String id) throws FileNotFoundException { //redefine
-        String content = interesovanjeRepository.findXmlById(id);
-        transformerService.generateHTML("interesovanje" + id, content, PATH_TO_XSL + "interesovanje.xsl");
-        return "interesovanje" + id;
+    public String findRequestById(String id) throws FileNotFoundException { //redefine ->d
+        String content = certificateRequestRepository.findXmlById(id);
+        System.out.println(content);
+        transformerService.generateHTML("request" + id, content, PATH_TO_XSL + "zahtev_za_sertifikat.xsl");
+        return "request" + id;
+    }
+
+    @Override
+    public String findSaglasnostById(String id) throws FileNotFoundException {
+        String content = saglasnostRepository.findXmlById(id);
+        System.out.println(content);
+        transformerService.generateHTML("saglasnost" + id, content, PATH_TO_XSL + "obrazac_saglasnosti_za_imunizaciju.xsl");
+        return "saglasnost" + id;
     }
 
     @Override
     public String generateCertificateView(String id) throws IOException, WriterException {
         String content = digitalCertificateRepository.findXmlById(id);
+        System.out.println(content);
         QRService.makeNewQr("http://localhost:8081/sertifikat" + id, "data/gen/qr-code.jpg");
 //        transformerService.generateHTML("digitalcert" + id, content, PATH_TO_XSL + "digitalniSertifikat.xsl"); //CHANGE
         return "digitalcert" + id;
+    }
+
+    @Override
+    public String findInteresovanje(String id) throws FileNotFoundException {
+        String content = interesovanjeRepository.findXmlById(id);
+        System.out.println(content);
+        transformerService.generateHTML("interesovanje" + id, content, PATH_TO_XSL + "interesovanje.xsl");
+        return "interesovanje" + id;
     }
 
 
