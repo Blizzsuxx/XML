@@ -1,0 +1,1 @@
+/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/monex-1.0.1/content/monex-1.0.1.jar

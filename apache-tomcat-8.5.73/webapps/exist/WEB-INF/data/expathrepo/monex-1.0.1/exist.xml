@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://exist-db.org/ns/expath-pkg"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <java>
+      <namespace>http://exist-db.org/xquery/console</namespace>
+      <class>org.exist.console.xquery.ConsoleModule</class>
+   </java>
+   <jar>monex-1.0.1.jar</jar>
+</package>
