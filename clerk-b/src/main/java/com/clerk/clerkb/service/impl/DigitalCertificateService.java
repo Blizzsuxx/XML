@@ -1,6 +1,18 @@
 package com.clerk.clerkb.service.impl;
 
-import com.clerk.clerkb.db.ExistManager;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import java.util.List;
+
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.clerk.clerkb.dto.CitizenDocuments;
 import com.clerk.clerkb.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
@@ -8,23 +20,13 @@ import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.TDoza;
 import com.clerk.clerkb.model.zeleniSertifikat.TVakcinacija;
-import com.clerk.clerkb.repository.*;
+import com.clerk.clerkb.repository.CertificateRequestRepository;
+import com.clerk.clerkb.repository.DigitalCertificateRepository;
+import com.clerk.clerkb.repository.InteresovanjeRepository;
+import com.clerk.clerkb.repository.PotvrdaOVakcinacijiRepository;
+import com.clerk.clerkb.repository.SaglasnostRepository;
 import com.clerk.clerkb.service.IDigitalCertificateService;
 import com.google.zxing.WriterException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.xmldb.api.modules.XMLResource;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.time.LocalDate;
-import java.time.ZonedDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.GregorianCalendar;
 
 @Service
 public class DigitalCertificateService implements IDigitalCertificateService {
@@ -42,7 +44,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     private DigitalCertificateRepository digitalCertificateRepository;
 
     @Autowired
-    private MailSender mailSender;
+    private MailSender2 mailSender2;
 
     //delete
     @Autowired

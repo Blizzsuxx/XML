@@ -1,21 +1,28 @@
 package com.clerk.clerkb.service.impl;
 
-import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
+import java.io.File;
+import java.io.IOException;
+import java.util.Properties;
+
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
+
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 import org.xmldb.api.base.XMLDBException;
-import org.xmldb.api.modules.XMLResource;
 
-import javax.mail.*;
-import javax.mail.internet.*;
-import java.io.File;
-import java.io.IOException;
-import java.util.Properties;
+import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
 
 @Service
-public class MailSender {
+public class MailSender2 {
 
     public JavaMailSender getJavaMailSender(){
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();

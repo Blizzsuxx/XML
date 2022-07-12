@@ -12,11 +12,11 @@ public class AuthenticationManager {
     // @Value("${conn.host}")
     private String host = "localhost";
     // @Value("${conn.port}")
-    private String port = "8080";
+    private String port = "8081";
     // @Value("${conn.driver}")
     private String driver = "org.exist.xmldb.DatabaseImpl";
     // @Value("${conn.uri}")
-    private String uri = "xmldb:exist://localhost:8080/exist/xmlrpc";
+    private String uri = "xmldb:exist://localhost:8081/exist/xmlrpc";
     public String getUser() {
         return user;
     }

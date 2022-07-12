@@ -830,3 +830,5 @@
 127.0.0.1 - - [12/Jul/2022:09:35:35 +0200] "GET /exist/apps/dashboard/plugins/browsing/browsing.html HTTP/1.1" 200 7244
 127.0.0.1 - - [12/Jul/2022:09:35:36 +0200] "GET /exist/apps/dashboard/plugins/browsing/contents/?collection=%2Fdb HTTP/1.1" 200 536
 127.0.0.1 - - [12/Jul/2022:09:35:36 +0200] "GET /exist/apps/dashboard/plugins/browsing/contents/?collection=%2Fdb HTTP/1.1" 200 536
+127.0.0.1 - - [12/Jul/2022:16:47:35 +0200] "POST /exist/xmlrpc HTTP/1.1" 200 159
+127.0.0.1 - - [12/Jul/2022:16:47:35 +0200] "POST /exist/xmlrpc HTTP/1.1" 200 159

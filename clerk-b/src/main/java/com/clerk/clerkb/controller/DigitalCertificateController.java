@@ -1,20 +1,24 @@
 package com.clerk.clerkb.controller;
 
-import com.clerk.clerkb.dto.CitizenDocuments;
-import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
-import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
-import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
-import com.clerk.clerkb.service.IDigitalCertificateService;
-import com.clerk.clerkb.service.impl.DocumentTransformerService;
-import org.apache.regexp.RE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.clerk.clerkb.dto.CitizenDocuments;
+import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
+import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
+import com.clerk.clerkb.service.IDigitalCertificateService;
 
 @RestController
-@RequestMapping(value = "cert", produces = MediaType.APPLICATION_XML_VALUE)
+@CrossOrigin
+@RequestMapping(value = "cert", produces = MediaType.APPLICATION_XML_VALUE, consumes =  MediaType.APPLICATION_XML_VALUE)
 public class DigitalCertificateController {
 
     @Autowired
@@ -49,8 +53,9 @@ public class DigitalCertificateController {
         }
     }
 
-    @GetMapping(value ="/requests")
+    @GetMapping("/requests")
     public ResponseEntity<ZahteviZaSertifikat> getAllCertificateRequests(){
+        System.out.println("AAAAAAAA");
         try{
             return new ResponseEntity<>(service.findAllRequests(), HttpStatus.OK);
         } catch (Exception e){

@@ -1,5 +1,7 @@
 package com.clerk.clerkb.security;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -8,8 +10,6 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-
-import javax.servlet.http.HttpServletResponse;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -48,4 +48,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
     }
+
+//     @Bean
+//     public SpringBus cxf() {
+//         return new SpringBus();
+//     }
+
+//     @Bean
+//     public Endpoint endpoint() {
+//         EndpointImpl endpoint = new EndpointImpl(cxf(), new HelloWorldImpl());
+//         endpoint.publish("/HelloWorld");
+//         return endpoint;
+//     }
 }

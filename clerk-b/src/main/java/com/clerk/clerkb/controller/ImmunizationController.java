@@ -1,19 +1,26 @@
 package com.clerk.clerkb.controller;
 
-import com.clerk.clerkb.db.ExistManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.clerk.clerkb.model.izvestajOImunizaciji.IzvestajOImunizaciji;
 import com.clerk.clerkb.model.vakcina.Vaccine;
 import com.clerk.clerkb.model.vakcina.Vaccines;
 import com.clerk.clerkb.service.IImmunizationService;
 import com.clerk.clerkb.service.IVaccineService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "immunization", produces = MediaType.APPLICATION_XML_VALUE)
+@CrossOrigin
+@RequestMapping(value = "immunization", produces = MediaType.APPLICATION_XML_VALUE, consumes =  MediaType.APPLICATION_XML_VALUE)
 public class ImmunizationController {
 
     @Autowired
