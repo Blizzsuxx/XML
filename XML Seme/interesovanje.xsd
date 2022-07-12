@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
     targetNamespace="http://ftn.uns.ac.rs/interesovanje" xmlns="http://ftn.uns.ac.rs/interesovanje"
-    xmlns:ns1="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji">
-    <xs:import namespace="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+    xmlns:ns1="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+    xmlns:ns2="https://ftn.uns.ac.rs/potvrda_o_vakcinaciji">
+    <xs:import namespace="https://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
         schemaLocation="potvrdaOVakcinaciji.xsd"/>
     <xs:element name="interesovanje_za_vakcinisanje">
         <xs:complexType>
@@ -20,20 +21,20 @@
                 <xs:element name="lokacija" type="xs:string"/>
                 <xs:element name="vakcine">
                     <xs:complexType>
-                        <xs:sequence>
+                        <xs:choice>
                             <xs:element name="izabrane_vakcine">
                                 <xs:complexType>
                                     <xs:complexContent>
                                         <xs:extension base="TIzbor">
                                             <xs:sequence>
-                                                <xs:element name="vakcina" type="ns1:TVakcina"/>
+                                                <xs:element name="vakcina" type="ns2:TVakcina"/>
                                             </xs:sequence>
                                         </xs:extension>
                                     </xs:complexContent>
                                 </xs:complexType>
                             </xs:element>
                             <xs:element name="bilo_sta" type="TIzbor"/>
-                        </xs:sequence>
+                        </xs:choice>
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="davalac_krvi" type="TIzbor"/>

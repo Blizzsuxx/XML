@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns3:potvrdaOVakcinaciji xmlns:ns1="http://ftn.uns.ac.rs/interesovanje"
+ xmlns:ns2="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+ xmlns:ns3="https://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+ xmlns:sa="http://ftn.uns.ac.rs/saglasnost"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="https://ftn.uns.ac.rs/potvrda_o_vakcinaciji file:/media/user/games/Projects/XML/XML%20Seme/saglasnost.xsd">
+    <ns3:Pacijent>
+        <ns3:ime>Aaa</ns3:ime>
+        <ns3:prezime>Aaa</ns3:prezime>
+        <ns3:datum>2006-05-04</ns3:datum>
+        <ns3:pol>
+            <ns3:Zensko>Zensko</ns3:Zensko>
+        </ns3:pol>
+        <ns3:jmbg>0000000000000</ns3:jmbg>
+    </ns3:Pacijent>
+    <ns3:datumPrva>2006-05-04</ns3:datumPrva>
+    <ns3:serija>00000000</ns3:serija>
+    <ns3:datumDruga>2006-05-04</ns3:datumDruga>
+    <ns3:ustanova>
+        <ns3:naziv>Aaaaaa</ns3:naziv>
+        <ns3:ulica>Aaa</ns3:ulica>
+        <ns3:broj>0</ns3:broj>
+        <ns3:grad>Aaa</ns3:grad>
+    </ns3:ustanova>
+    <ns3:vakcina>
+        <ns3:Sinopharm>Sinopharm</ns3:Sinopharm>
+    </ns3:vakcina>
+    <ns3:datumPotvrde>2006-05-04</ns3:datumPotvrde>
+    <ns3:QRCode>QRCode0</ns3:QRCode>
+</ns3:potvrdaOVakcinaciji>

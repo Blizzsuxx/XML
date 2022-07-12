@@ -18,9 +18,7 @@ target/
 *.iws
 *.iml
 *.ipr
-*.lck
-*.log
-/apache-tomcat-8.5.73/*
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -33,5 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-frontend-clerk/node_modules
-frontend/node_modules

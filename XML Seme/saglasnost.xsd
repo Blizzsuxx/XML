@@ -2,9 +2,10 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
     targetNamespace="http://ftn.uns.ac.rs/saglasnost" xmlns="http://ftn.uns.ac.rs/saglasnost"
     xmlns:ns1="http://ftn.uns.ac.rs/interesovanje"
-    xmlns:ns2="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji">
+    xmlns:ns2="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+    xmlns:ns3="https://ftn.uns.ac.rs/potvrda_o_vakcinaciji">
     <xs:import namespace="http://ftn.uns.ac.rs/interesovanje" schemaLocation="interesovanje.xsd"/>
-    <xs:import namespace="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
+    <xs:import namespace="https://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
         schemaLocation="potvrdaOVakcinaciji.xsd"/>
     <xs:element name="dokument">
         <xs:complexType>
@@ -83,7 +84,7 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="saglasnost" type="ns1:TIzbor"/>
-                            <xs:element name="vakcina" type="ns2:TVakcina"/>
+                            <xs:element name="vakcina" type="ns3:TVakcina"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -125,7 +126,7 @@
                             <xs:element maxOccurs="unbounded" name="element">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element maxOccurs="1" name="vakcina" type="ns2:TVakcina"/>
+                                        <xs:element maxOccurs="1" name="vakcina" type="ns3:TVakcina"/>
                                         <xs:element name="datum_davanja" type="xs:date"/>
                                         <xs:element fixed="IM" name="nacin_davanja" type="xs:string"/>
                                         <xs:element name="ekstremitet">
@@ -138,7 +139,7 @@
                                             </xs:complexType>
                                         </xs:element>
                                         <xs:element name="serija" type="xs:long"/>
-                                        <xs:element name="proizvodjac" type="ns2:TVakcina"/>
+                                        <xs:element name="proizvodjac" type="ns3:TVakcina"/>
                                         <xs:element name="nezeljena_reakcija" type="xs:boolean"/>
                                         <xs:element name="potpis_lekara" type="xs:string"/>
                                     </xs:sequence>
@@ -164,7 +165,7 @@
             <xs:element name="ime" type="xs:string"/>
             <xs:element name="prezime" type="xs:string"/>
             <xs:element name="ime_roditelja" type="xs:string"/>
-            <xs:element name="pol" type="ns2:TPol"/>
+            <xs:element name="pol" type="ns3:TPol"/>
             <xs:element name="datum_rodjenja" type="xs:date"/>
             <xs:element name="mesto_rodjenja" type="xs:string"/>
             <xs:element name="adresa">
