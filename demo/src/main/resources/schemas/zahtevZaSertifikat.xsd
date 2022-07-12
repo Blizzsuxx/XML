@@ -7,11 +7,6 @@
                 <xs:element name="Pacijent" type="TOsoba"/>
                 <xs:element name="razlog" type="xs:string" />
                 <xs:element name="mesto" type="xs:string">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:pattern value="[A-Z][a-z]{2,15}"/>
-                        </xs:restriction>
-                    </xs:simpleType>
                 </xs:element>
                 <xs:element name="dan">
                     <xs:simpleType>
@@ -19,12 +14,8 @@
                     </xs:simpleType>
                 </xs:element>
                 <xs:element name="mesec" type="xs:gMonth"/>
-                <xs:element name="godina">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:int">
-                            <xs:pattern value="[0-9]{1,1}"/>
-                        </xs:restriction>
-                    </xs:simpleType>
+                <xs:element name="godina" type="xs:int">
+                    
                 </xs:element>
                 <xs:element name="potpis" type="xs:string">
                     

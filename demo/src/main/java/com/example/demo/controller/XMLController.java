@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,10 +50,10 @@ public class XMLController {
    }
 
    @PostMapping("/podnesiZahtevZaZeleniSertifikat")
-   public ResponseEntity<Boolean> podnesiZahtevZaZeleniSertifikat(@RequestBody ZahtevZaSertifikatDTO dto) throws Exception{
+   public ResponseEntity<Boolean> podnesiZahtevZaZeleniSertifikat(@RequestBody ZahtevZaSertifikatDTO dto, @RequestHeader("Authorization") String bearerToken) throws Exception{
     System.out.println("AAAAAAAAAA");
     System.out.println(dto);
-    return new ResponseEntity<Boolean>(this.xmlService.podnesiZahtevZaZeleniSertifikat(dto), HttpStatus.OK);
+    return new ResponseEntity<Boolean>(this.xmlService.podnesiZahtevZaZeleniSertifikat(dto, bearerToken), HttpStatus.OK);
    }
 
    @PostMapping("/jaxBSaglasnost")

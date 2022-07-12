@@ -42,6 +42,7 @@ import com.example.demo.model.saglasnost.TPol;
 import com.example.demo.model.saglasnost.TVakcina;
 import com.example.demo.model.zahtevZaSertifikat.ZahtevZaSertifikat;
 import com.example.demo.model.zeleniSertifikat.DigitalniSertifikat;
+import com.example.demo.security.TokenUtils;
 import com.ibm.icu.text.SimpleDateFormat;
 
 @Service
@@ -51,12 +52,14 @@ public class XMLService {
     private final ExistManager existManager;
     private final MailSender mailSender;
     private final PDFTransformer pdfTransformer;
+    private final TokenUtils tokenUtils;
 
-    public XMLService(JaxB jaxB, ExistManager existManager, MailSender mailSender, PDFTransformer pdfTransformer) {
+    public XMLService(JaxB jaxB, ExistManager existManager, MailSender mailSender, PDFTransformer pdfTransformer, TokenUtils tokenUtils) {
         this.jaxB = jaxB;
         this.existManager = existManager;
         this.mailSender = mailSender;
         this.pdfTransformer = pdfTransformer;
+        this.tokenUtils = tokenUtils;
     }
 
     public boolean podnesiZahtevZaSaglasnost(InteresovanjeZaVakcinisanje dto) {
@@ -297,7 +300,7 @@ public class XMLService {
         return true;
     }
 
-    public Boolean podnesiZahtevZaZeleniSertifikat(ZahtevZaSertifikatDTO dto) {
+    public Boolean podnesiZahtevZaZeleniSertifikat(ZahtevZaSertifikatDTO dto, String bearerToken) {
         ZahtevZaSertifikat zahtevZaSertifikat = new ZahtevZaSertifikat();
         zahtevZaSertifikat.setRazlog(dto.razlog);
         zahtevZaSertifikat.setPotpis(dto.ime + " " + dto.prezime);
@@ -379,22 +382,22 @@ public class XMLService {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        // ByteArrayOutputStream pdf = null;
-        // try {
-        //     String html = this.pdfTransformer.generateHTML(interesovanjeZaVakcinisanje,
-        //             "demo/src/main/resources/xsl/interesovanje.xsl");
-        //     this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getEAdresa() + ".html",
-        //     html);
-        //     pdf = this.pdfTransformer.generatePDF(html);
+        ByteArrayOutputStream pdf = null;
+        try {
+            String html = this.pdfTransformer.generateHTML(saglasnost,
+                    "demo/src/main/resources/xsl/zahtev_za_sertifikat.xsl");
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat", dto.jmbg + ".html",
+            html);
+            pdf = this.pdfTransformer.generatePDF(html);
             
-        // } catch (FileNotFoundException e) {
-        //     // TODO Auto-generated catch block
-        //     e.printStackTrace();
-        // } catch (Exception e) {
-        //     // TODO Auto-generated catch block
-        //     e.printStackTrace();
-        // }
-        // this.mailSender.sendEmail(dto.eadresa, pdf);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        this.mailSender.sendEmail(this.tokenUtils.getUsernameFromToken(bearerToken), pdf);
         return true;
     }
 }
