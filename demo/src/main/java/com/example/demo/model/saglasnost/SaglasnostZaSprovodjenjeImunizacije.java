@@ -128,6 +128,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "radniStatus",
     "zanimanje",
     "korisnikUstanoveSocZastite",
+    "opstinaSocijale",
     "izjava",
     "potpis",
     "datum"
@@ -145,6 +146,8 @@ public class SaglasnostZaSprovodjenjeImunizacije {
     protected SaglasnostZaSprovodjenjeImunizacije.Zanimanje zanimanje;
     @XmlElement(name = "korisnik_ustanove_soc_zastite", namespace = "http://ftn.uns.ac.rs/saglasnost", required = true)
     protected TIzbor korisnikUstanoveSocZastite;
+    @XmlElement(name = "opstina_socijale", namespace = "http://ftn.uns.ac.rs/saglasnost", required = true)
+    protected String opstinaSocijale;
     @XmlElement(namespace = "http://ftn.uns.ac.rs/saglasnost", required = true)
     protected SaglasnostZaSprovodjenjeImunizacije.Izjava izjava;
     @XmlElement(namespace = "http://ftn.uns.ac.rs/saglasnost", required = true)
@@ -152,6 +155,8 @@ public class SaglasnostZaSprovodjenjeImunizacije {
     @XmlElement(namespace = "http://ftn.uns.ac.rs/saglasnost", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar datum;
+
+    
 
     /**
      * Gets the value of the drzavljanstvo property.
@@ -1124,6 +1129,15 @@ public class SaglasnostZaSprovodjenjeImunizacije {
 
         }
 
+    }
+
+
+    public String getOpstinaSocijale() {
+        return opstinaSocijale;
+    }
+
+    public void setOpstinaSocijale(String opstinaSocijale) {
+        this.opstinaSocijale = opstinaSocijale;
     }
 
 }

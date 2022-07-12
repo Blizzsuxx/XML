@@ -112,7 +112,7 @@ export class SaglasnostComponent implements OnInit {
     if(this.drzavljanstvoDugme == "Strano"){
       drzavljanstvo = this.stranac.value;
     }
-    const saglasnost = new Saglasnost(drzavljanstvo, this.jmbg.value, this.ime.value, this.prezime.value, this.roditelj.value, this.pol, this.rodjendan.value, this.mesto.value, this.adresa.value, this.naselje.value, this.mobilni.value, this.fiksni.value, this.email.value, this.radniStatus, this.zanimanje, this.socijalnaZastita, this.saglasnost, this.vakcina, this.opstinaSocijala.value);
+    const saglasnost = new Saglasnost(drzavljanstvo, this.jmbg.value, this.ime.value, this.prezime.value, this.roditelj.value, this.pol, this.rodjendan.value, this.mesto.value, this.adresa.value, this.naselje.value, this.mobilni.value, this.fiksni.value, this.email.value, this.radniStatus, this.zanimanje, this.socijalnaZastita, this.saglasnost, this.vakcina, this.opstinaSocijala.value, this.opstina.value);
     console.log(saglasnost)
 
     this.dokumentiService.sacuvajSaglasnost(saglasnost);

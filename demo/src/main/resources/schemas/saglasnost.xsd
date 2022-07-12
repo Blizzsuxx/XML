@@ -76,6 +76,7 @@
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="korisnik_ustanove_soc_zastite" type="TIzbor"/>
+                <xs:element name="opstina_socijale" type="xs:string"/>
                 <xs:element name="izjava">
                     <xs:complexType>
                         <xs:sequence>
@@ -187,6 +188,7 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
+            <xs:element name="opstina" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="TVakcina">

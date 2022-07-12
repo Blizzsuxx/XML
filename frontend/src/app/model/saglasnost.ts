@@ -20,6 +20,7 @@ export class Saglasnost {
     public saglasnost: string;
     public izabranaVakcina: string;
     public opstinaSocijale: string;
+    public opstina: string;
     constructor(
         drzavljanstvo : string, 
         jmbg : string, 
@@ -39,7 +40,8 @@ export class Saglasnost {
         socijalnaZastita: string,
         saglasnost: string,
         izabranaVakcina: string,
-        opstinaSocijale: string) {
+        opstinaSocijale: string,
+        opstina: string) {
         
         
 
@@ -62,5 +64,6 @@ export class Saglasnost {
             this.saglasnost = saglasnost;
             this.izabranaVakcina = izabranaVakcina;
             this.opstinaSocijale = opstinaSocijale;
+            this.opstina = opstina
     }
 }

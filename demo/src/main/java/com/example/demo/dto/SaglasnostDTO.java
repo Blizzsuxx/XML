@@ -20,6 +20,7 @@ public class SaglasnostDTO {
     public String saglasnost;
     public String izabranaVakcina;
     public String opstinaSocijale;
+    public String opstina;
 
     public SaglasnostDTO(){
 
@@ -28,7 +29,7 @@ public class SaglasnostDTO {
     public SaglasnostDTO(String drzavljanstvo, String jmbg, String ime, String prezime, String imeRoditelja, String pol,
             String datumRodjenja, String mestoRodjenja, String adresa, String mesto, String mobilni, String fiksni,
             String eadresa, String radniStatus, String zanimanje, String socijalnaZastita, String saglasnost,
-            String izabranaVakcina, String opstinaSocijale) {
+            String izabranaVakcina, String opstinaSocijale, String opstina) {
         this.drzavljanstvo = drzavljanstvo;
         this.jmbg = jmbg;
         this.ime = ime;
@@ -48,6 +49,7 @@ public class SaglasnostDTO {
         this.saglasnost = saglasnost;
         this.izabranaVakcina = izabranaVakcina;
         this.opstinaSocijale = opstinaSocijale;
+        this.opstina = opstina;
     }
 
     @Override
@@ -55,11 +57,15 @@ public class SaglasnostDTO {
         return "SaglasnostDTO [adresa=" + adresa + ", datumRodjenja=" + datumRodjenja + ", drzavljanstvo="
                 + drzavljanstvo + ", eadresa=" + eadresa + ", fiksni=" + fiksni + ", ime=" + ime + ", imeRoditelja="
                 + imeRoditelja + ", izabranaVakcina=" + izabranaVakcina + ", jmbg=" + jmbg + ", mesto=" + mesto
-                + ", mestoRodjenja=" + mestoRodjenja + ", mobilni=" + mobilni + ", opstinaSocijale=" + opstinaSocijale
-                + ", pol=" + pol + ", prezime=" + prezime + ", radniStatus=" + radniStatus + ", saglasnost="
-                + saglasnost + ", socijalnaZastita=" + socijalnaZastita + ", zanimanje=" + zanimanje + "]";
+                + ", mestoRodjenja=" + mestoRodjenja + ", mobilni=" + mobilni + ", opstina=" + opstina
+                + ", opstinaSocijale=" + opstinaSocijale + ", pol=" + pol + ", prezime=" + prezime + ", radniStatus="
+                + radniStatus + ", saglasnost=" + saglasnost + ", socijalnaZastita=" + socijalnaZastita + ", zanimanje="
+                + zanimanje + "]";
     }
 
+    
+
+    
 
     
 }

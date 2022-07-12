@@ -221,6 +221,8 @@ public class XMLService {
         saglasnostZaSprovodjenjeImunizacije.getOsoba().setMestoRodjenja(dto.mestoRodjenja);
         saglasnostZaSprovodjenjeImunizacije.getOsoba().setMobilni(dto.mobilni);
         saglasnostZaSprovodjenjeImunizacije.getOsoba().setImeRoditelja(dto.imeRoditelja);
+        saglasnostZaSprovodjenjeImunizacije.getOsoba().setOpstina(dto.opstina);
+        saglasnostZaSprovodjenjeImunizacije.setOpstinaSocijale(dto.opstinaSocijale);
         saglasnostZaSprovodjenjeImunizacije.getOsoba().setPol(new TPol());
         if(dto.pol.equals("Musko") || dto.pol.equals("Muski")){
 
@@ -276,22 +278,22 @@ public class XMLService {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        // ByteArrayOutputStream pdf = null;
-        // try {
-        //     String html = this.pdfTransformer.generateHTML(interesovanjeZaVakcinisanje,
-        //             "demo/src/main/resources/xsl/interesovanje.xsl");
-        //     this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getEAdresa() + ".html",
-        //     html);
-        //     pdf = this.pdfTransformer.generatePDF(html);
+        ByteArrayOutputStream pdf = null;
+        try {
+            String html = this.pdfTransformer.generateHTML(saglasnost,
+                    "demo/src/main/resources/xsl/obrazac_saglasnosti_za_imunizaciju.xsl");
+            this.existManager.storeFromText("/db/dokumenti/saglasnost", dto.eadresa + ".html",
+            html);
+            pdf = this.pdfTransformer.generatePDF(html);
             
-        // } catch (FileNotFoundException e) {
-        //     // TODO Auto-generated catch block
-        //     e.printStackTrace();
-        // } catch (Exception e) {
-        //     // TODO Auto-generated catch block
-        //     e.printStackTrace();
-        // }
-        // this.mailSender.sendEmail(dto.eadresa, pdf);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        this.mailSender.sendEmail(dto.eadresa, pdf);
         return true;
     }
 

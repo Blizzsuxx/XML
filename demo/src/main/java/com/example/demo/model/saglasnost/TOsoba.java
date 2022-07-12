@@ -74,7 +74,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "mesto",
     "mobilni",
     "fiksni",
-    "eAdresa"
+    "eAdresa",
+    "opstina",
 })
 public class TOsoba {
 
@@ -101,6 +102,8 @@ public class TOsoba {
     protected String fiksni;
     @XmlElement(name = "e-adresa", namespace = "http://ftn.uns.ac.rs/saglasnost", required = true)
     protected String eAdresa;
+    @XmlElement(name = "opstina", namespace = "http://ftn.uns.ac.rs/saglasnost", required = true)
+    protected String opstina;
 
     /**
      * Gets the value of the ime property.
@@ -364,6 +367,22 @@ public class TOsoba {
      */
     public void setEAdresa(String value) {
         this.eAdresa = value;
+    }
+
+    public String geteAdresa() {
+        return eAdresa;
+    }
+
+    public void seteAdresa(String eAdresa) {
+        this.eAdresa = eAdresa;
+    }
+
+    public String getOpstina() {
+        return opstina;
+    }
+
+    public void setOpstina(String opstina) {
+        this.opstina = opstina;
     }
 
 }
