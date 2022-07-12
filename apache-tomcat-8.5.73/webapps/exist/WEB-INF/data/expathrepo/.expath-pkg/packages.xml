@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><packages xmlns="http://expath.org/ns/repo/packages">
-<package version="0.9.1" dir="shared-0.9.1" name="http://exist-db.org/apps/shared"/>
-<package version="1.0.1" dir="functx-1.0.1" name="http://www.functx.com"/>
-<package version="0.16.5" dir="usermanager-0.16.5" name="http://exist-db.org/apps/usermanager"/>
-<package version="1.1.1" dir="dashboard-1.1.1" name="http://exist-db.org/apps/dashboard"/>
-<package version="2.4.13" dir="eXide-2.4.13" name="http://exist-db.org/apps/eXide"/>
-<package version="1.0.1" dir="monex-1.0.1" name="http://exist-db.org/apps/monex"/>
-</packages>
