@@ -2,6 +2,7 @@ package com.clerk.clerkb.repository;
 
 import com.clerk.clerkb.db.ExistManager;
 import com.clerk.clerkb.model.interesovanje.InteresovanjeZaVakcinisanje;
+import com.clerk.clerkb.model.saglasnost.Dokument;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -88,5 +89,27 @@ public class DigitalCertificateRepository {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public List<DigitalniSertifikat> findAll(){
+        List<DigitalniSertifikat> retVal = new ArrayList<>();
+        try {
+            ResourceSet xmlPotvrde = existManager.retrieve(collectionId, "/*");
+            ResourceIterator i = xmlPotvrde.getIterator();
+            XMLResource res;
+            while(i.hasMoreResources()){
+                try {
+                    res = (XMLResource) i.nextResource();
+                    JAXBContext jaxbContext = JAXBContext.newInstance(DigitalniSertifikat.class);
+                    DigitalniSertifikat one = (DigitalniSertifikat) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
+                    retVal.add(one);
+                } catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return retVal;
     }
 }

@@ -44,6 +44,29 @@ public class SaglasnostRepository {
         return retVal;
     }
 
+    public List<Dokument> findAll(){
+        List<Dokument> retVal = new ArrayList<>();
+        try {
+            ResourceSet xmlPotvrde = existManager.retrieve(collectionId, "/*");
+            ResourceIterator i = xmlPotvrde.getIterator();
+            XMLResource res;
+            while(i.hasMoreResources()){
+                try {
+                    res = (XMLResource) i.nextResource();
+                    JAXBContext jaxbContext = JAXBContext.newInstance(Dokument.class);
+                    Dokument one = (Dokument) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
+                    retVal.add(one);
+                } catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return retVal;
+    }
+
+
     public String findXmlById(String id) {
         XMLResource res = null;
         try {
