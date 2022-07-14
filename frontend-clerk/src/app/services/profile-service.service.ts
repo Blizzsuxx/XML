@@ -32,4 +32,8 @@ export class ProfileServiceService {
   public createReport(start:string, end:string){
     return this.http.get(`${environment.apiUrl}/immunization/report/${start}/${end}`, {responseType: 'text'});
   }
+
+  public simpleSearch(search: string){
+    return this.http.get(`${environment.apiUrl}/search/simple/${search}`, {responseType: 'text'});
+  }
 }
