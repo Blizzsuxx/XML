@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "cert", produces = MediaType.APPLICATION_XML_VALUE)
 public class DigitalCertificateController {
 
+
     @Autowired
     private IDigitalCertificateService service;
 
