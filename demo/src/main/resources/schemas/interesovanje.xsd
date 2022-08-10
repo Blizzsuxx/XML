@@ -77,7 +77,7 @@
             <xs:element name="mobilni">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:pattern value="06[0-9]{8,8}"/>
+                        <xs:pattern value="[0-9]{10,10}"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>

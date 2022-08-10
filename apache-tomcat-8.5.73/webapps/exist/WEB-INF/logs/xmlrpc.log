@@ -1,2 +1,10 @@
 2022-07-12 12:06:17,499 [http-nio-8081-exec-4] INFO  (RpcConnection.java [createCollection]:184) - collection /db/dokumenti has been created 
 2022-07-12 12:06:17,540 [http-nio-8081-exec-4] INFO  (RpcConnection.java [createCollection]:184) - collection /db/dokumenti/zahtevZaZeleniSertifikat has been created 
+2022-07-12 17:46:23,435 [http-nio-8081-exec-7] INFO  (RpcConnection.java [createCollection]:184) - collection /db/vaccines has been created 
+2022-07-12 17:46:23,481 [http-nio-8081-exec-5] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
+2022-07-12 17:52:56,080 [http-nio-8081-exec-1] INFO  (RpcConnection.java [doQuery]:257) - query took 17ms. 
+2022-08-10 17:11:26,766 [http-nio-8081-exec-9] INFO  (RpcConnection.java [createCollection]:184) - collection /db/gradjanin has been created 
+2022-08-10 17:11:26,822 [http-nio-8081-exec-9] INFO  (RpcConnection.java [createCollection]:184) - collection /db/gradjanin/xml has been created 
+2022-08-10 17:11:26,870 [http-nio-8081-exec-6] INFO  (RpcConnection.java [createCollection]:184) - collection /db/gradjanin/xml/korisnik has been created 
+2022-08-10 19:09:40,812 [http-nio-8081-exec-3] INFO  (RpcConnection.java [createCollection]:184) - collection /db/dokumenti/zahtevZaSaglasnost has been created 
+2022-08-10 20:49:28,600 [http-nio-8081-exec-6] INFO  (RpcConnection.java [createCollection]:184) - collection /db/dokumenti/saglasnost has been created 

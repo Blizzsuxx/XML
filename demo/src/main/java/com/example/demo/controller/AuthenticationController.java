@@ -44,12 +44,17 @@ public class AuthenticationController {
          System.out.println(korisnik.getEmail());
          System.out.println(korisnik.getLozinka());
          System.out.println(korisnik);
-
-         Authentication authentication = authenticationManager
+         Authentication authentication = null;
+         try{
+            authentication = authenticationManager
                  .authenticate(new UsernamePasswordAuthenticationToken(korisnik.getEmail(),
                          korisnik.getLozinka()));
+        } catch(Exception e){
+            return new ResponseEntity<>("Username" + korisnik.getEmail() + "not found", HttpStatus.NOT_FOUND);
+        }
+         
 
-         // Ubaci korisnika u trenutni security kontekst
+        // Ubaci korisnika u trenutni security kontekst
          SecurityContextHolder.getContext().setAuthentication(authentication);
 
          // Kreiraj token za tog korisnika

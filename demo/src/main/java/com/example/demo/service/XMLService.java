@@ -195,7 +195,10 @@ public class XMLService {
         saglasnostZaSprovodjenjeImunizacije.getIzjava().setVakcina(new TVakcina());
         saglasnostZaSprovodjenjeImunizacije.getIzjava().getVakcina().setVakcina(dto.izabranaVakcina);
         saglasnostZaSprovodjenjeImunizacije.setDrzavljanstvo(new Drzavljanstvo());
-        if(dto.drzavljanstvo.equals("Stranac")){
+        System.out.println("dto.drzavljanstvo");
+        System.out.println(dto.drzavljanstvo);
+        System.out.println("dto.drzavljanstvo");
+        if(!dto.drzavljanstvo.equals("Srpsko")){
             saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().setStranac( new Stranac());
             saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().getStranac().setBrPasosaIliEbs(dto.jmbg);
             saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().getStranac().setNazivStranogDrzavljanstva(dto.drzavljanstvo);
@@ -232,7 +235,7 @@ public class XMLService {
             saglasnostZaSprovodjenjeImunizacije.getOsoba().getPol().setMusko("Musko");
         } else {
 
-            saglasnostZaSprovodjenjeImunizacije.getOsoba().getPol().setMusko("Zensko");
+            saglasnostZaSprovodjenjeImunizacije.getOsoba().getPol().setZensko("Zensko");
         }
         
         

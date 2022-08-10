@@ -64,14 +64,14 @@
             <xs:element name="mobilni">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:pattern value="06[0-9]{8,8}"/>
+                        <xs:pattern value="[0-9]{10,10}"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
             <xs:element name="fiksni">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
-                        <xs:pattern value="01[0-9]{7,7}"/>
+                        <xs:pattern value="[0-9]{9,9}"/>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>

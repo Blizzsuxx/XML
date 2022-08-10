@@ -44,7 +44,7 @@ export class SaglasnostComponent implements OnInit {
   jmbg = new FormControl('', [Validators.required, Validators.pattern("[0-9]{13}")]);
   ime = new FormControl('', [Validators.required]);
   prezime = new FormControl('', [Validators.required]);
-  mobilni = new FormControl('', [Validators.required, Validators.pattern("06[0-9]{8,8}")]);
+  mobilni = new FormControl('', [Validators.required, Validators.pattern("[0-9]{10,10}")]);
   fiksni = new FormControl('', [Validators.pattern("[0-9]{9}")]);
   opstina = new FormControl('', [Validators.required]);
   drzavljanstvoDugme = ""

@@ -1,5 +1,9 @@
 package com.clerk.clerkb.db;
 
+import java.io.File;
+
+import javax.xml.transform.OutputKeys;
+
 import org.exist.xmldb.EXistResource;
 import org.exist.xupdate.XUpdateProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +17,6 @@ import org.xmldb.api.modules.CollectionManagementService;
 import org.xmldb.api.modules.XMLResource;
 import org.xmldb.api.modules.XPathQueryService;
 import org.xmldb.api.modules.XUpdateQueryService;
-
-import javax.xml.transform.OutputKeys;
-import java.io.File;
 
 @Service
 public class ExistManager {
@@ -139,8 +140,9 @@ public class ExistManager {
         Collection col = null;
         ResourceSet result = null;
         try {
-            col = DatabaseManager.getCollection(authManager.getUri() + collectionUri, authManager.getUser(),
-                    authManager.getPassword());
+            System.out.println(authManager.getUri() + collectionUri);
+            
+            col = getOrCreateCollection(collectionUri, 0);
             System.out.println("Collection size: " + col.getResourceCount());
             XPathQueryService xpathService = (XPathQueryService) col.getService("XPathQueryService", "1.0");
             xpathService.setProperty("indent", "yes");
