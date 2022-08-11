@@ -19,7 +19,7 @@ export class ZeleniSertifikatComponent implements OnInit {
   prezime = new FormControl(null, [Validators.required]);
   rodjendan = new FormControl(null, [Validators.required]);
   jmbg = new FormControl(null, [Validators.required, Validators.pattern("[0-9]{13}")]);
-  pasos = new FormControl(null, [Validators.required, Validators.pattern("[0-9]+")]);
+  pasos = new FormControl(null, [Validators.required, Validators.pattern("[0-9]{10}")]);
   mesto = new FormControl(null, [Validators.required]);
 
   constructor(
