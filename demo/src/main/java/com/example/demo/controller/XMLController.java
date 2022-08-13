@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.dto.IzvestajOImunizacijiDTO;
 import com.example.demo.dto.SaglasnostDTO;
 import com.example.demo.dto.XMLDto;
 import com.example.demo.dto.ZahtevZaSertifikatDTO;
@@ -54,6 +55,13 @@ public class XMLController {
     System.out.println("AAAAAAAAAA");
     System.out.println(dto);
     return new ResponseEntity<Boolean>(this.xmlService.podnesiZahtevZaZeleniSertifikat(dto, bearerToken), HttpStatus.OK);
+   }
+
+   @PostMapping("/podnesiIzvestajOImunizaciji")
+   public ResponseEntity<Boolean> podnesiIzvestajOImunizaciji(@RequestBody IzvestajOImunizacijiDTO dto, @RequestHeader("Authorization") String bearerToken) throws Exception{
+    System.out.println("AAAAAAAAAA");
+    System.out.println(dto);
+    return new ResponseEntity<Boolean>(this.xmlService.podnesiIzvestajOImunizaciji(dto, bearerToken), HttpStatus.OK);
    }
 
    @PostMapping("/jaxBSaglasnost")
@@ -103,6 +111,7 @@ public class XMLController {
         System.out.println("OUTPUT: " + output);
         return new ResponseEntity<>(output, HttpStatus.OK);
     }
+    
 
 
     

@@ -11,6 +11,7 @@ import { InteresovanjeComponent } from './Forms/interesovanje/interesovanje.comp
 import { SigninFormComponent } from './Forms/signin-form/signin-form.component';
 import { SaglasnostComponent } from './Forms/saglasnost/saglasnost.component';
 import { ZeleniSertifikatComponent } from './Forms/zeleni-sertifikat/zeleni-sertifikat.component';
+import { IzvestajOImunizacijiComponent } from './Forms/izvestaj-o-imunizaciji/izvestaj-o-imunizaciji.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginFormComponent,
+  },
+
+  {
+    path: 'izvestaj-o-imunizaciji',
+    component: IzvestajOImunizacijiComponent,
   },
 
   {

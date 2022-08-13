@@ -21,6 +21,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.db.ExistManager;
+import com.example.demo.dto.IzvestajOImunizacijiDTO;
 import com.example.demo.dto.SaglasnostDTO;
 import com.example.demo.dto.XMLDto;
 import com.example.demo.dto.ZahtevZaSertifikatDTO;
@@ -390,6 +391,40 @@ public class XMLService {
             String html = this.pdfTransformer.generateHTML(saglasnost,
                     "demo/src/main/resources/xsl/zahtev_za_sertifikat.xsl");
             this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat", dto.jmbg + ".html",
+            html);
+            pdf = this.pdfTransformer.generatePDF(html);
+            
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        this.mailSender.sendEmail(this.tokenUtils.getUsernameFromToken(bearerToken), pdf);
+        return true;
+    }
+
+
+
+
+
+
+
+    public Boolean podnesiIzvestajOImunizaciji(IzvestajOImunizacijiDTO dto, String bearerToken) {
+        String text = "<test></test>";
+        try {
+            this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", "test" + ".xml",
+            text);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        ByteArrayOutputStream pdf = null;
+        try {
+            String html = this.pdfTransformer.generateHTML(text,
+                    "demo/src/main/resources/xsl/izvestaj_o_imunizaciji.xsl");
+            this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", "test" + ".html",
             html);
             pdf = this.pdfTransformer.generatePDF(html);
             

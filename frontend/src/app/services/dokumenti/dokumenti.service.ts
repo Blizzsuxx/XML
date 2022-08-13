@@ -5,7 +5,7 @@ import { Drzavljanstvo, Interesovanje, TIzbor, TOsoba, TVakcina, Vakcine } from 
 import { js2xml } from "node_modules/xml-js"
 import { Saglasnost } from 'src/app/model/saglasnost';
 import { ZahtevZaZeleniSertifikat } from 'src/app/model/zahtev-za-zeleni-sertifikat';
-
+import { IzvestajOImunizaciji } from 'src/app/model/izvestaj-o-imunizaciji';
 
 export class TestXML{
   public a : string;
@@ -94,5 +94,15 @@ export class DokumentiService {
     this.sacuvajInteresovanje(interesovanje);
   }
 
+
+  sacuvajIzvestajOImunizaciji(izvestajOImunizaciji : IzvestajOImunizaciji){
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    console.log(js2xml(izvestajOImunizaciji, {compact:true}))
+    console.log(izvestajOImunizaciji)
+    this.http.post("http://localhost:8080/api/xml/podnesiIzvestajOImunizaciji", "<izvestaj_o_imunizaciji>" + js2xml(izvestajOImunizaciji, {compact:true}) + "</izvestaj_o_imunizaciji>", {headers: headers, responseType: "text"}).subscribe();
+    
+  }
 
 }

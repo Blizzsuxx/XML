@@ -4,6 +4,7 @@
     <xs:element name="potvrdaOVakcinaciji">
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="sifra" type="xs:string"/>
                 <xs:element name="Pacijent" type="TOsoba"/>
                 <xs:element name="datumPrva" type="xs:date"/>
                 <xs:element name="serija">

@@ -1,0 +1,128 @@
+<div class="demo-button-container">
+
+    <mat-sidenav-container class="example-container2">
+        <mat-sidenav mode="side" opened class="side-menu">
+
+        </mat-sidenav>
+        <mat-sidenav-content class="main-menu">
+
+            <div style=" padding : 45px;" class="col-md-4 col-md-offset-4">
+
+                <div id="form-holder-div">
+                    <h1 class="h1 mb-3 font-weight-normal">Izjava interesovanja za vakcinisanje</h1>
+
+
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Unesite Vremenski Raspon</mat-label>
+                        <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+                          <input matStartDate formControlName="datumOd" placeholder="Datum Od">
+                          <input matEndDate formControlName="datumDo" placeholder="Datum Do">
+                        </mat-date-range-input>
+                        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-date-range-picker #picker></mat-date-range-picker>
+                    </mat-form-field>
+                      
+
+                    <button mat-button color="primary" (click)="autofillData()">Autofill Data</button>
+
+
+                    
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Podnetih Interesovanja</mat-label>
+                            <input matInput placeholder="2758" [formControl]="interesovanja" required>
+                            <mat-error *ngIf="interesovanja.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Primljenih Zahteva Za Digitalni Sertifikat</mat-label>
+                            <input matInput placeholder="453" [formControl]="sertifikat" required>
+                            <mat-error *ngIf="sertifikat.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Primljenih Zahteva Za Digitalni Sertifikat</mat-label>
+                            <input matInput placeholder="428" [formControl]="izdato" required>
+                            <mat-error *ngIf="izdato.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Datih Doza</mat-label>
+                            <input matInput placeholder="3225" [formControl]="doze" required>
+                            <mat-error *ngIf="doze.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Datih Prvih Doza</mat-label>
+                            <input matInput placeholder="1789" [formControl]="doze1" required>
+                            <mat-error *ngIf="doze1.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Datih Drugih Doza</mat-label>
+                            <input matInput placeholder="1276" [formControl]="doze2" required>
+                            <mat-error *ngIf="doze2.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Datih Trecih Doza</mat-label>
+                            <input matInput placeholder="160" [formControl]="doze3" required>
+                            <mat-error *ngIf="doze3.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Datih Doza Od Pfizera</mat-label>
+                            <input matInput placeholder="1625" [formControl]="pfizer" required>
+                            <mat-error *ngIf="pfizer.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Datih Doza Od Sinopharma</mat-label>
+                            <input matInput placeholder="1100" [formControl]="sinopharm" required>
+                            <mat-error *ngIf="sinopharm.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Datih Doza Od Sputnika</mat-label>
+                            <input matInput placeholder="356" [formControl]="sputnik" required>
+                            <mat-error *ngIf="sputnik.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-container">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Broj Datih Doza Od AstraZeneca</mat-label>
+                            <input matInput placeholder="144" [formControl]="astraZeneca" required>
+                            <mat-error *ngIf="astraZeneca.invalid">Morate uneti Broj</mat-error>
+                        </mat-form-field>
+                    </div>
+                    
+                    <button mat-button color="primary" (click)="submit()">Posalji</button>
+                </div>
+            </div>
+
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

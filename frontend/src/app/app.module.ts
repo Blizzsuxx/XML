@@ -37,6 +37,7 @@ import { SaglasnostComponent } from './Forms/saglasnost/saglasnost.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { ZeleniSertifikatComponent } from './Forms/zeleni-sertifikat/zeleni-sertifikat.component';
+import { IzvestajOImunizacijiComponent } from './Forms/izvestaj-o-imunizaciji/izvestaj-o-imunizaciji.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { ZeleniSertifikatComponent } from './Forms/zeleni-sertifikat/zeleni-sert
     SigninFormComponent,
     SaglasnostComponent,
     ZeleniSertifikatComponent,
+    IzvestajOImunizacijiComponent,
   ],
   imports: [
     BrowserModule,

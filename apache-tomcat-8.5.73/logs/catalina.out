@@ -1211,3 +1211,67 @@ Scanning journal  [=                                                 ] (2 %)Sca
 10-Aug-2022 14:44:32.801 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [27] ms
 10-Aug-2022 14:44:32.805 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
 10-Aug-2022 14:44:32.814 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 31499 ms
+12-Aug-2022 19:26:42.953 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.73
+12-Aug-2022 19:26:42.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 11 2021 13:14:36 UTC
+12-Aug-2022 19:26:42.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.73.0
+12-Aug-2022 19:26:42.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+12-Aug-2022 19:26:42.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.0-46-generic
+12-Aug-2022 19:26:42.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+12-Aug-2022 19:26:42.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+12-Aug-2022 19:26:42.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_342-8u342-b07-0ubuntu1~20.04-b07
+12-Aug-2022 19:26:42.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+12-Aug-2022 19:26:42.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+12-Aug-2022 19:26:42.955 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+12-Aug-2022 19:26:42.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/conf/logging.properties
+12-Aug-2022 19:26:42.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+12-Aug-2022 19:26:42.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+12-Aug-2022 19:26:42.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+12-Aug-2022 19:26:42.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+12-Aug-2022 19:26:42.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+12-Aug-2022 19:26:42.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+12-Aug-2022 19:26:42.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73
+12-Aug-2022 19:26:42.956 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/temp
+12-Aug-2022 19:26:42.956 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+12-Aug-2022 19:26:43.048 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+12-Aug-2022 19:26:43.080 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+12-Aug-2022 19:26:43.095 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 662 ms
+12-Aug-2022 19:26:43.137 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+12-Aug-2022 19:26:43.137 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.73]
+12-Aug-2022 19:26:43.190 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war]
+12-Aug-2022 19:26:55.807 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+12-Aug-2022 19:26:59.005 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Create a new repository with storage: File system storage in /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo
+12-Aug-2022 19:26:59.037 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/dashboard-1.1.1/dashboard'
+12-Aug-2022 19:26:59.054 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/usermanager-0.16.5/usermanager'
+12-Aug-2022 19:26:59.058 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info Warning: package uses old-style content dir: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/functx-1.0.1/functx'
+12-Aug-2022 19:26:59.083 INFO [localhost-startStop-1] org.expath.pkg.repo.tools.Logger.info None of content dirs exist: '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/content' and '/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data/expathrepo/eXide-2.4.13/eXide'
+12-Aug-2022 19:27:00.554 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist.war] has finished in [17,364] ms
+12-Aug-2022 19:27:00.579 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war]
+12-Aug-2022 19:27:03.080 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2022-08-12 19:27:04] Config     INFO  FUSEKI_HOME=unset
+[2022-08-12 19:27:04] Config     INFO  FUSEKI_BASE=/etc/fuseki
+[2022-08-12 19:27:04] Config     INFO  Shiro file: file:///etc/fuseki/shiro.ini
+[2022-08-12 19:27:04] Config     INFO  Context path = /fuseki
+[2022-08-12 19:27:04] Config     INFO  Configuration file: /etc/fuseki/config.ttl
+[2022-08-12 19:27:04] Config     INFO  Load configuration: file:///etc/fuseki/configuration/PersonDataset.ttl
+[2022-08-12 19:27:05] Config     INFO  Load configuration: file:///etc/fuseki/configuration/Fakultet.ttl
+[2022-08-12 19:27:05] Server     INFO  Configuration file: /etc/fuseki/config.ttl
+[2022-08-12 19:27:05] Server     INFO  Path = /Fakultet
+[2022-08-12 19:27:05] Server     INFO  Path = /PersonDataset
+[2022-08-12 19:27:05] Server     INFO  System
+[2022-08-12 19:27:05] Server     INFO    Memory: 3.4 GiB
+[2022-08-12 19:27:05] Server     INFO    Java:   1.8.0_342
+[2022-08-12 19:27:05] Server     INFO    OS:     Linux 5.15.0-46-generic amd64
+[2022-08-12 19:27:05] Server     INFO    PID:    4068
+12-Aug-2022 19:27:05.462 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/fuseki.war] has finished in [4,883] ms
+12-Aug-2022 19:27:05.463 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager]
+12-Aug-2022 19:27:05.542 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/manager] has finished in [79] ms
+12-Aug-2022 19:27:05.542 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs]
+12-Aug-2022 19:27:05.563 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/docs] has finished in [21] ms
+12-Aug-2022 19:27:05.563 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples]
+12-Aug-2022 19:27:05.771 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/examples] has finished in [208] ms
+12-Aug-2022 19:27:05.772 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager]
+12-Aug-2022 19:27:05.788 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/host-manager] has finished in [16] ms
+12-Aug-2022 19:27:05.789 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT]
+12-Aug-2022 19:27:05.804 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/ROOT] has finished in [15] ms
+12-Aug-2022 19:27:05.808 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+12-Aug-2022 19:27:05.816 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 22719 ms
