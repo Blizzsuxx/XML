@@ -28,17 +28,17 @@
         </head>
         <body>
         <h3>IНСТИТУТ ЗА ЈАВНО ЗДРАВЉЕ СРБИЈЕ</h3>
-        <h2>"Др Милан Јовановић Батут</h1>
+        <h2>"Др Милан Јовановић Батут</h2>
         <h3 class="foo">INSTITUT ZA JAVNO ZDRAVLJE SRBIJE</h3>
-        <h2 class="foo">"Dr. Milan Jovanovic Batut</h1>
+        <h2 class="foo">"Dr. Milan Jovanovic Batut</h2>
         <h3 class="foo">INSTITUTE OF PUBLIC HEALTH OF SERBIA</h3>
-        <h2 class="foo">"Dr. Milan Jovanovic Batut</h1>
+        <h2 class="foo">"Dr. Milan Jovanovic Batut</h2>
         <h2>ШИФРА ПОТВРДЕ О ВАКЦИНАЦИЈЕ</h2>
-        <h1 class="foo">Sifra potvrde/Confirmation code</h2>
+        <h1 class="foo">Sifra potvrde/Confirmation code</h1>
         
         <h3>ПОТВРДА О ИЗВРШЕНОЈ ВАКЦИНАЦИЈИ ПРОТИВ COVID-19</h3>
-        <h2 class="foo">POTVRDA O IZVRSENOJ VAKCINACIJI PROTIV COVID-19</h3>
-        <h2 class="foo">CONFIRMATION OF THE COVID-19 VACCINATION</h3>
+        <h2 class="foo">POTVRDA O IZVRSENOJ VAKCINACIJI PROTIV COVID-19</h2>
+        <h2 class="foo">CONFIRMATION OF THE COVID-19 VACCINATION</h2>
 
             <h1> 
                 Име и презиме: <b><xsl:value-of select="x:Pacijent/x:ime"/></b> <b><xsl:value-of select="x:Pacijent/x:prezime"/></b>
