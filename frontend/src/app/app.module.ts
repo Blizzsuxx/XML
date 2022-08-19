@@ -38,6 +38,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { ZeleniSertifikatComponent } from './Forms/zeleni-sertifikat/zeleni-sertifikat.component';
 import { IzvestajOImunizacijiComponent } from './Forms/izvestaj-o-imunizaciji/izvestaj-o-imunizaciji.component';
+import { IzlistajDokumenteComponent } from './Forms/izlistaj-dokumente/izlistaj-dokumente.component';
+import { DokumentComponent } from './Forms/dokument/dokument.component';
 
 
 @NgModule({
@@ -52,6 +54,8 @@ import { IzvestajOImunizacijiComponent } from './Forms/izvestaj-o-imunizaciji/iz
     SaglasnostComponent,
     ZeleniSertifikatComponent,
     IzvestajOImunizacijiComponent,
+    IzlistajDokumenteComponent,
+    DokumentComponent,
   ],
   imports: [
     BrowserModule,

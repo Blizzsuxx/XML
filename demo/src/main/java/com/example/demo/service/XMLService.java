@@ -3,6 +3,7 @@ package com.example.demo.service;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -18,7 +19,11 @@ import javax.xml.datatype.DatatypeConstants;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
+import org.xmldb.api.base.XMLDBException;
+import org.xmldb.api.modules.XMLResource;
 
 import com.example.demo.db.ExistManager;
 import com.example.demo.dto.IzvestajOImunizacijiDTO;
@@ -45,6 +50,7 @@ import com.example.demo.model.zahtevZaSertifikat.ZahtevZaSertifikat;
 import com.example.demo.model.zeleniSertifikat.DigitalniSertifikat;
 import com.example.demo.security.TokenUtils;
 import com.ibm.icu.text.SimpleDateFormat;
+import com.itextpdf.text.DocumentException;
 
 @Service
 public class XMLService {
@@ -55,7 +61,8 @@ public class XMLService {
     private final PDFTransformer pdfTransformer;
     private final TokenUtils tokenUtils;
 
-    public XMLService(JaxB jaxB, ExistManager existManager, MailSender mailSender, PDFTransformer pdfTransformer, TokenUtils tokenUtils) {
+    public XMLService(JaxB jaxB, ExistManager existManager, MailSender mailSender, PDFTransformer pdfTransformer,
+            TokenUtils tokenUtils) {
         this.jaxB = jaxB;
         this.existManager = existManager;
         this.mailSender = mailSender;
@@ -63,7 +70,8 @@ public class XMLService {
         this.tokenUtils = tokenUtils;
     }
 
-    public boolean podnesiZahtevZaSaglasnost(InteresovanjeZaVakcinisanje dto) {
+    public boolean podnesiZahtevZaSaglasnost(InteresovanjeZaVakcinisanje dto, String bearerToken) {
+        dto.getOsoba().setEAdresa(this.tokenUtils.getUsernameFromToken(bearerToken));
         String interesovanjeZaVakcinisanje = null;
         GregorianCalendar calendar = new GregorianCalendar();
         Date trenutniDatum = new Date();
@@ -101,9 +109,9 @@ public class XMLService {
             String html = this.pdfTransformer.generateHTML(interesovanjeZaVakcinisanje,
                     "demo/src/main/resources/xsl/interesovanje.xsl");
             this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getEAdresa() + ".html",
-            html);
+                    html);
             pdf = this.pdfTransformer.generatePDF(html);
-            
+
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -187,10 +195,11 @@ public class XMLService {
         return result;
     }
 
-    public Boolean podnesiSaglasnost(SaglasnostDTO dto) {
+    public Boolean podnesiSaglasnost(SaglasnostDTO dto, String bearerToken) {
         SaglasnostZaSprovodjenjeImunizacije saglasnostZaSprovodjenjeImunizacije = new SaglasnostZaSprovodjenjeImunizacije();
+        dto.eadresa = this.tokenUtils.getUsernameFromToken(bearerToken);
         saglasnostZaSprovodjenjeImunizacije.setPotpis(dto.ime + " " + dto.prezime);
-        saglasnostZaSprovodjenjeImunizacije.setIzjava( new Izjava());
+        saglasnostZaSprovodjenjeImunizacije.setIzjava(new Izjava());
         saglasnostZaSprovodjenjeImunizacije.getIzjava().setSaglasnost(new TIzbor());
         saglasnostZaSprovodjenjeImunizacije.getIzjava().getSaglasnost().setIzabran(dto.saglasnost);
         saglasnostZaSprovodjenjeImunizacije.getIzjava().setVakcina(new TVakcina());
@@ -199,26 +208,27 @@ public class XMLService {
         System.out.println("dto.drzavljanstvo");
         System.out.println(dto.drzavljanstvo);
         System.out.println("dto.drzavljanstvo");
-        if(!dto.drzavljanstvo.equals("Srpsko")){
-            saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().setStranac( new Stranac());
+        if (!dto.drzavljanstvo.equals("Srpsko")) {
+            saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().setStranac(new Stranac());
             saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().getStranac().setBrPasosaIliEbs(dto.jmbg);
-            saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().getStranac().setNazivStranogDrzavljanstva(dto.drzavljanstvo);
+            saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().getStranac()
+                    .setNazivStranogDrzavljanstva(dto.drzavljanstvo);
         } else {
-            saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().setRepublikaSrbija( new RepublikaSrbija());
+            saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().setRepublikaSrbija(new RepublikaSrbija());
             saglasnostZaSprovodjenjeImunizacije.getDrzavljanstvo().getRepublikaSrbija().setJmbg(dto.jmbg);
         }
-        saglasnostZaSprovodjenjeImunizacije.setRadniStatus( new RadniStatus());
+        saglasnostZaSprovodjenjeImunizacije.setRadniStatus(new RadniStatus());
         saglasnostZaSprovodjenjeImunizacije.getRadniStatus().setRadniStatus(dto.radniStatus);
         saglasnostZaSprovodjenjeImunizacije.setZanimanje(new Zanimanje());
         saglasnostZaSprovodjenjeImunizacije.getZanimanje().setZanimanje(dto.zanimanje);
         saglasnostZaSprovodjenjeImunizacije.setKorisnikUstanoveSocZastite(new TIzbor());
-        if(dto.socijalnaZastita.equals("Da")){
+        if (dto.socijalnaZastita.equals("Da")) {
             saglasnostZaSprovodjenjeImunizacije.getKorisnikUstanoveSocZastite().setIzabran(true);
         } else {
 
             saglasnostZaSprovodjenjeImunizacije.getKorisnikUstanoveSocZastite().setIzabran(false);
         }
-        saglasnostZaSprovodjenjeImunizacije.setOsoba( new TOsoba());
+        saglasnostZaSprovodjenjeImunizacije.setOsoba(new TOsoba());
         saglasnostZaSprovodjenjeImunizacije.getOsoba().setAdresa(dto.adresa);
         saglasnostZaSprovodjenjeImunizacije.getOsoba().setEAdresa(dto.eadresa);
         saglasnostZaSprovodjenjeImunizacije.getOsoba().setFiksni(dto.fiksni);
@@ -231,19 +241,18 @@ public class XMLService {
         saglasnostZaSprovodjenjeImunizacije.getOsoba().setOpstina(dto.opstina);
         saglasnostZaSprovodjenjeImunizacije.setOpstinaSocijale(dto.opstinaSocijale);
         saglasnostZaSprovodjenjeImunizacije.getOsoba().setPol(new TPol());
-        if(dto.pol.equals("Musko") || dto.pol.equals("Muski")){
+        if (dto.pol.equals("Musko") || dto.pol.equals("Muski")) {
 
             saglasnostZaSprovodjenjeImunizacije.getOsoba().getPol().setMusko("Musko");
         } else {
 
             saglasnostZaSprovodjenjeImunizacije.getOsoba().getPol().setZensko("Zensko");
         }
-        
-        
+
         GregorianCalendar calendar = new GregorianCalendar();
         Date trenutniDatum = new Date();
         calendar.setTime(trenutniDatum);
-        
+
         XMLGregorianCalendar date = null;
         try {
 
@@ -272,7 +281,8 @@ public class XMLService {
         String saglasnost = null;
 
         try {
-            saglasnost = this.jaxB.marshall(SaglasnostZaSprovodjenjeImunizacije.class, saglasnostZaSprovodjenjeImunizacije);
+            saglasnost = this.jaxB.marshall(SaglasnostZaSprovodjenjeImunizacije.class,
+                    saglasnostZaSprovodjenjeImunizacije);
             System.out.println(saglasnost);
         } catch (JAXBException e) {
             // TODO Auto-generated catch block
@@ -280,7 +290,7 @@ public class XMLService {
         }
         try {
             this.existManager.storeFromText("/db/dokumenti/saglasnost", dto.eadresa + ".xml",
-            saglasnost);
+                    saglasnost);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -290,9 +300,9 @@ public class XMLService {
             String html = this.pdfTransformer.generateHTML(saglasnost,
                     "demo/src/main/resources/xsl/obrazac_saglasnosti_za_imunizaciju.xsl");
             this.existManager.storeFromText("/db/dokumenti/saglasnost", dto.eadresa + ".html",
-            html);
+                    html);
             pdf = this.pdfTransformer.generatePDF(html);
-            
+
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -315,20 +325,18 @@ public class XMLService {
         zahtevZaSertifikat.getPacijent().setPasos(dto.brojPasossa);
         zahtevZaSertifikat.getPacijent().setJmbg(dto.jmbg);
         zahtevZaSertifikat.getPacijent().setPol(new com.example.demo.model.zahtevZaSertifikat.TPol());
-        if(dto.pol.equals("Musko") || dto.pol.equals("Muski")){
+        if (dto.pol.equals("Musko") || dto.pol.equals("Muski")) {
 
             zahtevZaSertifikat.getPacijent().getPol().setMusko("Musko");
         } else {
 
             zahtevZaSertifikat.getPacijent().getPol().setMusko("Zensko");
         }
-        
-        
-        
+
         GregorianCalendar calendar = new GregorianCalendar();
         Date trenutniDatum = new Date();
         calendar.setTime(trenutniDatum);
-        
+
         XMLGregorianCalendar date = null;
         try {
 
@@ -380,8 +388,9 @@ public class XMLService {
             e.printStackTrace();
         }
         try {
-            this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat", dto.jmbg + ".xml",
-            saglasnost);
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat",
+                    this.tokenUtils.getUsernameFromToken(bearerToken) + ".xml",
+                    saglasnost);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -390,10 +399,11 @@ public class XMLService {
         try {
             String html = this.pdfTransformer.generateHTML(saglasnost,
                     "demo/src/main/resources/xsl/zahtev_za_sertifikat.xsl");
-            this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat", dto.jmbg + ".html",
-            html);
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat",
+                    this.tokenUtils.getUsernameFromToken(bearerToken) + ".html",
+                    html);
             pdf = this.pdfTransformer.generatePDF(html);
-            
+
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -405,17 +415,11 @@ public class XMLService {
         return true;
     }
 
-
-
-
-
-
-
     public Boolean podnesiIzvestajOImunizaciji(IzvestajOImunizacijiDTO dto, String bearerToken) {
         String text = "<test></test>";
         try {
             this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", "test" + ".xml",
-            text);
+                    text);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -425,9 +429,9 @@ public class XMLService {
             String html = this.pdfTransformer.generateHTML(text,
                     "demo/src/main/resources/xsl/izvestaj_o_imunizaciji.xsl");
             this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", "test" + ".html",
-            html);
+                    html);
             pdf = this.pdfTransformer.generatePDF(html);
-            
+
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -438,4 +442,85 @@ public class XMLService {
         this.mailSender.sendEmail(this.tokenUtils.getUsernameFromToken(bearerToken), pdf);
         return true;
     }
+
+    public String getDocument(String type) {
+        UserDetails name = (UserDetails) SecurityContextHolder.getContext().getAuthentication()
+                .getPrincipal();
+        return this.getDocument(type, name.getUsername());
+    }
+
+    public String getDocument(String type, String name) {
+        XMLResource resource = null;
+        try {
+            resource = this.existManager.load("/db/dokumenti/" + type, name + ".html");
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        String html = null;
+        try {
+            if (resource != null) {
+                html = (String) resource.getContent();
+            }
+        } catch (XMLDBException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return html;
+    }
+
+    private void addDocument(ArrayList<String> data, String type, String name) {
+        String html = getDocument(type, name);
+        if (html != null) {
+            data.add(html);
+        }
+    }
+
+    public ArrayList<String> nabaviPodatke(String bearerToken) {
+        String username = this.tokenUtils.getUsernameFromToken(bearerToken);
+        ArrayList<String> podaci = new ArrayList<String>();
+        String[] dokumenti = { "zahtevZaSaglasnost", "saglasnost", "zahtevZaZeleniSertifikat" };
+
+        for (String doc : dokumenti) {
+            this.addDocument(podaci, doc, username);
+        }
+        return podaci;
+    }
+
+    public ArrayList<String> nabaviDostupnePodatke(String bearerToken) {
+        String username = this.tokenUtils.getUsernameFromToken(bearerToken);
+        ArrayList<String> podaci = new ArrayList<String>();
+        String[] dokumenti = { "zahtevZaSaglasnost", "saglasnost", "zahtevZaZeleniSertifikat", "izvestajOImunizaciji" };
+
+        for (String doc : dokumenti) {
+            String html = getDocument(doc, username);
+            if (html != null) {
+                podaci.add(doc);
+            }
+        }
+        return podaci;
+
+    }
+
+    public Boolean skiniPodatke(String type, String bearerToken) {
+        String html = this.getDocument(type, this.tokenUtils.getUsernameFromToken(bearerToken));
+        ByteArrayOutputStream pdf = null;
+        if (html != null) {
+            try {
+                pdf = this.pdfTransformer.generatePDF(html);
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (DocumentException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+            this.mailSender.sendEmail(this.tokenUtils.getUsernameFromToken(bearerToken), pdf);
+            this.mailSender.sendEmail(this.tokenUtils.getUsernameFromToken(bearerToken), html.getBytes( StandardCharsets.UTF_8 ));
+            return true;
+        }
+        return false;
+    }
+
 }

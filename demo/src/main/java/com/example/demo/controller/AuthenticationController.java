@@ -65,7 +65,7 @@ public class AuthenticationController {
          UserTokenStateDTO token = null;
          korisnik.setLozinka("");
         try {
-            token = new UserTokenStateDTO(jwt, korisnikService.getOne(korisnik.getEmail()));
+            token = new UserTokenStateDTO(jwt, korisnikService.getOne(korisnik.getEmail()), expiresIn);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

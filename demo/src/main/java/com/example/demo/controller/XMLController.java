@@ -36,18 +36,18 @@ public class XMLController {
     }
 
     @PostMapping("/podnesiZahtevZaSaglasnost")
-   public ResponseEntity<Boolean> podnesiZahtevZaSaglasnost(@RequestBody InteresovanjeZaVakcinisanje dto) throws Exception{
+   public ResponseEntity<Boolean> podnesiZahtevZaSaglasnost(@RequestBody InteresovanjeZaVakcinisanje dto, @RequestHeader("Authorization") String bearerToken) throws Exception{
     System.out.println("AAAAAAAAAA");
     
-    return new ResponseEntity<Boolean>(this.xmlService.podnesiZahtevZaSaglasnost(dto), HttpStatus.OK);
+    return new ResponseEntity<Boolean>(this.xmlService.podnesiZahtevZaSaglasnost(dto, bearerToken), HttpStatus.OK);
    }
 
 
    @PostMapping("/podnesiSaglasnost")
-   public ResponseEntity<Boolean> podnesiSaglasnost(@RequestBody SaglasnostDTO dto) throws Exception{
+   public ResponseEntity<Boolean> podnesiSaglasnost(@RequestBody SaglasnostDTO dto, @RequestHeader("Authorization") String bearerToken) throws Exception{
     System.out.println("AAAAAAAAAA");
     System.out.println(dto);
-    return new ResponseEntity<Boolean>(this.xmlService.podnesiSaglasnost(dto), HttpStatus.OK);
+    return new ResponseEntity<Boolean>(this.xmlService.podnesiSaglasnost(dto, bearerToken), HttpStatus.OK);
    }
 
    @PostMapping("/podnesiZahtevZaZeleniSertifikat")
@@ -111,6 +111,27 @@ public class XMLController {
         System.out.println("OUTPUT: " + output);
         return new ResponseEntity<>(output, HttpStatus.OK);
     }
+
+    @GetMapping("getDokument/{naziv}")
+    public ResponseEntity<String> getDocument(@PathVariable("naziv") String naziv, @RequestHeader("Authorization") String bearerToken) throws IOException {
+        
+        String result = xmlService.getDocument(naziv);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+    @GetMapping("nabaviPodatke")
+    public ResponseEntity<ArrayList<String>> nabaviPodatke(@RequestHeader("Authorization") String bearerToken) throws IOException {
+        ArrayList<String> response = xmlService.nabaviDostupnePodatke( bearerToken);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @GetMapping("skiniPodatke/{type}")
+    public ResponseEntity<Boolean> skiniPodatke( @RequestHeader("Authorization") String bearerToken, @PathVariable("type") String type) throws IOException {
+        Boolean response = xmlService.skiniPodatke( type, bearerToken);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    
     
 
 

@@ -2,17 +2,15 @@
 
  import java.util.Date;
 
- import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 
- import com.example.demo.model.izvestajOImunizaciji.TOsoba;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 
- import org.springframework.beans.factory.annotation.Value;
- import org.springframework.security.core.userdetails.UserDetails;
- import org.springframework.stereotype.Component;
-
- import io.jsonwebtoken.Claims;
- import io.jsonwebtoken.Jwts;
- import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 
  // Utility klasa za rad sa JSON Web Tokenima
  @Component
@@ -97,16 +95,18 @@
 
      // Funkcija za validaciju JWT tokena
      public Boolean validateToken(String token, UserDetails userDetails) {
-         TOsoba user = (TOsoba) userDetails;
          final String username = getUsernameFromToken(token);
          final Date created = getIssuedAtDateFromToken(token);
 
-         return (username != null && username.equals(((TOsoba) userDetails).getJmbg())
-                 );
+         return (username != null && username.equals(userDetails.getUsername()) && !isTokenExpired(token));
+                 
      }
 
      public String getUsernameFromToken(String token) {
          String username;
+		 if(token.startsWith("Bearer ")) {
+			 token = token.substring(7);
+		 }
          try {
              final Claims claims = this.getAllClaimsFromToken(token);
              username = claims.getSubject();

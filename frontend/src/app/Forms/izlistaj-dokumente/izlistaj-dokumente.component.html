@@ -1,0 +1,24 @@
+<div class="demo-button-container">
+
+    <mat-sidenav-container class="example-container2">
+        <mat-sidenav mode="side" opened class="side-menu">
+
+        </mat-sidenav>
+        <mat-sidenav-content class="main-menu">
+
+            <div style=" padding : 45px;" class="col-md-4 col-md-offset-4">
+
+                <div id="form-holder-div">
+                    <h1 class="h1 mb-3 font-weight-normal">Pregled dokumenata</h1>
+
+                    <div *ngFor="let doc of docs">
+                        <button mat-button color="primary" (click)="viewDoc(doc)">Prikazi dokument {{doc}}</button>
+                        <button mat-button color="primary" (click)="getDoc(doc)">Posalji dokument {{doc}} na mail</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

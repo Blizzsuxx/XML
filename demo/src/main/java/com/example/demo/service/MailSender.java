@@ -44,6 +44,18 @@ public class MailSender {
         return true;
     }
 
+    public Boolean sendEmail(String address, byte[] text) {
+        try {
+            sendmail(address, text);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+            return false;
+        } catch (IOException e) {
+            return false;
+        }
+        return true;
+    }
+
     @Bean
     public JavaMailSender getJavaMailSender() {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
@@ -95,6 +107,50 @@ public class MailSender {
         MimeBodyPart pdfBodyPart = new MimeBodyPart();
         pdfBodyPart.setDataHandler(new DataHandler(dataSource));
         pdfBodyPart.setFileName("dokument.pdf");
+
+        multipart.addBodyPart(pdfBodyPart);
+        msg.setContent(multipart);
+        
+
+        Transport.send(msg);
+
+    }
+
+
+
+    public static void sendmail(String sendT0, byte[] text) throws AddressException, MessagingException, IOException {
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+
+        Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+            protected javax.mail.PasswordAuthentication getPasswordAuthentication() {
+
+                return new javax.mail.PasswordAuthentication("doktorski.sistem@gmail.com", "hdjeksdgsxwqnpjy");
+            }
+        });
+        Message msg = new MimeMessage(session);
+        msg.setFrom(new InternetAddress("doktorski.sistem@gmail.com", false));
+
+        // msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(sendT0));
+        msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("mahajiraaji@gmail.com"));
+
+        msg.setSubject("Sistem Za Vakcinaciju");
+        msg.setSentDate(new Date());
+
+        MimeBodyPart messageBodyPart = new MimeBodyPart();
+        messageBodyPart.setText("Uspesno ste se prijavili za vakcinaciju\nU prilogu se nalazi vasa prijava");
+
+        Multipart multipart = new MimeMultipart();
+        multipart.addBodyPart(messageBodyPart);
+        
+        DataSource dataSource = new ByteArrayDataSource(text, "text/html");
+        MimeBodyPart pdfBodyPart = new MimeBodyPart();
+        pdfBodyPart.setDataHandler(new DataHandler(dataSource));
+        pdfBodyPart.setFileName("dokument.html");
 
         multipart.addBodyPart(pdfBodyPart);
         msg.setContent(multipart);

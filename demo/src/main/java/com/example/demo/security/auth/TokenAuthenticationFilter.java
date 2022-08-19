@@ -2,17 +2,17 @@
 
  import java.io.IOException;
 
- import javax.servlet.FilterChain;
- import javax.servlet.ServletException;
- import javax.servlet.http.HttpServletRequest;
- import javax.servlet.http.HttpServletResponse;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
- import com.example.demo.security.TokenUtils;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.web.filter.OncePerRequestFilter;
 
- import org.springframework.security.core.context.SecurityContextHolder;
- import org.springframework.security.core.userdetails.UserDetails;
- import org.springframework.security.core.userdetails.UserDetailsService;
- import org.springframework.web.filter.OncePerRequestFilter;
+import com.example.demo.security.TokenUtils;
 
  //Filter koji ce presretati svaki zahtev klijenta ka serveru
  //Sem nad putanjama navedenim u WebSecurityConfig.configure(WebSecurity web)
@@ -41,7 +41,7 @@
              if (username != null) {
                  // uzmi user-a na osnovu username-a
                  UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-
+                
                  // proveri da li je prosledjeni token validan
                  if (tokenUtils.validateToken(authToken, userDetails)) {
                      // kreiraj autentifikaciju

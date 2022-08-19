@@ -99,10 +99,36 @@ export class DokumentiService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
     headers.append('Accept', 'application/xml');
     headers.append('Content-Type', 'application/xml');
+    
     console.log(js2xml(izvestajOImunizaciji, {compact:true}))
     console.log(izvestajOImunizaciji)
     this.http.post("http://localhost:8080/api/xml/podnesiIzvestajOImunizaciji", "<izvestaj_o_imunizaciji>" + js2xml(izvestajOImunizaciji, {compact:true}) + "</izvestaj_o_imunizaciji>", {headers: headers, responseType: "text"}).subscribe();
     
+  }
+
+  nabaviPodatke(){
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml; charset=utf-8' });
+    headers.append('Accept', 'application/xml; charset=utf-8');
+    headers.append('Content-Type', 'application/xml; charset=utf-8');
+    return this.http.get("http://localhost:8080/api/xml/nabaviPodatke", {headers: headers, responseType: "text"});
+  }
+
+  skiniPodatke(doc : any){
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    return this.http.get("http://localhost:8080/api/xml/skiniPodatke/" + doc, {headers: headers, responseType: "text"}).subscribe(data => { 
+      console.log(data);
+      return data;
+      }
+        );
+  }
+
+  getDokument(naziv : string){
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    return this.http.get("http://localhost:8080/api/xml/getDokument/" + naziv, {headers: headers, responseType: "text"});
   }
 
 }
