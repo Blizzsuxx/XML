@@ -2,6 +2,7 @@ package com.clerk.clerkb.repository;
 
 import com.clerk.clerkb.db.ExistManager;
 import com.clerk.clerkb.model.interesovanje.InteresovanjeZaVakcinisanje;
+import com.clerk.clerkb.model.saglasnost.Dokument;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -29,7 +30,7 @@ public class DigitalCertificateRepository {
         return existManager.getCollectionCount(collectionId) + 1;
     }
 
-    public void save(DigitalniSertifikat digitalCertificate){
+    public String save(DigitalniSertifikat digitalCertificate){
         try {
             JAXBContext context = JAXBContext.newInstance(DigitalniSertifikat.class);
             Marshaller marshaller = context.createMarshaller();
@@ -44,10 +45,11 @@ public class DigitalCertificateRepository {
 
             String xmlString = sw.toString();
             existManager.storeFromText(collectionId, digitalCertificate.getId().toString(), xmlString);
+            return xmlString;
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        return null;
     }
 
     public long countForDates(LocalDate date1, LocalDate date2){
@@ -79,7 +81,7 @@ public class DigitalCertificateRepository {
     public String findXmlById(String id){
         XMLResource res = null;
         try {
-            res = existManager.load(collectionId, id + ".xml");
+            res = existManager.load(collectionId, id+".xml");
             if(res == null){
                 return null;
             }
@@ -88,5 +90,27 @@ public class DigitalCertificateRepository {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public List<DigitalniSertifikat> findAll(){
+        List<DigitalniSertifikat> retVal = new ArrayList<>();
+        try {
+            ResourceSet xmlPotvrde = existManager.retrieve(collectionId, "/*");
+            ResourceIterator i = xmlPotvrde.getIterator();
+            XMLResource res;
+            while(i.hasMoreResources()){
+                try {
+                    res = (XMLResource) i.nextResource();
+                    JAXBContext jaxbContext = JAXBContext.newInstance(DigitalniSertifikat.class);
+                    DigitalniSertifikat one = (DigitalniSertifikat) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
+                    retVal.add(one);
+                } catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return retVal;
     }
 }

@@ -61,10 +61,12 @@ export class RequestsPageComponent implements OnInit {
       const xml = parser.parseFromString(data, 'text/xml');
       const obj: any = this.xml2jsonService.xmlToJson(xml);
       console.log(obj);
-      alert("User received an email containing generated digital certificate!");
+      // alert("User received an email containing generated digital certificate!");
       this.requests = this.requests.filter(req => { 
         req.Pacijent.jmbg != jmbg;
       });
+      window.open(`${environment.serverUrl}/digitalcert${obj.digitalniSertifikat['@attributes'].ID}`);
+
     });
   }
 
@@ -74,9 +76,9 @@ export class RequestsPageComponent implements OnInit {
     });
   }
 
+
   showRequest(){
-    console.log("DISPLAYING REQUEST");
-    var response = this.requestService.showDocument(this.selectedJmbg).subscribe((data: any) => {
+    var response = this.requestService.showDocument("request", this.selectedJmbg).subscribe((data: any) => {
       console.log(data);
       
       window.open(`${environment.serverUrl}/${data}`);
@@ -84,12 +86,17 @@ export class RequestsPageComponent implements OnInit {
   }
   
   showAccordance(){
-    console.log("DISPLAYING ACCORDANCE");
-    
+    var response = this.requestService.showDocument("saglasnost", this.selectedJmbg).subscribe((data: any) => {
+      console.log(data);
+      
+      window.open(`${environment.serverUrl}/${data}`);
+    }); 
   }
 
   showVaccination(){
-    console.log("DISPLAYING VACCINATION");
-    
+    this.requestService.showDocument("potvrda", this.selectedJmbg).subscribe((data: any) => {
+      console.log(data);
+      window.open(`${environment.serverUrl}/${data}`);
+    });
   }
 }

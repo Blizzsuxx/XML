@@ -1,18 +1,6 @@
 package com.clerk.clerkb.service.impl;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.time.ZonedDateTime;
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import java.util.List;
-
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
+import com.clerk.clerkb.db.ExistManager;
 import com.clerk.clerkb.dto.CitizenDocuments;
 import com.clerk.clerkb.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
@@ -20,13 +8,23 @@ import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.TDoza;
 import com.clerk.clerkb.model.zeleniSertifikat.TVakcinacija;
-import com.clerk.clerkb.repository.CertificateRequestRepository;
-import com.clerk.clerkb.repository.DigitalCertificateRepository;
-import com.clerk.clerkb.repository.InteresovanjeRepository;
-import com.clerk.clerkb.repository.PotvrdaOVakcinacijiRepository;
-import com.clerk.clerkb.repository.SaglasnostRepository;
+import com.clerk.clerkb.repository.*;
 import com.clerk.clerkb.service.IDigitalCertificateService;
 import com.google.zxing.WriterException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.xmldb.api.modules.XMLResource;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.GregorianCalendar;
 
 @Service
 public class DigitalCertificateService implements IDigitalCertificateService {
@@ -44,7 +42,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     private DigitalCertificateRepository digitalCertificateRepository;
 
     @Autowired
-    private MailSender2 mailSender2;
+    private MailSender mailSender;
 
     //delete
     @Autowired
@@ -88,7 +86,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
         int id = digitalCertificateRepository.getIdForNewCertificate();
         digitalCert.setId(id);
 
-        digitalCert.setQrCode("http://localhost:4200/certificate/" + id); //generate qrCode?
+        digitalCert.setQrCode("http://localhost:8081/digitalcert" + id); //generate qrCode?
 
         digitalCert.setVreme(today);
 
@@ -105,8 +103,9 @@ public class DigitalCertificateService implements IDigitalCertificateService {
         vakcinacija.setDoza(doze);
         digitalCert.setVakcinacija(vakcinacija);
 
-        digitalCertificateRepository.save(digitalCert);
+        String content = digitalCertificateRepository.save(digitalCert);
 
+        generateCertificateView(id + "", content);
         //generate certificate html and pdf
 
         //mailSender.sendAcceptRequestEmail("digitalniSertifikat"); // + id
@@ -123,18 +122,44 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     }
 
     @Override
-    public String findRequestById(String id) throws FileNotFoundException { //redefine
+    public String findRequestById(String id) throws FileNotFoundException { //redefine ->d
+        String content = certificateRequestRepository.findXmlById(id);
+        System.out.println(content);
+        transformerService.generateHTML("request" + id, content, PATH_TO_XSL + "zahtev_za_sertifikat.xsl");
+        return "request" + id;
+    }
+
+    @Override
+    public String findSaglasnostById(String id) throws FileNotFoundException {
+        String content = saglasnostRepository.findXmlById(id);
+        System.out.println(content);
+        transformerService.generateHTML("saglasnost" + id, content, PATH_TO_XSL + "obrazac_saglasnosti_za_imunizaciju.xsl");
+        return "saglasnost" + id;
+    }
+
+    @Override
+    public String generateCertificateView(String id, String content) throws IOException, WriterException {
+//        System.out.println("Looking for certificate with id: " + id);
+//        String content = digitalCertificateRepository.findXmlById(id);
+//        System.out.println("Content: " + content);
+        QRService.makeNewQr("http://localhost:8081/digitalcert" + id, "data/gen/qr-code.jpg");
+        transformerService.generateHTML("digitalcert" + id, content, PATH_TO_XSL + "zeleni_sertifikat.xsl");
+        return "digitalcert" + id;
+    }
+
+    @Override
+    public String findInteresovanje(String id) throws FileNotFoundException {
         String content = interesovanjeRepository.findXmlById(id);
+        System.out.println(content);
         transformerService.generateHTML("interesovanje" + id, content, PATH_TO_XSL + "interesovanje.xsl");
         return "interesovanje" + id;
     }
 
     @Override
-    public String generateCertificateView(String id) throws IOException, WriterException {
-        String content = digitalCertificateRepository.findXmlById(id);
-        QRService.makeNewQr("http://localhost:8081/sertifikat" + id, "data/gen/qr-code.jpg");
-//        transformerService.generateHTML("digitalcert" + id, content, PATH_TO_XSL + "digitalniSertifikat.xsl"); //CHANGE
-        return "digitalcert" + id;
+    public String findPotvrdaById(String id) throws FileNotFoundException {
+        String content = potvrdaRepository.findXmlById(id);
+        transformerService.generateHTML("potvrda" + id, content, PATH_TO_XSL + "potvrda_o_vakcinaciji.xsl");
+        return "potvrda" + id;
     }
 
 

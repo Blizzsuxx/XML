@@ -18,7 +18,7 @@ public class ImmunizationRepository {
 
     private final String collectionId = "db/reports";
 
-    public void save(IzvestajOImunizaciji report){
+    public String save(IzvestajOImunizaciji report){
         try {
             JAXBContext context = JAXBContext.newInstance(IzvestajOImunizaciji.class);
             Marshaller marshaller = context.createMarshaller();
@@ -33,8 +33,10 @@ public class ImmunizationRepository {
 
             String xmlString = sw.toString();
             existManager.storeFromText(collectionId, report.getIzvestajSeOdnosiNa().getDatumOd().toString() + "t" + report.getIzvestajSeOdnosiNa().getDatumDo().toString() + ".xml", xmlString);
+            return xmlString;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 }

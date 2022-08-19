@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxXml2jsonService } from 'ngx-xml2json';
+import { environment } from 'src/environments/environment';
 import { ProfileServiceService } from '../services/profile-service.service';
 
 @Component({
@@ -23,6 +24,7 @@ export class ImmunizationReportComponent implements OnInit {
   generateReport(){
     var response = this.requestService.createReport(this.startDate, this.endDate).subscribe((data: any) => {
       console.log(data);
+      window.open(`${environment.serverUrl}/izvestaj${this.startDate}t${this.endDate}`);
     });
   }
 
