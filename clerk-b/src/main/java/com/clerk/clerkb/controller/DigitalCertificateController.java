@@ -72,6 +72,17 @@ public class DigitalCertificateController {
     @GetMapping(value="/transform-request/{id}")
     public ResponseEntity<String> transformRequest(@PathVariable String id){
         try{
+            String html = service.findInteresovanje(id);
+            return new ResponseEntity<>(html, HttpStatus.OK);
+        } catch(Exception e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping(value="/transform-request/{id}")
+    public ResponseEntity<String> transformRequest(@PathVariable String id){
+        System.out.println("OK");
+        try{
             String html = service.findRequestById(id);
             return new ResponseEntity<>(html, HttpStatus.OK);
         } catch(Exception e){

@@ -1,1 +1,19 @@
-<p>search-page works!</p>
+<div>
+    <label for="simple-search">Simple search: </label>
+    <input type="text" [(ngModel)]="sSearch"/>
+    <button (click)="handleSearch()">Search</button>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Type</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let doc of documents">
+            <td>content</td>
+            <td>content</td>
+            <button>Export HTML</button>
+            <button>Export PDF</button>
+        </tr>
+    </table>
+</div>

@@ -162,5 +162,13 @@ public class DigitalCertificateService implements IDigitalCertificateService {
         return "potvrda" + id;
     }
 
+    @Override
+    public String findInteresovanje(String id) throws FileNotFoundException {
+        String content = interesovanjeRepository.findXmlById(id);
+        System.out.println(content);
+        transformerService.generateHTML("interesovanje" + id, content, PATH_TO_XSL + "interesovanje.xsl");
+        return "interesovanje" + id;
+    }
+
 
 }

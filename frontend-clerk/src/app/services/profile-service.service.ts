@@ -25,11 +25,15 @@ export class ProfileServiceService {
     return this.http.post(`${environment.apiUrl}/cert/decline/${citizenId}/${reason}`, {});
   }
 
-  public showDocument(documentId: string){
-    return this.http.get(`${environment.apiUrl}/cert/transform-interesovanje/${documentId}`, {responseType: 'text'});
+  public showDocument(type: string, documentId: string){
+    return this.http.get(`${environment.apiUrl}/cert/transform-${type}/${documentId}`, {responseType: 'text'});
   }
 
   public createReport(start:string, end:string){
     return this.http.get(`${environment.apiUrl}/immunization/report/${start}/${end}`, {responseType: 'text'});
+  }
+
+  public simpleSearch(search: string){
+    return this.http.get(`${environment.apiUrl}/search/simple/${search}`, {responseType: 'text'});
   }
 }

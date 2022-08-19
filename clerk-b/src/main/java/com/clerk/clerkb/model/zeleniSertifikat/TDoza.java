@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.Objects;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -68,5 +69,16 @@ public class TDoza {
 
     public void setInstitucija(String institucija) {
         this.institucija = institucija;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        return Objects.equals(tip, o) && Objects.equals(proizvodjac, o) && Objects.equals(datum, o) && Objects.equals(serija, o) && Objects.equals(institucija, o);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(tip, proizvodjac, datum, serija, institucija);
     }
 }

@@ -12,7 +12,7 @@ public class AuthenticationManager {
 	// @Value("${conn.host}")
 	private String host = "localhost";
 	// @Value("${conn.port}")
-	private String port = "8081";
+	private String port = "8080";  //CHANGE PORT
 	// @Value("${conn.driver}")
 	private String driver = "org.exist.xmldb.DatabaseImpl";
 	// @Value("${conn.uri}")
