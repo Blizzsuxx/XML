@@ -37,11 +37,17 @@ export class ProfileServiceService {
     return this.http.post(`${environment.apiUrl}/cert/decline/${citizenId}/${reason}`, {responseType: 'text', headers: headers});
   }
 
-  public showDocument(documentId: string){
-    return this.http.get(`${environment.apiUrl}/cert/transform-interesovanje/${documentId}`, {responseType: 'text'});
+  public showDocument(type: string, documentId: string){
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    return this.http.get(`${environment.apiUrl}/cert/transform-${type}/${documentId}`, {responseType: 'text', headers: headers});
   }
 
   public createReport(start:string, end:string){
-    return this.http.get(`${environment.apiUrl}/immunization/report/${start}/${end}`, {responseType: 'text'});
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    return this.http.get(`${environment.apiUrl}/immunization/report/${start}/${end}`, {responseType: 'text', headers: headers});
   }
 }
