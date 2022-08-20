@@ -1,6 +1,18 @@
 package com.clerk.clerkb.service.impl;
 
-import com.clerk.clerkb.db.ExistManager;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import java.util.List;
+
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.clerk.clerkb.dto.CitizenDocuments;
 import com.clerk.clerkb.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
@@ -8,23 +20,13 @@ import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.TDoza;
 import com.clerk.clerkb.model.zeleniSertifikat.TVakcinacija;
-import com.clerk.clerkb.repository.*;
+import com.clerk.clerkb.repository.CertificateRequestRepository;
+import com.clerk.clerkb.repository.DigitalCertificateRepository;
+import com.clerk.clerkb.repository.InteresovanjeRepository;
+import com.clerk.clerkb.repository.PotvrdaOVakcinacijiRepository;
+import com.clerk.clerkb.repository.SaglasnostRepository;
 import com.clerk.clerkb.service.IDigitalCertificateService;
 import com.google.zxing.WriterException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.xmldb.api.modules.XMLResource;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.time.LocalDate;
-import java.time.ZonedDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.GregorianCalendar;
 
 @Service
 public class DigitalCertificateService implements IDigitalCertificateService {
@@ -41,8 +43,8 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     @Autowired
     private DigitalCertificateRepository digitalCertificateRepository;
 
-    @Autowired
-    private MailSender mailSender;
+    // @Autowired
+    // private MailSender mailSender;
 
     //delete
     @Autowired
@@ -147,13 +149,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
         return "digitalcert" + id;
     }
 
-    @Override
-    public String findInteresovanje(String id) throws FileNotFoundException {
-        String content = interesovanjeRepository.findXmlById(id);
-        System.out.println(content);
-        transformerService.generateHTML("interesovanje" + id, content, PATH_TO_XSL + "interesovanje.xsl");
-        return "interesovanje" + id;
-    }
+    
 
     @Override
     public String findPotvrdaById(String id) throws FileNotFoundException {

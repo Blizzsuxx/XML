@@ -3926,3 +3926,63 @@ OK!
 2022-08-16 10:47:35,066 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 6% (4 out of 64) Cache efficiency : 96% 
 2022-08-16 10:47:35,066 [db.exist.scheduler.quartz-worker-3] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
 2022-08-16 10:47:35,066 [db.exist.scheduler.quartz-worker-3] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-08-20 15:07:19,059 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:115) - EXistServlet: exist.home=/media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF 
+2022-08-20 15:07:19,061 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [getOrCreateBrokerPool]:118) - Reading configuration from /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/conf.xml 
+2022-08-20 15:07:19,068 [localhost-startStop-1] INFO  (Configuration.java [<init>]:177) - Reading configuration from file /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/conf.xml 
+2022-08-20 15:07:19,115 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.security.BouncyCastleJceProviderStartupTrigger 
+2022-08-20 15:07:19,116 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.protocolhandler.URLStreamHandlerStartupTrigger 
+2022-08-20 15:07:19,116 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.extensions.exquery.restxq.impl.RestXqStartupTrigger 
+2022-08-20 15:07:19,119 [localhost-startStop-1] INFO  (Configuration.java [configureStartup]:1308) - Registered StartupTrigger: org.exist.repo.AutoDeploymentTrigger 
+2022-08-20 15:07:19,644 [localhost-startStop-1] INFO  (Configuration.java [configureValidation]:1518) - Add catalog uri file:///media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist//WEB-INF/catalog.xml 
+2022-08-20 15:07:19,645 [localhost-startStop-1] INFO  (GrammarPool.java [<init>]:54) - Initializing GrammarPool. 
+2022-08-20 15:07:19,646 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:138) - Configuring eXist instance 
+2022-08-20 15:07:19,662 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:400) - database instance 'exist' will wait  120,000 ms during shutdown 
+2022-08-20 15:07:19,663 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:403) - database instance 'exist' is enabled for recovery : true 
+2022-08-20 15:07:19,663 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:408) - database instance 'exist' will have between 1 and 20 brokers 
+2022-08-20 15:07:19,663 [localhost-startStop-1] INFO  (BrokerPool.java [<init>]:412) - database instance 'exist' will be synchronized every 120,000 ms 
+2022-08-20 15:07:19,716 [localhost-startStop-1] INFO  (DefaultCacheManager.java [<init>]:155) - Cache settings: 262,144k; totalPages: 65,536; maxCacheSize: 58,982; cacheShrinkThreshold: 10,000 
+2022-08-20 15:07:19,794 [localhost-startStop-1] INFO  (XQueryPool.java [configure]:110) - QueryPool: size = 128; maxQueryStackSize = 64; timeout = 120,000;  
+2022-08-20 15:07:19,805 [db.exist.prepare-quartz-scheduler] INFO  (QuartzSchedulerImpl.java [getQuartzProperties]:134) - Successfully loaded quartz.properties 
+2022-08-20 15:07:20,280 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.ngram.NGramIndex as ngram-index 
+2022-08-20 15:07:20,487 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.lucene.LuceneIndex as lucene-index 
+2022-08-20 15:07:20,488 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.sort.SortIndex as sort-index 
+2022-08-20 15:07:20,653 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.indexing.range.RangeIndex as range-index 
+2022-08-20 15:07:20,654 [localhost-startStop-1] INFO  (IndexManager.java [initIndex]:149) - Registered index org.exist.storage.structural.NativeStructuralIndex as structural-index 
+2022-08-20 15:07:20,658 [localhost-startStop-1] ERROR (PluginsManagerImpl.java [addPlugin]:239) - java.lang.ClassNotFoundException: org.exist.storage.md.MDStorageManager 
+2022-08-20 15:07:20,659 [localhost-startStop-1] INFO  (SyncTask.java [configure]:73) - Using DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data. Minimal disk space required for database to continue operations: 128mb 
+2022-08-20 15:07:20,664 [localhost-startStop-1] INFO  (SyncTask.java [configure]:76) - Usable space on partition containing DATA_DIR: /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/data: 308343mb 
+2022-08-20 15:07:21,071 [localhost-startStop-1] INFO  (BlobStoreImplService.java [startSystem]:71) - Opened de-duplicating Blob Store v1. metadata=blob.dbx, store=blob/ 
+2022-08-20 15:07:21,182 [localhost-startStop-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,464,832K total; 3,617,280K max; 958,954K free 
+2022-08-20 15:07:21,183 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-08-20 15:07:21,183 [localhost-startStop-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 5% (13 out of 256) Cache efficiency : 99% 
+2022-08-20 15:07:21,183 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 8% (5 out of 64) Cache efficiency : 99% 
+2022-08-20 15:07:21,184 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 6% (4 out of 64) Cache efficiency : 96% 
+2022-08-20 15:07:21,184 [localhost-startStop-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-08-20 15:07:21,184 [localhost-startStop-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-08-20 15:07:21,365 [localhost-startStop-1] INFO  (BouncyCastleJceProviderStartupTrigger.java [execute]:47) - Registered JCE Security Provider: org.bouncycastle.jce.provider.BouncyCastleProvider 
+2022-08-20 15:07:21,367 [localhost-startStop-1] WARN  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:71) - The JVM already has a URLStreamHandlerFactory registered, skipping... 
+2022-08-20 15:07:21,367 [localhost-startStop-1] INFO  (URLStreamHandlerStartupTrigger.java [registerStreamHandlerFactory]:85) - Setting java.protocol.handler.pkgs to org.apache.catalina.webresources|org.exist.protocolhandler.protocols 
+2022-08-20 15:07:21,558 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doDatabaseStartup]:151) - Registering XMLDB driver 
+2022-08-20 15:07:21,566 [localhost-startStop-1] INFO  (AbstractExistHttpServlet.java [doGeneralExistServletConfig]:196) - Using default user guest for all unauthorized requests. 
+2022-08-20 15:07:21,588 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:149) - Looking for a valid Parser...
+Checking for Xerces, found version Xerces-J 2.11.0
+OK!
+ 
+2022-08-20 15:07:21,608 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:171) - Looking for a valid Transformer...
+Checking for Saxon, found version 9.6.0.7
+OK!
+ 
+2022-08-20 15:07:21,609 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:183) - Looking for a valid Resolver...
+Checking for Resolver, found version XmlResolver 1.2
+OK!
+ 
+2022-08-20 15:07:21,613 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:189) - Using parser org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser 
+2022-08-20 15:07:21,625 [localhost-startStop-1] INFO  (XmlLibraryChecker.java [check]:190) - Using transformer org.apache.xalan.transformer.TransformerIdentityImpl 
+2022-08-20 15:17:19,071 [http-nio-8081-exec-1] INFO  (Descriptor.java [<init>]:103) - Reading Descriptor from file /media/user/games/Projects/XML2/XML/apache-tomcat-8.5.73/webapps/exist/WEB-INF/descriptor.xml 
+2022-08-20 15:17:33,225 [db.exist.scheduler.quartz-worker-1] INFO  (NativeBroker.java [sync]:3557) - Memory: 1,482,752K total; 3,617,280K max; 990,539K free 
+2022-08-20 15:17:33,226 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - dom.dbx INDEX Buffers occupation : 9% (6 out of 64) Cache efficiency : 100% 
+2022-08-20 15:17:33,226 [db.exist.scheduler.quartz-worker-1] INFO  (DOMFile.java [printStatistics]:1399) - dom.dbx DATA Buffers occupation : 5% (13 out of 256) Cache efficiency : 99% 
+2022-08-20 15:17:33,226 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - collections.dbx INDEX Buffers occupation : 8% (5 out of 64) Cache efficiency : 99% 
+2022-08-20 15:17:33,227 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - collections.dbx DATA Buffers occupation : 9% (6 out of 64) Cache efficiency : 95% 
+2022-08-20 15:17:33,227 [db.exist.scheduler.quartz-worker-1] INFO  (BTree.java [printStatistics]:2609) - values.dbx INDEX Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
+2022-08-20 15:17:33,227 [db.exist.scheduler.quartz-worker-1] INFO  (BFile.java [printStatistics]:408) - values.dbx DATA Buffers occupation : 0% (0 out of 64) Cache efficiency : N/A 
