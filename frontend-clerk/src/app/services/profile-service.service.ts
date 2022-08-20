@@ -50,4 +50,11 @@ export class ProfileServiceService {
     headers.append('Content-Type', 'application/xml');
     return this.http.get(`${environment.apiUrl}/immunization/report/${start}/${end}`, {responseType: 'text', headers: headers});
   }
+
+  public simpleSearch(search: string){
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    return this.http.get(`${environment.apiUrl}/search/simple/${search}`, {responseType: 'text', headers: headers});
+  }
 }
