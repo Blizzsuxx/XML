@@ -38,16 +38,10 @@ export class ProfileServiceService {
   }
 
   public showDocument(documentId: string){
-    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
-    headers.append('Accept', 'application/xml');
-    headers.append('Content-Type', 'application/xml');
-    return this.http.get(`${environment.apiUrl}/cert/transform-interesovanje/${documentId}`, {responseType: 'text', headers: headers});
+    return this.http.get(`${environment.apiUrl}/cert/transform-interesovanje/${documentId}`, {responseType: 'text'});
   }
 
   public createReport(start:string, end:string){
-    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
-    headers.append('Accept', 'application/xml');
-    headers.append('Content-Type', 'application/xml');
-    return this.http.get(`${environment.apiUrl}/immunization/report/${start}/${end}`, {responseType: 'text', headers: headers});
+    return this.http.get(`${environment.apiUrl}/immunization/report/${start}/${end}`, {responseType: 'text'});
   }
 }

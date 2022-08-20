@@ -40,6 +40,7 @@ public class DocumentTransformerService {
     public String generateHTML(String id, String content, String xslPath) throws FileNotFoundException {
         try{
             StreamSource transformSource = new StreamSource(new File(xslPath));
+
             Transformer transformer = transformerFactory.newTransformer(transformSource);
             transformer.setOutputProperty("{http://xml.apache.org/xalan}indent-amount", "2");
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -58,7 +59,7 @@ public class DocumentTransformerService {
 
             StreamResult result = new StreamResult(bStream);
             transformer.transform(source, result);
-            System.out.println(bStream.toString("UTF-8"));
+//            System.out.println(bStream.toString(StandardCharsets.UTF_8));
 
             PrintWriter out = new PrintWriter("data/gen/" + id + ".html");
             out.println(bStream.toString("UTF-8"));

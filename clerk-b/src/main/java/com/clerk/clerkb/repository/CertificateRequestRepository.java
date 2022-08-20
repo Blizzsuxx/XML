@@ -69,7 +69,7 @@ public class CertificateRequestRepository {
             while(i.hasMoreResources()){
                 try{
                     res = (XMLResource) i.nextResource();
-                    JAXBContext jaxbContext = JAXBContext.newInstance(ZahteviZaSertifikat.class);
+                    JAXBContext jaxbContext = JAXBContext.newInstance(ZahtevZaSertifikat.class);
                     ZahtevZaSertifikat one = (ZahtevZaSertifikat) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
                     retVal.add(one);
                 } catch (Exception e){
