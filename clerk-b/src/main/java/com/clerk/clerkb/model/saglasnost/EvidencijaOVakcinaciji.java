@@ -1,19 +1,124 @@
+
 package com.clerk.clerkb.model.saglasnost;
 
-import com.clerk.clerkb.model.potvrdaOVakcinaciji.TVakcina;
-
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="zdravstvena_ustanova" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="vakcinacijski_punkt" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="ime_prezime_faksimil_brtel">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="ime" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                   &lt;element name="prezime" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                   &lt;element name="faksimil">
+ *                     &lt;simpleType>
+ *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                         &lt;pattern value="[0-9]+"/>
+ *                       &lt;/restriction>
+ *                     &lt;/simpleType>
+ *                   &lt;/element>
+ *                   &lt;element name="brtel">
+ *                     &lt;simpleType>
+ *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                         &lt;pattern value="[0-9]{10,10}"/>
+ *                       &lt;/restriction>
+ *                     &lt;/simpleType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="tabela">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="element" maxOccurs="unbounded">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="vakcina" type="{http://ftn.uns.ac.rs/saglasnost}TVakcina"/>
+ *                             &lt;element name="datum_davanja" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *                             &lt;element name="nacin_davanja" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                             &lt;element name="ekstremitet">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     &lt;choice>
+ *                                       &lt;element name="dr" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                                       &lt;element name="lv" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                                     &lt;/choice>
+ *                                   &lt;/restriction>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
+ *                             &lt;element name="serija" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *                             &lt;element name="proizvodjac" type="{http://ftn.uns.ac.rs/saglasnost}TVakcina"/>
+ *                             &lt;element name="nezeljena_reakcija" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *                             &lt;element name="potpis_lekara" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                           &lt;/sequence>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element name="privremene_kontradikcije">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="datum" type="{http://www.w3.org/2001/XMLSchema}date"/>
+ *                             &lt;element name="dijagnoza" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *                           &lt;/sequence>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element name="trajne_kontradikcije" type="{http://ftn.uns.ac.rs/saglasnost}TIzbor"/>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-        "zdravstvenaUstanova",
-        "vakcinacijskiPunkt",
-        "imePrezimeFaksimilBrtel",
-        "tabela"
+    "zdravstvenaUstanova",
+    "vakcinacijskiPunkt",
+    "imePrezimeFaksimilBrtel",
+    "tabela"
 })
+@XmlRootElement(name = "evidencija_o_vakcinaciji", namespace = "http://ftn.uns.ac.rs/saglasnost")
 public class EvidencijaOVakcinaciji {
 
     @XmlElement(name = "zdravstvena_ustanova", namespace = "http://ftn.uns.ac.rs/saglasnost", required = true)
@@ -27,11 +132,11 @@ public class EvidencijaOVakcinaciji {
 
     /**
      * Gets the value of the zdravstvenaUstanova property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getZdravstvenaUstanova() {
         return zdravstvenaUstanova;
@@ -39,11 +144,11 @@ public class EvidencijaOVakcinaciji {
 
     /**
      * Sets the value of the zdravstvenaUstanova property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setZdravstvenaUstanova(String value) {
         this.zdravstvenaUstanova = value;
@@ -51,11 +156,11 @@ public class EvidencijaOVakcinaciji {
 
     /**
      * Gets the value of the vakcinacijskiPunkt property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link String }
-     *
+     *     
      */
     public String getVakcinacijskiPunkt() {
         return vakcinacijskiPunkt;
@@ -63,11 +168,11 @@ public class EvidencijaOVakcinaciji {
 
     /**
      * Sets the value of the vakcinacijskiPunkt property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link String }
-     *
+     *     
      */
     public void setVakcinacijskiPunkt(String value) {
         this.vakcinacijskiPunkt = value;
@@ -75,11 +180,11 @@ public class EvidencijaOVakcinaciji {
 
     /**
      * Gets the value of the imePrezimeFaksimilBrtel property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EvidencijaOVakcinaciji.ImePrezimeFaksimilBrtel }
-     *
+     *     
      */
     public EvidencijaOVakcinaciji.ImePrezimeFaksimilBrtel getImePrezimeFaksimilBrtel() {
         return imePrezimeFaksimilBrtel;
@@ -87,11 +192,11 @@ public class EvidencijaOVakcinaciji {
 
     /**
      * Sets the value of the imePrezimeFaksimilBrtel property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EvidencijaOVakcinaciji.ImePrezimeFaksimilBrtel }
-     *
+     *     
      */
     public void setImePrezimeFaksimilBrtel(EvidencijaOVakcinaciji.ImePrezimeFaksimilBrtel value) {
         this.imePrezimeFaksimilBrtel = value;
@@ -99,11 +204,11 @@ public class EvidencijaOVakcinaciji {
 
     /**
      * Gets the value of the tabela property.
-     *
+     * 
      * @return
      *     possible object is
      *     {@link EvidencijaOVakcinaciji.Tabela }
-     *
+     *     
      */
     public EvidencijaOVakcinaciji.Tabela getTabela() {
         return tabela;
@@ -111,11 +216,11 @@ public class EvidencijaOVakcinaciji {
 
     /**
      * Sets the value of the tabela property.
-     *
+     * 
      * @param value
      *     allowed object is
      *     {@link EvidencijaOVakcinaciji.Tabela }
-     *
+     *     
      */
     public void setTabela(EvidencijaOVakcinaciji.Tabela value) {
         this.tabela = value;
@@ -124,9 +229,9 @@ public class EvidencijaOVakcinaciji {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -153,15 +258,15 @@ public class EvidencijaOVakcinaciji {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-            "ime",
-            "prezime",
-            "faksimil",
-            "brtel"
+        "ime",
+        "prezime",
+        "faksimil",
+        "brtel"
     })
     public static class ImePrezimeFaksimilBrtel {
 
@@ -176,11 +281,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Gets the value of the ime property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getIme() {
             return ime;
@@ -188,11 +293,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Sets the value of the ime property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setIme(String value) {
             this.ime = value;
@@ -200,11 +305,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Gets the value of the prezime property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getPrezime() {
             return prezime;
@@ -212,11 +317,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Sets the value of the prezime property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setPrezime(String value) {
             this.prezime = value;
@@ -224,11 +329,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Gets the value of the faksimil property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getFaksimil() {
             return faksimil;
@@ -236,11 +341,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Sets the value of the faksimil property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setFaksimil(String value) {
             this.faksimil = value;
@@ -248,11 +353,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Gets the value of the brtel property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link String }
-         *
+         *     
          */
         public String getBrtel() {
             return brtel;
@@ -260,11 +365,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Sets the value of the brtel property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link String }
-         *
+         *     
          */
         public void setBrtel(String value) {
             this.brtel = value;
@@ -275,9 +380,9 @@ public class EvidencijaOVakcinaciji {
 
     /**
      * <p>Java class for anonymous complex type.
-     *
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     *
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -330,14 +435,14 @@ public class EvidencijaOVakcinaciji {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     *
-     *
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-            "element",
-            "privremeneKontradikcije",
-            "trajneKontradikcije"
+        "element",
+        "privremeneKontradikcije",
+        "trajneKontradikcije"
     })
     public static class Tabela {
 
@@ -350,40 +455,40 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Gets the value of the element property.
-         *
+         * 
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the element property.
-         *
+         * 
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getElement().add(newItem);
          * </pre>
-         *
-         *
+         * 
+         * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link EvidencijaOVakcinaciji.Tabela.Element }
-         *
-         *
+         * 
+         * 
          */
         public List<EvidencijaOVakcinaciji.Tabela.Element> getElement() {
             if (element == null) {
-                element = new ArrayList<Element>();
+                element = new ArrayList<EvidencijaOVakcinaciji.Tabela.Element>();
             }
             return this.element;
         }
 
         /**
          * Gets the value of the privremeneKontradikcije property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link EvidencijaOVakcinaciji.Tabela.PrivremeneKontradikcije }
-         *
+         *     
          */
         public EvidencijaOVakcinaciji.Tabela.PrivremeneKontradikcije getPrivremeneKontradikcije() {
             return privremeneKontradikcije;
@@ -391,11 +496,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Sets the value of the privremeneKontradikcije property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link EvidencijaOVakcinaciji.Tabela.PrivremeneKontradikcije }
-         *
+         *     
          */
         public void setPrivremeneKontradikcije(EvidencijaOVakcinaciji.Tabela.PrivremeneKontradikcije value) {
             this.privremeneKontradikcije = value;
@@ -403,11 +508,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Gets the value of the trajneKontradikcije property.
-         *
+         * 
          * @return
          *     possible object is
          *     {@link TIzbor }
-         *
+         *     
          */
         public TIzbor getTrajneKontradikcije() {
             return trajneKontradikcije;
@@ -415,11 +520,11 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * Sets the value of the trajneKontradikcije property.
-         *
+         * 
          * @param value
          *     allowed object is
          *     {@link TIzbor }
-         *
+         *     
          */
         public void setTrajneKontradikcije(TIzbor value) {
             this.trajneKontradikcije = value;
@@ -428,9 +533,9 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -460,19 +565,19 @@ public class EvidencijaOVakcinaciji {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "vakcina",
-                "datumDavanja",
-                "nacinDavanja",
-                "ekstremitet",
-                "serija",
-                "proizvodjac",
-                "nezeljenaReakcija",
-                "potpisLekara"
+            "vakcina",
+            "datumDavanja",
+            "nacinDavanja",
+            "ekstremitet",
+            "serija",
+            "proizvodjac",
+            "nezeljenaReakcija",
+            "potpisLekara"
         })
         public static class Element {
 
@@ -496,11 +601,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Gets the value of the vakcina property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link TVakcina }
-             *
+             *     
              */
             public TVakcina getVakcina() {
                 return vakcina;
@@ -508,11 +613,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Sets the value of the vakcina property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link TVakcina }
-             *
+             *     
              */
             public void setVakcina(TVakcina value) {
                 this.vakcina = value;
@@ -520,11 +625,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Gets the value of the datumDavanja property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link XMLGregorianCalendar }
-             *
+             *     
              */
             public XMLGregorianCalendar getDatumDavanja() {
                 return datumDavanja;
@@ -532,11 +637,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Sets the value of the datumDavanja property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link XMLGregorianCalendar }
-             *
+             *     
              */
             public void setDatumDavanja(XMLGregorianCalendar value) {
                 this.datumDavanja = value;
@@ -544,11 +649,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Gets the value of the nacinDavanja property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getNacinDavanja() {
                 return nacinDavanja;
@@ -556,11 +661,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Sets the value of the nacinDavanja property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setNacinDavanja(String value) {
                 this.nacinDavanja = value;
@@ -568,11 +673,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Gets the value of the ekstremitet property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link EvidencijaOVakcinaciji.Tabela.Element.Ekstremitet }
-             *
+             *     
              */
             public EvidencijaOVakcinaciji.Tabela.Element.Ekstremitet getEkstremitet() {
                 return ekstremitet;
@@ -580,11 +685,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Sets the value of the ekstremitet property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link EvidencijaOVakcinaciji.Tabela.Element.Ekstremitet }
-             *
+             *     
              */
             public void setEkstremitet(EvidencijaOVakcinaciji.Tabela.Element.Ekstremitet value) {
                 this.ekstremitet = value;
@@ -592,7 +697,7 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Gets the value of the serija property.
-             *
+             * 
              */
             public long getSerija() {
                 return serija;
@@ -600,7 +705,7 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Sets the value of the serija property.
-             *
+             * 
              */
             public void setSerija(long value) {
                 this.serija = value;
@@ -608,11 +713,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Gets the value of the proizvodjac property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link TVakcina }
-             *
+             *     
              */
             public TVakcina getProizvodjac() {
                 return proizvodjac;
@@ -620,11 +725,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Sets the value of the proizvodjac property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link TVakcina }
-             *
+             *     
              */
             public void setProizvodjac(TVakcina value) {
                 this.proizvodjac = value;
@@ -632,7 +737,7 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Gets the value of the nezeljenaReakcija property.
-             *
+             * 
              */
             public boolean isNezeljenaReakcija() {
                 return nezeljenaReakcija;
@@ -640,7 +745,7 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Sets the value of the nezeljenaReakcija property.
-             *
+             * 
              */
             public void setNezeljenaReakcija(boolean value) {
                 this.nezeljenaReakcija = value;
@@ -648,11 +753,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Gets the value of the potpisLekara property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getPotpisLekara() {
                 return potpisLekara;
@@ -660,11 +765,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Sets the value of the potpisLekara property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setPotpisLekara(String value) {
                 this.potpisLekara = value;
@@ -673,9 +778,9 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * <p>Java class for anonymous complex type.
-             *
+             * 
              * <p>The following schema fragment specifies the expected content contained within this class.
-             *
+             * 
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -688,13 +793,13 @@ public class EvidencijaOVakcinaciji {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             *
-             *
+             * 
+             * 
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                    "dr",
-                    "lv"
+                "dr",
+                "lv"
             })
             public static class Ekstremitet {
 
@@ -705,11 +810,11 @@ public class EvidencijaOVakcinaciji {
 
                 /**
                  * Gets the value of the dr property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getDr() {
                     return dr;
@@ -717,11 +822,11 @@ public class EvidencijaOVakcinaciji {
 
                 /**
                  * Sets the value of the dr property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setDr(String value) {
                     this.dr = value;
@@ -729,11 +834,11 @@ public class EvidencijaOVakcinaciji {
 
                 /**
                  * Gets the value of the lv property.
-                 *
+                 * 
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public String getLv() {
                     return lv;
@@ -741,11 +846,11 @@ public class EvidencijaOVakcinaciji {
 
                 /**
                  * Sets the value of the lv property.
-                 *
+                 * 
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *
+                 *     
                  */
                 public void setLv(String value) {
                     this.lv = value;
@@ -758,9 +863,9 @@ public class EvidencijaOVakcinaciji {
 
         /**
          * <p>Java class for anonymous complex type.
-         *
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         *
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -773,13 +878,13 @@ public class EvidencijaOVakcinaciji {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         *
-         *
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "datum",
-                "dijagnoza"
+            "datum",
+            "dijagnoza"
         })
         public static class PrivremeneKontradikcije {
 
@@ -791,11 +896,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Gets the value of the datum property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link XMLGregorianCalendar }
-             *
+             *     
              */
             public XMLGregorianCalendar getDatum() {
                 return datum;
@@ -803,11 +908,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Sets the value of the datum property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link XMLGregorianCalendar }
-             *
+             *     
              */
             public void setDatum(XMLGregorianCalendar value) {
                 this.datum = value;
@@ -815,11 +920,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Gets the value of the dijagnoza property.
-             *
+             * 
              * @return
              *     possible object is
              *     {@link String }
-             *
+             *     
              */
             public String getDijagnoza() {
                 return dijagnoza;
@@ -827,11 +932,11 @@ public class EvidencijaOVakcinaciji {
 
             /**
              * Sets the value of the dijagnoza property.
-             *
+             * 
              * @param value
              *     allowed object is
              *     {@link String }
-             *
+             *     
              */
             public void setDijagnoza(String value) {
                 this.dijagnoza = value;
@@ -840,4 +945,5 @@ public class EvidencijaOVakcinaciji {
         }
 
     }
+
 }

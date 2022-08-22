@@ -1,19 +1,19 @@
 package com.clerk.clerkb.repository;
 
-import com.clerk.clerkb.db.ExistManager;
-import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
-import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
-import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.JAXBContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.xmldb.api.base.ResourceIterator;
 import org.xmldb.api.base.ResourceSet;
 import org.xmldb.api.modules.XMLResource;
 
-import javax.xml.bind.JAXBContext;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import com.clerk.clerkb.db.ExistManager;
+import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
 
 @Repository
 public class CertificateRequestRepository {
@@ -21,12 +21,12 @@ public class CertificateRequestRepository {
     @Autowired
     private ExistManager existManager;
 
-    private final String collectionId = "db/requests";
+    private final String collectionId = "/db/dokumenti/zahtevZaZeleniSertifikat";
 
     public ZahtevZaSertifikat findById(String citizenId){
         XMLResource res = null;
         try {
-            res = existManager.load(collectionId, citizenId);
+            res = existManager.load(collectionId, citizenId + ".xml");
             if(res == null){
                 return null;
             }

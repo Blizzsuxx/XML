@@ -35,6 +35,7 @@ import com.example.demo.jaxb.JaxB;
 import com.example.demo.model.interesovanje.InteresovanjeZaVakcinisanje;
 import com.example.demo.model.izvestajOImunizaciji.IzvestajOImunizaciji;
 import com.example.demo.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
+import com.example.demo.model.saglasnost.Dokument;
 import com.example.demo.model.saglasnost.SaglasnostZaSprovodjenjeImunizacije;
 import com.example.demo.model.saglasnost.SaglasnostZaSprovodjenjeImunizacije.Drzavljanstvo;
 import com.example.demo.model.saglasnost.SaglasnostZaSprovodjenjeImunizacije.Drzavljanstvo.RepublikaSrbija;
@@ -278,11 +279,13 @@ public class XMLService {
 
         saglasnostZaSprovodjenjeImunizacije.getOsoba().setDatumRodjenja(rodjendan);
         saglasnostZaSprovodjenjeImunizacije.setDatum(date);
+        Dokument dokument = new Dokument();
+        dokument.setSaglasnostZaSprovodjenjeImunizacije(saglasnostZaSprovodjenjeImunizacije);
         String saglasnost = null;
 
         try {
-            saglasnost = this.jaxB.marshall(SaglasnostZaSprovodjenjeImunizacije.class,
-                    saglasnostZaSprovodjenjeImunizacije);
+            saglasnost = this.jaxB.marshall(Dokument.class,
+            dokument);
             System.out.println(saglasnost);
         } catch (JAXBException e) {
             // TODO Auto-generated catch block

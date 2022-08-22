@@ -12,11 +12,11 @@
         </thead>
         <tbody>
         <tr *ngFor="let req of requests">
-            <td>{{req.Pacijent.jmbg}}</td>
+            <td>{{req.pacijent.jmbg}}</td>
             <td>{{req.razlog}}</td>
-            <td><button (click)="showDocumentation(req.Pacijent.jmbg)">Show documentation</button></td>
-            <td><button (click)="acceptRequest(req.Pacijent.jmbg)">Accept</button></td>
-            <td><button (click)="declineRequest(req.Pacijent.jmbg)">Decline</button></td>
+            <td><button (click)="showDocumentation(req.pacijent.jmbg)">Show documentation</button></td>
+            <td><button (click)="acceptRequest(req.pacijent.jmbg)">Accept</button></td>
+            <td><button (click)="declineRequest(req.pacijent.jmbg)">Decline</button></td>
         </tr>
         </tbody>
     </table>

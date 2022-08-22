@@ -1,17 +1,18 @@
 package com.clerk.clerkb.repository;
 
-import com.clerk.clerkb.db.ExistManager;
-import com.clerk.clerkb.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
-import com.clerk.clerkb.model.saglasnost.Dokument;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.xml.bind.JAXBContext;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.xmldb.api.base.ResourceIterator;
 import org.xmldb.api.base.ResourceSet;
 import org.xmldb.api.modules.XMLResource;
 
-import javax.xml.bind.JAXBContext;
-import java.util.ArrayList;
-import java.util.List;
+import com.clerk.clerkb.db.ExistManager;
+import com.clerk.clerkb.model.saglasnost.Dokument;
 
 @Repository
 public class SaglasnostRepository {
@@ -19,7 +20,7 @@ public class SaglasnostRepository {
     @Autowired
     private ExistManager existManager;
 
-    private final String collectionId = "db/saglasnosti";
+    private final String collectionId = "/db/dokumenti/saglasnost";
 
     public List<Dokument> findAllByCitizenId(String citizenId){
         List<Dokument> retVal = new ArrayList<>();

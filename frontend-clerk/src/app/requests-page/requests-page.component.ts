@@ -30,16 +30,15 @@ export class RequestsPageComponent implements OnInit {
       const parser = new DOMParser();
       const xml = parser.parseFromString(data, 'text/xml');
       const obj: any = this.xml2jsonService.xmlToJson(xml);
-      console.log(obj);
-      console.log(Array.isArray(obj.zahtevi.zahtev));
+      console.log(obj.ZahteviZaSertifikat);
       
-      if(Array.isArray(obj.zahtevi.zahtev)){
-        this.requests = obj.zahtevi.zahtev;
+      if(Array.isArray(obj.ZahteviZaSertifikat.zahtev)){
+        this.requests = obj.ZahteviZaSertifikat.zahtev.zahtev;
       }
       else{
-        this.requests = Array(obj.zahtevi.zahtev);
+        this.requests = Array(obj.ZahteviZaSertifikat.zahtev.zahtev);
       }
-      
+      console.log(this.requests);
     });
   }
 
@@ -63,7 +62,7 @@ export class RequestsPageComponent implements OnInit {
       console.log(obj);
       // alert("User received an email containing generated digital certificate!");
       this.requests = this.requests.filter(req => { 
-        req.Pacijent.jmbg != jmbg;
+        req.pacijent.jmbg != jmbg;
       });
       window.open(`${environment.serverUrl}/digitalcert${obj.digitalniSertifikat['@attributes'].ID}`);
 

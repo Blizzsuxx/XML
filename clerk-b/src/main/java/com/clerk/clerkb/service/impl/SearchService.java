@@ -1,14 +1,15 @@
 package com.clerk.clerkb.service.impl;
 
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.clerk.clerkb.dto.SearchDocuments;
 import com.clerk.clerkb.repository.DigitalCertificateRepository;
 import com.clerk.clerkb.repository.PotvrdaOVakcinacijiRepository;
 import com.clerk.clerkb.repository.SaglasnostRepository;
 import com.clerk.clerkb.service.ISearchService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.stream.Collectors;
 
 @Service
 public class SearchService implements ISearchService {
@@ -47,7 +48,7 @@ public class SearchService implements ISearchService {
                         || ds.getPacijent().getJmbg().equals(content)).collect(Collectors.toList()));
 
         sd.setSaglasnost(saglasnostRepository.findAll()
-                        .stream().filter(s -> s.getSaglasnostZaSprovodjenjeImunizacije().getOsoba().getJmbg().equals(content)
+                        .stream().filter(s -> s.getSaglasnostZaSprovodjenjeImunizacije().getDrzavljanstvo().getRepublikaSrbija().getJmbg().equals(content)
                         || s.getSaglasnostZaSprovodjenjeImunizacije().getOsoba().getIme().equals(content)
                         || s.getSaglasnostZaSprovodjenjeImunizacije().getOsoba().getPrezime().equals(content)
                         || s.getSaglasnostZaSprovodjenjeImunizacije().getPotpis().equals(content)
