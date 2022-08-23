@@ -32,12 +32,14 @@ export class SaglasnostComponent implements OnInit {
     this.ime.setValue(token.user.ime);
     this.prezime.setValue(token.user.prezime);
     this.rodjendan.setValue(token.user.rodjendan);
+    this.jmbg.setValue(token.user.jmbg);
     this.drzavljanstvoDugme = "Srpsko"
     this.pol = "Muski"
     this.radniStatus = "Zaposlen";
     this.zanimanje = "ZdravstvenaZastita";
     this.saglasnost = "Da"
     this.vakcina = "Pfizer-BioNTech"
+    this.socijalnaZastita = "Da"
   }
 
   email = new FormControl('', [Validators.required, Validators.email]);

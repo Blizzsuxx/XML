@@ -54,6 +54,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "ime",
     "prezime",
+    "jmbg",
     "email",
     "lozinka",
     "rodjendan",
@@ -66,6 +67,8 @@ public class Korisnik {
     protected String ime;
     @XmlElement(required = true)
     protected String prezime;
+    @XmlElement(required = true)
+    protected String jmbg;
     @XmlElement(required = true)
     protected String email;
     @XmlElement(required = true)
@@ -203,12 +206,21 @@ public class Korisnik {
         this.rodjendan = rodjendan;
     }
 
-    @Override
-    public String toString() {
-        return "Korisnik [email=" + email + ", ime=" + ime + ", lozinka=" + lozinka + ", prezime=" + prezime
-                + ", rodjendan=" + rodjendan + ", uloga=" + uloga + "]";
+    public String getJmbg() {
+        return jmbg;
     }
 
+    public void setJmbg(String jmbg) {
+        this.jmbg = jmbg;
+    }
+
+    @Override
+    public String toString() {
+        return "Korisnik [email=" + email + ", ime=" + ime + ", jmbg=" + jmbg + ", lozinka=" + lozinka + ", prezime="
+                + prezime + ", rodjendan=" + rodjendan + ", uloga=" + uloga + "]";
+    }
+
+    
     
 
     

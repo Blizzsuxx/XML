@@ -1,9 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:x="http://ftn.uns.ac.rs/potvrda_o_vakcinaciji"
-    version="2.0">
-
-    <xsl:template match="/">
 
 
 
@@ -16,8 +10,8 @@
 
     <html>
         <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <style>
-            foo {
+        <style type="text/css">
+            .foo {
                 color: #000; /* Fallback for older browsers */
                 color: rgba(0, 0, 0, 0.5);
             
@@ -28,17 +22,17 @@
         </head>
         <body>
         <h3>IНСТИТУТ ЗА ЈАВНО ЗДРАВЉЕ СРБИЈЕ</h3>
-        <h2>"Др Милан Јовановић Батут</h2>
+        <h2>"Др Милан Јовановић Батут</h1>
         <h3 class="foo">INSTITUT ZA JAVNO ZDRAVLJE SRBIJE</h3>
-        <h2 class="foo">"Dr. Milan Jovanovic Batut</h2>
+        <h2 class="foo">"Dr. Milan Jovanovic Batut</h1>
         <h3 class="foo">INSTITUTE OF PUBLIC HEALTH OF SERBIA</h3>
-        <h2 class="foo">"Dr. Milan Jovanovic Batut</h2>
+        <h2 class="foo">"Dr. Milan Jovanovic Batut</h1>
         <h2>ШИФРА ПОТВРДЕ О ВАКЦИНАЦИЈЕ</h2>
-        <h1 class="foo">Sifra potvrde/Confirmation code</h1>
+        <h1 class="foo">Sifra potvrde/Confirmation code</h2>
         
         <h3>ПОТВРДА О ИЗВРШЕНОЈ ВАКЦИНАЦИЈИ ПРОТИВ COVID-19</h3>
-        <h2 class="foo">POTVRDA O IZVRSENOJ VAKCINACIJI PROTIV COVID-19</h2>
-        <h2 class="foo">CONFIRMATION OF THE COVID-19 VACCINATION</h2>
+        <h2 class="foo">POTVRDA O IZVRSENOJ VAKCINACIJI PROTIV COVID-19</h3>
+        <h2 class="foo">CONFIRMATION OF THE COVID-19 VACCINATION</h3>
 
             <h1> 
                 Име и презиме: <b><xsl:value-of select="x:Pacijent/x:ime"/></b> <b><xsl:value-of select="x:Pacijent/x:prezime"/></b>
@@ -108,5 +102,3 @@
         </div>
         </body>
         </html>
-    </xsl:template>
-</xsl:stylesheet>

@@ -25,10 +25,18 @@ export class ZeleniSertifikatComponent implements OnInit {
   constructor(
     public router: Router,
     private dokumentiService: DokumentiService,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private authService: AuthentitacionService
   ) { }
 
   ngOnInit() {
+
+    const token = this.authService.getAuthorizationToken();
+    this.ime.setValue(token.user.ime);
+    this.prezime.setValue(token.user.prezime);
+    this.rodjendan.setValue(token.user.rodjendan);
+    this.jmbg.setValue(token.user.jmbg);
+    this.pol = "Muski"
       
   }
   getErrorMessage() {

@@ -51,13 +51,15 @@ export class AuthentitacionService {
         console.log(xml2js(resData).elements[0].elements[1].elements[2].elements[0].text);
         const jwt = xml2js(resData).elements[0].elements[0].elements[0].text;
         const user = xml2js(resData).elements[0].elements[1];
+        console.log(user);
         const ime = user.elements[0].elements[0].text;
         const prezime = user.elements[1].elements[0].text;
-        const username = user.elements[2].elements[0].text;
-        const uloga = user.elements[5].elements[0].text;
-        const rodjendan = user.elements[4].elements[0].text;
+        const jmbg = user.elements[2].elements[0].text;
+        const username = user.elements[3].elements[0].text;
+        const uloga = user.elements[6].elements[0].text;
+        const rodjendan = user.elements[5].elements[0].text;
 
-        let token = new Token(jwt, new User(username, "", ime, prezime, rodjendan));
+        let token = new Token(jwt, new User(username, "", ime, prezime, jmbg, rodjendan));
         token.user.uloga = uloga;
 
         this.handleAuthentication(token);
@@ -85,7 +87,7 @@ export class AuthentitacionService {
   }
 
   logout() {
-    const token = new Token("", new User("", "", "", "", ""));
+    const token = new Token("", new User("", "", "", "", "", ""));
     this.loggedUser.next(token);
     this.router.navigate(['/login']);
     localStorage.removeItem('loggedUser');

@@ -1,14 +1,16 @@
 package com.example.demo.repository;
 
-import com.example.demo.db.ExistManager;
-import com.example.demo.model.korisnik.Korisnik;
+import java.io.StringWriter;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.xmldb.api.modules.XMLResource;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
-import java.io.StringWriter;
+import com.example.demo.db.ExistManager;
+import com.example.demo.model.korisnik.Korisnik;
 
 @Repository
 public class KorisnikRepository {
@@ -34,6 +36,7 @@ public class KorisnikRepository {
 
             String xmlString = sw.toString();
             existManager.storeFromText(collectionId, korisnik.getEmail(), xmlString);
+            existManager.storeFromText(collectionId, korisnik.getJmbg(), xmlString);
         } catch (Exception e) {
             e.printStackTrace();
             return false;

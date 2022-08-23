@@ -32,11 +32,16 @@ export class RequestsPageComponent implements OnInit {
       const obj: any = this.xml2jsonService.xmlToJson(xml);
       console.log(obj.ZahteviZaSertifikat);
       
-      if(Array.isArray(obj.ZahteviZaSertifikat.zahtev)){
+      if(Array.isArray(obj.ZahteviZaSertifikat.zahtev.zahtev)){
         this.requests = obj.ZahteviZaSertifikat.zahtev.zahtev;
       }
       else{
         this.requests = Array(obj.ZahteviZaSertifikat.zahtev.zahtev);
+      }
+      for(let i = 0; i < this.requests.length; i++){
+        if( Object.keys(this.requests[i].razlog).length == 0){
+          this.requests[i].razlog = "Prazno";
+        }
       }
       console.log(this.requests);
     });

@@ -26,9 +26,11 @@ export class InteresovanjeComponent implements OnInit {
 
   ngOnInit(): void {
     const token = this.authService.getAuthorizationToken();
+    console.log(token);
     this.email.setValue(token.user.email);
     this.ime.setValue(token.user.ime);
     this.prezime.setValue(token.user.prezime);
+    this.jmbg.setValue(token.user.jmbg);
   }
 
   email = new FormControl('', [Validators.required, Validators.email]);

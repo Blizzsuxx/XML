@@ -125,10 +125,10 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 
     @Override
     public String findRequestById(String id) throws FileNotFoundException { //redefine ->d
-        String content = certificateRequestRepository.findXmlById(id);
+        String content = certificateRequestRepository.findXmlById(id + ".xml");
         System.out.println(content);
         transformerService.generateHTML("request" + id, content, PATH_TO_XSL + "zahtev_za_sertifikat.xsl");
-        return "request" + id;
+        return "request" + id + ".html";
     }
 
     @Override

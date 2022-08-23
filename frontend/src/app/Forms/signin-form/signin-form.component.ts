@@ -27,6 +27,7 @@ export class SigninFormComponent implements OnInit {
       'password': new FormControl(null, [Validators.required, Validators.minLength(8)]),
       'ime': new FormControl(null, [Validators.required]),
       'prezime': new FormControl(null, [Validators.required]),
+      'jmbg': new FormControl(null, [Validators.required, Validators.pattern("[0-9]{13}")]),
       'rodjendan': new FormControl(null, [Validators.required])
     });
   }
@@ -40,6 +41,7 @@ export class SigninFormComponent implements OnInit {
           this.signinForm.value.password,
           this.signinForm.value.ime,
           this.signinForm.value.prezime,
+          this.signinForm.value.jmbg,
           rodjendan
           
         )

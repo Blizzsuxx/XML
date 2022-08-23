@@ -34,6 +34,7 @@ import com.example.demo.fuseki.FusekiReader;
 import com.example.demo.jaxb.JaxB;
 import com.example.demo.model.interesovanje.InteresovanjeZaVakcinisanje;
 import com.example.demo.model.izvestajOImunizaciji.IzvestajOImunizaciji;
+import com.example.demo.model.korisnik.Korisnik;
 import com.example.demo.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
 import com.example.demo.model.saglasnost.Dokument;
 import com.example.demo.model.saglasnost.SaglasnostZaSprovodjenjeImunizacije;
@@ -61,14 +62,16 @@ public class XMLService {
     private final MailSender mailSender;
     private final PDFTransformer pdfTransformer;
     private final TokenUtils tokenUtils;
+    private final KorisnikService korisnikService;
 
     public XMLService(JaxB jaxB, ExistManager existManager, MailSender mailSender, PDFTransformer pdfTransformer,
-            TokenUtils tokenUtils) {
+            TokenUtils tokenUtils, KorisnikService korisnikService) {
         this.jaxB = jaxB;
         this.existManager = existManager;
         this.mailSender = mailSender;
         this.pdfTransformer = pdfTransformer;
         this.tokenUtils = tokenUtils;
+        this.korisnikService = korisnikService;
     }
 
     public boolean podnesiZahtevZaSaglasnost(InteresovanjeZaVakcinisanje dto, String bearerToken) {
@@ -101,6 +104,9 @@ public class XMLService {
         try {
             this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getEAdresa() + ".xml",
                     interesovanjeZaVakcinisanje);
+                    Korisnik korisnik = this.korisnikService.getOne(dto.getOsoba().getEAdresa());
+                    this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", korisnik.getJmbg() + ".xml",
+                    interesovanjeZaVakcinisanje);
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -110,6 +116,9 @@ public class XMLService {
             String html = this.pdfTransformer.generateHTML(interesovanjeZaVakcinisanje,
                     "demo/src/main/resources/xsl/interesovanje.xsl");
             this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getEAdresa() + ".html",
+                    html);
+                    Korisnik korisnik = this.korisnikService.getOne(dto.getOsoba().getEAdresa());
+                    this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", korisnik.getJmbg() + ".html",
                     html);
             pdf = this.pdfTransformer.generatePDF(html);
 
@@ -292,7 +301,10 @@ public class XMLService {
             e.printStackTrace();
         }
         try {
+            Korisnik korisnik = this.korisnikService.getOne(dto.eadresa);
             this.existManager.storeFromText("/db/dokumenti/saglasnost", dto.eadresa + ".xml",
+                    saglasnost);
+                    this.existManager.storeFromText("/db/dokumenti/saglasnost", korisnik.getJmbg() + ".xml",
                     saglasnost);
         } catch (Exception e) {
             // TODO Auto-generated catch block
@@ -300,9 +312,13 @@ public class XMLService {
         }
         ByteArrayOutputStream pdf = null;
         try {
+            Korisnik korisnik = this.korisnikService.getOne(dto.eadresa);
             String html = this.pdfTransformer.generateHTML(saglasnost,
                     "demo/src/main/resources/xsl/obrazac_saglasnosti_za_imunizaciju.xsl");
+                    
             this.existManager.storeFromText("/db/dokumenti/saglasnost", dto.eadresa + ".html",
+                    html);
+                    this.existManager.storeFromText("/db/dokumenti/saglasnost", korisnik.getJmbg() + ".html",
                     html);
             pdf = this.pdfTransformer.generatePDF(html);
 
@@ -385,26 +401,32 @@ public class XMLService {
 
         try {
             saglasnost = this.jaxB.marshall(ZahtevZaSertifikat.class, zahtevZaSertifikat);
+            saglasnost = saglasnost.replace("&lt;", "<").replace("&gt;", ">").replace("&quot;", "\"").replace("&amp;", "&").replace("&apos;", "'").replace("&nbsp;", " ");
             System.out.println(saglasnost);
         } catch (JAXBException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
         try {
+            Korisnik korisnik = this.korisnikService.getOne(this.tokenUtils.getUsernameFromToken(bearerToken));
             this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat",
                     this.tokenUtils.getUsernameFromToken(bearerToken) + ".xml",
                     saglasnost);
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat", korisnik.getJmbg() + ".xml", saglasnost);
+            
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
         ByteArrayOutputStream pdf = null;
         try {
+            Korisnik korisnik = this.korisnikService.getOne(this.tokenUtils.getUsernameFromToken(bearerToken));
             String html = this.pdfTransformer.generateHTML(saglasnost,
                     "demo/src/main/resources/xsl/zahtev_za_sertifikat.xsl");
             this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat",
                     this.tokenUtils.getUsernameFromToken(bearerToken) + ".html",
                     html);
+            this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat", korisnik.getJmbg() + ".html", html);
             pdf = this.pdfTransformer.generatePDF(html);
 
         } catch (FileNotFoundException e) {
@@ -421,17 +443,24 @@ public class XMLService {
     public Boolean podnesiIzvestajOImunizaciji(IzvestajOImunizacijiDTO dto, String bearerToken) {
         String text = "<test></test>";
         try {
+            Korisnik korisnik = this.korisnikService.getOne(this.tokenUtils.getUsernameFromToken(bearerToken));
             this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", "test" + ".xml",
                     text);
+            this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", korisnik.getJmbg() + ".xml",
+                    text);
+
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
         ByteArrayOutputStream pdf = null;
         try {
+            Korisnik korisnik = this.korisnikService.getOne(this.tokenUtils.getUsernameFromToken(bearerToken));
             String html = this.pdfTransformer.generateHTML(text,
                     "demo/src/main/resources/xsl/izvestaj_o_imunizaciji.xsl");
             this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", "test" + ".html",
+                    html);
+            this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", korisnik.getJmbg() + ".html",
                     html);
             pdf = this.pdfTransformer.generatePDF(html);
 

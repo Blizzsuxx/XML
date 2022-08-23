@@ -70,7 +70,16 @@ public class CertificateRequestRepository {
                 try{
                     res = (XMLResource) i.nextResource();
                     JAXBContext jaxbContext = JAXBContext.newInstance(ZahtevZaSertifikat.class);
+                    
+                    
                     ZahtevZaSertifikat one = (ZahtevZaSertifikat) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
+                    String text = res.getContent().toString();
+                    text = text.split("<razlog>")[1];
+                    text = text.split("</razlog>")[0];
+                    System.out.println("text");
+                    System.out.println(text);
+                    System.out.println("text");
+                    one.setRazlog(text);
                     retVal.add(one);
                 } catch (Exception e){
                     e.printStackTrace();
