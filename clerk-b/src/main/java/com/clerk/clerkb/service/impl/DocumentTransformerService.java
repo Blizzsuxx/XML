@@ -33,7 +33,7 @@ public class DocumentTransformerService {
 
     public String generateHTML(String id, String content, String xslPath) throws FileNotFoundException {
         String html = this.pdfTransformer.generateHTML(content,
-                "clerk-b/src/main/resources/xsl/zahtev_za_sertifikat.xsl");
+        xslPath);
         PrintWriter out = new PrintWriter("clerk-b/data/gen/" + id + ".html");
         out.println(html);
         out.flush();

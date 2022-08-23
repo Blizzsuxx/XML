@@ -54,7 +54,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     @Autowired
     private DocumentTransformerService transformerService;
 
-    private static final String PATH_TO_XSL = "src/main/resources/xsl/";
+    private static final String PATH_TO_XSL = "clerk-b/src/main/resources/xsl/";
 
     @Override
     public CitizenDocuments getDocumentsForCitizen(String citizenId) {
@@ -144,7 +144,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 //        System.out.println("Looking for certificate with id: " + id);
 //        String content = digitalCertificateRepository.findXmlById(id);
 //        System.out.println("Content: " + content);
-        QRService.makeNewQr("http://localhost:8081/digitalcert" + id, "data/gen/qr-code.jpg");
+        QRService.makeNewQr("http://localhost:8081/digitalcert" + id, "clerk-b/data/gen/qr-code" + id +".jpg");
         transformerService.generateHTML("digitalcert" + id, content, PATH_TO_XSL + "zeleni_sertifikat.xsl");
         return "digitalcert" + id;
     }

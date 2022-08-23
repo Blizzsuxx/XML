@@ -1,9 +1,14 @@
 package com.clerk.clerkb.model.zeleniSertifikat;
 
-import com.clerk.clerkb.model.zahtevZaSertifikat.TOsoba;
-
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+
+import com.clerk.clerkb.model.zahtevZaSertifikat.TOsoba;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -11,7 +16,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
         "pacijent",
         "datumIzdavanja",
         "vakcinacija", //edit
-        "vreme"
+        "vreme",
+        "id"
 })
 @XmlRootElement(name = "digitalniSertifikat")
 public class DigitalniSertifikat {
@@ -30,7 +36,7 @@ public class DigitalniSertifikat {
     @XmlElement(required = true)
     @XmlSchemaType(name = "time")
     protected XMLGregorianCalendar vreme;
-    @XmlAttribute(name = "ID")
+    @XmlElement(required = true)
     protected Integer id;
 
     public String getQrCode() {

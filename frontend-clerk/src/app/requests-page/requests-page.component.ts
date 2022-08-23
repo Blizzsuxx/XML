@@ -69,7 +69,7 @@ export class RequestsPageComponent implements OnInit {
       this.requests = this.requests.filter(req => { 
         req.pacijent.jmbg != jmbg;
       });
-      window.open(`${environment.serverUrl}/digitalcert${obj.digitalniSertifikat['@attributes'].ID}`);
+      window.open(`${environment.serverUrl}/digitalcert${obj.DigitalniSertifikat.id}`);
 
     });
   }
