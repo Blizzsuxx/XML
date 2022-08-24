@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -56,10 +57,13 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     @Autowired
     private DigitalCertificateRepository digitalCertificateRepository;
 
+    @Autowired
+    private VaccineService vaccineService;
+
     // @Autowired
     // private MailSender mailSender;
 
-    //delete
+    // delete
     @Autowired
     private InteresovanjeRepository interesovanjeRepository;
     //
@@ -86,7 +90,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     public void declineCertificateRequest(String requestId, String reason) throws Exception {
         ZahtevZaSertifikat zs = certificateRequestRepository.findById(requestId);
         certificateRequestRepository.delete(requestId);
-        //mailSender.sendDeclineRequestEmail(zs, reason);
+        // mailSender.sendDeclineRequestEmail(zs, reason);
     }
 
     @Override
@@ -100,17 +104,17 @@ public class DigitalCertificateService implements IDigitalCertificateService {
         XMLGregorianCalendar today = DatatypeFactory.newInstance().newXMLGregorianCalendar(c);
         digitalCert.setDatumIzdavanja(today);
 
-        //get new id value;
+        // get new id value;
         int id = digitalCertificateRepository.getIdForNewCertificate();
         digitalCert.setId(id);
 
-        digitalCert.setQrCode("http://localhost:8081/digitalcert" + id); //generate qrCode?
+        digitalCert.setQrCode("http://localhost:8081/digitalcert" + id); // generate qrCode?
 
         digitalCert.setVreme(today);
 
         TVakcinacija vakcinacija = new TVakcinacija();
         List<TDoza> doze = new ArrayList<>();
-        for (PotvrdaOVakcinaciji potvrda: potvrdaRepository.findAllByJmbg(zs.getPacijent().getJmbg())) {
+        for (PotvrdaOVakcinaciji potvrda : potvrdaRepository.findAllByJmbg(zs.getPacijent().getJmbg())) {
             TDoza novaDoza = new TDoza();
             novaDoza.setInstitucija(potvrda.getUstanova().getNaziv());
             novaDoza.setDatum(potvrda.getDatumPrva().toString());
@@ -124,9 +128,9 @@ public class DigitalCertificateService implements IDigitalCertificateService {
         String content = digitalCertificateRepository.save(digitalCert);
 
         generateCertificateView(id + "", content);
-        //generate certificate html and pdf
+        // generate certificate html and pdf
 
-        //mailSender.sendAcceptRequestEmail("digitalniSertifikat"); // + id
+        // mailSender.sendAcceptRequestEmail("digitalniSertifikat"); // + id
         return digitalCert;
     }
 
@@ -140,7 +144,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     }
 
     @Override
-    public String findRequestById(String id) throws FileNotFoundException { //redefine ->d
+    public String findRequestById(String id) throws FileNotFoundException { // redefine ->d
         String content = certificateRequestRepository.findXmlById(id + ".xml");
         System.out.println(content);
         transformerService.generateHTML("request" + id, content, PATH_TO_XSL + "zahtev_za_sertifikat.xsl");
@@ -149,15 +153,16 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 
     @Override
     public String findSaglasnostById(String id) throws FileNotFoundException {
-        String content = saglasnostRepository.findXmlById(id+".xml");
+        String content = saglasnostRepository.findXmlById(id + ".xml");
         System.out.println(content);
-        transformerService.generateHTML("saglasnost" + id, content, PATH_TO_XSL + "obrazac_saglasnosti_za_imunizaciju.xsl");
+        transformerService.generateHTML("saglasnost" + id, content,
+                PATH_TO_XSL + "obrazac_saglasnosti_za_imunizaciju.xsl");
         return "saglasnost" + id;
     }
 
     @Override
     public Dokument findSaglasnostByIdDocument(String id) throws FileNotFoundException, JAXBException {
-        String content = saglasnostRepository.findXmlById(id+".xml");
+        String content = saglasnostRepository.findXmlById(id + ".xml");
         Dokument dokument = this.jaxB.unmarshall(Dokument.class, content);
         System.out.println(content);
         return dokument;
@@ -165,15 +170,13 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 
     @Override
     public String generateCertificateView(String id, String content) throws IOException, WriterException {
-//        System.out.println("Looking for certificate with id: " + id);
-//        String content = digitalCertificateRepository.findXmlById(id);
-//        System.out.println("Content: " + content);
-        QRService.makeNewQr("http://localhost:8081/digitalcert" + id, "clerk-b/data/gen/qr-code" + id +".jpg");
+        // System.out.println("Looking for certificate with id: " + id);
+        // String content = digitalCertificateRepository.findXmlById(id);
+        // System.out.println("Content: " + content);
+        QRService.makeNewQr("http://localhost:8081/digitalcert" + id, "clerk-b/data/gen/qr-code" + id + ".jpg");
         transformerService.generateHTML("digitalcert" + id, content, PATH_TO_XSL + "zeleni_sertifikat.xsl");
         return "digitalcert" + id;
     }
-
-    
 
     @Override
     public String findPotvrdaById(String id) throws FileNotFoundException {
@@ -204,20 +207,28 @@ public class DigitalCertificateService implements IDigitalCertificateService {
         evidencijaOVakcinaciji.getImePrezimeFaksimilBrtel().setBrtel(evidencija.telephone);
         evidencijaOVakcinaciji.setTabela(new Tabela());
         evidencijaOVakcinaciji.getTabela().setPrivremeneKontradikcije(new PrivremeneKontradikcije());
-        evidencijaOVakcinaciji.getTabela().getPrivremeneKontradikcije().setDijagnoza(evidencija.privremeneKontradikcije);
+        evidencijaOVakcinaciji.getTabela().getPrivremeneKontradikcije()
+                .setDijagnoza(evidencija.privremeneKontradikcije);
         evidencijaOVakcinaciji.getTabela().setTrajneKontradikcije(new TIzbor());
         evidencijaOVakcinaciji.getTabela().getTrajneKontradikcije().setIzabran(evidencija.trajneKontradikcije);
         evidencijaOVakcinaciji.getTabela().setElement(new ArrayList<>());
         GregorianCalendar calendar = new GregorianCalendar();
         XMLGregorianCalendar date = null;
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        calendar.setTime(format.parse(evidencija.privremeneKontradikcijeDatum));
-        date = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
-        if(!evidencijaOVakcinaciji.getTabela().getPrivremeneKontradikcije().getDijagnoza().equals("")){
+        Date temp = null;
+        try {
+            temp = format.parse(evidencija.privremeneKontradikcijeDatum);
+            calendar.setTime(format.parse(evidencija.privremeneKontradikcijeDatum));
+            date = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+            if (!evidencijaOVakcinaciji.getTabela().getPrivremeneKontradikcije().getDijagnoza().equals("")) {
 
-        evidencijaOVakcinaciji.getTabela().getPrivremeneKontradikcije().setDatum(date);// TODO
-    }
-        try{
+                evidencijaOVakcinaciji.getTabela().getPrivremeneKontradikcije().setDatum(date);// TODO
+            }
+        } catch (Exception e) {
+
+        }
+
+        try {
             for (Kolona s : evidencija.tabela) {
                 EvidencijaOVakcinaciji.Tabela.Element element = new EvidencijaOVakcinaciji.Tabela.Element();
                 element.setSerija(Long.parseLong(s.serija));
@@ -235,18 +246,20 @@ public class DigitalCertificateService implements IDigitalCertificateService {
                 date = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
                 element.setDatumDavanja(date);
                 evidencijaOVakcinaciji.getTabela().getElement().add(element);
+                int quantity = this.vaccineService.getQuantity(element.getSerija());
+                if (quantity <= 0) {
+                    throw new Exception("Nema vakcine sa serijom: " + element.getSerija());
+                }
+                this.vaccineService.updateQuantity(element.getSerija(), quantity - 1);
+
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
 
         this.saglasnostRepository.save(dokument);
 
         return true;
     }
-
-    
-
 
 }

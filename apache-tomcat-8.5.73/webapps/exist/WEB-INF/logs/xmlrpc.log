@@ -1417,3 +1417,8 @@ Caused by: org.exist.EXistException: result set unknown or timed out: 29
 2022-08-24 18:09:29,831 [http-nio-8081-exec-1] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
 2022-08-24 20:25:06,419 [http-nio-8081-exec-5] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
 2022-08-24 20:26:16,247 [http-nio-8081-exec-7] INFO  (RpcConnection.java [doQuery]:257) - query took 1ms. 
+2022-08-24 23:58:30,939 [http-nio-8081-exec-6] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
+2022-08-24 23:59:37,811 [http-nio-8081-exec-8] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
+2022-08-24 23:59:41,036 [http-nio-8081-exec-10] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
+2022-08-24 23:59:58,214 [http-nio-8081-exec-1] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
+2022-08-25 00:01:07,960 [http-nio-8081-exec-5] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
