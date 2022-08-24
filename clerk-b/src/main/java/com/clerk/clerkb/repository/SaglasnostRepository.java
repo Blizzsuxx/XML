@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -12,6 +13,7 @@ import org.xmldb.api.base.ResourceSet;
 import org.xmldb.api.modules.XMLResource;
 
 import com.clerk.clerkb.db.ExistManager;
+import com.clerk.clerkb.jaxb.JaxB;
 import com.clerk.clerkb.model.saglasnost.Dokument;
 
 @Repository
@@ -21,6 +23,9 @@ public class SaglasnostRepository {
     private ExistManager existManager;
 
     private final String collectionId = "/db/dokumenti/saglasnost";
+
+    @Autowired
+    private JaxB jaxB;
 
     public List<Dokument> findAllByCitizenId(String citizenId){
         List<Dokument> retVal = new ArrayList<>();
@@ -80,5 +85,26 @@ public class SaglasnostRepository {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void save(Dokument dokument) {
+        String dokumentString = "";
+        try {
+            dokumentString = this.jaxB.marshall(Dokument.class, dokument);
+        } catch (JAXBException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+        try {
+            if(dokument.getSaglasnostZaSprovodjenjeImunizacije().getDrzavljanstvo().getRepublikaSrbija() != null){
+
+                existManager.storeFromText(collectionId, dokument.getSaglasnostZaSprovodjenjeImunizacije().getDrzavljanstvo().getRepublikaSrbija().getJmbg() + ".xml", dokumentString);
+        } else if(dokument.getSaglasnostZaSprovodjenjeImunizacije().getDrzavljanstvo().getStranac() != null) {
+
+            existManager.storeFromText(collectionId, dokument.getSaglasnostZaSprovodjenjeImunizacije().getDrzavljanstvo().getStranac().getBrPasosaIliEbs() + ".xml", dokumentString);
+        }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

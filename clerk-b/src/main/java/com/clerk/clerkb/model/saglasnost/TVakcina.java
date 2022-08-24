@@ -172,9 +172,9 @@ public class TVakcina {
     public void setVakcina(String vakcina){
 
 
-        if(vakcina.equals("Pfizer-BioNTech")){
+        if(vakcina.equals("Pfizer-BioNTech") || vakcina.equals("Pfizer")){
             this.pfizer = "Pfizer";
-        } else if(vakcina.equals("Sputnik V")){
+        } else if(vakcina.equals("Sputnik V") || vakcina.equals("Sputnik")){
 
             this.sputnik = "Sputnik";
         } else if(vakcina.equals("Sinopharm")){

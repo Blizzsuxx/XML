@@ -4,19 +4,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.clerk.clerkb.dto.CitizenDocuments;
+import com.clerk.clerkb.dto.EvidencijaDTO;
+import com.clerk.clerkb.model.saglasnost.Dokument;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
 import com.clerk.clerkb.service.IDigitalCertificateService;
 
 @RestController
-@RequestMapping(value = "cert", produces = MediaType.APPLICATION_XML_VALUE)
+@RequestMapping(value = "cert", produces = MediaType.APPLICATION_XML_VALUE, consumes =  MediaType.APPLICATION_XML_VALUE)
+@CrossOrigin
 public class DigitalCertificateController {
 
 
@@ -84,6 +89,17 @@ public class DigitalCertificateController {
         }
     }
 
+    @GetMapping(value="/get-saglasnost/{id}")
+    public ResponseEntity<Dokument> getSaglasnost(@PathVariable String id){
+        try{
+            Dokument html = service.findSaglasnostByIdDocument(id);
+            return new ResponseEntity<>(html, HttpStatus.OK);
+        } catch(Exception e){
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
     @GetMapping(value="/transform-saglasnost/{id}")
     public ResponseEntity<String> transformSaglasnost(@PathVariable String id){
         try{
@@ -110,6 +126,18 @@ public class DigitalCertificateController {
             String content = service.findPotvrdaById(id);
             return new ResponseEntity<>(content, HttpStatus.OK);
         } catch (Exception e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+
+    @PostMapping(value="/send-evidencija/{jmbg}")
+    public ResponseEntity<Boolean> dodajEvidenciju(@RequestBody EvidencijaDTO evidencija, @PathVariable String jmbg){
+        try {
+            Boolean content = service.dodajEvidenciju(evidencija, jmbg);
+            return new ResponseEntity<>(content, HttpStatus.OK);
+        } catch (Exception e){
+            e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }

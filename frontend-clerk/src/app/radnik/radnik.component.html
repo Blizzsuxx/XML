@@ -1,0 +1,88 @@
+<nav-bar></nav-bar>
+<div class="page">
+
+    <label for="declineReason">JMBG of the Citizen:</label>
+    <input [(ngModel)]="selectedJmbg" />
+    <button (click)="showAccordance()">Show accordance</button>
+    <div style="margin-bottom: 10px;"></div>
+    <button (click)="vaccinate()">Vaccinate the citizen</button>
+    <div style="margin-bottom: 10px;"></div>
+
+    <div *ngIf="this.saglasnost != null && this.saglasnost != undefined">
+        <label for="institution">Healthcare institution:</label>
+        <input [(ngModel)]="institution" />
+        <div style="margin-bottom: 10px;"></div>
+        <label for="punkt">Vaccination punkt:</label>
+        <input [(ngModel)]="punkt" />
+        <div style="margin-bottom: 10px;"></div>
+        <label for="name">Name of the doctor:</label>
+        <input [(ngModel)]="name" />
+        <div style="margin-bottom: 10px;"></div>
+        <label for="lastname">Lastname of the doctor:</label>
+        <input [(ngModel)]="lastname" />
+        <div style="margin-bottom: 10px;"></div>
+        <label for="faksimil">Faksimil of the doctor:</label>
+        <input [(ngModel)]="faksimil" />
+        <div style="margin-bottom: 10px;"></div>
+        <label for="telephone">Telephone number of the doctor:</label>
+        <input [(ngModel)]="telephone" />
+        <div style="margin-bottom: 10px;"></div>
+
+        <label for="privremeneKontradikcije">Temporary Contradictions:</label>
+        <input [(ngModel)]="privremeneKontradikcije" />
+        <div style="margin-bottom: 10px;"></div>
+        <div *ngIf="privremeneKontradikcije != ''">
+            <label for="privremeneKontradikcijeDatum">Temporary Contradictions Date:</label>
+            <label>{{privremeneKontradikcijeDatum}}</label>
+            <div style="margin-bottom: 10px;"></div>
+        </div>
+        <label for="trajneKontradikcije">Permanent Contradictions:</label>
+        <input [(ngModel)]="trajneKontradikcije" type="checkbox" id="da" name="contra">
+
+        <div style="margin-bottom: 10px;"></div>
+
+        <table border="3">
+            <tr>
+                <th>Назив вакцине</th>
+                <th>Датум давања вакцине (V1 i V2)</th>
+                <th>Начин давања вакцине</th>
+                <th>Екстремитет</th>
+                <th>Серија вакцине (лот)</th>
+                <th>Произвођач</th>
+                <th>Нежељена реакција</th>
+                <th>Потпис лекара</th>
+            </tr>
+            <tr>
+                <td>{{tabela[0].nazivVakcine}}</td>
+                <td>{{tabela[0].datumVakcine}}</td>
+                <td>ИМ</td>
+                <td>
+                    <input [(ngModel)]="tabela[0].ekstremitet" type="radio" id="dr" name="drone" value="DR" checked>
+                    <label for="dr">1)ДР, </label>
+                    <input [(ngModel)]="tabela[0].ekstremitet" type="radio" id="lr" name="drone" value="LR">
+                    <label for="lr">2)ЛР</label>
+                </td>
+                <td><input [(ngModel)]="tabela[0].serija" /></td>
+                <td>{{tabela[0].proizvodjac}}</td>
+                <td><input [(ngModel)]="tabela[0].nezeljenaReakcija" /></td>
+                <td><input [(ngModel)]="tabela[0].potpisLekara" /></td>
+            </tr>
+            <tr>
+                <td>{{tabela[1].nazivVakcine}}</td>
+                <td>{{tabela[1].datumVakcine}}</td>
+                <td>ИМ</td>
+                <td>
+                    <input [(ngModel)]="tabela[1].ekstremitet" type="radio" id="dr" name="drone2" value="DR" checked>
+                    <label for="dr">1)ДР, </label>
+                    <input [(ngModel)]="tabela[1].ekstremitet" type="radio" id="lr" name="drone2" value="LR">
+                    <label for="lr">2)ЛР</label>
+                </td>
+                <td><input [(ngModel)]="tabela[1].serija" /></td>
+                <td>{{tabela[1].proizvodjac}}</td>
+                <td><input [(ngModel)]="tabela[1].nezeljenaReakcija" /></td>
+                <td><input [(ngModel)]="tabela[1].potpisLekara" /></td>
+            </tr>
+        </table>
+        <button (click)="submit()">Submit data</button>
+    </div>
+</div>

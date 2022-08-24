@@ -482,6 +482,11 @@ public class EvidencijaOVakcinaciji {
             return this.element;
         }
 
+        public void setElement(List<EvidencijaOVakcinaciji.Tabela.Element> element) {
+            this.element = element;
+        }
+
+
         /**
          * Gets the value of the privremeneKontradikcije property.
          * 
@@ -595,7 +600,7 @@ public class EvidencijaOVakcinaciji {
             @XmlElement(namespace = "http://ftn.uns.ac.rs/saglasnost", required = true)
             protected TVakcina proizvodjac;
             @XmlElement(name = "nezeljena_reakcija", namespace = "http://ftn.uns.ac.rs/saglasnost")
-            protected boolean nezeljenaReakcija;
+            protected String nezeljenaReakcija;
             @XmlElement(name = "potpis_lekara", namespace = "http://ftn.uns.ac.rs/saglasnost", required = true)
             protected String potpisLekara;
 
@@ -739,7 +744,7 @@ public class EvidencijaOVakcinaciji {
              * Gets the value of the nezeljenaReakcija property.
              * 
              */
-            public boolean isNezeljenaReakcija() {
+            public String isNezeljenaReakcija() {
                 return nezeljenaReakcija;
             }
 
@@ -747,7 +752,7 @@ public class EvidencijaOVakcinaciji {
              * Sets the value of the nezeljenaReakcija property.
              * 
              */
-            public void setNezeljenaReakcija(boolean value) {
+            public void setNezeljenaReakcija(String value) {
                 this.nezeljenaReakcija = value;
             }
 
@@ -856,6 +861,16 @@ public class EvidencijaOVakcinaciji {
                     this.lv = value;
                 }
 
+            }
+
+
+            public void setEkstremitet(String ekstremitet2) {
+                if(ekstremitet2.equals("DR")){
+                    this.ekstremitet.dr = "DR";
+                }
+                else{
+                    this.ekstremitet.lv = "LR";
+                }
             }
 
         }

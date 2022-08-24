@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 
@@ -14,7 +15,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.clerk.clerkb.dto.CitizenDocuments;
+import com.clerk.clerkb.dto.EvidencijaDTO;
+import com.clerk.clerkb.dto.Kolona;
+import com.clerk.clerkb.jaxb.JaxB;
 import com.clerk.clerkb.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
+import com.clerk.clerkb.model.saglasnost.Dokument;
+import com.clerk.clerkb.model.saglasnost.EvidencijaOVakcinaciji;
+import com.clerk.clerkb.model.saglasnost.EvidencijaOVakcinaciji.ImePrezimeFaksimilBrtel;
+import com.clerk.clerkb.model.saglasnost.EvidencijaOVakcinaciji.Tabela;
+import com.clerk.clerkb.model.saglasnost.EvidencijaOVakcinaciji.Tabela.Element.Ekstremitet;
+import com.clerk.clerkb.model.saglasnost.EvidencijaOVakcinaciji.Tabela.PrivremeneKontradikcije;
+import com.clerk.clerkb.model.saglasnost.TIzbor;
+import com.clerk.clerkb.model.saglasnost.TVakcina;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahtevZaSertifikat;
 import com.clerk.clerkb.model.zahtevZaSertifikat.ZahteviZaSertifikat;
 import com.clerk.clerkb.model.zeleniSertifikat.DigitalniSertifikat;
@@ -27,6 +39,7 @@ import com.clerk.clerkb.repository.PotvrdaOVakcinacijiRepository;
 import com.clerk.clerkb.repository.SaglasnostRepository;
 import com.clerk.clerkb.service.IDigitalCertificateService;
 import com.google.zxing.WriterException;
+import com.ibm.icu.text.SimpleDateFormat;
 
 @Service
 public class DigitalCertificateService implements IDigitalCertificateService {
@@ -53,6 +66,9 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 
     @Autowired
     private DocumentTransformerService transformerService;
+
+    @Autowired
+    private JaxB jaxB;
 
     private static final String PATH_TO_XSL = "clerk-b/src/main/resources/xsl/";
 
@@ -140,6 +156,14 @@ public class DigitalCertificateService implements IDigitalCertificateService {
     }
 
     @Override
+    public Dokument findSaglasnostByIdDocument(String id) throws FileNotFoundException, JAXBException {
+        String content = saglasnostRepository.findXmlById(id+".xml");
+        Dokument dokument = this.jaxB.unmarshall(Dokument.class, content);
+        System.out.println(content);
+        return dokument;
+    }
+
+    @Override
     public String generateCertificateView(String id, String content) throws IOException, WriterException {
 //        System.out.println("Looking for certificate with id: " + id);
 //        String content = digitalCertificateRepository.findXmlById(id);
@@ -165,6 +189,64 @@ public class DigitalCertificateService implements IDigitalCertificateService {
         transformerService.generateHTML("interesovanje" + id, content, PATH_TO_XSL + "interesovanje.xsl");
         return "interesovanje" + id;
     }
+
+    public Boolean dodajEvidenciju(EvidencijaDTO evidencija, String jmbg) throws Exception {
+        System.out.println("Dodajem evidenciju za pacijenta sa jmbg: " + jmbg);
+        Dokument dokument = this.findSaglasnostByIdDocument(jmbg);
+        EvidencijaOVakcinaciji evidencijaOVakcinaciji = new EvidencijaOVakcinaciji();
+        dokument.setEvidencijaOVakcinaciji(evidencijaOVakcinaciji);
+        evidencijaOVakcinaciji.setVakcinacijskiPunkt(evidencija.punkt);
+        evidencijaOVakcinaciji.setZdravstvenaUstanova(evidencija.institution);
+        evidencijaOVakcinaciji.setImePrezimeFaksimilBrtel(new ImePrezimeFaksimilBrtel());
+        evidencijaOVakcinaciji.getImePrezimeFaksimilBrtel().setIme(evidencija.name);
+        evidencijaOVakcinaciji.getImePrezimeFaksimilBrtel().setPrezime(evidencija.lastname);
+        evidencijaOVakcinaciji.getImePrezimeFaksimilBrtel().setFaksimil(evidencija.faksimil);
+        evidencijaOVakcinaciji.getImePrezimeFaksimilBrtel().setBrtel(evidencija.telephone);
+        evidencijaOVakcinaciji.setTabela(new Tabela());
+        evidencijaOVakcinaciji.getTabela().setPrivremeneKontradikcije(new PrivremeneKontradikcije());
+        evidencijaOVakcinaciji.getTabela().getPrivremeneKontradikcije().setDijagnoza(evidencija.privremeneKontradikcije);
+        evidencijaOVakcinaciji.getTabela().setTrajneKontradikcije(new TIzbor());
+        evidencijaOVakcinaciji.getTabela().getTrajneKontradikcije().setIzabran(evidencija.trajneKontradikcije);
+        evidencijaOVakcinaciji.getTabela().setElement(new ArrayList<>());
+        GregorianCalendar calendar = new GregorianCalendar();
+        XMLGregorianCalendar date = null;
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        calendar.setTime(format.parse(evidencija.privremeneKontradikcijeDatum));
+        date = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+        if(!evidencijaOVakcinaciji.getTabela().getPrivremeneKontradikcije().getDijagnoza().equals("")){
+
+        evidencijaOVakcinaciji.getTabela().getPrivremeneKontradikcije().setDatum(date);// TODO
+    }
+        try{
+            for (Kolona s : evidencija.tabela) {
+                EvidencijaOVakcinaciji.Tabela.Element element = new EvidencijaOVakcinaciji.Tabela.Element();
+                element.setSerija(Long.parseLong(s.serija));
+                element.setPotpisLekara(s.potpisLekara);
+                element.setNacinDavanja("ИМ");
+                element.setEkstremitet(new Ekstremitet());
+                element.setEkstremitet(s.ekstremitet);
+                element.setNezeljenaReakcija(s.nezeljenaReakcija);
+                element.setPotpisLekara(s.potpisLekara);
+                element.setProizvodjac(new TVakcina());
+                element.getProizvodjac().setVakcina(s.proizvodjac);
+                element.setVakcina(new TVakcina());
+                element.getVakcina().setVakcina(s.nazivVakcine);
+                calendar.setTime(format.parse(s.datumVakcine));
+                date = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+                element.setDatumDavanja(date);
+                evidencijaOVakcinaciji.getTabela().getElement().add(element);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+
+        this.saglasnostRepository.save(dokument);
+
+        return true;
+    }
+
+    
 
 
 }

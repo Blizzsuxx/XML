@@ -200,11 +200,12 @@
             <div/>
             <b><xsl:value-of select="x:dokument/x:saglasnost_za_sprovodjenje_imunizacije/x:datum"/></b>
         </span></div>
-        <div style="position:absolute;left:105.29px;top:538.29px" class="cls_009"><span class="cls_009">ЕВИДЕНЦИЈА О ВАКЦИНАЦИЈИ ПРОТИВ COVID-19</span></div>
-        <div style="position:absolute;left:226.94px;top:556.39px" class="cls_008"><span class="cls_008">(попуњава здравствени радник)</span></div>
-        <div style="position:absolute;left:42.52px;top:581.59px" class="cls_008"><span class="cls_008">Здравствена установа</span></div>
-        <div style="position:absolute;left:337.45px;top:581.59px" class="cls_008"><span class="cls_008">Вакцинацијски пункт</span></div>
-        <div style="position:absolute;left:42.52px;top:606.79px" class="cls_008"><span class="cls_008">Име, презиме, факсимил и бр. телефона лекара:</span></div>
+
+        <div style="position:absolute;left:105.29px;top:-400.29px" class="cls_009"><span class="cls_009">ЕВИДЕНЦИЈА О ВАКЦИНАЦИЈИ ПРОТИВ COVID-19</span></div>
+        <div style="position:absolute;left:226.94px;top:-400.39px" class="cls_008"><span class="cls_008">(попуњава здравствени радник)</span></div>
+        <div style="position:absolute;left:42.52px;top:-400.59px" class="cls_008"><span class="cls_008">Здравствена установа <b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:zdravstvena_ustanova"/></b></span></div>
+        <div style="position:absolute;left:337.45px;top:-400.59px" class="cls_008"><span class="cls_008">Вакцинацијски пункт <b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:punkt"/></b></span></div>
+        <div style="position:absolute;left:42.52px;top:-400.79px" class="cls_008"><span class="cls_008">Име, презиме, факсимил и бр. телефона лекара: <b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:ime_prezime_faksimil_brtel"/></b></span></div>
 
         <div style="position:absolute;bottom:150.30px;left:-500px">
         <table >
@@ -219,33 +220,37 @@
                 <th>Потпис лекара</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td>ИМ</td>
-                <td>1)ДР, 2)ЛР</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:vakcina"/></b></td>
+                <td>
+                    <b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:datum_davanja"/></b>
+                </td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:nacin_davanja"/></b></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:ekstremitet"/></b></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:serija"/></b></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:proizvodjac"/></b></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:nezeljena_reakcija"/></b></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:potpis_lekara"/></b></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td>ИМ</td>
-                <td>1)ДР, 2)ЛР</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:vakcina"/></b></td>
+                <td>
+                    <b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:datum_davanja"/></b>
+                </td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:nacin_davanja"/></b></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:ekstremitet"/></b></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:serija"/></b></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:proizvodjac"/></b></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:nezeljena_reakcija"/></b></td>
+                <td><b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:potpis_lekara"/></b></td>
             </tr>
             <tr>
                 <td colspan="8">Привремене контраиндикације
-(датум утврђивања и дијагноза):</td>
+(датум утврђивања и дијагноза): <b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:privremene_kontradikcije"/></b></td>
             </tr>
             <tr>
                 <td colspan="8">
                 Одлука комисије за трајне контраиндикације (ако постоји, уписати Да)
-
+                <b><xsl:value-of select="x:dokument/x:evidencija_o_vakcinaciji/x:tabela/x:element/x:trajne_kontradikcije"/></b>
                 </td>
             </tr>
         </table>

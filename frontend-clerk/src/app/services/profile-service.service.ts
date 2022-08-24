@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Evidencija } from '../model/kolona';
+import { js2xml } from "node_modules/xml-js"
 
 @Injectable({
   providedIn: 'root'
@@ -56,5 +58,23 @@ export class ProfileServiceService {
     headers.append('Accept', 'application/xml');
     headers.append('Content-Type', 'application/xml');
     return this.http.get(`${environment.apiUrl}/search/simple/${search}`, {responseType: 'text', headers: headers});
+  }
+
+  public getSaglasnostDokument(documentId: string){
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    return this.http.get(`${environment.apiUrl}/cert/get-saglasnost/${documentId}`, {responseType: 'text', headers: headers});
+  }
+
+  public sendEvidencija(evidencija : Evidencija, jmbg : string){
+    const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+    headers.append('Accept', 'application/xml');
+    headers.append('Content-Type', 'application/xml');
+    const evidencijaXML =  js2xml(evidencija, {compact:true});
+    console.log(evidencijaXML);
+    return this.http.post(`${environment.apiUrl}/cert/send-evidencija/${jmbg}`, "<evidencija_o_vakcinaciji>" + evidencijaXML + "</evidencija_o_vakcinaciji>", {responseType: 'text', headers: headers});
+
+
   }
 }
