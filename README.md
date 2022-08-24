@@ -1,8 +1,8 @@
 # XML
-"demo" je backend za pacijente
-"clerk-b" je backend za sluzbenike i zdravstvene radnike
-"frontend" je frontend za pacijente
-"frontend-clerk" je frontend za sluzbenike i zdravstvene radnike
+### "demo" je backend za pacijente
+### "clerk-b" je backend za sluzbenike i zdravstvene radnike
+### "frontend" je frontend za pacijente
+### "frontend-clerk" je frontend za sluzbenike i zdravstvene radnike
 
 ## pre pokretanja svakog projekta
 pozicijonirati se u apache-tomcat-8.5.73/bin/ i pokrenuti tomcat-a pomocu startup.sh/bin skripte
