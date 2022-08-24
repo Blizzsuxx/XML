@@ -209,7 +209,8 @@ public class ExistManager {
             // get the collection
             col = DatabaseManager.getCollection(authManager.getUri() + collectionUri, authManager.getUser(), authManager.getPassword());
             col.setProperty("indent", "yes");
-            col.removeResource(col.getResource(documentId));
+            col.removeResource(col.getResource(documentId + ".xml"));
+            col.removeResource(col.getResource(documentId + ".html"));
             System.out.println("[INFO] Removed document from the collection");
         } finally {
 

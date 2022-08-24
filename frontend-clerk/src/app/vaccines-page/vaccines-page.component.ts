@@ -26,8 +26,8 @@ export class VaccinesPageComponent implements OnInit {
       const parser = new DOMParser();
       const xml = parser.parseFromString(data, 'text/xml');
       const obj: any = this.xml2jsonService.xmlToJson(xml);
-      console.log(obj.vaccines);
-      this.vaccines = obj.vaccines.vaccine;
+      console.log(obj.Vaccines);
+      this.vaccines = obj.Vaccines.vaccine.vaccine;
     })
   }
 

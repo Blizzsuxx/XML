@@ -133,7 +133,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 
     @Override
     public String findSaglasnostById(String id) throws FileNotFoundException {
-        String content = saglasnostRepository.findXmlById(id);
+        String content = saglasnostRepository.findXmlById(id+".xml");
         System.out.println(content);
         transformerService.generateHTML("saglasnost" + id, content, PATH_TO_XSL + "obrazac_saglasnosti_za_imunizaciju.xsl");
         return "saglasnost" + id;
@@ -153,7 +153,7 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 
     @Override
     public String findPotvrdaById(String id) throws FileNotFoundException {
-        String content = potvrdaRepository.findXmlById(id);
+        String content = potvrdaRepository.findXmlById(id + ".xml");
         transformerService.generateHTML("potvrda" + id, content, PATH_TO_XSL + "potvrda_o_vakcinaciji.xsl");
         return "potvrda" + id;
     }

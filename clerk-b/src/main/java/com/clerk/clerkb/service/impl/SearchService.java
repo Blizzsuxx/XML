@@ -52,10 +52,10 @@ public class SearchService implements ISearchService {
                         || s.getSaglasnostZaSprovodjenjeImunizacije().getOsoba().getIme().equals(content)
                         || s.getSaglasnostZaSprovodjenjeImunizacije().getOsoba().getPrezime().equals(content)
                         || s.getSaglasnostZaSprovodjenjeImunizacije().getPotpis().equals(content)
-                        || s.getEvidencijaOVakcinaciji().getZdravstvenaUstanova().equals(content)
+                        || ((s.getEvidencijaOVakcinaciji() != null) && (s.getEvidencijaOVakcinaciji().getZdravstvenaUstanova().equals(content)
                         || s.getEvidencijaOVakcinaciji().getVakcinacijskiPunkt().equals(content)
                         || s.getEvidencijaOVakcinaciji().getImePrezimeFaksimilBrtel().getPrezime().equals(content)
-                        || s.getEvidencijaOVakcinaciji().getImePrezimeFaksimilBrtel().getIme().equals(content))
+                        || s.getEvidencijaOVakcinaciji().getImePrezimeFaksimilBrtel().getIme().equals(content))))
                 .collect(Collectors.toList()));
 
         return sd;

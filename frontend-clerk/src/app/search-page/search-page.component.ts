@@ -27,8 +27,10 @@ export class SearchPageComponent implements OnInit {
       const parser = new DOMParser();
       const xml = parser.parseFromString(data, 'text/xml');
       const obj: any = this.xml2jsonService.xmlToJson(xml);
-      console.log(obj);
-      this.documents = obj.documents.sertifikat;
+      console.log(obj.SearchDocuments);
+      this.documents.push(obj.SearchDocuments.sertifikat);
+      this.documents.push(obj.SearchDocuments.saglasnost);
+      this.documents.push(obj.SearchDocuments.potvrda);
     });
   }
 
