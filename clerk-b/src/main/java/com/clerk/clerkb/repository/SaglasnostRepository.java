@@ -41,7 +41,6 @@ public class SaglasnostRepository {
                     Dokument one = (Dokument) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
                     retVal.add(one);
                 } catch(Exception e){
-                    e.printStackTrace();
                 }
             }
         } catch (Exception e) {

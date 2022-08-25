@@ -1,11 +1,16 @@
 package com.clerk.clerkb.model.interesovanje;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
 import com.clerk.clerkb.model.potvrdaOVakcinaciji.TVakcina;
 import com.clerk.clerkb.model.saglasnost.TIzbor;
 import com.clerk.clerkb.model.zahtevZaSertifikat.TOsoba;
-
-import javax.xml.bind.annotation.*;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -16,7 +21,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
         "davalacKrvi",
         "dan",
         "godina",
-        "potpis"
+        "potpis",
+        "nadjenTermin"
 })
 @XmlRootElement(name = "interesovanje_za_vakcinisanje", namespace = "http://ftn.uns.ac.rs/interesovanje")
 public class InteresovanjeZaVakcinisanje {
@@ -38,6 +44,8 @@ public class InteresovanjeZaVakcinisanje {
     protected String potpis;
     @XmlElement(namespace = "http://ftn.uns.ac.rs/interesovanje", required = true)
     protected String godina;
+    @XmlElement(namespace = "http://ftn.uns.ac.rs/interesovanje", required = false)
+    protected Boolean nadjenTermin;
 
     public InteresovanjeZaVakcinisanje.Drzavljanstvo getDrzavljanstvo() {
         return drzavljanstvo;
@@ -207,5 +215,13 @@ public class InteresovanjeZaVakcinisanje {
             }
 
         }
+    }
+
+    public Boolean getNadjenTermin() {
+        return nadjenTermin;
+    }
+
+    public void setNadjenTermin(Boolean nadjenTermin) {
+        this.nadjenTermin = nadjenTermin;
     }
 }

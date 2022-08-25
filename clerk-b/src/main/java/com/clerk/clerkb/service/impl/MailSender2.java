@@ -51,6 +51,15 @@ public class MailSender2 {
         getJavaMailSender().send(message);
     }
 
+    public void sendMessage(String adresa, String info) throws XMLDBException {
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("marinaseqrity77711@gmail.com");
+        message.setTo("pera.peric111000@gmail.com");
+        message.setSubject("Zahtev za digitalni sertifikat - ODBIJEN");
+        message.setText(info);
+        getJavaMailSender().send(message);
+    }
+
     public void sendAcceptRequestEmail(String filePath) throws MessagingException, IOException {
         MimeMessage message = getJavaMailSender().createMimeMessage();
         message.setFrom("marinaseqrity77711@gmail.com");

@@ -191,7 +191,7 @@ public class ImmunizationService implements IImmunizationService {
         //broj vakcina
         report.setDatoJeVakcina(cntAZ + cntModerna + cntPfizer + cntSinopharm + cntSputnik);
         String content = immunizationRepository.save(report);
-
+        System.out.println(content);
         try {
             transformerService.generateHTML("izvestaj" + dateFrom + "t" + dateUntil, content, PATH_TO_XSL + "izvestaj_o_imunizaciji.xsl");
         } catch (FileNotFoundException e) {

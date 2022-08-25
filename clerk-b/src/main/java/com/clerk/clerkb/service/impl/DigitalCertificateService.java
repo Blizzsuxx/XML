@@ -15,10 +15,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.clerk.clerkb.db.ExistManager;
 import com.clerk.clerkb.dto.CitizenDocuments;
 import com.clerk.clerkb.dto.EvidencijaDTO;
 import com.clerk.clerkb.dto.Kolona;
 import com.clerk.clerkb.jaxb.JaxB;
+import com.clerk.clerkb.model.interesovanje.InteresovanjeZaVakcinisanje;
 import com.clerk.clerkb.model.potvrdaOVakcinaciji.PotvrdaOVakcinaciji;
 import com.clerk.clerkb.model.saglasnost.Dokument;
 import com.clerk.clerkb.model.saglasnost.EvidencijaOVakcinaciji;
@@ -73,6 +75,9 @@ public class DigitalCertificateService implements IDigitalCertificateService {
 
     @Autowired
     private JaxB jaxB;
+
+    @Autowired
+    private MailSender2 mailSender;
 
     private static final String PATH_TO_XSL = "clerk-b/src/main/resources/xsl/";
 
@@ -246,11 +251,6 @@ public class DigitalCertificateService implements IDigitalCertificateService {
                 date = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
                 element.setDatumDavanja(date);
                 evidencijaOVakcinaciji.getTabela().getElement().add(element);
-                int quantity = this.vaccineService.getQuantity(element.getSerija());
-                if (quantity <= 0) {
-                    throw new Exception("Nema vakcine sa serijom: " + element.getSerija());
-                }
-                this.vaccineService.updateQuantity(element.getSerija(), quantity - 1);
 
             }
         } catch (Exception e) {
@@ -258,8 +258,191 @@ public class DigitalCertificateService implements IDigitalCertificateService {
         }
 
         this.saglasnostRepository.save(dokument);
-
+        InteresovanjeZaVakcinisanje interesovanjeZaVakcinisanje = this.jaxB.unmarshall(InteresovanjeZaVakcinisanje.class, this.interesovanjeRepository.findXmlById(jmbg + ".xml"));
+        interesovanjeZaVakcinisanje.setNadjenTermin(false);
+        String interesovanjeString = this.jaxB.marshall(InteresovanjeZaVakcinisanje.class, interesovanjeZaVakcinisanje);
+        this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", jmbg + ".xml", interesovanjeString);
         return true;
     }
+
+
+
+
+	@Autowired
+	private ExistManager existManager;
+
+    // @Autowired
+    // private KorisnikService korisnikService;
+
+
+	// public void zakaziSledeciTermin(Dokument saglasnost) {
+
+	// 	try {
+	// 		ResourceSet xmlRequests = existManager.retrieve("/db/dokumenti/zahtevZaSaglasnost", "/*");
+	// 		ResourceIterator i = xmlRequests.getIterator();
+	// 		XMLResource res;
+	// 		while (i.hasMoreResources()) {
+	// 			try {
+	// 				res = (XMLResource) i.nextResource();
+	// 				System.out.println(res.getId());
+	// 				if(res.getId().split("\\.")[1].equals("html")){
+	// 					continue;
+	// 				}
+	// 				JAXBContext jaxbContext = JAXBContext.newInstance(InteresovanjeZaVakcinisanje.class);
+	// 				InteresovanjeZaVakcinisanje one = (InteresovanjeZaVakcinisanje) jaxbContext.createUnmarshaller()
+	// 						.unmarshal(res.getContentAsDOM());
+
+	// 				if (one.getNadjenTermin() == null || !one.getNadjenTermin()) {
+	// 					Boolean biloSta = one.getVakcine().getBiloSta().isIzabran();
+	// 					IzabraneVakcine izabraneVakcine = one.getVakcine().getIzabraneVakcine();
+	// 					Vaccines vacciness = vaccineService.findAll();
+	// 					for (Vaccine vaccine : vacciness.getVaccine()) {
+	// 						if (vaccine.getQuantity() <= 0) {
+	// 							continue;
+	// 						}
+
+	// 						if (biloSta) {
+	// 							if(this.napraviTermin(one, vaccine)){
+	// 								break;
+	// 							}
+	// 						}
+	// 						if (izabraneVakcine.getVakcina().getAstraZeneca() != null && izabraneVakcine.getVakcina().getAstraZeneca().equals(vaccine.getManufacturer())) {
+	// 							if(this.napraviTermin(one, vaccine)){
+	// 								break;
+	// 							}
+	// 						}
+	// 						if (izabraneVakcine.getVakcina().getModerna() != null && izabraneVakcine.getVakcina().getModerna().equals(vaccine.getManufacturer())) {
+	// 							if(this.napraviTermin(one, vaccine)){
+	// 								break;
+	// 							}
+	// 						}
+	// 						if (izabraneVakcine.getVakcina().getPfizer() != null && izabraneVakcine.getVakcina().getPfizer().equals(vaccine.getManufacturer())) {
+	// 							if(this.napraviTermin(one, vaccine)){
+	// 								break;
+	// 							}
+								
+	// 						}
+
+	// 						if (izabraneVakcine.getVakcina().getSinopharm() != null && izabraneVakcine.getVakcina().getSinopharm().equals(vaccine.getManufacturer())) {
+	// 							if(this.napraviTermin(one, vaccine)){
+	// 								break;
+	// 							}
+	// 						}
+	// 						if (izabraneVakcine.getVakcina().getSputnik() != null && izabraneVakcine.getVakcina().getSputnik().equals(vaccine.getManufacturer())) {
+	// 							if(this.napraviTermin(one, vaccine)){
+	// 								break;
+	// 							}
+	// 						}
+
+	// 					}
+	// 				}
+
+	// 			} catch (Exception e) {
+	// 				e.printStackTrace();
+	// 			}
+	// 		}
+	// 	} catch (Exception e) {
+	// 		e.printStackTrace();
+	// 	}
+
+
+	// }
+
+	// private int maxTerminaZaVakcinu(Vaccine vaccine) {
+	// 	switch (vaccine.getManufacturer()) {
+	// 		case "Astra Zeneca":
+	// 			return 4;
+	// 		case "Moderna":
+	// 			return 3;
+	// 		case "Pfizer":
+	// 			return 6;
+	// 		case "Sinopharm":
+	// 			return 7;
+	// 		case "Sputnik":
+	// 			return 2;
+	// 	}
+	// 	return 5;
+	// }
+
+	// private boolean proveriTermine(Vaccine vaccine) {
+
+	// 	int getMaxTermina = this.maxTerminaZaVakcinu(vaccine);
+	// 	Date today = new Date();
+	// 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+	// 	Date terminDate = null;
+	// 	for (int brojDana = 1; brojDana < 8; brojDana++) {
+	// 		terminDate = new Date(today.getTime() + (brojDana * 24 * 60 * 60 * 1000));
+	// 		if (vaccine.getTermini().get(formatter.format(terminDate)) == null || vaccine.getTermini().get(formatter.format(terminDate)) < getMaxTermina) {
+	// 			Long termini = vaccine.getTermini().get(formatter.format(terminDate));
+	// 			if(termini == null) {
+	// 				termini = 0L;
+	// 			}
+	// 			vaccine.getTermini().put(formatter.format(terminDate), termini + 1);
+	// 			return true;
+	// 		}
+	// 	}
+	// 	return false;
+
+	// }
+
+	// private boolean napraviTermin(InteresovanjeZaVakcinisanje interesovanjeZaVakcinisanje, Vaccine vaccine) {
+	// 	boolean slobodanTermin = this.proveriTermine(vaccine);
+	// 	if (!slobodanTermin) {
+	// 		return false;
+	// 	}
+	// 	interesovanjeZaVakcinisanje.setNadjenTermin(true);
+	// 	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+	// 	vaccine.setQuantity(vaccine.getQuantity() - 1);
+	// 	this.vaccineService.save(vaccine);
+	// 	String interesovanjeString = "";
+	// 	try {
+    //         interesovanjeString = this.jaxB.marshall(InteresovanjeZaVakcinisanje.class, interesovanjeZaVakcinisanje);
+    //         System.out.println(interesovanjeString);
+    //     } catch (JAXBException e) {
+    //         // TODO Auto-generated catch block
+    //         e.printStackTrace();
+    //     }
+    //     try {
+    //                 Korisnik korisnik = this.korisnikService.getOne(interesovanjeZaVakcinisanje.getOsoba().getEAdresa());
+    //                 this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", korisnik.getJmbg() + ".xml",
+    //                 interesovanjeString);
+    //     } catch (Exception e) {
+    //         // TODO Auto-generated catch block
+    //         e.printStackTrace();
+    //     }
+	// 	try {
+    //         mailSender.sendMessage(interesovanjeZaVakcinisanje.getOsoba().getEAdresa(), ("Zakazan vam je termin za vakcinu: " +
+    //         		"Zakazan vam je termin za vakcinu: " + vaccine.getManufacturer() + " na datum: " + formatter.format(new Date()) ) );
+    //     } catch (XMLDBException e) {
+    //         // TODO Auto-generated catch block
+    //         e.printStackTrace();
+    //     }
+
+	// 	return true;
+
+	// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

@@ -71,6 +71,9 @@ public class CertificateRequestRepository {
                     res = (XMLResource) i.nextResource();
                     JAXBContext jaxbContext = JAXBContext.newInstance(ZahtevZaSertifikat.class);
                     
+                    if(res == null || res.getId().contains(".xml")){
+                        continue;
+                    }
                     
                     ZahtevZaSertifikat one = (ZahtevZaSertifikat) jaxbContext.createUnmarshaller().unmarshal(res.getContentAsDOM());
                     String text = res.getContent().toString();

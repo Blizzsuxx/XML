@@ -1,5 +1,7 @@
 package com.clerk.clerkb.model.vakcina;
 
+import java.util.HashMap;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="vaccine")
@@ -8,6 +10,7 @@ public class Vaccine {
     private long id;
     private String manufacturer;
     private int quantity;
+    private HashMap<String, Long> termini;
 
     public long getId() {
         return id;
@@ -32,4 +35,18 @@ public class Vaccine {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public HashMap<String, Long> getTermini() {
+        if(termini == null) {
+            termini = new HashMap<>();
+        }
+        return termini;
+    }
+
+    public void setTermini(HashMap<String, Long> termini) {
+        this.termini = termini;
+    }
+
+
+    
 }

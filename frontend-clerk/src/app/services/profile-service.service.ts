@@ -29,14 +29,14 @@ export class ProfileServiceService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
     headers.append('Accept', 'application/xml');
     headers.append('Content-Type', 'application/xml');
-    return this.http.post(`${environment.apiUrl}/cert/approve/${citizenId}`, {}, {responseType: 'text', headers: headers});
+    return this.http.post(`${environment.apiUrl}/cert/approve/${citizenId}`, '', {responseType: 'text', headers: headers});
   }
 
   public declineCertificateRequest(citizenId: string, reason: string){
     const headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
     headers.append('Accept', 'application/xml');
     headers.append('Content-Type', 'application/xml');
-    return this.http.post(`${environment.apiUrl}/cert/decline/${citizenId}/${reason}`, {responseType: 'text', headers: headers});
+    return this.http.post(`${environment.apiUrl}/cert/decline/${citizenId}/${reason}`, '', {responseType: 'text', headers: headers});
   }
 
   public showDocument(type: string, documentId: string){

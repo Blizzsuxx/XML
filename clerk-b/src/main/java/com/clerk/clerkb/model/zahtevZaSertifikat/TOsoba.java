@@ -12,6 +12,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
         "ime",
         "prezime",
         "datum",
+        "eAdresa",
         "pol",
         "jmbg",
         "pasos"
@@ -31,7 +32,9 @@ public class TOsoba {
     protected String jmbg;
     @XmlElement(required = true)
     protected String pasos;
-
+    @XmlElement(name = "e-adresa", required = true)
+    protected String eAdresa;
+    
     /**
      * Gets the value of the ime property.
      *
@@ -174,5 +177,13 @@ public class TOsoba {
      */
     public void setPasos(String value) {
         this.pasos = value;
+    }
+
+    public String getEAdresa() {
+        return eAdresa;
+    }
+
+    public void setEAdresa(String eAdresa) {
+        this.eAdresa = eAdresa;
     }
 }

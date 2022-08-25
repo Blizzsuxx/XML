@@ -54,8 +54,11 @@ public class ImmunizationController {
 
     @GetMapping(value = "/get-all-vaccines")
     public ResponseEntity<Vaccines> findAll(){
-
-        return new ResponseEntity<>(vaccineService.findAll(), HttpStatus.OK);
+        Vaccines vaccines = vaccineService.findAll();
+        for(Vaccine vaccine : vaccines.getVaccine()){
+            vaccine.setTermini(null);
+        }
+        return new ResponseEntity<>(vaccines, HttpStatus.OK);
     }
 
 }
