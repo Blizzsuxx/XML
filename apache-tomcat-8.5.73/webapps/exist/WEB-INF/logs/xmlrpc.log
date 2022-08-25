@@ -2678,3 +2678,5 @@ Caused by: org.xml.sax.SAXParseException: Premature end of file.
 2022-08-25 21:17:50,096 [http-nio-8081-exec-2] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
 2022-08-25 21:18:00,095 [http-nio-8081-exec-3] INFO  (RpcConnection.java [doQuery]:257) - query took 1ms. 
 2022-08-25 21:18:10,095 [http-nio-8081-exec-6] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
+2022-08-25 21:18:20,096 [http-nio-8081-exec-10] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
+2022-08-25 21:18:30,092 [http-nio-8081-exec-5] INFO  (RpcConnection.java [doQuery]:257) - query took 0ms. 
