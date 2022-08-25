@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RadnikComponent } from './radnik/radnik.component';
+import { VaccinationCertificateComponent } from './vaccination-certificate/vaccination-certificate.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RadnikComponent } from './radnik/radnik.component';
     SearchPageComponent,
     VaccinesPageComponent,
     NavBarComponent,
-    RadnikComponent
+    RadnikComponent,
+    VaccinationCertificateComponent
   ],
   imports: [
     BrowserModule,
