@@ -77,7 +77,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "davalacKrvi",
     "dan",
     "godina",
-    "potpis"
+    "potpis",
+    "nadjenTermin"
 })
 @XmlRootElement(name = "interesovanje_za_vakcinisanje", namespace = "http://ftn.uns.ac.rs/interesovanje")
 public class InteresovanjeZaVakcinisanje {
@@ -99,6 +100,8 @@ public class InteresovanjeZaVakcinisanje {
     protected String potpis;
     @XmlElement(namespace = "http://ftn.uns.ac.rs/interesovanje", required = true)
     protected String godina;
+    @XmlElement(namespace = "http://ftn.uns.ac.rs/interesovanje", required = false)
+    protected Boolean nadjenTermin;
 
 
 
@@ -106,7 +109,13 @@ public class InteresovanjeZaVakcinisanje {
 
 
 
+    public Boolean getNadjenTermin() {
+        return nadjenTermin;
+    }
 
+    public void setNadjenTermin(Boolean nadjenTermin) {
+        this.nadjenTermin = nadjenTermin;
+    }
 
     
     public String getGodina() {
@@ -545,5 +554,8 @@ public class InteresovanjeZaVakcinisanje {
         }
 
     }
+
+
+    
 
 }

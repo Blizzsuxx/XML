@@ -94,6 +94,7 @@ public class XMLService {
             e1.printStackTrace();
         }
         dto.setDan(date);
+        dto.setNadjenTermin(false);
         try {
             interesovanjeZaVakcinisanje = this.jaxB.marshall(InteresovanjeZaVakcinisanje.class, dto);
             System.out.println(interesovanjeZaVakcinisanje);
@@ -102,8 +103,6 @@ public class XMLService {
             e.printStackTrace();
         }
         try {
-            this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getEAdresa() + ".xml",
-                    interesovanjeZaVakcinisanje);
                     Korisnik korisnik = this.korisnikService.getOne(dto.getOsoba().getEAdresa());
                     this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", korisnik.getJmbg() + ".xml",
                     interesovanjeZaVakcinisanje);
@@ -115,8 +114,6 @@ public class XMLService {
         try {
             String html = this.pdfTransformer.generateHTML(interesovanjeZaVakcinisanje,
                     "demo/src/main/resources/xsl/interesovanje.xsl");
-            this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", dto.getOsoba().getEAdresa() + ".html",
-                    html);
                     Korisnik korisnik = this.korisnikService.getOne(dto.getOsoba().getEAdresa());
                     this.existManager.storeFromText("/db/dokumenti/zahtevZaSaglasnost", korisnik.getJmbg() + ".html",
                     html);
@@ -302,8 +299,6 @@ public class XMLService {
         }
         try {
             Korisnik korisnik = this.korisnikService.getOne(dto.eadresa);
-            this.existManager.storeFromText("/db/dokumenti/saglasnost", dto.eadresa + ".xml",
-                    saglasnost);
                     this.existManager.storeFromText("/db/dokumenti/saglasnost", korisnik.getJmbg() + ".xml",
                     saglasnost);
         } catch (Exception e) {
@@ -316,8 +311,6 @@ public class XMLService {
             String html = this.pdfTransformer.generateHTML(saglasnost,
                     "demo/src/main/resources/xsl/obrazac_saglasnosti_za_imunizaciju.xsl");
                     
-            this.existManager.storeFromText("/db/dokumenti/saglasnost", dto.eadresa + ".html",
-                    html);
                     this.existManager.storeFromText("/db/dokumenti/saglasnost", korisnik.getJmbg() + ".html",
                     html);
             pdf = this.pdfTransformer.generatePDF(html);
@@ -409,9 +402,6 @@ public class XMLService {
         }
         try {
             Korisnik korisnik = this.korisnikService.getOne(this.tokenUtils.getUsernameFromToken(bearerToken));
-            this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat",
-                    this.tokenUtils.getUsernameFromToken(bearerToken) + ".xml",
-                    saglasnost);
             this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat", korisnik.getJmbg() + ".xml", saglasnost);
             
         } catch (Exception e) {
@@ -423,9 +413,6 @@ public class XMLService {
             Korisnik korisnik = this.korisnikService.getOne(this.tokenUtils.getUsernameFromToken(bearerToken));
             String html = this.pdfTransformer.generateHTML(saglasnost,
                     "demo/src/main/resources/xsl/zahtev_za_sertifikat.xsl");
-            this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat",
-                    this.tokenUtils.getUsernameFromToken(bearerToken) + ".html",
-                    html);
             this.existManager.storeFromText("/db/dokumenti/zahtevZaZeleniSertifikat", korisnik.getJmbg() + ".html", html);
             pdf = this.pdfTransformer.generatePDF(html);
 
@@ -444,8 +431,6 @@ public class XMLService {
         String text = "<test></test>";
         try {
             Korisnik korisnik = this.korisnikService.getOne(this.tokenUtils.getUsernameFromToken(bearerToken));
-            this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", "test" + ".xml",
-                    text);
             this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", korisnik.getJmbg() + ".xml",
                     text);
 
@@ -458,8 +443,6 @@ public class XMLService {
             Korisnik korisnik = this.korisnikService.getOne(this.tokenUtils.getUsernameFromToken(bearerToken));
             String html = this.pdfTransformer.generateHTML(text,
                     "demo/src/main/resources/xsl/izvestaj_o_imunizaciji.xsl");
-            this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", "test" + ".html",
-                    html);
             this.existManager.storeFromText("/db/dokumenti/izvestajOImunizaciji", korisnik.getJmbg() + ".html",
                     html);
             pdf = this.pdfTransformer.generatePDF(html);

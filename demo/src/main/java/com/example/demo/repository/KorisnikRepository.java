@@ -35,7 +35,6 @@ public class KorisnikRepository {
             marshaller.marshal(korisnik, sw);
 
             String xmlString = sw.toString();
-            existManager.storeFromText(collectionId, korisnik.getEmail(), xmlString);
             existManager.storeFromText(collectionId, korisnik.getJmbg(), xmlString);
         } catch (Exception e) {
             e.printStackTrace();
